@@ -1,0 +1,15 @@
+body {
+	background-color: white;
+}
+
+.center {
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+#seeds { 
+	height: 160px;
+  	width: 160px;
+	border: 0px;
+}
