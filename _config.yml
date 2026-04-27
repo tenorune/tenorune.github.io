@@ -35,17 +35,13 @@ defaults:
     values:
       layout: story
 
-# Exclude every homepage asset and every dev artifact so Jekyll passes them
-# through untouched. The cohabitation discipline (Section 1 of spec) lives here.
+# Cohabitation note: Jekyll automatically passes through any file at the root
+# that has no YAML front matter (index.html, style.css, CNAME, favicon.ico,
+# media/, LICENSE — none of which we touch). The `exclude:` list below covers
+# only files that should NOT appear in _site/ at all: project bookkeeping and
+# dev artifacts. Putting homepage files in exclude would DELETE them from the
+# built site — the wrong direction for cohabitation.
 exclude:
-  # Homepage assets — DO NOT REMOVE without curator review.
-  - index.html
-  - style.css
-  - CNAME
-  - favicon.ico
-  - media/
-  - LICENSE
-
   # Project bookkeeping that should not be served as web pages.
   - CLAUDE.md
   - docs/
