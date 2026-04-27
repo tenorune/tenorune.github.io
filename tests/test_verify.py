@@ -1,15 +1,10 @@
 """Tests for scripts/verify.py — one test per check (Section 9 of spec)."""
 from __future__ import annotations
 
-import sys
-from pathlib import Path
-
-# Make scripts/ importable.
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
-
+# sys.path is set up by conftest.py so verify and _helpers are importable.
 import verify  # noqa: E402
 
-from conftest import (  # noqa: E402
+from _helpers import (  # noqa: E402
     add_inventory_entry,
     add_story,
     add_theme,
