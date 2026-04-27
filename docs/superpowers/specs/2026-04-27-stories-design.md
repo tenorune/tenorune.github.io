@@ -38,7 +38,9 @@ Each story entry contains:
 
 ## Section 1 — Repository layout & cohabitation
 
-The project shares a repo with the existing `lightseed.net` homepage but must remain truly independent. Jekyll, once activated, processes the whole repo by default — so cohabitation is enforced by an explicit **`exclude:` list** in `_config.yml` covering every homepage asset (`index.html`, `style.css`, `CNAME`, `favicon.ico`, `media/`, `LICENSE`, `CLAUDE.md`, `docs/`, plus `.superpowers/` and other dev artifacts).
+The project shares a repo with the existing `lightseed.net` homepage but must remain truly independent. Cohabitation works because Jekyll passes through any root file with no YAML front matter automatically — and the homepage assets (`index.html`, `style.css`, `CNAME`, `favicon.ico`, `media/`) have no front matter, so they end up in `_site/` byte-identical to their source. The `_config.yml` `exclude:` list covers only files that should NOT appear in `_site/` at all: project bookkeeping (`CLAUDE.md`, `docs/`, `README.md`) and dev artifacts (`Gemfile`, `.env`, `.bundle/`, `.superpowers/`, `scripts/`, `tests/`, etc.).
+
+> **Errata note (2026-04-27 implementation):** The original draft of this section asserted "Jekyll, once activated, processes the whole repo by default — so cohabitation is enforced by an explicit `exclude:` list including the homepage files." That was factually wrong. Listing homepage files in `exclude:` *removes* them from `_site/` entirely (the deployed site would have no homepage at all). The corrected approach above is what's actually shipped. The `homepage_untouched` check in Section 9 + `scripts/build-check.sh` provides the cohabitation safety guarantee.
 
 Project-owned files use a recognizable namespace (`stories_*` includes, `assets/stories/`, `*saves*` scripts) so a future relocation to a subdomain is a clean copy of an obvious set.
 
@@ -792,7 +794,6 @@ A single script that runs all build-time invariants. Curator runs it before comm
 | Check | Failure mode | Why it matters |
 |---|---|---|
 | **Homepage untouched** | Compares `index.html`, `style.css`, `CNAME`, `favicon.ico`, `media/*` against their git HEAD versions. Fails if any byte differs. | Catches accidental edits to homepage files. |
-| **Jekyll exclude completeness** | Reads `_config.yml` `exclude:` list; verifies every homepage asset is named explicitly. | Catches a regression where someone removes a file from the exclude. |
 | **Theme references resolve** | Iterates every `_stories/*.md`; for each `themes:` entry, asserts the slug exists in `_data/themes.yml`. | Catches typos that would render no theme chip and no listing. |
 | **Theme stubs exist** | For every theme in `_data/themes.yml`, asserts `stories/themes/<slug>/index.md` and `stories/themes/<slug>/all.md` both exist. | Catches "I added a theme but forgot the stubs" — would 404 the theme URL. |
 | **Hero alt required** | Any story with `hero_image:` set must also have non-empty `hero_image_alt:`. | Accessibility + author-discipline. |
