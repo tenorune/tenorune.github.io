@@ -40,8 +40,18 @@ Scaffolding complete (PR 1):
 - `.github/workflows/verify.yml` — CI workflow that runs all of the above on every push and PR.
 - `Gemfile`, `Gemfile.lock`, `.env.example`, `.gitignore`.
 
-Still pending:
-- **PR 2: Ingestion.** Strategy is open under the no-local-execution constraint — GitHub Action with secrets, manual paste in chat, or hybrid. Decide before writing.
+PR 2 ingestion (also on this branch):
+- `scripts/fetch_saves.py` — probes BlueSky bookmark endpoints, falls through 401/404/403 to alternates, raises `NoBookmarkEndpointError` if all fail.
+- `tests/test_fetch_saves.py` — 11 unit tests with mocked HTTP via `respx`.
+- `.github/workflows/fetch.yml` — scheduled daily at 07:17 UTC + `workflow_dispatch`, auto-commits inventory if it changed.
+
+**Required curator action before PR 2 can run:** add two repo secrets via GitHub UI → Settings → Secrets and variables → Actions:
+- `BSKY_HANDLE` — your handle (e.g., `lightseed.net` or `you.bsky.social`)
+- `BSKY_APP_PASSWORD` — generated at https://bsky.app/settings/app-passwords
+
+Then trigger `fetch saves` workflow manually (Actions tab → fetch saves → Run workflow). If it goes green, inventory is flowing; PR 3 can proceed. If it fails with `NoBookmarkEndpointError`, app passwords don't have bookmark scope and we pivot to Option B (manual paste) or Option D (OAuth-via-chat) — write a follow-up plan in chat.
+
+Still pending after PR 2:
 - **PR 3: First bulk-draft.** Once inventory has data, Claude bulk-drafts stories from real saves, seeding `_data/themes.yml` with emergent themes.
 - **PR 4: First cull + polish + publish.** Curator decides what to keep (in chat); Claude flips `published: true`.
 - **PR 5: CSS iteration** once real content exposes spacing/typography needs.

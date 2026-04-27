@@ -695,6 +695,16 @@ git add _data/saves_inventory.json && git commit -m "data: refresh saves invento
 - Full-session OAuth fallback baked in from the start.
 - Manual JSON `--from-file` escape hatch as the last-resort path.
 
+> **Errata note (2026-04-27 morning, after PR 1 shipped):** The "no local execution at all" constraint was clarified by the curator after PR 1 landed. As a result, the "local-only script" approach above was **reversed**. PR 2 now ships:
+>
+> - `scripts/fetch_saves.py` — same Python script, but designed to run inside GitHub Actions rather than on the curator's laptop.
+> - `.github/workflows/fetch.yml` — scheduled daily fetch (07:17 UTC) + `workflow_dispatch`. Auto-commits `_data/saves_inventory.json` when the saves array changes.
+> - Secrets in repo Settings → Secrets and variables → Actions: `BSKY_HANDLE`, `BSKY_APP_PASSWORD`.
+>
+> The OAuth fallback path is **NOT** in PR 2 because OAuth requires browser interaction which a non-interactive Action cannot perform. If the app password lacks the bookmark scope (likely), the workflow goes red with a `NoBookmarkEndpointError` listing every probed endpoint and its status code; the curator then decides between Option B (manual paste in chat) or Option D (one-time OAuth in chat → persisted refresh token in repo Secrets) as a follow-up.
+>
+> The original Section 7 design (local script, OAuth fallback, manual `--from-file` hatch) is preserved here for historical context. The implementation in `scripts/fetch_saves.py` is closer to the original *plan*'s approach (`docs/stories-plan.md` before it was deleted) than to this spec's Section 7 as originally written.
+
 ---
 
 ## Section 8 — Authoring workflow
