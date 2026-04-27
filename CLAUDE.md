@@ -6,14 +6,23 @@ This repo hosts two unrelated things that share a GitHub Pages build:
 
 2. **Stories compilation** (PR 1 scaffolded, awaiting ingestion) — a Jekyll-based long-form archive of BlueSky saves. Authoritative spec: [`docs/superpowers/specs/2026-04-27-stories-design.md`](docs/superpowers/specs/2026-04-27-stories-design.md). **Read that file first** before starting any stories-related work.
 
+## Operating model
+
+The curator does not run dev or build commands locally. Everything happens through one of two channels:
+
+- **This chat session** (Claude on Web). All authoring, editing, image management, and one-off commands run by Claude (e.g., resolving a BlueSky URL, drafting a story, committing a change).
+- **GitHub Actions**. CI runs verify checks + Jekyll build on every push and PR (`.github/workflows/verify.yml`). PR 2's ingestion will also run in a GitHub Action.
+
+The curator only needs a browser. No `bundle install`, no `pip install`, no local Ruby or Python.
+
 ## Active development branch
 - `claude/review-bluesky-stories-plan-ItxMr` for the current scaffolding work.
 - Subsequent curator sessions (authoring stories, editing, adding images): `stories/YYYYMMDD-<slug-or-topic>` per PR.
 
 ## Key rules
 - The two projects are **isolated**: no shared CSS, no nav link, no front-matter changes to the homepage.
-- Jekyll passes through the homepage automatically because the homepage files have no YAML front matter; they are NOT in `_config.yml` `exclude:` (putting them there would delete them from `_site/`). The cohabitation guarantee is verified by `scripts/verify.py` (homepage byte-identity vs. git HEAD) and `scripts/build-check.sh` (homepage diff after build).
-- Story authoring is **hybrid**: Claude bulk-drafts stories as `published: false`, the curator culls and polishes, Claude does ad-hoc revisions on request. See the spec's authoring workflow section.
+- Jekyll passes through the homepage automatically because the homepage files have no YAML front matter; they are NOT in `_config.yml` `exclude:` (putting them there would delete them from `_site/`). The cohabitation guarantee is enforced by the `verify` workflow on every push.
+- Story authoring is **hybrid**: Claude bulk-drafts stories as `published: false`, the curator culls and polishes (in chat — Claude makes the edits), Claude does ad-hoc revisions on request.
 - Git history is the revision log for stories. Use `git revert` to roll back an edit.
 - Frontmatter contract, file layout, and image storage conventions are in the spec — follow exactly.
 
@@ -27,43 +36,27 @@ Scaffolding complete (PR 1):
 - `_stories/` collection (empty), `stories/index.md`, `stories/themes/index.md`.
 - `assets/stories/stories.css` (long-form serif aesthetic, system-font stack).
 - `scripts/verify.py` (10 invariant checks, 21 passing pytest tests in `tests/test_verify.py`).
-- `scripts/build-check.sh` (jekyll build + homepage byte-identity assertion).
+- `scripts/build-check.sh` (jekyll build + homepage byte-identity assertion; mainly useful when Claude runs it in-chat before pushing).
+- `.github/workflows/verify.yml` — CI workflow that runs all of the above on every push and PR.
 - `Gemfile`, `Gemfile.lock`, `.env.example`, `.gitignore`.
-- Verified: homepage byte-identical pre/post build; `/stories/`, `/stories/themes/`, `/feed.xml`, `/sitemap.xml` all render.
 
 Still pending:
-- **PR 2: Ingestion script.** `scripts/fetch_saves.py` (AT Protocol via XRPC). Requires curator's `.env` populated with `BSKY_HANDLE` and `BSKY_APP_PASSWORD`. App passwords likely cannot read bookmarks; the script will fall back to OAuth/session flow on 401/403.
+- **PR 2: Ingestion.** Strategy is open under the no-local-execution constraint — GitHub Action with secrets, manual paste in chat, or hybrid. Decide before writing.
 - **PR 3: First bulk-draft.** Once inventory has data, Claude bulk-drafts stories from real saves, seeding `_data/themes.yml` with emergent themes.
-- **PR 4: First cull + polish + publish.** Curator decides what to keep, polishes prose, flips `published: true`.
+- **PR 4: First cull + polish + publish.** Curator decides what to keep (in chat); Claude flips `published: true`.
 - **PR 5: CSS iteration** once real content exposes spacing/typography needs.
 
-## First-time local setup (curator)
+## How verification works (no local commands)
 
-```bash
-# Ruby gems
-bundle install
+The `verify` GitHub Actions workflow runs on every push and PR. It:
 
-# Python tooling for verify.py
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r scripts/requirements.txt
+1. Installs Ruby + Python deps.
+2. Runs `pytest tests/` — 21 unit tests for `verify.py`'s checks.
+3. Runs `python scripts/verify.py` — 10 invariants on the actual repo.
+4. Runs `bundle exec jekyll build`.
+5. Verifies the built site's homepage is byte-identical to the source.
 
-# Local credentials (for PR 2 fetch script)
-cp .env.example .env
-# edit .env, fill in BSKY_HANDLE and BSKY_APP_PASSWORD
-```
-
-Then:
-```bash
-# Verify invariants
-python scripts/verify.py
-
-# Build with homepage byte-identity check
-bash scripts/build-check.sh
-
-# Local preview
-bundle exec jekyll serve
-```
+If any step fails, the workflow goes red and the PR cannot merge cleanly. The curator never has to run anything to know if a change is broken — GitHub tells them.
 
 ## Things to read before acting on this project
 1. This file.
