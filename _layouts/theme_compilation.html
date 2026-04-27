@@ -1,0 +1,49 @@
+---
+layout: default
+---
+{% assign theme = site.data.themes | where: "slug", page.theme_slug | first %}
+{% assign published = site.stories | where: "published", true | sort: "date" %}
+{% assign matching = "" | split: "" %}
+{% for story in published %}
+  {% if story.themes contains page.theme_slug %}
+    {% assign matching = matching | push: story %}
+  {% endif %}
+{% endfor %}
+
+<h1 class="page-title">Theme: {{ theme.label }} — full compilation</h1>
+<p class="theme-description">{{ theme.description }}</p>
+<p><a class="view-list" href="/stories/themes/{{ theme.slug }}/">View as list →</a></p>
+
+{% if matching.size == 0 %}
+<p class="empty">No published stories in this theme yet.</p>
+{% else %}
+{% for story in matching %}
+<hr class="strong-rule">
+
+<article class="compiled-story">
+  <h2 class="story-title">{{ story.title }}</h2>
+
+  <p class="meta meta-line">
+    {{ story.date | date: "%b %-d, %Y" }} ·
+    {{ story.source_publication }}{% if story.source_author %}, {{ story.source_author }}{% endif %}
+  </p>
+
+  {% if story.hero_image %}
+  <figure class="hero">
+    <img src="{{ story.hero_image }}" alt="{{ story.hero_image_alt }}">
+    {% if story.hero_image_credit %}
+    <figcaption class="meta">{{ story.hero_image_credit }}</figcaption>
+    {% endif %}
+  </figure>
+  {% endif %}
+
+  <p class="summary">{{ story.summary }}</p>
+
+  <div class="body">
+    {{ story.content }}
+  </div>
+
+  <p class="source-link"><a href="{{ story.source_url }}">Read original →</a></p>
+</article>
+{% endfor %}
+{% endif %}

@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<h1 class="page-title">Themes</h1>
+
+{% assign themes = site.data.themes | sort: "label" %}
+{% assign published = site.stories | where: "published", true %}
+
+{% if themes.size == 0 %}
+<p class="empty">No themes yet.</p>
+{% else %}
+<ul class="themes-list">
+  {% for theme in themes %}
+    {% assign count = 0 %}
+    {% for story in published %}
+      {% if story.themes contains theme.slug %}{% assign count = count | plus: 1 %}{% endif %}
+    {% endfor %}
+    <li class="theme-row">
+      <a class="theme-label" href="/stories/themes/{{ theme.slug }}/">{{ theme.label }}</a>
+      <span class="theme-count meta">{{ count }} {% if count == 1 %}story{% else %}stories{% endif %}</span>
+      <p class="theme-description">{{ theme.description }}</p>
+    </li>
+  {% endfor %}
+</ul>
+{% endif %}
