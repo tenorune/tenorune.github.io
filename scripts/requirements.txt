@@ -1,0 +1,8 @@
+# Used by scripts/verify.py
+PyYAML>=6.0
+pytest>=8.0
+
+# Used by scripts/fetch_saves.py (added in PR 2; uncomment when introduced)
+# httpx>=0.27
+# python-dateutil>=2.9
+# python-dotenv>=1.0
