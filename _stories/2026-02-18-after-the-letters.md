@@ -10,7 +10,7 @@ source_publication: "BlueSky"
 source_author: "Nathan Kalman-Lamb"
 bluesky_uri: "at://did:plc:tgw3d4hvw3x5ijrxax7lg26u/app.bsky.feed.post/3mf3cjpixvk25"
 bluesky_saved_at: 2026-02-18T13:32:25.753Z
-published: false
+published: true
 ---
 
 A seven-year-old child from Venezuela, Mia Valentina Paz Faria, was held in the Dilley, Texas family detention camp for seventy days. In a letter to the outside, she wrote: "I don't want to be in this place I want to go to my school." Hers was one of several letters that reached ProPublica reporters and was published in the resulting story.
