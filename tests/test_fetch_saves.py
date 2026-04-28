@@ -275,3 +275,63 @@ def test_extract_handles_missing_embed():
     entry = fetch_saves.normalise_record(raw)
     assert entry["uri"] == "at://author/post2"
     assert entry["embed"] is None
+
+
+def test_normalise_record_hydrated_getbookmarks_shape():
+    """The hydrated shape returned by app.bsky.bookmark.getBookmarks (used
+    by the bsky.app web client) has a different structure than the raw
+    repo records — fields live under `item` and `subject`."""
+    raw = {
+        "createdAt": "2026-04-22T19:37:34.460Z",
+        "subject": {
+            "uri": "at://did:plc:author/app.bsky.feed.post/abc",
+            "cid": "bafy...",
+        },
+        "item": {
+            "uri": "at://did:plc:author/app.bsky.feed.post/abc",
+            "author": {
+                "did": "did:plc:author",
+                "handle": "author.bsky.social",
+                "displayName": "Author Name",
+            },
+            "record": {
+                "$type": "app.bsky.feed.post",
+                "createdAt": "2026-04-22T17:27:55.496Z",
+                "text": "post body text here",
+            },
+            "indexedAt": "2026-04-22T17:27:55.752Z",
+        },
+    }
+    entry = fetch_saves.normalise_record(raw)
+    assert entry["uri"] == "at://did:plc:author/app.bsky.feed.post/abc"
+    assert entry["saved_at"] == "2026-04-22T19:37:34.460Z"
+    assert entry["post_text"] == "post body text here"
+    assert entry["author"]["handle"] == "author.bsky.social"
+    assert entry["author"]["did"] == "did:plc:author"
+    assert entry["embed"] is None
+
+
+def test_normalise_record_hydrated_getbookmarks_with_external_embed():
+    raw = {
+        "createdAt": "2026-04-22T19:37:34.460Z",
+        "subject": {"uri": "at://x/y"},
+        "item": {
+            "uri": "at://x/y",
+            "author": {"did": "did:plc:a", "handle": "a.bsky.social", "displayName": "A"},
+            "record": {
+                "text": "with embed",
+                "embed": {
+                    "$type": "app.bsky.embed.external",
+                    "external": {
+                        "uri": "https://example.org/article",
+                        "title": "Article title",
+                        "description": "Article description",
+                    },
+                },
+            },
+        },
+    }
+    entry = fetch_saves.normalise_record(raw)
+    assert entry["embed"]["url"] == "https://example.org/article"
+    assert entry["embed"]["title"] == "Article title"
+    assert entry["embed"]["type"] == "external"

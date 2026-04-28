@@ -53,9 +53,20 @@ else:
 EndpointParams = Callable[[str | None, str], dict]
 
 BOOKMARK_ENDPOINTS: list[tuple[str, str, EndpointParams]] = [
-    # AppView: hydrated bookmarks, but only works if the AppView trusts the
-    # accessJwt issued by the user's PDS. For users on bsky.social this works
-    # natively; for third-party PDS users, behaviour depends on the AppView.
+    # PDS-direct: the bsky.app web client uses this for accounts hosted on
+    # third-party PDSes (the PDS itself implements getBookmarks). For
+    # bsky.social-hosted accounts, PDS == AppView so this is equivalent to
+    # the next entry. Tried first because it works for both cases without
+    # cross-server auth.
+    (
+        "pds",
+        "app.bsky.bookmark.getBookmarks",
+        lambda cursor, did: {"limit": 100, **({"cursor": cursor} if cursor else {})},
+    ),
+    # AppView fallbacks: only useful if the user's PDS doesn't implement
+    # getBookmarks itself. Cross-server auth is unsupported by BlueSky for
+    # third-party PDS users (see spec Section 7 Errata round 2), so these
+    # mostly only help bsky.social-hosted users on path-2/path-3.
     (
         "appview",
         "app.bsky.bookmark.getBookmarks",
@@ -66,9 +77,10 @@ BOOKMARK_ENDPOINTS: list[tuple[str, str, EndpointParams]] = [
         "app.bsky.feed.getActorBookmarks",
         lambda cursor, did: {"actor": did, "limit": 100, **({"cursor": cursor} if cursor else {})},
     ),
-    # PDS: raw bookmark records from the user's own repo. Always available
-    # if bookmarks live in the standard collection. Returns URI references
-    # (no hydrated post content).
+    # Last resort: list raw bookmark records via the PDS repo API. Returns
+    # URI references only (no hydrated post data). For PDSes that store
+    # bookmarks as records in the user's repo, which BlueSky's bookmark
+    # implementation does NOT do (it uses AppView/PDS-side stash storage).
     (
         "pds",
         "com.atproto.repo.listRecords",
@@ -304,27 +316,49 @@ def probe_bookmark_endpoints(session: dict) -> tuple[str, list[dict]]:
 # ----- normalisation -----
 
 def normalise_record(raw: dict) -> dict:
-    """Map a raw AT-protocol record to the inventory schema (spec Section 2).
+    """Map a raw bookmark record to the inventory schema (spec Section 2).
 
-    The shape varies between endpoints, but at minimum we need:
-    - uri: the saved post's URI
-    - saved_at: when the user saved it
-    - post_text: the post's text content
-    - embed: {type, url, title, description} if external embed, else None
-    - author: {handle, display_name, did}
+    Two response shapes are supported:
+
+    1. `app.bsky.bookmark.getBookmarks` (hydrated bookmark view): each entry
+       has `subject.uri` (the post URI), `createdAt` (the bookmark's
+       saved-at), and `item.record.text` / `item.author` / `item.record.embed`
+       for the hydrated post content.
+
+    2. `com.atproto.repo.listRecords` for the bookmark collection (raw
+       records): each entry has `uri` (the bookmark record's URI),
+       `value.subject.uri` (the post URI), `value.createdAt` (the bookmark's
+       saved-at). No hydrated post content — text/author/embed left empty.
+
+    Inventory entry shape:
+      - uri: the saved post's URI
+      - saved_at: when the user saved it
+      - post_text: post's text content (empty if not hydrated)
+      - embed: {type, url, title, description} for external embeds, else None
+      - author: {handle, display_name, did}
     """
-    saved_at = raw.get("indexedAt") or raw.get("createdAt") or ""
-
-    # Records may wrap the bookmarked post in `value.subject` or `subject` directly.
-    value = raw.get("value", raw)
-    subject = value.get("subject", value)
-    post_uri = subject.get("uri") or raw.get("uri", "")
-    post_value = subject.get("value", subject)
-
-    post_text = post_value.get("text", "")
+    if "item" in raw and isinstance(raw.get("item"), dict):
+        # Hydrated `getBookmarks` shape.
+        item = raw["item"]
+        subject = raw.get("subject", {})
+        post_uri = item.get("uri") or subject.get("uri", "")
+        saved_at = raw.get("createdAt") or item.get("indexedAt", "")
+        record = item.get("record", {})
+        post_text = record.get("text", "")
+        embed_raw = record.get("embed") or {}
+        author_raw = item.get("author", {})
+    else:
+        # Raw `listRecords` shape.
+        value = raw.get("value", raw)
+        subject = value.get("subject", value)
+        post_uri = subject.get("uri") or raw.get("uri", "")
+        saved_at = value.get("createdAt") or raw.get("indexedAt", "")
+        post_value = subject.get("value", subject)
+        post_text = post_value.get("text", "")
+        embed_raw = post_value.get("embed") or {}
+        author_raw = subject.get("author", {})
 
     embed = None
-    embed_raw = post_value.get("embed") or {}
     if embed_raw.get("$type") == "app.bsky.embed.external":
         ext = embed_raw.get("external", {})
         embed = {
@@ -334,7 +368,6 @@ def normalise_record(raw: dict) -> dict:
             "description": ext.get("description", ""),
         }
 
-    author_raw = subject.get("author", {})
     author = {
         "handle": author_raw.get("handle", ""),
         "display_name": author_raw.get("displayName", ""),
