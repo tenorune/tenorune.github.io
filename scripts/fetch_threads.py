@@ -27,6 +27,13 @@ from pathlib import Path
 
 import httpx
 
+from fetch_saves import _extract_media
+
+# Bump this when the thread_replies schema changes; entries whose stored
+# thread_schema_version is below the current value are re-fetched on the
+# next run.
+THREAD_SCHEMA_VERSION = 2
+
 APPVIEW = "https://public.api.bsky.app"
 USER_AGENT = (
     "lightseed-stories/0.1 (+https://lightseed.net/stories/; "
@@ -60,7 +67,8 @@ def fetch_thread(uri: str) -> tuple[dict | None, str | None]:
 def collect_same_author_replies(thread: dict, author_did: str) -> list[dict]:
     """Walk the thread tree depth-first, returning posts whose author DID
     matches `author_did`. We recurse into all nodes (not just same-author
-    ones) so a self-thread interrupted by other replies is still captured."""
+    ones) so a self-thread interrupted by other replies is still captured.
+    Each reply also has its embedded media extracted."""
     out: list[dict] = []
     seen_uris: set[str] = set()
 
@@ -73,11 +81,13 @@ def collect_same_author_replies(thread: dict, author_did: str) -> list[dict]:
             uri = post.get("uri", "")
             if author.get("did") == author_did and uri and uri not in seen_uris:
                 record = post.get("record", {}) or {}
+                embed_view = post.get("embed") or {}
                 out.append(
                     {
                         "uri": uri,
                         "indexedAt": post.get("indexedAt", ""),
                         "text": record.get("text", ""),
+                        "images": _extract_media(embed_view),
                     }
                 )
                 seen_uris.add(uri)
@@ -94,9 +104,18 @@ def main() -> int:
 
     pending = []
     for s in saves:
-        if "thread_replies" in s:
+        # Re-fetch if the entry was hydrated under an older schema version
+        # (initial v1 schema captured only {uri, indexedAt, text} per reply,
+        # without images).
+        if (
+            "thread_replies" in s
+            and s.get("thread_schema_version") == THREAD_SCHEMA_VERSION
+        ):
             continue
         if s.get("thread_fetch_error"):
+            # Honour stored fetch errors (curator can clear the error field
+            # to retry). Bumping the schema version does NOT auto-retry
+            # failed entries — they remain in the failure state.
             continue
         pending.append(s)
 
@@ -121,6 +140,7 @@ def main() -> int:
         if thread is not None:
             replies = collect_same_author_replies(thread, author_did)
             s["thread_replies"] = replies
+            s["thread_schema_version"] = THREAD_SCHEMA_VERSION
             s.pop("thread_fetch_error", None)
             success += 1
             if replies:

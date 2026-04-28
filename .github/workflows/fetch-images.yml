@@ -1,0 +1,35 @@
+name: fetch images
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  hydrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python deps
+        run: pip install -r scripts/requirements.txt
+
+      - name: Localize CDN images into assets/stories/
+        run: python scripts/fetch_images.py
+
+      - name: Commit if changes
+        run: |
+          git config user.name "fetch-images[bot]"
+          git config user.email "fetch-images@users.noreply.github.com"
+          if git diff --quiet && git diff --cached --quiet && [ -z "$(git status --porcelain)" ]; then
+            echo "no changes"
+            exit 0
+          fi
+          git add _stories/ assets/stories/
+          git commit -m "data: localize CDN images into assets/stories/"
+          git push
