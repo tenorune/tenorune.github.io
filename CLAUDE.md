@@ -57,11 +57,10 @@ See spec Section 7's "Errata round 2" for the full debugging story.
 
 **Active ingestion path:**
 
-- **One-shot bulk import** of existing saves via browser DevTools inspection of bsky.app (TBD; planned next).
-- **Ongoing incremental adds** via manual paste: the curator pastes a BlueSky URL or AT-URI into the chat session, Claude resolves the post via public APIs, drafts the story, commits.
-
-Still pending:
-- **One-shot bulk import** workflow definition (Section 8a in the spec, TBD).
+- **Save inventory:** `fetch saves` workflow (manual or scheduled) pulls bookmarks via the AT Protocol bookmark endpoint into `_data/saves_inventory.json`. The PDS-direct path (`pds:app.bsky.bookmark.getBookmarks`) succeeds for the curator's third-party-PDS account. Currently 675 saves committed.
+- **Article hydration:** `fetch articles` workflow (manual) iterates inventory entries with external article links, downloads each article via trafilatura, and writes `article_text` back into the entry. Idempotent. Lets bulk-drafting in chat read article content directly from inventory.
+- **Bulk drafting:** Claude reads inventory + article_text in chat, drafts batches of stories as `published: false`, commits with theme stubs and saves_state updates. Curator culls and polishes later.
+- **Ongoing incremental adds:** the curator can also paste a BlueSky URL or AT-URI directly into chat for one-off additions when needed.
 - **PR 3: First bulk-draft.** Once inventory has data (from the bulk import), Claude bulk-drafts stories from real saves, seeding `_data/themes.yml` with emergent themes.
 - **PR 4: First cull + polish + publish.** Curator decides what to keep (in chat); Claude flips `published: true`.
 - **PR 5: CSS iteration** once real content exposes spacing/typography needs.

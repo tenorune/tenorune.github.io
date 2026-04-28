@@ -10,3 +10,6 @@ respx>=0.21       # HTTP mocking for tests
 # OAuth (DPoP-signed AT Protocol OAuth 2.1)
 pyjwt[crypto]>=2.8
 cryptography>=42
+
+# Used by scripts/fetch_articles.py — extracts main article text from HTML.
+trafilatura>=1.10

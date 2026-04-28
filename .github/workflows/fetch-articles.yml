@@ -1,0 +1,35 @@
+name: fetch articles
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  hydrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python deps
+        run: pip install -r scripts/requirements.txt
+
+      - name: Hydrate inventory with article text
+        run: python scripts/fetch_articles.py
+
+      - name: Commit if inventory changed
+        run: |
+          git config user.name "fetch-articles[bot]"
+          git config user.email "fetch-articles@users.noreply.github.com"
+          if git diff --quiet -- _data/saves_inventory.json; then
+            echo "no changes to inventory"
+            exit 0
+          fi
+          git add _data/saves_inventory.json
+          git commit -m "data: hydrate articles into inventory"
+          git push
