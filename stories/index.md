@@ -1,5 +1,5 @@
 ---
 layout: stories_index
-title: Stories
+title: Stories of 47
 permalink: /stories/
 ---

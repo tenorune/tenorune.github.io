@@ -1,4 +1,8 @@
 <header class="stories-header">
-  <a class="wordmark" href="/stories/">STORIES</a>
+  {% unless page.url == '/stories/' %}
+  <a class="wordmark" href="/stories/">STORIES OF 47</a>
+  {% endunless %}
+  {% unless page.url == '/stories/themes/' %}
   <nav><a href="/stories/themes/">themes</a></nav>
+  {% endunless %}
 </header>
