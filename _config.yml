@@ -1,0 +1,69 @@
+# Site
+title: lightseed stories
+description: Long-form synopses of saved BlueSky posts.
+url: https://lightseed.net
+baseurl: ""
+
+# Build
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# No theme — we own the layouts.
+theme: ~
+
+# Plugins (only those on the GitHub Pages whitelist).
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Stories collection.
+collections:
+  stories:
+    output: true
+    permalink: /stories/:slug/
+    render_with_liquid: false
+
+# Defaults: ensure stories use the right layout and that drafts (published: false)
+# are not rendered. Jekyll respects `published: false` natively.
+defaults:
+  - scope:
+      path: ""
+      type: stories
+    values:
+      layout: story
+
+# Cohabitation note: Jekyll automatically passes through any file at the root
+# that has no YAML front matter (index.html, style.css, CNAME, favicon.ico,
+# media/, LICENSE — none of which we touch). The `exclude:` list below covers
+# only files that should NOT appear in _site/ at all: project bookkeeping and
+# dev artifacts. Putting homepage files in exclude would DELETE them from the
+# built site — the wrong direction for cohabitation.
+exclude:
+  # Project bookkeeping that should not be served as web pages.
+  - CLAUDE.md
+  - docs/
+  - README.md
+
+  # Build / dev artifacts.
+  - Gemfile
+  - Gemfile.lock
+  - .env
+  - .env.example
+  - .gitignore
+  - .bundle/
+  - vendor/
+  - .jekyll-cache/
+  - .jekyll-metadata
+  - .superpowers/
+  - .venv/
+
+  # Scripts and tests are not site content.
+  - scripts/
+  - tests/
+
+# Feed and sitemap config.
+feed:
+  path: feed.xml

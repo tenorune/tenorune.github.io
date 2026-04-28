@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<article class="story">
+  <h1 class="story-title">{{ page.title }}</h1>
+
+  {% if page.hero_image %}
+  <figure class="hero">
+    <img src="{{ page.hero_image }}" alt="{{ page.hero_image_alt }}">
+    {% if page.hero_image_credit %}
+    <figcaption class="meta">{{ page.hero_image_credit }}</figcaption>
+    {% endif %}
+  </figure>
+  {% endif %}
+
+  <p class="summary">{{ page.summary }}</p>
+
+  <p class="themes">
+    {% for slug in page.themes %}
+      {% assign theme = site.data.themes | where: "slug", slug | first %}
+      {% if theme %}
+        <a class="chip" href="/stories/themes/{{ theme.slug }}/">#{{ theme.label }}</a>
+      {% endif %}
+    {% endfor %}
+  </p>
+
+  <p class="meta meta-line">
+    Saved {{ page.bluesky_saved_at | date: "%b %-d, %Y" }} ·
+    Source: {{ page.source_publication }}{% if page.source_author %}, {{ page.source_author }}{% endif %}{% if page.source_published_at %} ({{ page.source_published_at | date: "%b %-d, %Y" }}){% endif %}
+  </p>
+
+  <hr class="rule">
+
+  <div class="body">
+    {{ content }}
+  </div>
+
+  <hr class="rule">
+
+  <p class="source-link">
+    <a href="{{ page.source_url }}">Read original →</a>
+    <span class="meta">{{ page.source_url | replace: "https://", "" | replace: "http://", "" | split: "/" | first }}</span>
+  </p>
+</article>

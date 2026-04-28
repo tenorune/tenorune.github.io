@@ -1,0 +1,23 @@
+.superpowers/
+
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local credentials
+.env
+.bsky-session.json
+.oauth-init-state.json
+
+# Editor / OS
+.DS_Store
+*.swp

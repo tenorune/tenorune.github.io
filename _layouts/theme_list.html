@@ -1,0 +1,34 @@
+---
+layout: default
+---
+{% assign theme = site.data.themes | where: "slug", page.theme_slug | first %}
+{% assign published = site.stories | where: "published", true | sort: "date" | reverse %}
+{% assign matching = "" | split: "" %}
+{% for story in published %}
+  {% if story.themes contains page.theme_slug %}
+    {% assign matching = matching | push: story %}
+  {% endif %}
+{% endfor %}
+
+<h1 class="page-title">Theme: {{ theme.label }}</h1>
+<p class="theme-description">{{ theme.description }}</p>
+<p><a class="read-all" href="/stories/themes/{{ theme.slug }}/all/">Read all stories in this theme →</a></p>
+
+<hr class="rule">
+
+{% if matching.size == 0 %}
+<p class="empty">No published stories in this theme yet.</p>
+{% else %}
+{% assign current_year = "" %}
+<ul class="stories-list">
+{% for story in matching %}
+  {% assign year = story.date | date: "%Y" %}
+  {% if year != current_year %}
+    {% unless forloop.first %}</ul><h2 class="year">{{ year }}</h2><ul class="stories-list">{% endunless %}
+    {% if forloop.first %}<h2 class="year">{{ year }}</h2>{% endif %}
+    {% assign current_year = year %}
+  {% endif %}
+  {% include story_card.html story=story %}
+{% endfor %}
+</ul>
+{% endif %}

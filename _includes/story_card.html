@@ -1,0 +1,8 @@
+<li class="card">
+  <span class="card-date meta">{{ story.date | date: "%b %-d" }}</span>
+  <a class="card-title" href="{{ story.url }}">{{ story.title }}</a>
+  <p class="card-summary">{{ story.summary }}</p>
+  <p class="card-themes meta">
+    {% for slug in story.themes %}{{ slug }}{% unless forloop.last %} · {% endunless %}{% endfor %}
+  </p>
+</li>

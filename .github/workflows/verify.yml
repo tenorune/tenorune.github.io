@@ -1,0 +1,48 @@
+name: verify
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # full history so verify.py's HEAD comparisons work
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python deps
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run pytest
+        run: pytest tests/ -v
+
+      - name: Run verify.py
+        run: python scripts/verify.py
+
+      - name: Build site with Jekyll
+        run: bundle exec jekyll build
+
+      - name: Verify homepage byte-identity
+        run: |
+          diff -q index.html _site/index.html
+          diff -q style.css _site/style.css
+          diff -q CNAME _site/CNAME
+          diff -q favicon.ico _site/favicon.ico
+          diff -rq media/ _site/media/
+          echo "homepage byte-identical: OK"

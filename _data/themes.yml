@@ -1,0 +1,6 @@
+# Emergent themes will accumulate here as stories are drafted.
+# Schema (per Section 4 of spec):
+#   - slug: kebab-case-id
+#     label: human-readable label
+#     description: one-sentence emergent description
+[]

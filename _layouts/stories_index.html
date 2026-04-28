@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<h1 class="page-title">Stories</h1>
+<p class="intro">Compiled from saved BlueSky posts.</p>
+
+{% assign published = site.stories | where: "published", true | sort: "date" | reverse %}
+{% assign current_year = "" %}
+
+<ul class="stories-list">
+{% for story in published %}
+  {% assign year = story.date | date: "%Y" %}
+  {% if year != current_year %}
+    {% unless forloop.first %}</ul><h2 class="year">{{ year }}</h2><ul class="stories-list">{% endunless %}
+    {% if forloop.first %}<h2 class="year">{{ year }}</h2>{% endif %}
+    {% assign current_year = year %}
+  {% endif %}
+  {% include story_card.html story=story %}
+{% endfor %}
+</ul>
+
+{% if published.size == 0 %}
+<p class="empty">No published stories yet.</p>
+{% endif %}

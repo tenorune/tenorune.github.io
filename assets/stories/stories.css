@@ -1,0 +1,141 @@
+:root {
+  --serif: "Iowan Old Style", "Apple Garamond", Baskerville,
+           "Times New Roman", "Droid Serif", Times, serif;
+  --sans:  -apple-system, BlinkMacSystemFont, "Segoe UI",
+           Roboto, "Helvetica Neue", sans-serif;
+  --measure: 38rem;
+  --leading: 1.65;
+  --ink: #1a1a1a;
+  --paper: #fafaf8;
+  --muted: #6b6b6b;
+  --rule: #d8d8d4;
+  --accent: #6b3a1a;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  line-height: var(--leading);
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+a { color: var(--accent); }
+a:hover { text-decoration-thickness: 2px; }
+
+/* Sans for UI / metadata */
+.meta, nav, footer, .label, .stories-header, .stories-footer,
+.themes, .card-themes, .year, .empty, .intro, .read-all, .view-list {
+  font-family: var(--sans);
+}
+
+/* Header */
+.stories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem 0.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.stories-header .wordmark {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+.stories-header nav a {
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+/* Footer */
+.stories-footer {
+  max-width: var(--measure);
+  margin: 4rem auto 2rem;
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.stories-footer a { color: var(--muted); }
+
+/* Page titles */
+.page-title {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 1rem 0 0.5rem;
+}
+.intro { color: var(--muted); margin: 0 0 2rem; font-style: italic; }
+.empty { color: var(--muted); font-style: italic; }
+
+/* Year heading */
+.year {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Stories list */
+.stories-list { list-style: none; padding: 0; margin: 0; }
+.card { margin: 1.25rem 0; }
+.card-date { font-size: 0.85rem; color: var(--muted); margin-right: 0.5rem; }
+.card-title { font-family: var(--serif); font-size: 1.15rem; text-decoration: none; color: var(--ink); }
+.card-summary { font-style: italic; margin: 0.25rem 0; }
+.card-themes { font-size: 0.85rem; color: var(--muted); }
+
+/* Themes index */
+.themes-list { list-style: none; padding: 0; margin: 0; }
+.theme-row { margin: 1.5rem 0; }
+.theme-label { font-family: var(--serif); font-size: 1.15rem; text-decoration: none; color: var(--ink); }
+.theme-count { font-size: 0.85rem; color: var(--muted); margin-left: 0.5rem; }
+.theme-description { font-style: italic; color: var(--muted); margin: 0.25rem 0 0; }
+
+/* Single story */
+.story-title { font-size: 1.75rem; line-height: 1.25; margin: 1rem 0 1rem; }
+.summary { font-style: italic; font-size: 1.1rem; color: var(--ink); margin: 0.5rem 0 0.75rem; }
+.themes .chip {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+.meta-line { font-size: 0.85rem; color: var(--muted); margin: 0.25rem 0 1rem; }
+
+.body p { margin: 1em 0; }
+.body img { display: block; max-width: 100%; height: auto; margin: 1.5rem 0; }
+
+.hero { margin: 1rem 0 0.5rem; }
+.hero img { width: 100%; height: auto; display: block; }
+.hero figcaption { font-size: 0.8rem; color: var(--muted); margin-top: 0.25rem; }
+
+.rule { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+.strong-rule { border: 0; border-top: 3px double var(--rule); margin: 3rem 0; }
+
+.source-link { font-family: var(--sans); margin-top: 1.5rem; }
+.source-link a { font-weight: 600; }
+
+/* Theme list extras */
+.read-all, .view-list { display: inline-block; margin: 1rem 0; }
+
+/* Compilation view */
+.compiled-story { margin-top: 2rem; }
+.compiled-story .story-title { font-size: 1.5rem; }
