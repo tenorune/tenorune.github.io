@@ -7,12 +7,47 @@
       "status": "drafted",
       "story_slug": "thirteen-thousand-sent-anywhere"
     },
+    "at://did:plc:4q4ziw4qk2hxxaxfu7jweuey/app.bsky.feed.post/3mfkourjtw22e": {
+      "first_processed_at": "2026-04-28T07:00:00Z",
+      "last_action_at": "2026-04-28T07:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "ice-trained-to-disregard"
+    },
+    "at://did:plc:6h7b2i6ttw3l4t7pvbvxdith/app.bsky.feed.post/3mf3eii272s2u": {
+      "first_processed_at": "2026-04-28T07:00:00Z",
+      "last_action_at": "2026-04-28T07:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "eighteen-days-for-being-latino"
+    },
+    "at://did:plc:apssfu5zqqdhdxsutocuwgd4/app.bsky.feed.post/3mg3fxsb6u22m": {
+      "first_processed_at": "2026-04-28T07:00:00Z",
+      "last_action_at": "2026-04-28T07:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "war-crimes-file"
+    },
     "at://did:plc:dgkyncbh6kcchafzi55rqltt/app.bsky.feed.post/3mhm53r3ihk2w": {
       "first_processed_at": "2026-04-28T06:00:00Z",
       "last_action_at": "2026-04-28T06:00:00Z",
       "notes": null,
       "status": "drafted",
       "story_slug": "diligence-reserved-for-cruelty"
+    },
+    "at://did:plc:eclio37ymobqex2ncko63h4r/app.bsky.feed.post/3mfm6ixrxqd24": {
+      "first_processed_at": "2026-04-28T07:00:00Z",
+      "last_action_at": "2026-04-28T07:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "only-other-witness"
+    },
+    "at://did:plc:gvda6fem6r7selm4gzjjww4a/app.bsky.feed.post/3mgjcothtf227": {
+      "first_processed_at": "2026-04-28T07:00:00Z",
+      "last_action_at": "2026-04-28T07:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "fire-in-tehran-trees"
     },
     "at://did:plc:gwh73yelgaqpabfsvatntbnw/app.bsky.feed.post/3miaucvfk422m": {
       "first_processed_at": "2026-04-28T06:00:00Z",
@@ -21,12 +56,47 @@
       "status": "drafted",
       "story_slug": "untested-missile-iran-war"
     },
+    "at://did:plc:j5fbnzh57rn7xz65yjc36gxb/app.bsky.feed.post/3mgfjpi5b4c2p": {
+      "first_processed_at": "2026-04-28T07:00:00Z",
+      "last_action_at": "2026-04-28T07:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "white-house-bombing-mashup"
+    },
+    "at://did:plc:o4h5r2albulagzxvhp634tof/app.bsky.feed.post/3mf56bjgfe22x": {
+      "first_processed_at": "2026-04-28T07:00:00Z",
+      "last_action_at": "2026-04-28T07:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "honduran-pardon-suite"
+    },
     "at://did:plc:oqexhdqbizq24v6ikjhhig2h/app.bsky.feed.post/3mgxbrnhqc22e": {
       "first_processed_at": "2026-04-28T06:00:00Z",
       "last_action_at": "2026-04-28T06:00:00Z",
       "notes": null,
       "status": "drafted",
       "story_slug": "no-quarter-war-crime"
+    },
+    "at://did:plc:qyipmepnqowrzrk4abnfpwow/app.bsky.feed.post/3mfpn2y5kk223": {
+      "first_processed_at": "2026-04-28T07:00:00Z",
+      "last_action_at": "2026-04-28T07:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "rahman-sotu-arrest"
+    },
+    "at://did:plc:tgw3d4hvw3x5ijrxax7lg26u/app.bsky.feed.post/3mf3cjpixvk25": {
+      "first_processed_at": "2026-04-28T07:00:00Z",
+      "last_action_at": "2026-04-28T07:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "after-the-letters"
+    },
+    "at://did:plc:u6ajzyiqzkzbppp2x2y7fpfu/app.bsky.feed.post/3mfacwpwznk2w": {
+      "first_processed_at": "2026-04-28T07:00:00Z",
+      "last_action_at": "2026-04-28T07:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "deaths-by-design"
     },
     "at://did:plc:v3rvpshtirgoxscnmcjr7q2c/app.bsky.feed.post/3mk3zh4xvg22p": {
       "first_processed_at": "2026-04-28T06:00:00Z",
@@ -36,5 +106,5 @@
       "story_slug": "ice-detention-scale-first-year"
     }
   },
-  "updated_at": "2026-04-28T06:00:00Z"
+  "updated_at": "2026-04-28T07:00:00Z"
 }
