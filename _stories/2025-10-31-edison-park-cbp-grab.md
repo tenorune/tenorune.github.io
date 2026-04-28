@@ -15,7 +15,7 @@ published: false
 
 On an October 2025 afternoon, Border Patrol agents removed people working in the front yard of a home on Oconto Avenue in Edison Park — the most conservative neighborhood in Chicago, by the local accounting — and drove them in convoy to a parking lot behind an office building in Niles, where they were transferred to a prisoner van. A CBP helicopter circled the convoy. The chief was on scene but stayed back. The neighborhood gathered as the operation continued.
 
-![Photograph from the Edison Park scene: federal agents in tactical gear stand near a residential street, with neighbors visible in the background.](https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:jkuhm4lmg6t25piybct5izji/bafkreifwr2n2zvymdldoiw5j27s5mugkkfo5pyzfm7p66oubcokyccvym4)
+![Photograph from the Edison Park scene: federal agents in tactical gear stand near a residential street, with neighbors visible in the background.](/assets/stories/edison-park-cbp-grab/img-e4a9b58a11aba83d.jpg)
 
 "You're in the most conservative neighborhood in the city and nobody wants you here," a neighbor told the agents. Whistles followed the convoy as it moved. Filming continued from sidewalks and porches. CBP, in turn, made a show of pointing cameras at protesters and at press IDs.
 

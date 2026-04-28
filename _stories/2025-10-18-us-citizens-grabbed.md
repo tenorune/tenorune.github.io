@@ -15,7 +15,7 @@ published: false
 
 A ProPublica investigation by reporter Nicole Foy tracked, by sourcing from social media, court records, and local press in Spanish and English, more than fifty cases of US citizens detained by federal immigration agents on charges that subsequently collapsed in court or were never filed at all. The pattern crossed demographics: senior citizens tackled, pregnant women handcuffed, children detained, a veteran pulled from his car on the way to work.
 
-![Stat graphic: white text on a black background reading "50+ — Immigration agents have the authority to detain whom they reasonably suspect are in the country" — followed by additional text not fully visible in the preview.](https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ix26ab37ugxyhgpunrmzdh5g/bafkreif7fhniokyiyl53fis7dzl4tyoboajtnnr6lp7rmubuwcz46nfr6m)
+![Stat graphic: white text on a black background reading "50+ — Immigration agents have the authority to detain whom they reasonably suspect are in the country" — followed by additional text not fully visible in the preview.](/assets/stories/us-citizens-grabbed/img-2325c37c131e4c47.jpg)
 
 The mechanism for entry into custody was often not a citizenship-status question at all but an alleged assault on or interference with an officer. The catalogue includes the case of Andrea Velez, an LA woman accused of an assault that did not appear on the available video, whose case was dismissed by a federal judge. Other charges in the sample included causing an injury to "the thumb of an ATF Special Agent," using a trash can to block CBP cars, and "resisting arrest" of unspecified scope.
 

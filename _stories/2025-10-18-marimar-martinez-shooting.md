@@ -15,7 +15,7 @@ published: false
 
 Federal agents shot Marimar Martinez, a US citizen in Chicago, multiple times in October 2025. In the immediate aftermath, the Department of Homeland Security and Secretary Kristi Noem described the shooting as a response to Martinez "ramming" agents' vehicles in a "boxed-in" group of ten cars, brandishing a gun, and "forcing" the agent to open fire. Martinez, the official account said, "drove herself to the hospital."
 
-![Article preview: "Trump's Secret Police Shot a Citizen. Then Damning New Info Emerged." — The New Republic.](https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2amnkge5a6hplfwyesmxqkfl/bafkreiecklttj7ymkhrusgpxdnltlu2kj3eexpbvualnspbg6gbarj5mhe)
+![Article preview: "Trump's Secret Police Shot a Citizen. Then Damning New Info Emerged." — The New Republic.](/assets/stories/marimar-martinez-shooting/img-b9cd7a2dba554b2f.jpg)
 
 Each element of that account began to fail under examination. The federal charging document discussed two cars, not ten, made no reference to a gun, and noted that an ambulance — not Martinez — transported her to the hospital. Body camera footage, according to her counsel, undermines the claim that her vehicle was driven toward the agents and captures one of the officers saying "do something, bitch" immediately before opening fire.
 

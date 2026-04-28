@@ -14,7 +14,7 @@ published: false
 
 On a CoreCivic earnings call in early 2026, CEO Patrick Swindle described Immigration and Customs Enforcement as a "customer" with whom the company maintained "constant dialogue" to evaluate "how we can participate in that" mission. CoreCivic and GEO Group, the two largest private operators of immigration detention facilities in the United States, had reactivated idle capacity in advance of the second Trump administration's enforcement push. The Dilley, Texas family detention center — where letters from imprisoned children reached ProPublica reporters — is among those reactivated facilities.
 
-![Article preview: "The Kids Trump Sent to ICE's Dilley Detention Center" — ProPublica.](https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:nsttbhhihov4y5yejsri2zlr/bafkreicsanwgc2k7ity5fa6orhmjjszo2djijelrygsxbkw5dxuhrcjitq)
+![Article preview: "The Kids Trump Sent to ICE's Dilley Detention Center" — ProPublica.](/assets/stories/corecivic-dilley-monetization/img-33256c3c962fab2e.jpg)
 
 CoreCivic's executive compensation is structured to track company earnings. ICE revenues for the company more than doubled in 2025. Investors on the same earnings calls — Raj Sharma of Texas Bank, Matthew Arbner of Jones Trading, Greg Gibas of Northland Securities, Ben Briggs of StoneX Financial, M. Marin of Zacks, Bill Sutherland of Benchmark, Joe Gomes of Noble Capital — were on record expressing frustration that record detention numbers had not climbed higher.
 
