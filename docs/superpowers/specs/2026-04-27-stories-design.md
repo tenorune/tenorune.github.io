@@ -281,6 +281,7 @@ Synopsis paragraph three (optional).
 | `hero_image_alt` | Conditional | Required iff `hero_image` is set. Build verification fails otherwise. |
 | `hero_image_credit` | No | Encouraged when applicable. |
 | `published` | Yes | Defaults to `false` for new drafts; flip to `true` to publish. |
+| `source_article_pending` | Conditional | Set to `true` when `source_url` points to an article whose body could not be hydrated (i.e., the inventory entry has `article_fetch_error`). Lets the curator find stories needing manual hydration via `grep -l 'source_article_pending: true' _stories/`. The verify pipeline enforces this consistency. |
 
 ### Body rules
 

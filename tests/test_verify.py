@@ -195,3 +195,61 @@ def test_pandoc_clean_fails_on_liquid_braces(repo):
     ok, msg = verify.check_pandoc_clean(repo)
     assert not ok
     assert "s1" in msg
+
+
+# ---------- article_pending_flag ----------
+
+def _add_failed_inventory_entry(repo, url: str):
+    """Inject one inventory entry whose article fetch failed."""
+    import json
+    inv_path = repo / "_data" / "saves_inventory.json"
+    inv = json.loads(inv_path.read_text())
+    inv["saves"].append({
+        "uri": "at://did:plc:fake/app.bsky.feed.post/abc",
+        "saved_at": "2026-04-12T18:31:00Z",
+        "post_text": "p",
+        "embed": {"type": "external", "url": url, "title": "t", "description": "d"},
+        "author": {"handle": "h", "display_name": "H", "did": "did:plc:fake"},
+        "article_fetch_error": "http_403",
+    })
+    inv_path.write_text(json.dumps(inv, indent=2, sort_keys=True) + "\n")
+
+
+def test_article_pending_flag_passes_when_flag_set(repo):
+    add_theme(repo, "x", "x", "d")
+    url = "https://example.com/article"
+    _add_failed_inventory_entry(repo, url)
+    p = add_story(repo, slug="s1", themes=["x"])
+    text = p.read_text()
+    text = text.replace(
+        'source_url: "https://example.org/article"',
+        f'source_url: "{url}"\nsource_article_pending: true',
+    )
+    p.write_text(text)
+    ok, _ = verify.check_article_pending_flag(repo)
+    assert ok
+
+
+def test_article_pending_flag_fails_when_flag_missing(repo):
+    add_theme(repo, "x", "x", "d")
+    url = "https://example.com/article"
+    _add_failed_inventory_entry(repo, url)
+    p = add_story(repo, slug="s1", themes=["x"])
+    text = p.read_text()
+    text = text.replace(
+        'source_url: "https://example.org/article"',
+        f'source_url: "{url}"',
+    )
+    p.write_text(text)
+    ok, msg = verify.check_article_pending_flag(repo)
+    assert not ok
+    assert "source_article_pending" in msg
+
+
+def test_article_pending_flag_passes_when_url_succeeded(repo):
+    """A story pointing at an inventory URL with NO fetch error doesn't
+    need the flag (and shouldn't be expected to have it)."""
+    add_theme(repo, "x", "x", "d")
+    add_story(repo, slug="s1", themes=["x"])
+    ok, _ = verify.check_article_pending_flag(repo)
+    assert ok

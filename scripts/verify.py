@@ -235,6 +235,35 @@ def check_pandoc_clean(repo: Path) -> tuple[bool, str]:
     return True, "pandoc_clean: OK"
 
 
+def check_article_pending_flag(repo: Path) -> tuple[bool, str]:
+    """If a story's source_url is the same as an inventory entry's external
+    embed URL AND that entry has article_fetch_error set, the story should
+    declare `source_article_pending: true` in its frontmatter so the
+    curator can find stories awaiting manual hydration."""
+    inv_path = repo / "_data" / "saves_inventory.json"
+    if not inv_path.exists():
+        return True, "article_pending_flag: OK (no inventory)"
+    inv = json.loads(inv_path.read_text())
+    failed_urls = set()
+    for s in inv.get("saves", []):
+        if not s.get("article_fetch_error"):
+            continue
+        url = (s.get("embed") or {}).get("url")
+        if url:
+            failed_urls.add(url)
+    failures: list[str] = []
+    for path, fm, _ in _iter_stories(repo):
+        url = fm.get("source_url")
+        if url and url in failed_urls and not fm.get("source_article_pending"):
+            failures.append(
+                f"{path.name}: source_url is in inventory.article_fetch_error "
+                f"but story lacks source_article_pending: true"
+            )
+    if failures:
+        return False, "article_pending_flag: " + "; ".join(failures)
+    return True, "article_pending_flag: OK"
+
+
 # ----- runner -----
 
 CHECKS: list[Callable[[Path], tuple[bool, str]]] = [
@@ -248,6 +277,7 @@ CHECKS: list[Callable[[Path], tuple[bool, str]]] = [
     check_frontmatter_contract,
     check_slug_filename_match,
     check_pandoc_clean,
+    check_article_pending_flag,
 ]
 
 
