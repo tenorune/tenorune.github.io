@@ -10,7 +10,7 @@ source_publication: "Forever Wars"
 source_author: "Spencer Ackerman"
 bluesky_uri: "at://did:plc:qjzrpzlcmir3bkss4b5nh6ox/app.bsky.feed.post/3m5falt6jwc2q"
 bluesky_saved_at: 2025-11-12T00:00:00.000Z
-published: false
+published: true
 ---
 
 Yaa'kub Ira Vijandre, a photojournalist from Arlington, Texas, and a DACA recipient, was taken into Immigration and Customs Enforcement custody at gunpoint, where he has remained. The basis of the federal case against him, on the documents, is his pattern of social-media activity: Instagram posts and the act of "liking" content expressing support for Palestine and for U.S. citizens whom Vijandre considered wrongfully convicted.
