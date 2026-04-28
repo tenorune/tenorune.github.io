@@ -1,6 +1,15 @@
-# Emergent themes will accumulate here as stories are drafted.
-# Schema (per Section 4 of spec):
-#   - slug: kebab-case-id
-#     label: human-readable label
-#     description: one-sentence emergent description
-[]
+- slug: bureaucratic-cruelty
+  label: bureaucratic cruelty
+  description: "Harm inflicted at scale through systems, paperwork, and institutional indifference."
+- slug: civilian-harm
+  label: civilian harm
+  description: "Non-combatants caught in or targeted by state-organized force."
+- slug: deportation-machinery
+  label: deportation machinery
+  description: "The apparatus of removal — its scale, its logic, its asymmetric efficiency."
+- slug: rule-of-law
+  label: rule of law
+  description: "Legal and constitutional norms tested by the conduct of state power."
+- slug: state-violence
+  label: state violence
+  description: "Governmental coercion exercised against persons, lawfully or not."

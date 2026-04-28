@@ -1,4 +1,40 @@
 {
-  "updated_at": null,
-  "states": {}
+  "states": {
+    "at://did:plc:2vtbmhmrwzbqcfv4we4uxzzt/app.bsky.feed.post/3mhl4gjcl322c": {
+      "first_processed_at": "2026-04-28T06:00:00Z",
+      "last_action_at": "2026-04-28T06:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "thirteen-thousand-sent-anywhere"
+    },
+    "at://did:plc:dgkyncbh6kcchafzi55rqltt/app.bsky.feed.post/3mhm53r3ihk2w": {
+      "first_processed_at": "2026-04-28T06:00:00Z",
+      "last_action_at": "2026-04-28T06:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "diligence-reserved-for-cruelty"
+    },
+    "at://did:plc:gwh73yelgaqpabfsvatntbnw/app.bsky.feed.post/3miaucvfk422m": {
+      "first_processed_at": "2026-04-28T06:00:00Z",
+      "last_action_at": "2026-04-28T06:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "untested-missile-iran-war"
+    },
+    "at://did:plc:oqexhdqbizq24v6ikjhhig2h/app.bsky.feed.post/3mgxbrnhqc22e": {
+      "first_processed_at": "2026-04-28T06:00:00Z",
+      "last_action_at": "2026-04-28T06:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "no-quarter-war-crime"
+    },
+    "at://did:plc:v3rvpshtirgoxscnmcjr7q2c/app.bsky.feed.post/3mk3zh4xvg22p": {
+      "first_processed_at": "2026-04-28T06:00:00Z",
+      "last_action_at": "2026-04-28T06:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "ice-detention-scale-first-year"
+    }
+  },
+  "updated_at": "2026-04-28T06:00:00Z"
 }
