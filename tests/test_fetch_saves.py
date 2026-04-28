@@ -185,6 +185,71 @@ def test_merge_preserves_existing_entries():
     assert by_uri["at://x/2"]["post_text"] == "new"  # added
 
 
+def test_merge_backfills_missing_fields():
+    """Fields ABSENT from an existing entry get added from the new entry,
+    while fields PRESENT keep their existing value."""
+    existing = {
+        "fetched_at": "2026-04-01T00:00:00Z",
+        "saves": [
+            {
+                "uri": "at://x/1",
+                "saved_at": "2026-04-01T12:00:00Z",
+                "post_text": "original",
+                "embed": None,
+                "author": {"handle": "a", "display_name": "A", "did": "did:plc:a"},
+                # NOTE: no `images` field — older fetch didn't capture it.
+            }
+        ],
+    }
+    new_entries = [
+        {
+            "uri": "at://x/1",
+            "saved_at": "2026-04-12T00:00:00Z",
+            "post_text": "DIFFERENT",  # must NOT replace existing
+            "embed": None,
+            "author": {},
+            "images": [{"kind": "image", "url": "https://cdn/x.jpg", "alt": "alt"}],
+        },
+    ]
+    merged = fetch_saves.merge_into_inventory(existing, new_entries)
+    by_uri = {s["uri"]: s for s in merged["saves"]}
+    e = by_uri["at://x/1"]
+    assert e["post_text"] == "original"  # preserved
+    assert e["images"] == [{"kind": "image", "url": "https://cdn/x.jpg", "alt": "alt"}]
+    # Empty `embed` (None) gets backfilled if the new entry has a real one.
+    # In this test new entry's embed is also None, so still None.
+    assert e["embed"] is None
+
+
+def test_merge_backfills_empty_existing_field():
+    """A field present-but-empty in existing should accept a real value."""
+    existing = {
+        "fetched_at": None,
+        "saves": [
+            {
+                "uri": "at://x/1",
+                "saved_at": "2026-04-01T12:00:00Z",
+                "post_text": "",  # empty string — should accept new value
+                "embed": None,
+                "author": {},
+            }
+        ],
+    }
+    new_entries = [
+        {
+            "uri": "at://x/1",
+            "saved_at": "2026-04-12T00:00:00Z",
+            "post_text": "new text",
+            "embed": {"type": "external", "url": "https://e/", "title": "t", "description": "d"},
+            "author": {},
+        },
+    ]
+    merged = fetch_saves.merge_into_inventory(existing, new_entries)
+    e = {s["uri"]: s for s in merged["saves"]}["at://x/1"]
+    assert e["post_text"] == "new text"
+    assert e["embed"]["url"] == "https://e/"
+
+
 def test_merge_sorts_by_saved_at_desc():
     existing = _empty_inventory()
     new_entries = [
@@ -253,6 +318,121 @@ def test_extract_embed_external_pulls_url_title_description():
     assert entry["embed"]["title"] == "Article title"
     assert entry["embed"]["description"] == "Article description"
     assert entry["embed"]["type"] == "external"
+
+
+def test_normalise_record_extracts_images_from_hydrated_view():
+    """Hydrated bookmarks have item.embed with already-resolved CDN URLs."""
+    raw = {
+        "createdAt": "2026-04-22T19:37:34Z",
+        "subject": {"uri": "at://author/post1"},
+        "item": {
+            "uri": "at://author/post1",
+            "indexedAt": "2026-04-22T17:27:55Z",
+            "author": {"handle": "h", "displayName": "H", "did": "did:plc:h"},
+            "record": {"$type": "app.bsky.feed.post", "text": "post"},
+            "embed": {
+                "$type": "app.bsky.embed.images#view",
+                "images": [
+                    {
+                        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/.../1@jpeg",
+                        "fullsize": "https://cdn.bsky.app/img/feed_fullsize/.../1@jpeg",
+                        "alt": "first image",
+                    },
+                    {
+                        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/.../2@jpeg",
+                        "fullsize": "https://cdn.bsky.app/img/feed_fullsize/.../2@jpeg",
+                        "alt": "",
+                    },
+                ],
+            },
+        },
+    }
+    entry = fetch_saves.normalise_record(raw)
+    assert len(entry["images"]) == 2
+    assert entry["images"][0]["kind"] == "image"
+    assert entry["images"][0]["url"].endswith("1@jpeg")
+    assert entry["images"][0]["alt"] == "first image"
+    assert entry["images"][1]["alt"] == ""
+
+
+def test_normalise_record_extracts_external_embed_thumbnail():
+    raw = {
+        "createdAt": "2026-04-22T19:37:34Z",
+        "subject": {"uri": "at://author/post1"},
+        "item": {
+            "uri": "at://author/post1",
+            "indexedAt": "2026-04-22T17:27:55Z",
+            "author": {"handle": "h", "displayName": "H", "did": "did:plc:h"},
+            "record": {
+                "$type": "app.bsky.feed.post",
+                "text": "post",
+                "embed": {
+                    "$type": "app.bsky.embed.external",
+                    "external": {"uri": "https://example.org/", "title": "T", "description": "D"},
+                },
+            },
+            "embed": {
+                "$type": "app.bsky.embed.external#view",
+                "external": {
+                    "uri": "https://example.org/",
+                    "title": "T",
+                    "description": "D",
+                    "thumb": "https://cdn.bsky.app/img/feed_thumbnail/.../thumb@jpeg",
+                },
+            },
+        },
+    }
+    entry = fetch_saves.normalise_record(raw)
+    # External embed parsing still works.
+    assert entry["embed"]["url"] == "https://example.org/"
+    # Plus the embed thumb is captured.
+    assert any(im["kind"] == "embed_thumb" for im in entry["images"])
+    thumb = next(im for im in entry["images"] if im["kind"] == "embed_thumb")
+    assert thumb["url"].endswith("thumb@jpeg")
+
+
+def test_normalise_record_handles_record_with_media_view():
+    raw = {
+        "createdAt": "2026-04-22T19:37:34Z",
+        "subject": {"uri": "at://author/post1"},
+        "item": {
+            "uri": "at://author/post1",
+            "indexedAt": "2026-04-22T17:27:55Z",
+            "author": {"handle": "h", "displayName": "H", "did": "did:plc:h"},
+            "record": {"$type": "app.bsky.feed.post", "text": "post"},
+            "embed": {
+                "$type": "app.bsky.embed.recordWithMedia#view",
+                "media": {
+                    "$type": "app.bsky.embed.images#view",
+                    "images": [
+                        {
+                            "thumb": "https://cdn/t.jpg",
+                            "fullsize": "https://cdn/f.jpg",
+                            "alt": "a",
+                        }
+                    ],
+                },
+            },
+        },
+    }
+    entry = fetch_saves.normalise_record(raw)
+    assert len(entry["images"]) == 1
+    assert entry["images"][0]["url"] == "https://cdn/f.jpg"
+
+
+def test_normalise_record_no_embed_view_returns_empty_images():
+    raw = {
+        "createdAt": "2026-04-22T19:37:34Z",
+        "subject": {"uri": "at://author/post1"},
+        "item": {
+            "uri": "at://author/post1",
+            "indexedAt": "2026-04-22T17:27:55Z",
+            "author": {"handle": "h", "displayName": "H", "did": "did:plc:h"},
+            "record": {"$type": "app.bsky.feed.post", "text": "no embed"},
+        },
+    }
+    entry = fetch_saves.normalise_record(raw)
+    assert entry["images"] == []
 
 
 def test_extract_handles_missing_embed():

@@ -337,6 +337,7 @@ def normalise_record(raw: dict) -> dict:
       - embed: {type, url, title, description} for external embeds, else None
       - author: {handle, display_name, did}
     """
+    embed_view: dict = {}
     if "item" in raw and isinstance(raw.get("item"), dict):
         # Hydrated `getBookmarks` shape.
         item = raw["item"]
@@ -346,6 +347,7 @@ def normalise_record(raw: dict) -> dict:
         record = item.get("record", {})
         post_text = record.get("text", "")
         embed_raw = record.get("embed") or {}
+        embed_view = item.get("embed") or {}  # already-resolved URLs live here
         author_raw = item.get("author", {})
     else:
         # Raw `listRecords` shape.
@@ -374,13 +376,67 @@ def normalise_record(raw: dict) -> dict:
         "did": author_raw.get("did", ""),
     }
 
+    images = _extract_media(embed_view)
+
     return {
         "uri": post_uri,
         "saved_at": saved_at,
         "post_text": post_text,
         "embed": embed,
         "author": author,
+        "images": images,
     }
+
+
+def _extract_media(view: dict) -> list[dict]:
+    """Extract image / video / embed-thumb URLs from a hydrated embed view.
+
+    Walks `app.bsky.embed.recordWithMedia#view` recursively into its `media`
+    sub-view. Returns a list of {kind, url, alt} dicts where:
+      - kind = 'image' for post-attached images
+      - kind = 'video' for video thumbnails
+      - kind = 'embed_thumb' for external link card thumbnails
+    """
+    if not isinstance(view, dict):
+        return []
+    typ = view.get("$type", "")
+    out: list[dict] = []
+    if typ == "app.bsky.embed.images#view":
+        for img in view.get("images", []) or []:
+            url = img.get("fullsize") or img.get("thumb")
+            if url:
+                out.append(
+                    {
+                        "kind": "image",
+                        "url": url,
+                        "thumb": img.get("thumb"),
+                        "alt": img.get("alt", ""),
+                    }
+                )
+    elif typ == "app.bsky.embed.video#view":
+        thumb = view.get("thumbnail")
+        if thumb:
+            out.append(
+                {
+                    "kind": "video",
+                    "url": thumb,
+                    "alt": view.get("alt", ""),
+                }
+            )
+    elif typ == "app.bsky.embed.external#view":
+        ext = view.get("external", {}) or {}
+        thumb = ext.get("thumb")
+        if thumb:
+            out.append(
+                {
+                    "kind": "embed_thumb",
+                    "url": thumb,
+                    "alt": ext.get("title", ""),
+                }
+            )
+    elif typ == "app.bsky.embed.recordWithMedia#view":
+        out.extend(_extract_media(view.get("media")))
+    return out
 
 
 # ----- merge -----
@@ -388,19 +444,31 @@ def normalise_record(raw: dict) -> dict:
 def merge_into_inventory(existing: dict, new_entries: list[dict]) -> dict:
     """Merge new_entries into existing inventory.
 
-    Rules (spec Section 7):
-    - Keyed by `uri`. Existing entries are NEVER modified.
-    - New URIs are appended.
+    Rules:
+    - Keyed by `uri`.
+    - For URIs already in the inventory: ADD missing fields from the new
+      entry, but never overwrite a non-empty existing value. This lets later
+      fetches backfill new fields (e.g., images, embed thumbnails) into
+      older entries without losing already-captured data, and preserves
+      hydration fields written by other scripts (article_text,
+      thread_replies, etc.).
+    - For new URIs: append the entry as-is.
     - Result sorted by `saved_at` desc (newest first).
-    - `fetched_at` updated to current run; the script's caller fills this in.
+    - `fetched_at` updated by the caller.
     """
-    by_uri = {s["uri"]: s for s in existing.get("saves", [])}
+    by_uri: dict[str, dict] = {s["uri"]: dict(s) for s in existing.get("saves", [])}
     for entry in new_entries:
         uri = entry.get("uri", "")
         if not uri:
             continue
-        if uri not in by_uri:
-            by_uri[uri] = entry
+        if uri in by_uri:
+            existing_entry = by_uri[uri]
+            for k, v in entry.items():
+                cur = existing_entry.get(k)
+                if cur in (None, "", [], {}):
+                    existing_entry[k] = v
+        else:
+            by_uri[uri] = dict(entry)
     saves = sorted(by_uri.values(), key=lambda s: s.get("saved_at", ""), reverse=True)
     return {
         "fetched_at": existing.get("fetched_at"),
