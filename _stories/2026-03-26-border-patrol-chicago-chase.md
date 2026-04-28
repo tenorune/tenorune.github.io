@@ -3,7 +3,7 @@ title: "When the Body Cameras Caught the Chase"
 slug: border-patrol-chicago-chase
 summary: "Body camera footage from an October 2025 Chicago incident contradicts the Department of Homeland Security's account: Border Patrol agents continued a high-speed pursuit against direct supervisor orders to end it, blew a tire, crashed, and then deployed tear gas in the surrounding neighborhood."
 date: 2026-03-26
-themes: [state-violence, rule-of-law, bureaucratic-cruelty]
+themes: [state-violence, official-narrative]
 source_url: "https://unraveledpress.com/border-patrol-agents-ignored-orders-to-end-car-chase-before-gassing-chicago-neighborhood/"
 source_title: "Border Patrol agents ignored orders to end car chase before gassing Chicago neighborhood"
 source_publication: "Unraveled Press"

@@ -3,7 +3,7 @@ title: "First Day of the Iran War: An Untested Missile Hit a School"
 slug: untested-missile-iran-war
 summary: "On the war's first day, the United States deployed a ballistic missile that had never been used in combat; analysis of the strike sites shows it hit a sports hall, an elementary school, and residential buildings, killing at least twenty-one including children."
 date: 2026-03-30
-themes: [state-violence, civilian-harm]
+themes: [civilian-harm, state-violence]
 source_url: "https://bsky.app/profile/trbrtc.bsky.social/post/3miaucvfk422m"
 source_title: "Triebert on the first US strike of the Iran war"
 source_publication: "BlueSky"

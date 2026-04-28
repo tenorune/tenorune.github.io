@@ -3,7 +3,7 @@ title: "Eighteen Days for Being Latino"
 slug: eighteen-days-for-being-latino
 summary: "A 20-year-old lawfully present in the United States was arrested for being Latino and held for eighteen days in a Minnesota detention cell so cramped he couldn't sit down — an arrest the federal courts have since ruled unlawful."
 date: 2026-02-19
-themes: [rule-of-law, deportation-machinery, bureaucratic-cruelty]
+themes: [rule-of-law, deportation-machinery]
 source_url: "https://bsky.app/profile/mjsdc.bsky.social/post/3mf3eii272s2u"
 source_title: "Stern on Minnesota's 18-day unlawful ICE detention case"
 source_publication: "BlueSky"

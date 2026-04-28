@@ -3,7 +3,7 @@ title: "What the Body Cam Said"
 slug: marimar-martinez-shooting
 summary: "Federal agents shot Marimar Martinez, a US citizen in Chicago, multiple times; the Department of Homeland Security's account claimed she menaced agents with a gun and her car, but charging documents and body camera footage have since contradicted nearly every element."
 date: 2025-10-18
-themes: [state-violence, rule-of-law]
+themes: [state-violence, official-narrative]
 source_url: "https://newrepublic.com/article/201957/trump-chicago-secret-police-shot-woman-damning-info"
 source_title: "Trump's Secret Police Shot a Citizen. Then Damning New Info Emerged."
 source_publication: "The New Republic"

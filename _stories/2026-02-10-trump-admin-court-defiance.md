@@ -3,7 +3,7 @@ title: "Five Patterns of Defiance"
 slug: trump-admin-court-defiance
 summary: "Federal judges hearing immigration cases have begun to articulate a recurring playbook of administrative noncompliance with their orders — across detainee transfers, deadlines, release conditions, post-release treatment, and bond hearings."
 date: 2026-02-10
-themes: [rule-of-law, deportation-machinery]
+themes: [rule-of-law, resistance-and-witness]
 source_url: "https://www.politico.com/news/2026/02/10/ice-immigration-detention-court-orders-00771727"
 source_title: "How the Trump administration skirts — and defies — court rulings on ICE detentions"
 source_publication: "Politico"

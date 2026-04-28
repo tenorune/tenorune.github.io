@@ -3,7 +3,7 @@ title: "Operation in the Most Conservative Neighborhood"
 slug: edison-park-cbp-grab
 summary: "A Border Patrol operation seized people working in the front yard of a home in Edison Park, Chicago, transferred them in a parking lot in a neighboring suburb to a prisoner van, and was met by neighbors blowing whistles and shouting at the agents."
 date: 2025-10-31
-themes: [state-violence, deportation-machinery]
+themes: [deportation-machinery, resistance-and-witness]
 source_url: "https://bsky.app/profile/peternickeas.bsky.social/post/3m4j7z4ijlc2y"
 source_title: "Nickeas on the Edison Park / Niles Border Patrol operation"
 source_publication: "BlueSky"

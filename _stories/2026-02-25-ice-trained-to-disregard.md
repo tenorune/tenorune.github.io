@@ -3,7 +3,7 @@ title: "Trained to Disregard"
 slug: ice-trained-to-disregard
 summary: "ICE whistleblower Ryan Schwank, a former agency instructor and staff attorney, testified that field agents were trained to disregard constitutional rights — making rights violations a matter of policy rather than aberration."
 date: 2026-02-25
-themes: [rule-of-law, state-violence]
+themes: [rule-of-law, resistance-and-witness]
 source_url: "https://bsky.app/profile/mollyploofkins.bsky.social/post/3mfkourjtw22e"
 source_title: "Ploofkins on Schwank's ICE training testimony"
 source_publication: "BlueSky"

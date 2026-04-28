@@ -3,7 +3,7 @@ title: "The Only Other Witness"
 slug: only-other-witness
 summary: "The only passenger in the car when an ICE officer shot and killed a US citizen in Texas had planned to publicly contradict the government's official account of the shooting; before he could testify, he died in an unrelated car crash."
 date: 2026-02-24
-themes: [rule-of-law, state-violence]
+themes: [state-violence, resistance-and-witness]
 source_url: "https://bsky.app/profile/nytimes.com/post/3mfm6ixrxqd24"
 source_title: "Orta, the only other witness in a Texas ICE shooting, dies before testifying"
 source_publication: "The New York Times"

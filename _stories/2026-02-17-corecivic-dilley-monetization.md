@@ -3,7 +3,7 @@ title: "The Customer in Question"
 slug: corecivic-dilley-monetization
 summary: "CoreCivic's CEO described Immigration and Customs Enforcement as a 'customer' on a 2025 earnings call; investors on the same calls expressed frustration that the agency's record detention numbers were not yet high enough. ICE revenues for the contractor more than doubled that year."
 date: 2026-02-17
-themes: [bureaucratic-cruelty, deportation-machinery]
+themes: [predatory-capital, deportation-machinery]
 source_url: "https://www.propublica.org/article/life-inside-ice-dilley-children"
 source_title: "The Kids Trump Sent to ICE's Dilley Detention Center"
 source_publication: "ProPublica"

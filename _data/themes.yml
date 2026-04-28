@@ -13,3 +13,12 @@
 - slug: state-violence
   label: state violence
   description: "Governmental coercion exercised against persons, lawfully or not."
+- slug: official-narrative
+  label: official narrative
+  description: "The gap between official accounts and what evidence shows — propaganda, denial, and the deployment and unraveling of state-issued fictions."
+- slug: predatory-capital
+  label: predatory capital
+  description: "Where private wealth is built on the apparatus — shareholders, executive compensation, defense contractors, family business interests."
+- slug: resistance-and-witness
+  label: resistance and witness
+  description: "Who refuses, documents, or intervenes — whistleblowers, journalists, judges, neighbors, the planned testimony."

@@ -3,7 +3,7 @@ title: "When the Cameras Came Out"
 slug: doj-cases-collapsing
 summary: "Federal prosecutions of protesters and others accused of 'assaulting' or 'impeding' federal officers have repeatedly collapsed when courtroom evidence — particularly video — contradicted the officers' sworn statements."
 date: 2026-02-22
-themes: [rule-of-law, state-violence]
+themes: [rule-of-law, official-narrative]
 source_url: "https://www.theguardian.com/us-news/2026/feb/21/doj-protesters-federal-agents-cases"
 source_title: "DoJ cases against protesters keep collapsing as officers' lies are exposed in court"
 source_publication: "The Guardian"

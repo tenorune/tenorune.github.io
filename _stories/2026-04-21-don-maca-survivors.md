@@ -3,7 +3,7 @@ title: "Survivors of the Don Maca"
 slug: don-maca-survivors
 summary: "Ecuadorian fishers aboard the Don Maca survived a US drone strike on their vessel during routine fishing operations; no evidence has been produced linking them or their boat to drug trafficking."
 date: 2026-04-21
-themes: [state-violence, civilian-harm, rule-of-law]
+themes: [civilian-harm, state-violence]
 source_url: "https://www.theguardian.com/global-development/2026/apr/21/ecuador-us-boat-strike-survivors"
 source_title: "‘We were terrified they were going to kill us’: fishers who survived US boat strike speak out"
 source_publication: "The Guardian"

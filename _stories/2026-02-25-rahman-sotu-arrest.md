@@ -3,7 +3,7 @@ title: "Arrested for Silent Challenge"
 slug: rahman-sotu-arrest
 summary: "Aliya Rahman, who was violently dragged from her car by federal agents in January, was arrested again at the State of the Union — the cited reason being that she had silently challenged the president during the speech."
 date: 2026-02-25
-themes: [rule-of-law, state-violence]
+themes: [state-violence, rule-of-law]
 source_url: "https://bsky.app/profile/tusk81.bsky.social/post/3mfpn2y5kk223"
 source_title: "Ortíz on Rahman's State of the Union arrest"
 source_publication: "BlueSky"

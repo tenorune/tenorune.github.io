@@ -3,7 +3,7 @@ title: "Fifty-Plus Cases That Fell Apart"
 slug: us-citizens-grabbed
 summary: "A ProPublica investigation methodically tracked over fifty cases of US citizens detained by immigration agents on charges that were either dismissed in court or never filed at all — including a woman accused of an assault that wasn't on video and a charge listing the injury as 'the thumb of an ATF Special Agent.'"
 date: 2025-10-18
-themes: [state-violence, rule-of-law, deportation-machinery]
+themes: [rule-of-law, resistance-and-witness]
 source_url: "https://bsky.app/profile/nicolefoy.bsky.social/post/3m3hxrh6i5k2y"
 source_title: "Foy on her ProPublica investigation of US citizens grabbed by immigration agents"
 source_publication: "BlueSky"

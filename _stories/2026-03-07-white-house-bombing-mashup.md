@@ -3,7 +3,7 @@ title: "Mashup"
 slug: white-house-bombing-mashup
 summary: "Hours after the New York Times reported that US strikes had killed children in an Iranian elementary school, the White House social media account posted a video mixing airstrike footage with clips from Top Gun, Iron Man, and other action films."
 date: 2026-03-07
-themes: [civilian-harm, state-violence]
+themes: [civilian-harm, official-narrative]
 source_url: "https://bsky.app/profile/drewharwell.com/post/3mgfjpi5b4c2p"
 source_title: "Harwell on the White House airstrike-action-film mashup"
 source_publication: "BlueSky"

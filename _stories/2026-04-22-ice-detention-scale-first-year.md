@@ -3,7 +3,7 @@ title: "Tracking the Scale of ICE Detention's First Year"
 slug: ice-detention-scale-first-year
 summary: "Federal data through March shows more than 450,000 people experienced ICE detention in the Trump administration's first fourteen months — a count that includes both new bookings and inter-facility transfers."
 date: 2026-04-22
-themes: [bureaucratic-cruelty, deportation-machinery]
+themes: [deportation-machinery]
 source_url: "https://bsky.app/profile/adamjst.bsky.social/post/3mk3zh4xvg22p"
 source_title: "Sawyer on ICE detention totals through March 2026"
 source_publication: "BlueSky"

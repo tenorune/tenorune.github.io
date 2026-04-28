@@ -3,7 +3,7 @@ title: "Not Accidental"
 slug: deaths-by-design
 summary: "Deaths in immigration detention now match the patterns recorded in the early phases of past regimes' concentration camps: poor conditions, untreated disease, abuse — not random misfortune but the predictable output of a custodial system designed for harm."
 date: 2026-02-25
-themes: [bureaucratic-cruelty, state-violence]
+themes: [bureaucratic-cruelty]
 source_url: "https://bsky.app/profile/gravelinfluencer.bsky.social/post/3mfacwpwznk2w"
 source_title: "Gravel Influencer on detention deaths and historical pattern"
 source_publication: "BlueSky"
