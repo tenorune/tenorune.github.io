@@ -28,6 +28,20 @@
       "status": "drafted",
       "story_slug": "war-crimes-file"
     },
+    "at://did:plc:bewgr6xys3euxuztrh6r6i77/app.bsky.feed.post/3mh6hjz6jfc2i": {
+      "first_processed_at": "2026-04-28T08:00:00Z",
+      "last_action_at": "2026-04-28T08:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "paktyawal-afghan-asylum-death"
+    },
+    "at://did:plc:cvne4fdbpqyu6qced7whinxn/app.bsky.feed.post/3mjzgnfd7vs2b": {
+      "first_processed_at": "2026-04-28T08:00:00Z",
+      "last_action_at": "2026-04-28T08:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "don-maca-survivors"
+    },
     "at://did:plc:dgkyncbh6kcchafzi55rqltt/app.bsky.feed.post/3mhm53r3ihk2w": {
       "first_processed_at": "2026-04-28T06:00:00Z",
       "last_action_at": "2026-04-28T06:00:00Z",
@@ -56,12 +70,26 @@
       "status": "drafted",
       "story_slug": "untested-missile-iran-war"
     },
+    "at://did:plc:htqlqkynhupi6fw4c7x26qti/app.bsky.feed.post/3mhy3apoj3c2a": {
+      "first_processed_at": "2026-04-28T08:00:00Z",
+      "last_action_at": "2026-04-28T08:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "border-patrol-chicago-chase"
+    },
     "at://did:plc:j5fbnzh57rn7xz65yjc36gxb/app.bsky.feed.post/3mgfjpi5b4c2p": {
       "first_processed_at": "2026-04-28T07:00:00Z",
       "last_action_at": "2026-04-28T07:00:00Z",
       "notes": null,
       "status": "drafted",
       "story_slug": "white-house-bombing-mashup"
+    },
+    "at://did:plc:nztbvvo2gl4227zuxjf7gog3/app.bsky.feed.post/3mhw6m676ps2h": {
+      "first_processed_at": "2026-04-28T08:00:00Z",
+      "last_action_at": "2026-04-28T08:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "ice-courthouse-authority-memo"
     },
     "at://did:plc:o4h5r2albulagzxvhp634tof/app.bsky.feed.post/3mf56bjgfe22x": {
       "first_processed_at": "2026-04-28T07:00:00Z",
@@ -104,7 +132,14 @@
       "notes": null,
       "status": "drafted",
       "story_slug": "ice-detention-scale-first-year"
+    },
+    "at://did:plc:wkwznppeeuglgghcet7mch4g/app.bsky.feed.post/3mffkkip7gs2s": {
+      "first_processed_at": "2026-04-28T08:00:00Z",
+      "last_action_at": "2026-04-28T08:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "doj-cases-collapsing"
     }
   },
-  "updated_at": "2026-04-28T07:00:00Z"
+  "updated_at": "2026-04-28T08:00:00Z"
 }
