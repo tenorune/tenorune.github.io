@@ -1,0 +1,34 @@
+name: oauth init
+
+on:
+  workflow_dispatch:
+    inputs:
+      handle:
+        description: "BlueSky handle (e.g., alice.bsky.social)"
+        required: true
+        type: string
+
+jobs:
+  init:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python deps
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run OAuth init phase
+        run: python scripts/oauth_init.py init "${{ inputs.handle }}"
+
+      - name: Upload state artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: oauth-init-state
+          path: .oauth-init-state.json
+          retention-days: 1
