@@ -13,8 +13,8 @@ bluesky_saved_at: 2026-03-13T22:02:51.588Z
 published: false
 ---
 
-"No quarter" is the historical phrase for refusing to take prisoners — for treating surrender as inadmissible, killing combatants who attempt to lay down arms. The phrase has a centuries-long lineage in the laws of armed conflict and a more specific status in modern US military doctrine: the Department of Defense Manual for Military Commissions classifies the denial of quarter, and the public declaration that no quarter will be given, as a violation of the laws of war.
+The denial of quarter — the refusal to take prisoners, the killing of combatants who attempt to surrender — is classified as a war crime under United States military legal doctrine, codified in the Department of Defense Manual for Military Commissions. The same prohibition extends to a public declaration that no quarter will be given.
 
-The relevance of this classification became immediate when the Secretary of Defense's remarks raised the question of whether US forces would, or already had, declared something resembling a no-quarter posture. The legal answer does not depend on the speaker's tone: the prohibition is binding doctrine, codified in the document the Pentagon publishes for its own use, and applies whether or not the person making the public statement intended to invoke the legal threshold.
+The classification became immediately relevant when the Secretary of Defense's remarks raised the question of whether US forces had, or already would, declare such a posture. The legal answer does not depend on the speaker's tone or stated intent: the doctrine binds whether or not the person making the public statement intended to invoke the legal threshold.
 
-Legal definitions in the laws of war are not retroactive defenses. An act crosses a line when it crosses, regardless of subsequent characterization. The DoD manual makes this particular line easy to find.
+Legal definitions in the laws of war are not retroactive defenses. An act crosses a line when it crosses, regardless of subsequent characterization.

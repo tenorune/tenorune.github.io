@@ -13,8 +13,8 @@ bluesky_saved_at: 2026-03-30T12:10:30.331Z
 published: false
 ---
 
-A weapon's first combat use is meant to demonstrate capability against a chosen target. The early-war strike under examination here demonstrated something else: the missile struck a sports hall, an elementary school, and residential buildings, with at least twenty-one dead including children. The targets were not military by any conventional definition.
+On the first day of the war with Iran, a US ballistic missile previously unused in combat struck a sports hall, an elementary school, and residential buildings, killing at least twenty-one people including children. None of the targets were military by any conventional definition.
 
-Forensic reconstruction of the impact sites — debris analysis, satellite imagery, civilian witness accounts — produced a timeline showing the strikes occurred within the war's first hours, when targeting decisions are still being calibrated against doctrine and intelligence is at its least mature. The choice to use an untested weapon in this window compounds the question of whether the targeting was deliberate, mistaken, or indifferent.
+Forensic reconstruction — debris analysis, satellite imagery, civilian witness accounts — placed the strikes in the war's first hours, when targeting decisions are still being calibrated against doctrine and intelligence is at its least mature. The choice to use an untested weapon in this window compounds the question of whether the targeting was deliberate, mistaken, or indifferent.
 
-Whatever the answer, the dead are dead. As of this writing, the Pentagon has not published a strike assessment that addresses the civilian harm.
+Whatever the answer, the dead are dead. The Pentagon has not, as of this writing, published a strike assessment that addresses the civilian harm.

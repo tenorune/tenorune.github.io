@@ -13,8 +13,6 @@ bluesky_saved_at: 2026-04-22T19:37:34.460Z
 published: false
 ---
 
-The number itself is the story. Across roughly fourteen months of the second Trump administration's immigration enforcement push, more than 450,000 people moved through Immigration and Customs Enforcement custody — a count that combines initial bookings with transfers between facilities. The figure exceeds the standing detention capacity of the federal system several times over, a measure of throughput rather than headcount.
+More than 450,000 people moved through Immigration and Customs Enforcement custody in the first fourteen months of the second Trump administration, according to federal detention data through March 2026. The count combines initial bookings and transfers between facilities, exceeding the standing federal detention capacity several times over — a measure of throughput rather than headcount.
 
-Translating throughput into experience is the point. Each entry in this count represents a person held, processed, and either released, removed, or transferred onward to another facility. The administrative paperwork that distinguishes "detention" from "transfer" is not visible from inside the cell.
-
-The data analyzed here is federal record, not estimate. The release of detention statistics through March allowed independent researchers to reconstruct a number that immigration enforcement agencies have been reluctant to publish in aggregate.
+Each entry represents a person held, processed, and either released, removed, or transferred onward; the administrative paperwork that distinguishes "detention" from "transfer" is not visible from inside the cell. The data is federal record, not estimate, reconstructed by independent researchers from statistics that immigration enforcement agencies have not chosen to publish in aggregate themselves.

@@ -13,6 +13,4 @@ bluesky_saved_at: 2026-03-22T02:21:00.156Z
 published: false
 ---
 
-A pattern is visible in how administrative effort is distributed. The deportation pipeline pursuing Kilmar Abrego Garcia — wrongfully removed to El Salvador's CECOT in 2025, then sought for re-removal to anywhere except Costa Rica after his return — has displayed a coordination, a persistence, and a creative legal aggressiveness that the federal government has not extended to public health, infrastructure, immigration adjudication, or veteran care.
-
-The asymmetry is the substance. It is one thing for governments to fail. It is another for failure to be selective — for the only systems that work, and work hard, to be the ones that hurt people. The Abrego case has functioned as a stress test, and the system has demonstrated exactly what it is capable of when the goal is removal.
+The federal government's pursuit of a fresh removal of Kilmar Abrego Garcia — after his wrongful 2025 deportation to El Salvador's CECOT and subsequent return — has shown a coordination, a persistence, and a creative legal aggressiveness that the same government has not extended to public health, infrastructure, immigration adjudication, or veteran care. It is one thing for governments to fail; it is another for failure to be selective, for the only systems that work, and work hard, to be the ones that hurt people.
