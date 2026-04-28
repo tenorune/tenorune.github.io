@@ -1,5 +1,12 @@
 {
   "states": {
+    "at://did:plc:2amnkge5a6hplfwyesmxqkfl/app.bsky.feed.post/3m3hpt6yh4k24": {
+      "first_processed_at": "2026-04-28T09:00:00Z",
+      "last_action_at": "2026-04-28T09:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "marimar-martinez-shooting"
+    },
     "at://did:plc:2vtbmhmrwzbqcfv4we4uxzzt/app.bsky.feed.post/3mhl4gjcl322c": {
       "first_processed_at": "2026-04-28T06:00:00Z",
       "last_action_at": "2026-04-28T06:00:00Z",
@@ -56,6 +63,13 @@
       "status": "drafted",
       "story_slug": "only-other-witness"
     },
+    "at://did:plc:euynv325eix7glyek377orak/app.bsky.feed.post/3meitkkniu22l": {
+      "first_processed_at": "2026-04-28T09:00:00Z",
+      "last_action_at": "2026-04-28T09:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "trump-admin-court-defiance"
+    },
     "at://did:plc:gvda6fem6r7selm4gzjjww4a/app.bsky.feed.post/3mgjcothtf227": {
       "first_processed_at": "2026-04-28T07:00:00Z",
       "last_action_at": "2026-04-28T07:00:00Z",
@@ -77,12 +91,33 @@
       "status": "drafted",
       "story_slug": "border-patrol-chicago-chase"
     },
+    "at://did:plc:ix26ab37ugxyhgpunrmzdh5g/app.bsky.feed.post/3m3hxrh6i5k2y": {
+      "first_processed_at": "2026-04-28T09:00:00Z",
+      "last_action_at": "2026-04-28T09:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "us-citizens-grabbed"
+    },
     "at://did:plc:j5fbnzh57rn7xz65yjc36gxb/app.bsky.feed.post/3mgfjpi5b4c2p": {
       "first_processed_at": "2026-04-28T07:00:00Z",
       "last_action_at": "2026-04-28T07:00:00Z",
       "notes": null,
       "status": "drafted",
       "story_slug": "white-house-bombing-mashup"
+    },
+    "at://did:plc:jkuhm4lmg6t25piybct5izji/app.bsky.feed.post/3m4j7z4ijlc2y": {
+      "first_processed_at": "2026-04-28T09:00:00Z",
+      "last_action_at": "2026-04-28T09:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "edison-park-cbp-grab"
+    },
+    "at://did:plc:nsttbhhihov4y5yejsri2zlr/app.bsky.feed.post/3mevy77oibs27": {
+      "first_processed_at": "2026-04-28T09:00:00Z",
+      "last_action_at": "2026-04-28T09:00:00Z",
+      "notes": null,
+      "status": "drafted",
+      "story_slug": "corecivic-dilley-monetization"
     },
     "at://did:plc:nztbvvo2gl4227zuxjf7gog3/app.bsky.feed.post/3mhw6m676ps2h": {
       "first_processed_at": "2026-04-28T08:00:00Z",
@@ -141,5 +176,5 @@
       "story_slug": "doj-cases-collapsing"
     }
   },
-  "updated_at": "2026-04-28T08:00:00Z"
+  "updated_at": "2026-04-28T09:00:00Z"
 }
