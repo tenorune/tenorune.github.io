@@ -705,6 +705,24 @@ git add _data/saves_inventory.json && git commit -m "data: refresh saves invento
 >
 > The original Section 7 design (local script, OAuth fallback, manual `--from-file` hatch) is preserved here for historical context. The implementation in `scripts/fetch_saves.py` is closer to the original *plan*'s approach (`docs/stories-plan.md` before it was deleted) than to this spec's Section 7 as originally written.
 
+> **Errata round 2 (2026-04-27 evening):** The OAuth path was implemented and tested end-to-end. Result: BlueSky's AppView refuses OAuth tokens from third-party PDSes for the bookmark API with an explicit policy message:
+>
+> ```
+> {"error": "InvalidToken", "message": "OAuth tokens are meant for PDS access only"}
+> ```
+>
+> Service auth was also tried (eurosky.social signs a token scoped to the AppView; bsky.social refuses to verify it). Both paths hit `InvalidToken`. The architectural reality is:
+>
+> - For accounts hosted on **bsky.social** (or any PDS that *is* the AppView), the app-password path in `fetch_saves.py` works because the same server issues and accepts the session JWT.
+> - For accounts hosted on a **third-party PDS** (eurosky.social, blacksky.app, self-hosted, etc.), there is currently **no documented path** to authenticate against bsky.social's AppView for private bookmark reads. The bsky.app web client must use some internal mechanism not exposed to clients.
+>
+> **Implications for this project:**
+>
+> 1. Automated daily ingestion via the `fetch saves` workflow is dead for the curator's third-party-PDS account. The cron schedule has been disabled; the workflow is preserved for `workflow_dispatch` only, in case BlueSky later opens up cross-PDS bookmark access or the project gains a bsky.social-hosted secondary account.
+> 2. The OAuth scaffolding (`scripts/oauth_init.py`, `scripts/atproto_dpop.py`, the `oauth/` static files, the `oauth init` and `oauth complete` workflows) is preserved as documentation and for future reuse, but is not in active use.
+> 3. The `scripts/fetch_saves.py` app-password code path is preserved and remains correct for bsky.social-hosted accounts.
+> 4. **Actual ingestion path going forward:** a one-shot bulk import via browser DevTools inspection of bsky.app (capturing the saves list directly from the bsky.app client's authenticated context), followed by ongoing manual paste of individual URLs in chat. See Section 8a (added below) for details when finalised.
+
 ---
 
 ## Section 8 — Authoring workflow

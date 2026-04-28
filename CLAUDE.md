@@ -40,19 +40,29 @@ Scaffolding complete (PR 1):
 - `.github/workflows/verify.yml` — CI workflow that runs all of the above on every push and PR.
 - `Gemfile`, `Gemfile.lock`, `.env.example`, `.gitignore`.
 
-PR 2 ingestion (also on this branch):
-- `scripts/fetch_saves.py` — probes BlueSky bookmark endpoints, falls through 401/404/403 to alternates, raises `NoBookmarkEndpointError` if all fail.
-- `tests/test_fetch_saves.py` — 11 unit tests with mocked HTTP via `respx`.
-- `.github/workflows/fetch.yml` — scheduled daily at 07:17 UTC + `workflow_dispatch`, auto-commits inventory if it changed.
+### Ingestion (status: pivoted to manual paste; automated paths preserved as dormant)
 
-**Required curator action before PR 2 can run:** add two repo secrets via GitHub UI → Settings → Secrets and variables → Actions:
-- `BSKY_HANDLE` — your handle (e.g., `lightseed.net` or `you.bsky.social`)
-- `BSKY_APP_PASSWORD` — generated at https://bsky.app/settings/app-passwords
+The plan tried two automated paths against BlueSky's bookmark API — both hit walls for accounts on third-party PDSes (the curator's account is on `eurosky.social`):
 
-Then trigger `fetch saves` workflow manually (Actions tab → fetch saves → Run workflow). If it goes green, inventory is flowing; PR 3 can proceed. If it fails with `NoBookmarkEndpointError`, app passwords don't have bookmark scope and we pivot to Option B (manual paste) or Option D (OAuth-via-chat) — write a follow-up plan in chat.
+1. **App-password + service auth** (in `scripts/fetch_saves.py`). Works for `bsky.social`-hosted accounts; fails for third-party PDSes because the AppView at `bsky.social` won't verify session JWTs from foreign servers.
+2. **OAuth + DPoP** (in `scripts/oauth_init.py`, `scripts/atproto_dpop.py`, the `oauth init`/`oauth complete` workflows). The auth flow itself works; the resulting access token is rejected by `bsky.social`'s AppView with the explicit message `"OAuth tokens are meant for PDS access only"`. This is BlueSky policy, not a fix-able bug.
 
-Still pending after PR 2:
-- **PR 3: First bulk-draft.** Once inventory has data, Claude bulk-drafts stories from real saves, seeding `_data/themes.yml` with emergent themes.
+See spec Section 7's "Errata round 2" for the full debugging story.
+
+**Status of the automated infrastructure:**
+- `scripts/fetch_saves.py`, `scripts/oauth_init.py`, `scripts/atproto_dpop.py`, `oauth/*` and the three workflows (`fetch.yml`, `oauth-init.yml`, `oauth-complete.yml`) are all **preserved in the repo but dormant**.
+- `fetch.yml` cron has been disabled; the workflow is `workflow_dispatch`-only.
+- All `BSKY_*` secrets and the `BSKY_PDS` Variable can be deleted; nothing in active CI uses them.
+- If the curator ever adds a `bsky.social`-hosted secondary account, the app-password path is ready to use.
+
+**Active ingestion path:**
+
+- **One-shot bulk import** of existing saves via browser DevTools inspection of bsky.app (TBD; planned next).
+- **Ongoing incremental adds** via manual paste: the curator pastes a BlueSky URL or AT-URI into the chat session, Claude resolves the post via public APIs, drafts the story, commits.
+
+Still pending:
+- **One-shot bulk import** workflow definition (Section 8a in the spec, TBD).
+- **PR 3: First bulk-draft.** Once inventory has data (from the bulk import), Claude bulk-drafts stories from real saves, seeding `_data/themes.yml` with emergent themes.
 - **PR 4: First cull + polish + publish.** Curator decides what to keep (in chat); Claude flips `published: true`.
 - **PR 5: CSS iteration** once real content exposes spacing/typography needs.
 

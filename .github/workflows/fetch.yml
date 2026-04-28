@@ -1,8 +1,18 @@
 name: fetch saves
 
 on:
-  schedule:
-    - cron: "17 7 * * *"  # daily at 07:17 UTC, off-peak
+  # Cron schedule disabled: BlueSky's AppView refuses both service-auth
+  # tokens and OAuth tokens issued by third-party PDSes for the bookmark
+  # API ("OAuth tokens are meant for PDS access only"), and the curator's
+  # account is on a third-party PDS, so this workflow has no working auth
+  # path against the production saves data.
+  #
+  # The workflow is preserved for two future scenarios:
+  #   1. If the curator switches to (or adds) an account hosted on
+  #      bsky.social, the app-password code path in fetch_saves.py works
+  #      against the same-server AppView.
+  #   2. If BlueSky later supports cross-PDS bookmark access, this is
+  #      the point of integration.
   workflow_dispatch:
 
 permissions:
