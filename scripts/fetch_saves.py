@@ -396,12 +396,144 @@ def list_repo_collections(session: dict) -> list[str]:
     return list(data.get("collections", []))
 
 
-def main() -> int:
+# ----- OAuth path (for accounts on third-party PDSes) -----
+
+OAUTH_CLIENT_ID = "https://lightseed.net/oauth/client-metadata.json"
+OAUTH_REFRESH_TOKEN = os.environ.get("BSKY_OAUTH_REFRESH_TOKEN")
+OAUTH_DPOP_PRIVATE_JWK = os.environ.get("BSKY_OAUTH_DPOP_PRIVATE_JWK")
+OAUTH_PDS_ISSUER = os.environ.get("BSKY_OAUTH_PDS_ISSUER")
+OAUTH_DID = os.environ.get("BSKY_OAUTH_DID")
+
+
+def oauth_enabled() -> bool:
+    return all(
+        [OAUTH_REFRESH_TOKEN, OAUTH_DPOP_PRIVATE_JWK, OAUTH_PDS_ISSUER, OAUTH_DID]
+    )
+
+
+def discover_token_endpoint(pds: str) -> str:
+    """Resolve PDS -> authorization server -> token endpoint."""
+    pds = pds.rstrip("/")
+    r = httpx.get(f"{pds}/.well-known/oauth-protected-resource", timeout=30.0)
+    r.raise_for_status()
+    auth_servers = r.json().get("authorization_servers", [])
+    if not auth_servers:
+        raise RuntimeError(f"PDS {pds} declared no authorization_servers")
+    auth_server = auth_servers[0].rstrip("/")
+    r = httpx.get(
+        f"{auth_server}/.well-known/oauth-authorization-server", timeout=30.0
+    )
+    r.raise_for_status()
+    return r.json()["token_endpoint"]
+
+
+def oauth_main() -> int:
+    """OAuth path: refresh access token, call AppView for bookmarks with
+    DPoP-bound access token."""
+    # Imports are local so the app-password path doesn't need OAuth deps at
+    # import time (atproto_dpop pulls in pyjwt and cryptography).
+    from atproto_dpop import dpop_get, dpop_post_form, jwk_to_key, public_jwk
+
+    private_jwk = json.loads(OAUTH_DPOP_PRIVATE_JWK)
+    private_key = jwk_to_key(private_jwk)
+    pub_jwk = public_jwk(private_jwk)
+
+    print(
+        f"fetch_saves: discovering auth server for PDS {OAUTH_PDS_ISSUER}",
+        file=sys.stderr,
+    )
+    token_endpoint = discover_token_endpoint(OAUTH_PDS_ISSUER)
+    print(f"fetch_saves: token endpoint = {token_endpoint}", file=sys.stderr)
+
+    print("fetch_saves: refreshing access token", file=sys.stderr)
+    tokens = dpop_post_form(
+        token_endpoint,
+        {
+            "grant_type": "refresh_token",
+            "refresh_token": OAUTH_REFRESH_TOKEN,
+            "client_id": OAUTH_CLIENT_ID,
+        },
+        private_key,
+        pub_jwk,
+    )
+    access_token = tokens["access_token"]
+    expires_in = tokens.get("expires_in")
+    print(
+        f"fetch_saves: got access token (len={len(access_token)}, expires_in={expires_in})",
+        file=sys.stderr,
+    )
+
+    new_refresh = tokens.get("refresh_token")
+    if new_refresh and new_refresh != OAUTH_REFRESH_TOKEN:
+        print(
+            "fetch_saves: WARN refresh token rotated; "
+            "BSKY_OAUTH_REFRESH_TOKEN secret needs to be updated",
+            file=sys.stderr,
+        )
+        # Print masked indicator so we know rotation occurred without
+        # leaking the new token to logs.
+        print(
+            f"fetch_saves: new_refresh_token (len={len(new_refresh)}, prefix={new_refresh[:8]}...)",
+            file=sys.stderr,
+        )
+
+    appview_url = f"{APPVIEW_BASE}/xrpc/app.bsky.bookmark.getBookmarks"
+    raw_records: list[dict] = []
+    cursor: str | None = None
+    while True:
+        params = {"limit": 100}
+        if cursor:
+            params["cursor"] = cursor
+        r = dpop_get(appview_url, access_token, private_key, pub_jwk, params=params)
+        print(f"fetch_saves:   appview:getBookmarks -> {r.status_code}", file=sys.stderr)
+        if r.status_code >= 400:
+            try:
+                body = r.json()
+            except ValueError:
+                body = {"raw": r.text[:500]}
+            print(f"  body={body}", file=sys.stderr)
+            r.raise_for_status()
+        data = r.json()
+        page = data.get("bookmarks") or []
+        raw_records.extend(page)
+        cursor = data.get("cursor")
+        if not cursor or not page:
+            break
+
+    print(
+        f"fetch_saves: got {len(raw_records)} bookmarks via OAuth",
+        file=sys.stderr,
+    )
+
+    new_entries = [normalise_record(rec) for rec in raw_records]
+
+    inv_path = Path("_data/saves_inventory.json")
+    existing = json.loads(inv_path.read_text()) if inv_path.exists() else {
+        "fetched_at": None,
+        "saves": [],
+    }
+    merged = merge_into_inventory(existing, new_entries)
+
+    from datetime import datetime, timezone
+    merged["fetched_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    inv_path.write_text(json.dumps(merged, indent=2, sort_keys=True) + "\n")
+    print(
+        f"fetch_saves: inventory now has {len(merged['saves'])} total entries",
+        file=sys.stderr,
+    )
+    return 0
+
+
+# ----- app-password path -----
+
+def app_password_main() -> int:
     handle = os.environ.get("BSKY_HANDLE")
     app_password = os.environ.get("BSKY_APP_PASSWORD")
     if not handle or not app_password:
         print(
-            "fetch_saves: BSKY_HANDLE and BSKY_APP_PASSWORD must be set",
+            "fetch_saves: BSKY_HANDLE and BSKY_APP_PASSWORD must be set "
+            "(or use the OAuth env vars instead)",
             file=sys.stderr,
         )
         return 2
@@ -417,7 +549,6 @@ def main() -> int:
     )
 
     if not raw:
-        # Diagnostic: tell us where bookmarks might actually live.
         try:
             collections = list_repo_collections(session)
             print(
@@ -439,7 +570,6 @@ def main() -> int:
     }
     merged = merge_into_inventory(existing, new_entries)
 
-    # Stamp current fetched_at.
     from datetime import datetime, timezone
     merged["fetched_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -449,6 +579,14 @@ def main() -> int:
         file=sys.stderr,
     )
     return 0
+
+
+def main() -> int:
+    if oauth_enabled():
+        print("fetch_saves: using OAuth path", file=sys.stderr)
+        return oauth_main()
+    print("fetch_saves: using app-password path", file=sys.stderr)
+    return app_password_main()
 
 
 if __name__ == "__main__":

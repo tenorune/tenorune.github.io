@@ -23,13 +23,26 @@ jobs:
 
       - name: Fetch saves
         env:
+          # Two auth modes; fetch_saves.py picks one based on which set of
+          # env vars is populated.
+          #
+          # Mode 1 (app password): used for accounts hosted on bsky.social.
+          # Set BSKY_HANDLE and BSKY_APP_PASSWORD secrets.
           BSKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
           BSKY_APP_PASSWORD: ${{ secrets.BSKY_APP_PASSWORD }}
-          # PDS hosting the user's account. Defaults to https://bsky.social
-          # if unset. For accounts on a third-party PDS (self-hosted or any
-          # non-bsky.social ATproto host), set this to that PDS's URL —
-          # ideally via a repo Variable so we're not committing it.
+          # Optional PDS override for the app-password path; defaults to
+          # https://bsky.social if unset.
           BSKY_PDS: ${{ vars.BSKY_PDS || 'https://bsky.social' }}
+          #
+          # Mode 2 (OAuth + DPoP): for accounts on third-party PDSes where
+          # mode 1's session JWT is rejected by the AppView. Set all four
+          # of the BSKY_OAUTH_* secrets (produced by the oauth-init /
+          # oauth-complete workflow pair). When all four are set, the
+          # OAuth path is chosen and the app-password vars are ignored.
+          BSKY_OAUTH_REFRESH_TOKEN: ${{ secrets.BSKY_OAUTH_REFRESH_TOKEN }}
+          BSKY_OAUTH_DPOP_PRIVATE_JWK: ${{ secrets.BSKY_OAUTH_DPOP_PRIVATE_JWK }}
+          BSKY_OAUTH_PDS_ISSUER: ${{ secrets.BSKY_OAUTH_PDS_ISSUER }}
+          BSKY_OAUTH_DID: ${{ secrets.BSKY_OAUTH_DID }}
         run: python scripts/fetch_saves.py
 
       - name: Commit if changed

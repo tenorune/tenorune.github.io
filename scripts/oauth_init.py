@@ -21,20 +21,23 @@ input pasted in chat between them.
 from __future__ import annotations
 
 import argparse
-import base64
 import hashlib
 import json
 import secrets
 import sys
-import time
 import urllib.parse
-import uuid
 from pathlib import Path
 
 import httpx
-import jwt
-from cryptography.hazmat.primitives.asymmetric import ec
-from cryptography.hazmat.primitives import serialization
+
+from atproto_dpop import (
+    b64url_encode,
+    dpop_post_form,
+    generate_dpop_key,
+    jwk_to_key,
+    key_to_jwk,
+    public_jwk,
+)
 
 CLIENT_ID = "https://lightseed.net/oauth/client-metadata.json"
 REDIRECT_URI = "https://lightseed.net/oauth/callback/"
@@ -42,86 +45,6 @@ SCOPE = "atproto transition:generic"
 
 STATE_PATH = Path(".oauth-init-state.json")
 PUBLIC_API = "https://public.api.bsky.app"
-
-
-# ----- key + JWK helpers -----
-
-def _b64url(data: bytes) -> str:
-    return base64.urlsafe_b64encode(data).rstrip(b"=").decode("ascii")
-
-
-def generate_dpop_key():
-    """Generate an EC P-256 keypair for DPoP."""
-    return ec.generate_private_key(ec.SECP256R1())
-
-
-def _key_to_jwk(private_key) -> dict:
-    """Serialise an EC P-256 private key as a JWK dict (with d, the private
-    component)."""
-    nums = private_key.private_numbers()
-    pub = nums.public_numbers
-    # P-256 coordinates are 32 bytes each.
-    x = pub.x.to_bytes(32, "big")
-    y = pub.y.to_bytes(32, "big")
-    d = nums.private_value.to_bytes(32, "big")
-    return {
-        "kty": "EC",
-        "crv": "P-256",
-        "x": _b64url(x),
-        "y": _b64url(y),
-        "d": _b64url(d),
-    }
-
-
-def _public_jwk(private_jwk: dict) -> dict:
-    return {k: v for k, v in private_jwk.items() if k != "d"}
-
-
-def _jwk_to_key(jwk: dict):
-    """Reverse of _key_to_jwk: rebuild the EC private key from a JWK dict."""
-    x = int.from_bytes(_b64url_decode(jwk["x"]), "big")
-    y = int.from_bytes(_b64url_decode(jwk["y"]), "big")
-    d = int.from_bytes(_b64url_decode(jwk["d"]), "big")
-    pub_nums = ec.EllipticCurvePublicNumbers(x, y, ec.SECP256R1())
-    priv_nums = ec.EllipticCurvePrivateNumbers(d, pub_nums)
-    return priv_nums.private_key()
-
-
-def _b64url_decode(s: str) -> bytes:
-    pad = "=" * ((4 - len(s) % 4) % 4)
-    return base64.urlsafe_b64decode(s + pad)
-
-
-# ----- DPoP proof JWT -----
-
-def make_dpop_proof(
-    private_key,
-    public_jwk: dict,
-    htm: str,
-    htu: str,
-    nonce: str | None = None,
-    access_token: str | None = None,
-) -> str:
-    """Build a DPoP proof JWT for a single HTTP request.
-
-    htm = HTTP method (e.g., 'POST'). htu = full URL.
-    nonce is set if the auth server previously returned a DPoP-Nonce header.
-    access_token is set when calling a resource server (the proof binds the
-    token via the `ath` claim).
-    """
-    payload = {
-        "jti": str(uuid.uuid4()),
-        "htm": htm,
-        "htu": htu,
-        "iat": int(time.time()),
-    }
-    if nonce:
-        payload["nonce"] = nonce
-    if access_token:
-        # ath = base64url(SHA256(access_token))
-        payload["ath"] = _b64url(hashlib.sha256(access_token.encode("ascii")).digest())
-    headers = {"typ": "dpop+jwt", "alg": "ES256", "jwk": public_jwk}
-    return jwt.encode(payload, private_key, algorithm="ES256", headers=headers)
 
 
 # ----- handle / DID / auth server resolution -----
@@ -202,38 +125,9 @@ def fetch_authorization_server_metadata(auth_server: str) -> dict:
 
 def make_pkce() -> tuple[str, str]:
     """Return (code_verifier, code_challenge) for S256."""
-    verifier = _b64url(secrets.token_bytes(32))
-    challenge = _b64url(hashlib.sha256(verifier.encode("ascii")).digest())
+    verifier = b64url_encode(secrets.token_bytes(32))
+    challenge = b64url_encode(hashlib.sha256(verifier.encode("ascii")).digest())
     return verifier, challenge
-
-
-# ----- DPoP-signed POST with nonce retry -----
-
-def dpop_post_form(url: str, form: dict, private_key, public_jwk: dict) -> dict:
-    """POST form-encoded data to `url` with a DPoP proof. If the server
-    returns a `use_dpop_nonce` error with a `DPoP-Nonce` header, retry once
-    with the nonce included in the proof."""
-    nonce: str | None = None
-    for attempt in range(2):
-        proof = make_dpop_proof(private_key, public_jwk, "POST", url, nonce=nonce)
-        r = httpx.post(
-            url,
-            data=form,
-            headers={
-                "DPoP": proof,
-                "Content-Type": "application/x-www-form-urlencoded",
-            },
-            timeout=30.0,
-        )
-        if r.status_code == 400 and r.json().get("error") == "use_dpop_nonce":
-            nonce = r.headers.get("DPoP-Nonce")
-            if not nonce:
-                raise RuntimeError("Server requested DPoP nonce but didn't provide one")
-            continue
-        if r.status_code >= 400:
-            raise RuntimeError(f"POST {url} -> {r.status_code}: {r.text[:500]}")
-        return r.json()
-    raise RuntimeError("DPoP nonce loop did not converge")
 
 
 # ----- phase 1: init -----
@@ -258,8 +152,8 @@ def phase_init(handle: str) -> None:
     print(f"oauth_init: token_endpoint = {token_endpoint}", file=sys.stderr)
 
     private_key = generate_dpop_key()
-    private_jwk = _key_to_jwk(private_key)
-    public_jwk = _public_jwk(private_jwk)
+    private_jwk = key_to_jwk(private_key)
+    public_jwk = public_jwk(private_jwk)
 
     code_verifier, code_challenge = make_pkce()
     state = secrets.token_urlsafe(16)
@@ -328,8 +222,8 @@ def phase_complete(redirect_url: str) -> None:
     iss = qs.get("iss", [None])[0]
     print(f"oauth_init: received code (len={len(code)}), iss={iss}", file=sys.stderr)
 
-    private_key = _jwk_to_key(state_data["private_jwk"])
-    public_jwk = _public_jwk(state_data["private_jwk"])
+    private_key = jwk_to_key(state_data["private_jwk"])
+    public_jwk = public_jwk(state_data["private_jwk"])
 
     token_form = {
         "grant_type": "authorization_code",
