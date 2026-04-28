@@ -15,6 +15,6 @@ published: false
 
 Hanne Engan is a Norwegian citizen married to an American. When she arrived for her green card interview in downtown San Diego, Immigration and Customs Enforcement officers detained her at the appointment. They separated her from the continuous-glucose monitor she wears for Type 1 diabetes and from her insulin, and transported her to the Otay Mesa Detention Center.
 
-![Article preview: "San Diego woman says her credit card information was stolen while she was in ICE custody" — Daylight San Diego.](https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2bqqvvbljclouzkz5r3oq36o/bafkreib6ikcc3x6wwbr5dqbhezbtwdyjacfu5vcpf7dx6dadp4ykz5l2jq)
+![Article preview: "San Diego woman says her credit card information was stolen while she was in ICE custody" — Daylight San Diego.](/assets/stories/engan-greencard-arrest/img-ae23dc338194f471.jpg)
 
 Engan's diabetes escalated rapidly under the conditions of confinement. Without her monitor or her insulin she was, by her own account, near death on multiple occasions during her detention; staff response to her medical condition was both delayed and inadequate. After her eventual release she discovered, separately, that her credit-card information had been used while she was in custody.

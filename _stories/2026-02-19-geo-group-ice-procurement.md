@@ -15,7 +15,7 @@ published: false
 
 The federal official directing Immigration and Customs Enforcement's detention procurement is David Venturella, a former executive of GEO Group, where he ran the company's immigration detention portfolio. The Department of Homeland Security granted him a written ethics waiver permitting him to award contracts to his prior employer in his new role.
 
-![Screenshot from a Washington Post profile of David Venturella with the headline "The former private prison exec behind ICE's immigrant detention surge."](https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:2vtbmhmrwzbqcfv4we4uxzzt/bafkreigigqky3gjyh2q2vyskhfk32qbwva54dlexg4owb2qhipghnetzze)
+![Screenshot from a Washington Post profile of David Venturella with the headline "The former private prison exec behind ICE's immigrant detention surge."](/assets/stories/geo-group-ice-procurement/img-32e8f4da316e1e16.jpg)
 
 The waiver has functioned. GEO's principal access to ICE money runs through a complex Navy procurement system used to disburse most of the $45 billion the Navy distributed last year, allowing ICE to direct contracts to GEO without competitive bids. GEO's competitors — other private detention operators eyeing the same expanding market — have not received comparable channels of access.
 

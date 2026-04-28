@@ -15,7 +15,7 @@ published: false
 
 Masked federal agents wearing ICE vests cordoned off a Minneapolis residential construction site, refused to identify themselves or present a warrant, and trapped two construction workers on the roof for hours in subzero temperatures. A protest crowd gathered. Bystanders carried heating pads, a jacket, and food; the agents prevented them from reaching the men on the roof.
 
-![Photograph from the Minneapolis construction-site scene showing federal agents in tactical gear behind a cordon.](https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:6m7rbdgaz5vyg4bnbefi7kh6/bafkreib7gjfc4lcsrjocc6lmxmq2d3nydb72flel2nikyaogo26bqsvmjy)
+![Photograph from the Minneapolis construction-site scene showing federal agents in tactical gear behind a cordon.](/assets/stories/subzero-rooftop-trap/img-38ae82ea210a11f7.jpg)
 
 A reporter at the scene counted at least thirty federal agents who took rotating shifts retreating to vehicles to stay warm — a temperature accommodation extended to the masked agents but not to the men they had cornered above. The agents eventually left; an ambulance removed one of the men from the roof.
 

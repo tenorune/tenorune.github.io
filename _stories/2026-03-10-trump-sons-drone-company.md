@@ -15,6 +15,6 @@ published: false
 
 Eric Trump and Donald Trump Jr. are backers of a new drone company whose business plan, on the public record, is winning Pentagon procurement contracts. Their father is the sitting president of the United States, who controls the executive branch within which the Department of Defense awards those contracts.
 
-![Article preview: "Trump Sons Back New Drone Company Targeting Pentagon Sales" — The Wall Street Journal.](https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ds7jumejrr2e2ksfjmjxsz75/bafkreibgsf3k7ybnrjk3batnavp7snjcrtmwfe5rgvoqweeg6lyxu3sh7u)
+![Article preview: "Trump Sons Back New Drone Company Targeting Pentagon Sales" — The Wall Street Journal.](/assets/stories/trump-sons-drone-company/img-0297a35e8b785645.jpg)
 
 The structural conflict needs no decoding: a defense vendor whose senior backers are children of the commander-in-chief, competing for contracts let by his administration. The arrangement is what the federal anti-emoluments architecture, written across the Constitution and various statutes, was designed to prevent — though enforcement of those provisions has, since 2017, depended primarily on shame.

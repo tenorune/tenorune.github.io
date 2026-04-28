@@ -15,6 +15,6 @@ published: false
 
 Yaa'kub Ira Vijandre, a photojournalist from Arlington, Texas, and a DACA recipient, was taken into Immigration and Customs Enforcement custody at gunpoint, where he has remained. The basis of the federal case against him, on the documents, is his pattern of social-media activity: Instagram posts and the act of "liking" content expressing support for Palestine and for U.S. citizens whom Vijandre considered wrongfully convicted.
 
-![Article preview: "ICE Caged This Man For His Instagram Posts And Likes" — Forever Wars.](https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:qjzrpzlcmir3bkss4b5nh6ox/bafkreichnc2likxptzfexmwzael6stxktfofarmclxrnf54gyhe22t4uba)
+![Article preview: "ICE Caged This Man For His Instagram Posts And Likes" — Forever Wars.](/assets/stories/vijandre-instagram-detention/img-26033a34fae06004.jpg)
 
 A new filing in Vijandre's case asserts that he was offered the option of becoming an informant in exchange for his release and refused. The filing characterizes Vijandre as a political prisoner — held not for an act, but for the protected expression of an opinion the Department of Homeland Security disfavors.
