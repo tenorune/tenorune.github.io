@@ -43,7 +43,6 @@ a:hover { text-decoration-thickness: 2px; }
 /* Header */
 .stories-header {
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
   max-width: var(--measure);
   margin: 0 auto;
@@ -56,6 +55,10 @@ a:hover { text-decoration-thickness: 2px; }
   font-size: 0.85rem;
   color: var(--ink);
   text-decoration: none;
+}
+.stories-header nav {
+  margin-left: auto;  /* always pushes nav to the right edge,
+                         whether the wordmark is present or hidden */
 }
 .stories-header nav a {
   font-size: 0.85rem;
