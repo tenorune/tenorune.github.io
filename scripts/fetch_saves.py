@@ -618,7 +618,7 @@ def oauth_main() -> int:
     from datetime import datetime, timezone
     merged["fetched_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    inv_path.write_text(json.dumps(merged, indent=2, sort_keys=True) + "\n")
+    inv_path.write_text(json.dumps(merged, indent=2, sort_keys=True, ensure_ascii=False) + "\n")
     print(
         f"fetch_saves: inventory now has {len(merged['saves'])} total entries",
         file=sys.stderr,
@@ -674,7 +674,7 @@ def app_password_main() -> int:
     from datetime import datetime, timezone
     merged["fetched_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    inv_path.write_text(json.dumps(merged, indent=2, sort_keys=True) + "\n")
+    inv_path.write_text(json.dumps(merged, indent=2, sort_keys=True, ensure_ascii=False) + "\n")
     print(
         f"fetch_saves: inventory now has {len(merged['saves'])} total entries",
         file=sys.stderr,

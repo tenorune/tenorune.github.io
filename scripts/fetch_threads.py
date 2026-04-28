@@ -154,7 +154,7 @@ def main() -> int:
         time.sleep(RATE_LIMIT_SEC)
 
     inv["fetched_at"] = now_iso()
-    inv_path.write_text(json.dumps(inv, indent=2, sort_keys=True) + "\n")
+    inv_path.write_text(json.dumps(inv, indent=2, sort_keys=True, ensure_ascii=False) + "\n")
 
     print(
         f"fetch_threads: {success} hydrated ({found_any} had self-replies), {failed} failed",
