@@ -10,7 +10,7 @@ source_publication: "BlueSky"
 source_author: "Sean Marotta"
 bluesky_uri: "at://did:plc:dgkyncbh6kcchafzi55rqltt/app.bsky.feed.post/3mhm53r3ihk2w"
 bluesky_saved_at: 2026-03-22T02:21:00.156Z
-published: false
+published: true
 ---
 
 The federal government's pursuit of a fresh removal of Kilmar Abrego Garcia — after his wrongful 2025 deportation to El Salvador's CECOT and subsequent return — has shown a coordination, a persistence, and a creative legal aggressiveness that the same government has not extended to public health, infrastructure, immigration adjudication, or veteran care. It is one thing for governments to fail; it is another for failure to be selective, for the only systems that work, and work hard, to be the ones that hurt people.

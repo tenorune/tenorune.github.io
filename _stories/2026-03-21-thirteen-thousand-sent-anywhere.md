@@ -10,7 +10,7 @@ source_publication: "BlueSky"
 source_author: "Aaron Reichlin-Melnick"
 bluesky_uri: "at://did:plc:2vtbmhmrwzbqcfv4we4uxzzt/app.bsky.feed.post/3mhl4gjcl322c"
 bluesky_saved_at: 2026-03-21T15:20:27.608Z
-published: false
+published: true
 ---
 
 Through early 2026, thirteen thousand people had been removed from the United States under the third-country deportation framework — many of them subject to removal orders issued decades or generations earlier and never previously enforced this way. The destinations were not the deportees' countries of origin but whatever third countries could be persuaded or coerced to receive them.

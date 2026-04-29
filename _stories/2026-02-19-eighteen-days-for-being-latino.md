@@ -10,7 +10,7 @@ source_publication: "BlueSky"
 source_author: "Mark Joseph Stern"
 bluesky_uri: "at://did:plc:6h7b2i6ttw3l4t7pvbvxdith/app.bsky.feed.post/3mf3eii272s2u"
 bluesky_saved_at: 2026-02-19T13:33:56.715Z
-published: false
+published: true
 ---
 
 A 20-year-old who was lawfully present in the United States was arrested in Minnesota by federal agents for what was, on review, the legally unprotected ground of being Latino. He was held for eighteen days in a detention cell described as too cramped for him to sit down. Federal courts have since ruled the arrest and detention unlawful.

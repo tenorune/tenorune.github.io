@@ -10,7 +10,7 @@ source_publication: "BlueSky"
 source_author: "Aaron Reichlin-Melnick"
 bluesky_uri: "at://did:plc:2vtbmhmrwzbqcfv4we4uxzzt/app.bsky.feed.post/3mf3hecple22q"
 bluesky_saved_at: 2026-02-19T13:33:00.000Z
-published: false
+published: true
 ---
 
 The federal official directing Immigration and Customs Enforcement's detention procurement is David Venturella, a former executive of GEO Group, where he ran the company's immigration detention portfolio. The Department of Homeland Security granted him a written ethics waiver permitting him to award contracts to his prior employer in his new role.

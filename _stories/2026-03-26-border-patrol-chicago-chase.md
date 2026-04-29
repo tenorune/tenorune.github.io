@@ -10,7 +10,7 @@ source_publication: "Unraveled Press"
 source_author: "Steve Held"
 bluesky_uri: "at://did:plc:htqlqkynhupi6fw4c7x26qti/app.bsky.feed.post/3mhy3apoj3c2a"
 bluesky_saved_at: 2026-03-26T18:26:14.102Z
-published: false
+published: true
 ---
 
 Body camera footage of an October 2025 incident in Chicago's East Side neighborhood shows three named Border Patrol agents continuing an eighteen-minute high-speed vehicle pursuit after their supervisor ordered them to call it off. The chase ended when the agents' own vehicle blew a tire and crashed. The agents then deployed tear gas in the surrounding residential neighborhood.

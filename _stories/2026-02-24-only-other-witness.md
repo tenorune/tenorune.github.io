@@ -10,7 +10,7 @@ source_publication: "The New York Times"
 source_author: "The New York Times"
 bluesky_uri: "at://did:plc:eclio37ymobqex2ncko63h4r/app.bsky.feed.post/3mfm6ixrxqd24"
 bluesky_saved_at: 2026-02-24T14:05:54.963Z
-published: false
+published: true
 ---
 
 The only passenger in the car when an ICE officer shot and killed a United States citizen in Texas in 2025 was Joshua Orta. Orta had planned to speak publicly and contradict the government's official account of the shooting. He died in an unrelated car crash before he could do so.

@@ -10,7 +10,7 @@ source_publication: "BlueSky"
 source_author: "Nicole Foy"
 bluesky_uri: "at://did:plc:ix26ab37ugxyhgpunrmzdh5g/app.bsky.feed.post/3m3hxrh6i5k2y"
 bluesky_saved_at: 2025-10-18T15:28:50.677Z
-published: false
+published: true
 ---
 
 A ProPublica investigation by reporter Nicole Foy tracked, by sourcing from social media, court records, and local press in Spanish and English, more than fifty cases of US citizens detained by federal immigration agents on charges that subsequently collapsed in court or were never filed at all. The pattern crossed demographics: senior citizens tackled, pregnant women handcuffed, children detained, a veteran pulled from his car on the way to work.

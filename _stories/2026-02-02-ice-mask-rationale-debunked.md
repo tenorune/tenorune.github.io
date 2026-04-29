@@ -10,7 +10,7 @@ source_publication: "How To Read This Chart (Philip Bump)"
 source_author: "Philip Bump"
 bluesky_uri: "at://did:plc:rogqxhzq6vy54nbuy4n6rwyd/app.bsky.feed.post/3mdmgjyjeg22a"
 bluesky_saved_at: 2026-02-02T00:00:00.000Z
-published: false
+published: true
 ---
 
 Since early 2025, the Department of Homeland Security has cited two threats — doxxing of officers and a spike in physical assaults — as the public rationale for permitting Immigration and Customs Enforcement agents to operate while masked. Masking conceals identity and accountability. Conventional law-enforcement practice in the United States is the opposite, on the principle that the public grants police the right to detain and use force in exchange for visible, identifiable accountability.

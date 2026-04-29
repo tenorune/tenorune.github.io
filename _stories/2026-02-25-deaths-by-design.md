@@ -10,7 +10,7 @@ source_publication: "BlueSky"
 source_author: "Gravel Influencer"
 bluesky_uri: "at://did:plc:u6ajzyiqzkzbppp2x2y7fpfu/app.bsky.feed.post/3mfacwpwznk2w"
 bluesky_saved_at: 2026-02-25T15:01:31.529Z
-published: false
+published: true
 ---
 
 Deaths in US immigration detention now match the patterns recorded in the early phases of past regimes' concentration-camp systems: deaths from poor conditions, untreated disease, untreated injury, and abuse. The pattern is not random misfortune. It is the predictable output of a custodial system whose design parameters — overcrowding, medical neglect, indefinite holds, restricted oversight — produce deaths as a statistically expected result.

@@ -10,7 +10,7 @@ source_publication: "BlueSky"
 source_author: "Molly Ploofkins"
 bluesky_uri: "at://did:plc:4q4ziw4qk2hxxaxfu7jweuey/app.bsky.feed.post/3mfkourjtw22e"
 bluesky_saved_at: 2026-02-25T13:05:31.826Z
-published: false
+published: true
 ---
 
 ICE whistleblower Ryan Schwank, a former agency instructor and staff attorney, testified that field agents were trained to disregard constitutional rights as a matter of operational policy. Schwank's account moves the question of unlawful arrests, denied counsel access, and warrantless entries from the category of individual misconduct into the category of institutional design.

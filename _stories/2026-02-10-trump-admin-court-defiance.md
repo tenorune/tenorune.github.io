@@ -10,7 +10,7 @@ source_publication: "Politico"
 source_article_pending: true
 bluesky_uri: "at://did:plc:euynv325eix7glyek377orak/app.bsky.feed.post/3meitkkniu22l"
 bluesky_saved_at: 2026-02-10T21:14:30.438Z
-published: false
+published: true
 ---
 
 Federal judges adjudicating immigration cases under the second Trump administration have begun publicly cataloguing a pattern of noncompliance with their orders. The list, as enumerated by judges in Minnesota and elsewhere, runs to at least five recurring tactics: detainees rapidly relocated across state lines (often to Texas or New Mexico) before habeas challenges can ripen; court deadlines for response simply ignored, with growing frequency; bail-style "conditions" like GPS monitoring imposed on people the judge has already ordered released; release into the cold or far from home, without identification, wallets, or warm clothes; and bond hearings that fall measurably short of constitutional standards.

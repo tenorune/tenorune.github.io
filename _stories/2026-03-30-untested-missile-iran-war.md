@@ -10,7 +10,7 @@ source_publication: "BlueSky"
 source_author: "Christiaan Triebert"
 bluesky_uri: "at://did:plc:gwh73yelgaqpabfsvatntbnw/app.bsky.feed.post/3miaucvfk422m"
 bluesky_saved_at: 2026-03-30T12:10:30.331Z
-published: false
+published: true
 ---
 
 On the first day of the war with Iran, a US ballistic missile previously unused in combat struck a sports hall, an elementary school, and residential buildings, killing at least twenty-one people including children. None of the targets were military by any conventional definition.

@@ -10,7 +10,7 @@ source_publication: "BlueSky"
 source_author: "Adam Sawyer"
 bluesky_uri: "at://did:plc:v3rvpshtirgoxscnmcjr7q2c/app.bsky.feed.post/3mk3zh4xvg22p"
 bluesky_saved_at: 2026-04-22T19:37:34.460Z
-published: false
+published: true
 ---
 
 More than 450,000 people moved through Immigration and Customs Enforcement custody in the first fourteen months of the second Trump administration, according to federal detention data through March 2026. The count combines initial bookings and transfers between facilities, exceeding the standing federal detention capacity several times over — a measure of throughput rather than headcount.

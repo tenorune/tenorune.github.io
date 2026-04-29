@@ -10,7 +10,7 @@ source_publication: "BlueSky"
 source_author: "Brian Finucane"
 bluesky_uri: "at://did:plc:oqexhdqbizq24v6ikjhhig2h/app.bsky.feed.post/3mgxbrnhqc22e"
 bluesky_saved_at: 2026-03-13T22:02:51.588Z
-published: false
+published: true
 ---
 
 The denial of quarter — the refusal to take prisoners, the killing of combatants who attempt to surrender — is classified as a war crime under United States military legal doctrine, codified in the Department of Defense Manual for Military Commissions. The same prohibition extends to a public declaration that no quarter will be given.

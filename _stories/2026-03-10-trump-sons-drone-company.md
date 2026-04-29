@@ -10,7 +10,7 @@ source_publication: "The Wall Street Journal"
 source_article_pending: true
 bluesky_uri: "at://did:plc:ds7jumejrr2e2ksfjmjxsz75/app.bsky.feed.post/3mgnqiaxwkc2e"
 bluesky_saved_at: 2026-03-10T13:24:00.000Z
-published: false
+published: true
 ---
 
 Eric Trump and Donald Trump Jr. are backers of a new drone company whose business plan, on the public record, is winning Pentagon procurement contracts. Their father is the sitting president of the United States, who controls the executive branch within which the Department of Defense awards those contracts.

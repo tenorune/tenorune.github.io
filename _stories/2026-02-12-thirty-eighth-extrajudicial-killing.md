@@ -10,7 +10,7 @@ source_publication: "BlueSky"
 source_author: "Charlie Archambault"
 bluesky_uri: "at://did:plc:ldtdnoxaint7yzelpnpljwes/app.bsky.feed.post/3meiudiazrs2e"
 bluesky_saved_at: 2026-02-12T00:00:00.000Z
-published: false
+published: true
 ---
 
 A running tally compiled from public reporting on US military operations in the Caribbean and elsewhere has recorded its thirty-eighth instance of the United States military unlawfully killing civilians under the orders of the Secretary of Defense and the President. The cumulative count of the dead is at least one hundred thirty. None of those killed were charged with a crime; the identities of most were not known to those who killed them.

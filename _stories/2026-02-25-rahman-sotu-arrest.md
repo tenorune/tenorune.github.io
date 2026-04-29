@@ -10,7 +10,7 @@ source_publication: "BlueSky"
 source_author: "Gabe Ortíz"
 bluesky_uri: "at://did:plc:qyipmepnqowrzrk4abnfpwow/app.bsky.feed.post/3mfpn2y5kk223"
 bluesky_saved_at: 2026-02-25T23:08:11.387Z
-published: false
+published: true
 ---
 
 Aliya Rahman, the Minnesotan who was violently dragged out of her car by federal agents in January, was arrested again at the State of the Union address. The stated reason was that Rahman had "silently" challenged the president during the speech.

@@ -10,7 +10,7 @@ source_publication: "The New Republic"
 source_author: "Greg Sargent"
 bluesky_uri: "at://did:plc:2amnkge5a6hplfwyesmxqkfl/app.bsky.feed.post/3m3hpt6yh4k24"
 bluesky_saved_at: 2025-10-18T15:45:11.882Z
-published: false
+published: true
 ---
 
 Federal agents shot Marimar Martinez, a US citizen in Chicago, multiple times in October 2025. In the immediate aftermath, the Department of Homeland Security and Secretary Kristi Noem described the shooting as a response to Martinez "ramming" agents' vehicles in a "boxed-in" group of ten cars, brandishing a gun, and "forcing" the agent to open fire. Martinez, the official account said, "drove herself to the hospital."

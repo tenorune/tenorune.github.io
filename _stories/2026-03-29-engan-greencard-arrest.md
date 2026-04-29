@@ -10,7 +10,7 @@ source_publication: "Daylight San Diego"
 source_author: "Kate Morrissey"
 bluesky_uri: "at://did:plc:2bqqvvbljclouzkz5r3oq36o/app.bsky.feed.post/3mi7eqa6zpc25"
 bluesky_saved_at: 2026-03-29T00:00:00.000Z
-published: false
+published: true
 ---
 
 Hanne Engan is a Norwegian citizen married to an American. When she arrived for her green card interview in downtown San Diego, Immigration and Customs Enforcement officers detained her at the appointment. They separated her from the continuous-glucose monitor she wears for Type 1 diabetes and from her insulin, and transported her to the Otay Mesa Detention Center.

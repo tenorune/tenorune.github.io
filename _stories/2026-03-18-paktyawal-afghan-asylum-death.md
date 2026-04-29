@@ -9,7 +9,7 @@ source_title: "Afghan asylum seeker dies after less than 24 hours in ICE custody
 source_publication: "NBC News"
 bluesky_uri: "at://did:plc:bewgr6xys3euxuztrh6r6i77/app.bsky.feed.post/3mh6hjz6jfc2i"
 bluesky_saved_at: 2026-03-18T18:08:32.052Z
-published: false
+published: true
 ---
 
 Mohommad Nazeer Paktyawal, age forty-one, was preparing to take his children to school on a Friday morning when a group of masked men drove up to his apartment complex in Richardson, Texas, and placed him in handcuffs. He had worked alongside the US military in Afghanistan, had no known health conditions, and was applying for US asylum. He died in Immigration and Customs Enforcement custody less than twenty-four hours after his arrest.

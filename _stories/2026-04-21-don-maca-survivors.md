@@ -9,7 +9,7 @@ source_title: "‘We were terrified they were going to kill us’: fishers who s
 source_publication: "The Guardian"
 bluesky_uri: "at://did:plc:cvne4fdbpqyu6qced7whinxn/app.bsky.feed.post/3mjzgnfd7vs2b"
 bluesky_saved_at: 2026-04-21T21:45:45.301Z
-published: false
+published: true
 ---
 
 The crew of the Ecuadorian fishing vessel Don Maca were finishing a day of swordfish and albacore lines when a drone strike tore through the boat, shattering glass and injuring several. The crew were subsequently detained by US forces and questioned. The United States has produced no evidence connecting the crew or the vessel to drug trafficking.

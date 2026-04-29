@@ -9,7 +9,7 @@ source_title: "Tricia McLaughlin's Top Five Lies"
 source_publication: "The Bulwark"
 bluesky_uri: "at://did:plc:aunpu65mdrhwfie7ynymlzeh/app.bsky.feed.post/3mf5wbdxkkj2w"
 bluesky_saved_at: 2026-02-18T00:00:00.000Z
-published: false
+published: true
 ---
 
 Of the people booked into Immigration and Customs Enforcement custody between October 1, 2025 and the date of the available data, seventy-three percent had no criminal conviction of any kind. Eight percent had a conviction for a violent or property offense. The remaining nineteen percent had been convicted of something — most commonly an immigration-related offense, including the act of unlawful presence itself.

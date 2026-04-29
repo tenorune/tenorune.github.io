@@ -9,7 +9,7 @@ source_title: "ICE Lied About Its Authority to Make Courthouse Arrests"
 source_publication: "The American Prospect"
 bluesky_uri: "at://did:plc:nztbvvo2gl4227zuxjf7gog3/app.bsky.feed.post/3mhw6m676ps2h"
 bluesky_saved_at: 2026-03-26T10:21:14.839Z
-published: false
+published: true
 ---
 
 Since May 2025, Immigration and Customs Enforcement officers have been arresting undocumented people as they showed up for routine immigration court hearings at federal buildings such as 26 Federal Plaza in New York. The agency justified the practice by invoking an internal memo dated May 27, 2025, titled "Civil Immigration Enforcement Actions in or Near Courthouses" — the so-called 2025 ICE Guidance.

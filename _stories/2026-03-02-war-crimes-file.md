@@ -10,7 +10,7 @@ source_publication: "BlueSky"
 source_author: "David Kaye"
 bluesky_uri: "at://did:plc:apssfu5zqqdhdxsutocuwgd4/app.bsky.feed.post/3mg3fxsb6u22m"
 bluesky_saved_at: 2026-03-02T18:41:36.443Z
-published: false
+published: true
 ---
 
 The Secretary of Defense's public statement that the mission would not be "guided by rules rooted in the law of armed conflict" amounted, on its face, to a public declaration that *jus in bello* principles were inapplicable to the operation. International law professor David Kaye, a former UN Special Rapporteur, flagged the statement as a near-textbook entry for any eventual war crimes prosecution file.

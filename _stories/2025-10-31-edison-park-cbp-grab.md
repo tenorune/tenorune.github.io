@@ -10,7 +10,7 @@ source_publication: "BlueSky"
 source_author: "Peter Nickeas"
 bluesky_uri: "at://did:plc:jkuhm4lmg6t25piybct5izji/app.bsky.feed.post/3m4j7z4ijlc2y"
 bluesky_saved_at: 2025-10-31T20:22:36.474Z
-published: false
+published: true
 ---
 
 On an October 2025 afternoon, Border Patrol agents removed people working in the front yard of a home on Oconto Avenue in Edison Park — the most conservative neighborhood in Chicago, by the local accounting — and drove them in convoy to a parking lot behind an office building in Niles, where they were transferred to a prisoner van. A CBP helicopter circled the convoy. The chief was on scene but stayed back. The neighborhood gathered as the operation continued.

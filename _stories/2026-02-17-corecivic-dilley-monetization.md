@@ -9,7 +9,7 @@ source_title: "The Kids Trump Sent to ICE's Dilley Detention Center"
 source_publication: "ProPublica"
 bluesky_uri: "at://did:plc:nsttbhhihov4y5yejsri2zlr/app.bsky.feed.post/3mevy77oibs27"
 bluesky_saved_at: 2026-02-17T10:56:58.338Z
-published: false
+published: true
 ---
 
 On a CoreCivic earnings call in early 2026, CEO Patrick Swindle described Immigration and Customs Enforcement as a "customer" with whom the company maintained "constant dialogue" to evaluate "how we can participate in that" mission. CoreCivic and GEO Group, the two largest private operators of immigration detention facilities in the United States, had reactivated idle capacity in advance of the second Trump administration's enforcement push. The Dilley, Texas family detention center — where letters from imprisoned children reached ProPublica reporters — is among those reactivated facilities.

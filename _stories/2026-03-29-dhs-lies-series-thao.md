@@ -11,7 +11,7 @@ source_author: "Radley Balko"
 source_article_pending: true
 bluesky_uri: "at://did:plc:c7ozmxoc5b2ky4iam2o36uic/app.bsky.feed.post/3mi4v662fc22l"
 bluesky_saved_at: 2026-03-29T00:00:00.000Z
-published: false
+published: true
 ---
 
 Investigative journalist Radley Balko launched an ongoing series cataloguing the false official statements that the Department of Homeland Security has issued after specific acts of abuse or violence by Immigration and Customs Enforcement and Border Patrol officers in the field. The first installment examines the illegal raid on ChongLy Scott Thao and his family — a raid the agency described publicly in terms that contradicted its own paperwork.
