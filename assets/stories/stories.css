@@ -195,3 +195,51 @@ a:hover { text-decoration-thickness: 2px; }
   .curator-row { grid-template-columns: 1fr; }
   .curator-actions { flex-direction: row; flex-wrap: wrap; }
 }
+
+/* Pending-saves dashboard */
+.pending-row { grid-template-columns: 10rem 1fr auto; }
+.pending-author {
+  display: block;
+  margin-top: 0.2rem;
+  font-family: var(--mono, monospace);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.pending-post {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+}
+.pending-embed { margin: 0.4rem 0; font-size: 0.85rem; }
+.pending-embed a { font-weight: 600; }
+.pending-link {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  margin-left: 0.4rem;
+}
+.pending-queued { background: rgba(255, 255, 200, 0.04); }
+
+.chip-guess { opacity: 0.6; font-style: italic; }
+
+.badge {
+  display: inline-block;
+  padding: 0.05rem 0.4rem;
+  margin-right: 0.3rem;
+  border-radius: 3px;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: #2a2a2a;
+  color: var(--muted);
+  border: 1px solid #3a3a3a;
+}
+.badge-article { color: #a8c8e8; border-color: #2a4a6a; }
+.badge-thread  { color: #c8a8e8; border-color: #4a2a6a; }
+.badge-image   { color: #e8c8a8; border-color: #6a4a2a; }
+
+.curator-state-queued { background: #1f2f3b; color: #c9d8e6; }
+
+@media (max-width: 640px) {
+  .pending-row { grid-template-columns: 1fr; }
+}

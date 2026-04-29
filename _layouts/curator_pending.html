@@ -1,0 +1,69 @@
+---
+layout: default
+---
+{% assign repo = "tenorune/tenorune.github.io" %}
+{% assign issue_base = "https://github.com/" | append: repo | append: "/issues/new" %}
+{% assign meta = site.data.pending.meta %}
+
+<article class="curator">
+  <h1 class="story-title">Curator — Pending Saves</h1>
+
+  <p class="meta">
+    Saved BlueSky posts that have not yet been drafted, filtered to those
+    matching at least one of the eight themes by keyword. Click <strong>Queue</strong>
+    to flag a save for the next batch I draft in chat; click <strong>Skip</strong>
+    to remove it from this view permanently.
+  </p>
+
+  <p class="meta curator-tally">
+    <a href="/stories/curator/">← back to drafted stories</a>
+  </p>
+
+  <p class="meta curator-tally">
+    {{ meta.pending_aligned }} shown · {{ meta.queued }} queued ·
+    {{ meta.pending_unaligned }} excluded as off-theme ·
+    {{ meta.skipped }} previously skipped ·
+    {{ meta.drafted }} already drafted ·
+    {{ meta.total_inventory }} inventory total
+  </p>
+
+  <hr class="rule">
+
+  <ol class="curator-list">
+    {% for s in site.data.pending.entries %}
+      {% capture title_skip  %}curator: skip {{ s.rkey }}{% endcapture %}
+      {% capture title_queue %}curator: queue {{ s.rkey }}{% endcapture %}
+      {% capture title_unq   %}curator: unqueue {{ s.rkey }}{% endcapture %}
+      {% capture body        %}{{ s.embed_title | default: s.post_text | truncate: 120 }}{% endcapture %}
+      <li class="curator-row pending-row{% if s.queued %} pending-queued{% endif %}">
+        <div class="curator-meta">
+          {% if s.queued %}<span class="curator-state-badge curator-state-queued">queued</span>{% endif %}
+          <span class="curator-date">{{ s.saved_at | slice: 0, 10 }}</span>
+          <span class="pending-author">@{{ s.author }}</span>
+        </div>
+        <div class="curator-body">
+          <p class="pending-post">{{ s.post_text }}</p>
+          {% if s.embed_title %}
+            <p class="pending-embed">
+              <a href="{{ s.embed_url }}" rel="noopener">{{ s.embed_title }}</a>
+              <span class="curator-source">— {{ s.embed_host }}</span>
+            </p>
+          {% endif %}
+          <p class="curator-themes">
+            {% for t in s.themes %}<span class="chip chip-guess">~{{ t }}</span>{% endfor %}
+            {% for b in s.badges %}<span class="badge badge-{{ b }}">{{ b }}</span>{% endfor %}
+            {% if s.bluesky_url %}<a class="pending-link" href="{{ s.bluesky_url }}" rel="noopener">view post</a>{% endif %}
+          </p>
+        </div>
+        <div class="curator-actions">
+          {% if s.queued %}
+            <a class="curator-btn curator-btn-draft" href="{{ issue_base }}?title={{ title_unq | url_encode }}&body={{ body | url_encode }}">Unqueue</a>
+          {% else %}
+            <a class="curator-btn curator-btn-publish" href="{{ issue_base }}?title={{ title_queue | url_encode }}&body={{ body | url_encode }}">Queue</a>
+          {% endif %}
+          <a class="curator-btn curator-btn-reject" href="{{ issue_base }}?title={{ title_skip | url_encode }}&body={{ body | url_encode }}">Skip</a>
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+</article>

@@ -18,10 +18,12 @@ jobs:
         env:
           TITLE: ${{ github.event.issue.title }}
         run: |
-          # Match: "curator: <action> <slug>"
-          if [[ "$TITLE" =~ ^curator:\ (publish|draft|reject)\ ([a-z0-9-]+)$ ]]; then
+          # Match: "curator: <action> <target>"
+          # action ∈ {publish, draft, reject, skip, queue, unqueue}
+          # target = story slug (kebab) or rkey (alphanumeric); both fit [a-z0-9-]+
+          if [[ "$TITLE" =~ ^curator:\ (publish|draft|reject|skip|queue|unqueue)\ ([a-z0-9-]+)$ ]]; then
             echo "action=${BASH_REMATCH[1]}" >> "$GITHUB_OUTPUT"
-            echo "slug=${BASH_REMATCH[2]}"   >> "$GITHUB_OUTPUT"
+            echo "target=${BASH_REMATCH[2]}" >> "$GITHUB_OUTPUT"
             echo "ok=true"                   >> "$GITHUB_OUTPUT"
           else
             echo "ok=false" >> "$GITHUB_OUTPUT"
@@ -33,7 +35,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh issue comment ${{ github.event.issue.number }} --repo ${{ github.repository }} \
-            --body "Title does not match \`curator: (publish|draft|reject) <slug>\`. Closing."
+            --body "Title does not match \`curator: (publish|draft|reject|skip|queue|unqueue) <slug-or-rkey>\`. Closing."
           gh issue close ${{ github.event.issue.number }} --repo ${{ github.repository }}
 
       - name: Gate on owner
@@ -62,20 +64,21 @@ jobs:
       - name: Apply curator action
         if: steps.parse.outputs.ok == 'true' && github.event.issue.author_association == 'OWNER'
         run: |
-          python scripts/curate.py "${{ steps.parse.outputs.action }}" "${{ steps.parse.outputs.slug }}"
+          python scripts/curate.py "${{ steps.parse.outputs.action }}" "${{ steps.parse.outputs.target }}"
           python scripts/build_curator_data.py
+          python scripts/build_pending_data.py
 
       - name: Commit and push
         if: steps.parse.outputs.ok == 'true' && github.event.issue.author_association == 'OWNER'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add _stories/ _data/curator.yml
+          git add _stories/ _data/curator.yml _data/pending.yml _data/saves_state.json
           if git diff --cached --quiet; then
             echo "no changes — action was a no-op"
             echo "noop=true" >> "$GITHUB_ENV"
           else
-            git commit -m "curate: ${{ steps.parse.outputs.action }} ${{ steps.parse.outputs.slug }} (issue #${{ github.event.issue.number }})"
+            git commit -m "curate: ${{ steps.parse.outputs.action }} ${{ steps.parse.outputs.target }} (issue #${{ github.event.issue.number }})"
             git push origin HEAD:main
             echo "noop=false" >> "$GITHUB_ENV"
           fi
@@ -86,9 +89,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           if [ "$noop" = "true" ]; then
-            BODY="No-op: \`${{ steps.parse.outputs.slug }}\` was already in the requested state (\`${{ steps.parse.outputs.action }}\`)."
+            BODY="No-op: \`${{ steps.parse.outputs.target }}\` was already in the requested state (\`${{ steps.parse.outputs.action }}\`)."
           else
-            BODY="Applied \`${{ steps.parse.outputs.action }}\` to \`${{ steps.parse.outputs.slug }}\`."
+            BODY="Applied \`${{ steps.parse.outputs.action }}\` to \`${{ steps.parse.outputs.target }}\`."
           fi
           gh issue comment ${{ github.event.issue.number }} --repo ${{ github.repository }} --body "$BODY"
           gh issue close ${{ github.event.issue.number }} --repo ${{ github.repository }}

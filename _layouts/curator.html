@@ -26,6 +26,13 @@ layout: default
     · {{ site.data.curator | size }} total
   </p>
 
+  {% if site.data.pending and site.data.pending.meta %}
+  <p class="meta curator-tally">
+    <a href="/stories/curator/pending/">{{ site.data.pending.meta.pending_aligned }} pending saves →</a>
+    {% if site.data.pending.meta.queued > 0 %}<span class="curator-source">({{ site.data.pending.meta.queued }} queued for drafting)</span>{% endif %}
+  </p>
+  {% endif %}
+
   <hr class="rule">
 
   <ol class="curator-list">
