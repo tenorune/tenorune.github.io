@@ -228,7 +228,7 @@
   themes:
   - civilian-harm
   - official-narrative
-  state: published
+  state: draft
   source_url: https://bsky.app/profile/drewharwell.com/post/3mgfjpi5b4c2p
   source_publication: BlueSky
   bluesky_uri: at://did:plc:j5fbnzh57rn7xz65yjc36gxb/app.bsky.feed.post/3mgfjpi5b4c2p
