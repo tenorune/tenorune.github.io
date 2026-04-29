@@ -64,6 +64,10 @@ exclude:
   - scripts/
   - tests/
 
-# Feed and sitemap config.
+# Feed and sitemap config. jekyll-feed only emits _posts by default, so the
+# stories collection has to be opted in explicitly. We park the stories feed
+# at /feed.xml (the conventional location) since this site has no _posts.
 feed:
-  path: feed.xml
+  collections:
+    stories:
+      path: feed.xml
