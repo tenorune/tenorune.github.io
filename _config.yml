@@ -69,6 +69,7 @@ exclude:
 # /stories/ tree to match the collection's URL space and avoid colliding with
 # the empty posts feed.
 feed:
+  posts_limit: 100
   collections:
     stories:
       path: stories/feed.xml
