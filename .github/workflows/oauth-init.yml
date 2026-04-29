@@ -14,9 +14,9 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -27,7 +27,7 @@ jobs:
         run: python scripts/oauth_init.py init "${{ inputs.handle }}"
 
       - name: Upload state artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: oauth-init-state
           path: .oauth-init-state.json
