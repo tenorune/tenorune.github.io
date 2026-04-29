@@ -1,0 +1,46 @@
+name: curator-data
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "_stories/**"
+      - "scripts/build_curator_data.py"
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    # Skip if the commit was made by this workflow itself, or by the curate
+    # workflow (which rebuilds curator.yml inline).
+    if: |
+      !contains(github.event.head_commit.message, 'chore(curator-data)') &&
+      !startsWith(github.event.head_commit.message, 'curate:')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install pyyaml
+
+      - name: Rebuild curator data
+        run: python scripts/build_curator_data.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _data/curator.yml
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "chore(curator-data): regenerate from _stories/"
+            git push origin HEAD:main
+          fi

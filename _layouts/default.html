@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="/assets/stories/stories.css">
+  {% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
   {% feed_meta %}
 </head>
 <body>

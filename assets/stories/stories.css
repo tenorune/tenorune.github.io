@@ -142,3 +142,56 @@ a:hover { text-decoration-thickness: 2px; }
 /* Compilation view */
 .compiled-story { margin-top: 2rem; }
 .compiled-story .story-title { font-size: 1.5rem; }
+
+/* Curator dashboard */
+.curator { max-width: 60rem; }
+.curator-tally { font-family: var(--sans); }
+.curator-list { list-style: none; padding: 0; margin: 0; }
+.curator-row {
+  display: grid;
+  grid-template-columns: 8rem 1fr auto;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.curator-meta { font-family: var(--sans); font-size: 0.8rem; color: var(--muted); }
+.curator-state-badge {
+  display: inline-block;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+.curator-state-published .curator-state-badge { background: #1f3b1f; color: #c9e6c9; }
+.curator-state-draft     .curator-state-badge { background: #3b3b1f; color: #e6e6c9; }
+.curator-state-rejected  .curator-state-badge { background: #3b1f1f; color: #e6c9c9; }
+.curator-state-rejected .curator-title { text-decoration: line-through; opacity: 0.6; }
+.curator-date { display: block; margin-top: 0.25rem; }
+.curator-title { font-weight: 600; font-size: 1.05rem; }
+.curator-summary { margin: 0.4rem 0 0.4rem; font-size: 0.95rem; }
+.curator-themes { font-family: var(--sans); font-size: 0.75rem; color: var(--muted); margin: 0; }
+.curator-themes .chip { margin-right: 0.4rem; }
+.curator-source { font-style: italic; }
+.curator-actions { display: flex; flex-direction: column; gap: 0.4rem; align-items: stretch; }
+.curator-btn {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.curator-btn-publish { background: #1f3b1f; color: #c9e6c9; border-color: #2f5b2f; }
+.curator-btn-draft   { background: #3b3b1f; color: #e6e6c9; border-color: #5b5b2f; }
+.curator-btn-reject  { background: #3b1f1f; color: #e6c9c9; border-color: #5b2f2f; }
+.curator-btn:hover { filter: brightness(1.2); }
+
+@media (max-width: 640px) {
+  .curator-row { grid-template-columns: 1fr; }
+  .curator-actions { flex-direction: row; flex-wrap: wrap; }
+}

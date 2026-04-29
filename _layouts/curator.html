@@ -1,0 +1,68 @@
+---
+layout: default
+---
+{% assign repo = "tenorune/tenorune.github.io" %}
+{% assign issue_base = "https://github.com/" | append: repo | append: "/issues/new" %}
+
+<article class="curator">
+  <h1 class="story-title">Curator</h1>
+
+  <p class="meta">
+    Each action opens a pre-filled GitHub Issue. Submit it from the curator's
+    GitHub account; the curate workflow gates on owner-association, mutates the
+    story's frontmatter, commits to <code>main</code>, and closes the issue.
+  </p>
+
+  {% assign published_count = 0 %}
+  {% assign draft_count = 0 %}
+  {% assign rejected_count = 0 %}
+  {% for s in site.data.curator %}
+    {% if s.state == "published" %}{% assign published_count = published_count | plus: 1 %}{% endif %}
+    {% if s.state == "draft" %}{% assign draft_count = draft_count | plus: 1 %}{% endif %}
+    {% if s.state == "rejected" %}{% assign rejected_count = rejected_count | plus: 1 %}{% endif %}
+  {% endfor %}
+  <p class="meta curator-tally">
+    {{ published_count }} published · {{ draft_count }} draft · {{ rejected_count }} rejected
+    · {{ site.data.curator | size }} total
+  </p>
+
+  <hr class="rule">
+
+  <ol class="curator-list">
+    {% for s in site.data.curator %}
+      {% assign body = "Story: " | append: s.title | url_encode %}
+      {% capture title_pub %}curator: publish {{ s.slug }}{% endcapture %}
+      {% capture title_rej %}curator: reject {{ s.slug }}{% endcapture %}
+      {% capture title_drf %}curator: draft {{ s.slug }}{% endcapture %}
+      <li class="curator-row curator-state-{{ s.state }}">
+        <div class="curator-meta">
+          <span class="curator-state-badge">{{ s.state }}</span>
+          <span class="curator-date">{{ s.date }}</span>
+        </div>
+        <div class="curator-body">
+          {% if s.state == "published" %}
+            <a class="curator-title" href="/stories/{{ s.slug }}/">{{ s.title }}</a>
+          {% else %}
+            <span class="curator-title">{{ s.title }}</span>
+          {% endif %}
+          <p class="curator-summary">{{ s.summary }}</p>
+          <p class="curator-themes">
+            {% for t in s.themes %}<span class="chip">#{{ t }}</span>{% endfor %}
+            {% if s.source_publication %}<span class="curator-source">— {{ s.source_publication }}</span>{% endif %}
+          </p>
+        </div>
+        <div class="curator-actions">
+          {% unless s.state == "published" %}
+            <a class="curator-btn curator-btn-publish" href="{{ issue_base }}?title={{ title_pub | url_encode }}&body={{ body }}">Publish</a>
+          {% endunless %}
+          {% unless s.state == "draft" %}
+            <a class="curator-btn curator-btn-draft" href="{{ issue_base }}?title={{ title_drf | url_encode }}&body={{ body }}">To draft</a>
+          {% endunless %}
+          {% unless s.state == "rejected" %}
+            <a class="curator-btn curator-btn-reject" href="{{ issue_base }}?title={{ title_rej | url_encode }}&body={{ body }}">Reject</a>
+          {% endunless %}
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+</article>
