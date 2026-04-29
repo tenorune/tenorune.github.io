@@ -133,7 +133,7 @@
   themes:
   - deportation-machinery
   - bureaucratic-cruelty
-  state: published
+  state: draft
   source_url: https://bsky.app/profile/smmarotta.bsky.social/post/3mhm53r3ihk2w
   source_publication: BlueSky
   bluesky_uri: at://did:plc:dgkyncbh6kcchafzi55rqltt/app.bsky.feed.post/3mhm53r3ihk2w
@@ -173,7 +173,7 @@
   themes:
   - rule-of-law
   - state-violence
-  state: published
+  state: draft
   source_url: https://bsky.app/profile/bcfinucane.bsky.social/post/3mgxbrnhqc22e
   source_publication: BlueSky
   bluesky_uri: at://did:plc:oqexhdqbizq24v6ikjhhig2h/app.bsky.feed.post/3mgxbrnhqc22e
@@ -214,7 +214,7 @@
   themes:
   - civilian-harm
   - state-violence
-  state: published
+  state: rejected
   source_url: https://bsky.app/profile/leahmcelrath.bsky.social/post/3mgjcothtf227
   source_publication: BlueSky
   bluesky_uri: at://did:plc:gvda6fem6r7selm4gzjjww4a/app.bsky.feed.post/3mgjcothtf227

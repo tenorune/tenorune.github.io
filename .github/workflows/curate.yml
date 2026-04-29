@@ -2,7 +2,7 @@ name: curate
 
 on:
   issues:
-    types: [opened]
+    types: [opened, reopened, edited]
 
 permissions:
   contents: write
@@ -11,7 +11,7 @@ permissions:
 jobs:
   curate:
     runs-on: ubuntu-latest
-    if: startsWith(github.event.issue.title, 'curator: ')
+    if: "${{ startsWith(github.event.issue.title, 'curator: ') }}"
     steps:
       - name: Parse issue title
         id: parse
