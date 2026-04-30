@@ -9,6 +9,7 @@ source_title: "‘We were terrified they were going to kill us’: fishers who s
 source_publication: "The Guardian"
 bluesky_uri: "at://did:plc:cvne4fdbpqyu6qced7whinxn/app.bsky.feed.post/3mjzgnfd7vs2b"
 bluesky_saved_at: 2026-04-21T21:45:45.301Z
+post_created_at: "2026-04-21T16:46:05Z"
 published: true
 ---
 

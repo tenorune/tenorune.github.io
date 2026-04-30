@@ -2,7 +2,7 @@
 title: "The Procurement Officer's Former Employer"
 slug: geo-group-ice-procurement
 summary: "The federal official directing Immigration and Customs Enforcement's detention procurement is a former GEO Group executive who, by ethics waiver, was permitted to award contracts to his prior employer — a company poised to receive tens of billions of dollars over four years through detention contracts often awarded without competitive bids."
-date: 2026-02-19
+date: 2026-02-17
 themes: [predatory-capital, deportation-machinery]
 source_url: "https://bsky.app/profile/reichlinmelnick.bsky.social/post/3mf3hecple22q"
 source_title: "Reichlin-Melnick on Venturella, GEO Group, and the ICE procurement waiver"
@@ -10,6 +10,7 @@ source_publication: "BlueSky"
 source_author: "Aaron Reichlin-Melnick"
 bluesky_uri: "at://did:plc:2vtbmhmrwzbqcfv4we4uxzzt/app.bsky.feed.post/3mf3hecple22q"
 bluesky_saved_at: 2026-02-19T13:33:00.000Z
+post_created_at: "2026-02-17T20:58:15Z"
 published: true
 ---
 

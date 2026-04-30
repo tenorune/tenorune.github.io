@@ -2,6 +2,11 @@ name: fetch articles
 
 on:
   workflow_dispatch:
+    inputs:
+      refresh_dates:
+        description: "Re-fetch already-hydrated articles to capture article_published_at"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -20,7 +25,12 @@ jobs:
         run: pip install -r scripts/requirements.txt
 
       - name: Hydrate inventory with article text
-        run: python scripts/fetch_articles.py
+        run: |
+          if [ "${{ inputs.refresh_dates }}" = "true" ]; then
+            python scripts/fetch_articles.py --refresh-dates
+          else
+            python scripts/fetch_articles.py
+          fi
 
       - name: Commit if inventory changed
         run: |

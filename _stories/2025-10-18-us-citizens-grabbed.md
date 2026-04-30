@@ -10,6 +10,7 @@ source_publication: "BlueSky"
 source_author: "Nicole Foy"
 bluesky_uri: "at://did:plc:ix26ab37ugxyhgpunrmzdh5g/app.bsky.feed.post/3m3hxrh6i5k2y"
 bluesky_saved_at: 2025-10-18T15:28:50.677Z
+post_created_at: "2025-10-18T14:11:56Z"
 published: true
 ---
 

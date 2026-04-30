@@ -2,13 +2,14 @@
 title: "The Pool"
 slug: east-montana-suicide-bets
 summary: "An Associated Press investigation, drawn from 911 calls and detainee accounts, reports that staff at the nation's largest ICE detention facility — Camp East Montana on Fort Bliss in Texas — placed bets on which detainee would next die by suicide; Camp East Montana sits on the site of a World War II Japanese American internment camp."
-date: 2026-03-08
+date: 2026-03-07
 themes: [bureaucratic-cruelty, civilian-harm, predatory-capital]
 source_url: "https://www.motherjones.com/politics/2026/03/at-largest-ice-detention-camp-staff-bet-on-detainee-suicides-ap-reports/"
 source_title: "At Largest ICE Detention Camp, Staff Bet on Detainee Suicides, AP Reports"
 source_publication: "Mother Jones"
 bluesky_uri: "at://did:plc:qobvnkudcv3zlaklxxjduqoi/app.bsky.feed.post/3mgipubtbsw2w"
 bluesky_saved_at: 2026-03-08T17:26:22.799Z
+post_created_at: "2026-03-07T21:00:09Z"
 published: true
 ---
 

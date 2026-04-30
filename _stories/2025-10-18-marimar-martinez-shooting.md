@@ -10,6 +10,7 @@ source_publication: "The New Republic"
 source_author: "Greg Sargent"
 bluesky_uri: "at://did:plc:2amnkge5a6hplfwyesmxqkfl/app.bsky.feed.post/3m3hpt6yh4k24"
 bluesky_saved_at: 2025-10-18T15:45:11.882Z
+post_created_at: "2025-10-18T11:49:45Z"
 published: true
 ---
 

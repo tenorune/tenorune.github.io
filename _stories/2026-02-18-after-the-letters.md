@@ -2,7 +2,7 @@
 title: "After the Letters Were Published"
 slug: after-the-letters
 summary: "Letters from children imprisoned in the Dilley, Texas family detention camp — including a seven-year-old held for seventy days, a five-year-old, and a nine-year-old held for one hundred thirteen days — reached ProPublica. The day the resulting story was published, federal personnel raided the dormitories to confiscate further letters."
-date: 2026-02-18
+date: 2026-02-17
 themes: [bureaucratic-cruelty, resistance-and-witness]
 source_url: "https://bsky.app/profile/nkalamb.bsky.social/post/3mf3cjpixvk25"
 source_title: "Kalman-Lamb on the ICE camp letter raid"
@@ -10,6 +10,7 @@ source_publication: "BlueSky"
 source_author: "Nathan Kalman-Lamb"
 bluesky_uri: "at://did:plc:tgw3d4hvw3x5ijrxax7lg26u/app.bsky.feed.post/3mf3cjpixvk25"
 bluesky_saved_at: 2026-02-18T13:32:25.753Z
+post_created_at: "2026-02-17T19:31:47Z"
 published: true
 ---
 

@@ -10,6 +10,7 @@ source_publication: "BlueSky"
 source_author: "Peter Nickeas"
 bluesky_uri: "at://did:plc:jkuhm4lmg6t25piybct5izji/app.bsky.feed.post/3m4j7z4ijlc2y"
 bluesky_saved_at: 2025-10-31T20:22:36.474Z
+post_created_at: "2025-10-31T19:37:15Z"
 published: true
 ---
 

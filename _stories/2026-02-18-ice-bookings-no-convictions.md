@@ -9,6 +9,7 @@ source_title: "Tricia McLaughlin's Top Five Lies"
 source_publication: "The Bulwark"
 bluesky_uri: "at://did:plc:aunpu65mdrhwfie7ynymlzeh/app.bsky.feed.post/3mf5wbdxkkj2w"
 bluesky_saved_at: 2026-02-18T00:00:00.000Z
+post_created_at: "2026-02-18T20:30:21Z"
 published: true
 ---
 

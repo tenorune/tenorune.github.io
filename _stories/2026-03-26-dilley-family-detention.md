@@ -9,6 +9,7 @@ source_title: "Wormy food, intimidating guards, sick kids: Inside ICE's only fam
 source_publication: "Mother Jones"
 bluesky_uri: "at://did:plc:qobvnkudcv3zlaklxxjduqoi/app.bsky.feed.post/3mhwizax5hn22"
 bluesky_saved_at: 2026-03-26T10:22:55.284Z
+post_created_at: "2026-03-26T02:00:08Z"
 published: true
 ---
 

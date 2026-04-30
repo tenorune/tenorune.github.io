@@ -22,6 +22,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -135,6 +136,36 @@ def bluesky_url_of(uri: str, handle: str) -> str:
     return f"https://bsky.app/profile/{handle}/post/{rkey}"
 
 
+def parse_iso(s: str | None) -> datetime | None:
+    """Parse a variety of ISO-ish timestamps to a tz-naive UTC datetime."""
+    if not s:
+        return None
+    s = str(s).strip()
+    if not s:
+        return None
+    # Normalise trailing Z and fractional seconds for fromisoformat compatibility.
+    s = s.replace("Z", "+00:00")
+    try:
+        dt = datetime.fromisoformat(s)
+    except ValueError:
+        # Date-only: "2025-11-04"
+        try:
+            dt = datetime.fromisoformat(s + "T00:00:00+00:00")
+        except ValueError:
+            return None
+    if dt.tzinfo is not None:
+        dt = dt.astimezone(tz=None).replace(tzinfo=None)
+    return dt
+
+
+def gap_days(post_at: str | None, pub_at: str | None) -> int | None:
+    p = parse_iso(post_at)
+    q = parse_iso(pub_at)
+    if p is None or q is None:
+        return None
+    return abs((p - q).days)
+
+
 def excerpt(text: str, n: int = 280) -> str:
     text = (text or "").strip().replace("\r", "")
     if len(text) <= n:
@@ -184,12 +215,19 @@ def main() -> int:
         if s.get("images"):
             badges.append("image")
 
+        post_at = s.get("post_created_at", "")
+        pub_at = s.get("article_published_at", "")
+        gap = gap_days(post_at, pub_at)
         aligned.append({
             "rkey": rkey_of(uri),
             "uri": uri,
             "author": handle,
             "author_display": author.get("display_name") or handle,
             "saved_at": s.get("saved_at", ""),
+            "post_created_at": post_at,
+            "article_published_at": pub_at,
+            "gap_days": gap,
+            "gap_flag": gap is not None and gap > 7,
             "post_text": excerpt(s.get("post_text") or "", 280),
             "embed_title": (e.get("title") or "").strip() if isinstance(e, dict) else "",
             "embed_host": host_of(e.get("url") if isinstance(e, dict) else None),
@@ -200,8 +238,9 @@ def main() -> int:
             "queued": uri in queued_uris,
         })
 
-    aligned.sort(key=lambda r: r["saved_at"], reverse=True)
+    aligned.sort(key=lambda r: r["post_created_at"] or r["saved_at"], reverse=True)
 
+    flagged = sum(1 for a in aligned if a["gap_flag"])
     meta = {
         "total_inventory": len(saves),
         "drafted": len(drafted),
@@ -210,6 +249,7 @@ def main() -> int:
         "pending_total": len(pending),
         "pending_aligned": len(aligned),
         "pending_unaligned": unaligned_count,
+        "pending_gap_flagged": flagged,
     }
 
     out = {"meta": meta, "entries": aligned}

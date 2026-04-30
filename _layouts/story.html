@@ -25,7 +25,8 @@ layout: default
   </p>
 
   <p class="meta meta-line">
-    {{ page.bluesky_saved_at | date: "%b %-d, %Y" }} ·
+    {% assign post_at = page.post_created_at | default: page.bluesky_saved_at %}
+    {{ post_at | date: "%b %-d, %Y" }} ·
     Source: {{ page.source_publication }}{% if page.source_author %}, {{ page.source_author }}{% endif %}{% if page.source_published_at %} ({{ page.source_published_at | date: "%b %-d, %Y" }}){% endif %}
   </p>
 

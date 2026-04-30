@@ -10,6 +10,7 @@ source_publication: "Chicago Tribune"
 source_author: "Dan Vock"
 bluesky_uri: "at://did:plc:gx3pvpa3rsczyr5fs3lyiv2g/app.bsky.feed.post/3mblyzg2yyc23"
 bluesky_saved_at: 2026-01-04T21:20:51.237Z
+post_created_at: "2026-01-04T13:16:06Z"
 published: true
 ---
 

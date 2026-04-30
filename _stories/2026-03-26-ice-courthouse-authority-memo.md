@@ -2,13 +2,14 @@
 title: "The Memo That Said What ICE Already Did"
 slug: ice-courthouse-authority-memo
 summary: "The legal memo ICE used for more than a year to justify courthouse arrests does not, on its face, grant that authority — a fact ICE's own counsel has now confirmed in writing to the Southern District of New York."
-date: 2026-03-26
+date: 2026-03-25
 themes: [rule-of-law, deportation-machinery]
 source_url: "https://prospect.org/2026/03/25/ice-lied-about-its-authority-to-make-courthouse-arrests/"
 source_title: "ICE Lied About Its Authority to Make Courthouse Arrests"
 source_publication: "The American Prospect"
 bluesky_uri: "at://did:plc:nztbvvo2gl4227zuxjf7gog3/app.bsky.feed.post/3mhw6m676ps2h"
 bluesky_saved_at: 2026-03-26T10:21:14.839Z
+post_created_at: "2026-03-25T22:53:51Z"
 published: true
 ---
 

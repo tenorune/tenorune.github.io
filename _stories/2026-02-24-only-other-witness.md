@@ -10,6 +10,7 @@ source_publication: "The New York Times"
 source_author: "The New York Times"
 bluesky_uri: "at://did:plc:eclio37ymobqex2ncko63h4r/app.bsky.feed.post/3mfm6ixrxqd24"
 bluesky_saved_at: 2026-02-24T14:05:54.963Z
+post_created_at: "2026-02-24T12:35:03Z"
 published: true
 ---
 

@@ -243,3 +243,18 @@ a:hover { text-decoration-thickness: 2px; }
 @media (max-width: 640px) {
   .pending-row { grid-template-columns: 1fr; }
 }
+
+/* Gap flag — post vs. article publication date differ by > 7 days */
+.gap-flag {
+  display: inline-block;
+  margin-top: 0.2rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 3px;
+  background: #4a3a1f;
+  color: #f0d090;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  border: 1px solid #6a5a2f;
+  white-space: nowrap;
+}
+.curator-gap-flagged { background: rgba(74, 58, 31, 0.05); }

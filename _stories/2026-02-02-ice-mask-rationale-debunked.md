@@ -2,7 +2,7 @@
 title: "The Doxxing That Hasn't Happened"
 slug: ice-mask-rationale-debunked
 summary: "The Department of Homeland Security has cited doxxing of ICE agents and rising assaults as the public rationale for permitting agents to operate while masked; according to DHS's own press releases, no ICE agent has been doxxed or assaulted in connection with this rationale since the start of the second Trump administration."
-date: 2026-02-02
+date: 2026-01-30
 themes: [official-narrative]
 source_url: "https://www.pbump.net/o/ices-excuse-for-wearing-masks-has-never-actually-manifested/"
 source_title: "ICE's excuse for wearing masks has never actually manifested"
@@ -10,6 +10,7 @@ source_publication: "How To Read This Chart (Philip Bump)"
 source_author: "Philip Bump"
 bluesky_uri: "at://did:plc:rogqxhzq6vy54nbuy4n6rwyd/app.bsky.feed.post/3mdmgjyjeg22a"
 bluesky_saved_at: 2026-02-02T00:00:00.000Z
+post_created_at: "2026-01-30T04:08:24Z"
 published: true
 ---
 

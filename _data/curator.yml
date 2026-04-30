@@ -1,6 +1,10 @@
 - slug: ice-detention-scale-first-year
   title: Tracking the Scale of ICE Detention's First Year
   date: '2026-04-22'
+  post_created_at: '2026-04-22T17:27:55Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: Federal data through March shows more than 450,000 people experienced ICE
     detention in the Trump administration's first fourteen months — a count that includes
     both new bookings and inter-facility transfers.
@@ -13,6 +17,10 @@
 - slug: don-maca-survivors
   title: Survivors of the Don Maca
   date: '2026-04-21'
+  post_created_at: '2026-04-21T16:46:05Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: Ecuadorian fishers aboard the Don Maca survived a US drone strike on their
     vessel during routine fishing operations; no evidence has been produced linking
     them or their boat to drug trafficking.
@@ -26,6 +34,10 @@
 - slug: untested-missile-iran-war
   title: 'First Day of the Iran War: An Untested Missile Hit a School'
   date: '2026-03-30'
+  post_created_at: '2026-03-30T04:49:00Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: On the war's first day, the United States deployed a ballistic missile
     that had never been used in combat; analysis of the strike sites shows it hit
     a sports hall, an elementary school, and residential buildings, killing at least
@@ -37,24 +49,13 @@
   source_url: https://bsky.app/profile/trbrtc.bsky.social/post/3miaucvfk422m
   source_publication: BlueSky
   bluesky_uri: at://did:plc:gwh73yelgaqpabfsvatntbnw/app.bsky.feed.post/3miaucvfk422m
-- slug: dhs-lies-series-thao
-  title: The First Bumbling Raid
-  date: '2026-03-29'
-  summary: Investigative journalist Radley Balko launched an ongoing series cataloguing
-    the false official statements that the Department of Homeland Security has issued
-    after specific acts of abuse or violence by ICE and Border Patrol officers in
-    the field; the first installment examines the illegal raid on ChongLy Scott Thao
-    and his family.
-  themes:
-  - official-narrative
-  - resistance-and-witness
-  state: published
-  source_url: https://radleybalko.substack.com/p/you-cant-hide-your-lying-ice
-  source_publication: The Watch (Radley Balko)
-  bluesky_uri: at://did:plc:c7ozmxoc5b2ky4iam2o36uic/app.bsky.feed.post/3mi4v662fc22l
 - slug: engan-greencard-arrest
   title: Hanne Engan, Type 1 Diabetic, Detained
   date: '2026-03-29'
+  post_created_at: '2026-03-29T14:37:27Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: Hanne Engan, a Norwegian woman married to an American citizen, was detained
     at her green card appointment in San Diego; while in custody at Otay Mesa, the
     equipment and insulin she needs to manage her Type 1 diabetes were withheld, she
@@ -67,23 +68,32 @@
   source_url: https://www.daylightsandiego.org/san-diego-woman-says-her-credit-card-information-was-stolen-while-she-was-in-ice-custody/
   source_publication: Daylight San Diego
   bluesky_uri: at://did:plc:2bqqvvbljclouzkz5r3oq36o/app.bsky.feed.post/3mi7eqa6zpc25
-- slug: lothirath-cancer-detention
-  title: Four Out of Five Chemotherapy Sessions
-  date: '2026-03-29'
-  summary: Oudone Lothirath, a Minnesota man with aggressive lymphoma, missed four
-    of five scheduled chemotherapy sessions while in ICE detention in Texas in January;
-    he was returned to Minnesota only after a hospital letter warned he would die
-    without treatment, and he is now in hospice.
+- slug: dhs-lies-series-thao
+  title: The First Bumbling Raid
+  date: '2026-03-28'
+  post_created_at: '2026-03-28T14:53:36Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: Investigative journalist Radley Balko launched an ongoing series cataloguing
+    the false official statements that the Department of Homeland Security has issued
+    after specific acts of abuse or violence by ICE and Border Patrol officers in
+    the field; the first installment examines the illegal raid on ChongLy Scott Thao
+    and his family.
   themes:
-  - bureaucratic-cruelty
-  - civilian-harm
+  - official-narrative
+  - resistance-and-witness
   state: published
-  source_url: https://www.startribune.com/how-ice-detainment-harmed-immigrants-with-chronic-health-problems/601588583
-  source_publication: Star Tribune
-  bluesky_uri: at://did:plc:uqrng3jvztdp5xhengot5vhy/app.bsky.feed.post/3mhxza22ha22r
+  source_url: https://radleybalko.substack.com/p/you-cant-hide-your-lying-ice
+  source_publication: The Watch (Radley Balko)
+  bluesky_uri: at://did:plc:c7ozmxoc5b2ky4iam2o36uic/app.bsky.feed.post/3mi4v662fc22l
 - slug: border-patrol-chicago-chase
   title: When the Body Cameras Caught the Chase
   date: '2026-03-26'
+  post_created_at: '2026-03-26T16:59:05Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: 'Body camera footage from an October 2025 Chicago incident contradicts
     the Department of Homeland Security''s account: Border Patrol agents continued
     a high-speed pursuit against direct supervisor orders to end it, blew a tire,
@@ -95,9 +105,31 @@
   source_url: https://unraveledpress.com/border-patrol-agents-ignored-orders-to-end-car-chase-before-gassing-chicago-neighborhood/
   source_publication: Unraveled Press
   bluesky_uri: at://did:plc:htqlqkynhupi6fw4c7x26qti/app.bsky.feed.post/3mhy3apoj3c2a
+- slug: lothirath-cancer-detention
+  title: Four Out of Five Chemotherapy Sessions
+  date: '2026-03-26'
+  post_created_at: '2026-03-26T16:22:55Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: Oudone Lothirath, a Minnesota man with aggressive lymphoma, missed four
+    of five scheduled chemotherapy sessions while in ICE detention in Texas in January;
+    he was returned to Minnesota only after a hospital letter warned he would die
+    without treatment, and he is now in hospice.
+  themes:
+  - bureaucratic-cruelty
+  - civilian-harm
+  state: published
+  source_url: https://www.startribune.com/how-ice-detainment-harmed-immigrants-with-chronic-health-problems/601588583
+  source_publication: Star Tribune
+  bluesky_uri: at://did:plc:uqrng3jvztdp5xhengot5vhy/app.bsky.feed.post/3mhxza22ha22r
 - slug: dilley-family-detention
   title: Inside Dilley
   date: '2026-03-26'
+  post_created_at: '2026-03-26T02:00:08Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: Sworn declarations from detained children and parents at the Dilley Immigration
     Processing Center — the nation's only family detention facility, run by CoreCivic
     and reopened in 2025 — describe vomit-inducing food, denied medical care, intimidating
@@ -113,7 +145,11 @@
   bluesky_uri: at://did:plc:qobvnkudcv3zlaklxxjduqoi/app.bsky.feed.post/3mhwizax5hn22
 - slug: ice-courthouse-authority-memo
   title: The Memo That Said What ICE Already Did
-  date: '2026-03-26'
+  date: '2026-03-25'
+  post_created_at: '2026-03-25T22:53:51Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: The legal memo ICE used for more than a year to justify courthouse arrests
     does not, on its face, grant that authority — a fact ICE's own counsel has now
     confirmed in writing to the Southern District of New York.
@@ -126,7 +162,11 @@
   bluesky_uri: at://did:plc:nztbvvo2gl4227zuxjf7gog3/app.bsky.feed.post/3mhw6m676ps2h
 - slug: diligence-reserved-for-cruelty
   title: The Diligence Reserved for Cruelty
-  date: '2026-03-22'
+  date: '2026-03-21'
+  post_created_at: '2026-03-21T23:00:09Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: The energy spent pursuing the deportation of Kilmar Abrego Garcia to a
     country he never lived in stands in conspicuous contrast to the federal government's
     approach to nearly every other policy goal.
@@ -140,6 +180,10 @@
 - slug: thirteen-thousand-sent-anywhere
   title: Thirteen Thousand Sent Anywhere But Home
   date: '2026-03-21'
+  post_created_at: '2026-03-21T13:15:37Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: Thirteen thousand people have been removed under the third-country deportation
     framework — many under removal orders issued decades earlier that prior administrations
     would not have enforced this way.
@@ -152,7 +196,11 @@
   bluesky_uri: at://did:plc:2vtbmhmrwzbqcfv4we4uxzzt/app.bsky.feed.post/3mhl4gjcl322c
 - slug: paktyawal-afghan-asylum-death
   title: Twenty-Three Hours
-  date: '2026-03-18'
+  date: '2026-03-16'
+  post_created_at: '2026-03-16T12:29:49Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: Mohommad Nazeer Paktyawal, an Afghan father of six who had worked alongside
     the US military in Afghanistan and was applying for asylum, died less than twenty-four
     hours after Immigration and Customs Enforcement detained him outside his apartment
@@ -167,6 +215,10 @@
 - slug: no-quarter-war-crime
   title: 'No Quarter as War Crime: The DoD''s Own Manual'
   date: '2026-03-13'
+  post_created_at: '2026-03-13T15:58:04Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: The denial of quarter — including a public declaration that no quarter
     will be given — is recognized as a war crime by the United States government's
     own military legal doctrine.
@@ -179,7 +231,11 @@
   bluesky_uri: at://did:plc:oqexhdqbizq24v6ikjhhig2h/app.bsky.feed.post/3mgxbrnhqc22e
 - slug: trump-sons-drone-company
   title: The Sons' New Drone Company
-  date: '2026-03-10'
+  date: '2026-03-09'
+  post_created_at: '2026-03-09T20:54:38Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: Eric Trump and Donald Trump Jr. are backers of a new drone company explicitly
     targeting Pentagon contracts; the company would profit from defense procurement
     decisions made by the administration of which their father is the head.
@@ -189,9 +245,30 @@
   source_url: https://www.wsj.com/politics/national-security/trump-sons-back-new-drone-company-targeting-pentagon-sales-2f74abca
   source_publication: The Wall Street Journal
   bluesky_uri: at://did:plc:ds7jumejrr2e2ksfjmjxsz75/app.bsky.feed.post/3mgnqiaxwkc2e
+- slug: fire-in-tehran-trees
+  title: Fire in the Trees of Tehran
+  date: '2026-03-08'
+  post_created_at: '2026-03-08T02:37:07Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: A geo-confirmed video from Tehran shows fire flowing through stone water-gutters
+    built to nourish the city's trees — visual evidence of the war's destruction of
+    basic civic infrastructure.
+  themes:
+  - civilian-harm
+  - state-violence
+  state: rejected
+  source_url: https://bsky.app/profile/leahmcelrath.bsky.social/post/3mgjcothtf227
+  source_publication: BlueSky
+  bluesky_uri: at://did:plc:gvda6fem6r7selm4gzjjww4a/app.bsky.feed.post/3mgjcothtf227
 - slug: east-montana-suicide-bets
   title: The Pool
-  date: '2026-03-08'
+  date: '2026-03-07'
+  post_created_at: '2026-03-07T21:00:09Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: An Associated Press investigation, drawn from 911 calls and detainee accounts,
     reports that staff at the nation's largest ICE detention facility — Camp East
     Montana on Fort Bliss in Texas — placed bets on which detainee would next die
@@ -205,22 +282,13 @@
   source_url: https://www.motherjones.com/politics/2026/03/at-largest-ice-detention-camp-staff-bet-on-detainee-suicides-ap-reports/
   source_publication: Mother Jones
   bluesky_uri: at://did:plc:qobvnkudcv3zlaklxxjduqoi/app.bsky.feed.post/3mgipubtbsw2w
-- slug: fire-in-tehran-trees
-  title: Fire in the Trees of Tehran
-  date: '2026-03-08'
-  summary: A geo-confirmed video from Tehran shows fire flowing through stone water-gutters
-    built to nourish the city's trees — visual evidence of the war's destruction of
-    basic civic infrastructure.
-  themes:
-  - civilian-harm
-  - state-violence
-  state: rejected
-  source_url: https://bsky.app/profile/leahmcelrath.bsky.social/post/3mgjcothtf227
-  source_publication: BlueSky
-  bluesky_uri: at://did:plc:gvda6fem6r7selm4gzjjww4a/app.bsky.feed.post/3mgjcothtf227
 - slug: white-house-bombing-mashup
   title: Mashup
-  date: '2026-03-07'
+  date: '2026-03-06'
+  post_created_at: '2026-03-06T14:32:06Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: Hours after the New York Times reported that US strikes had killed children
     in an Iranian elementary school, the White House social media account posted a
     video mixing airstrike footage with clips from Top Gun, Iron Man, and other action
@@ -235,6 +303,10 @@
 - slug: war-crimes-file
   title: Adding to the War Crimes File
   date: '2026-03-02'
+  post_created_at: '2026-03-02T13:58:33Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: Reading the Secretary of Defense's public statement that the mission would
     not be 'guided by rules rooted in the law of armed conflict,' former UN special
     rapporteur David Kaye flagged the declaration as material for any future war crimes
@@ -246,35 +318,13 @@
   source_url: https://bsky.app/profile/davidakaye.bsky.social/post/3mg3fxsb6u22m
   source_publication: BlueSky
   bluesky_uri: at://did:plc:apssfu5zqqdhdxsutocuwgd4/app.bsky.feed.post/3mg3fxsb6u22m
-- slug: deaths-by-design
-  title: Not Accidental
-  date: '2026-02-25'
-  summary: 'Deaths in immigration detention now match the patterns recorded in the
-    early phases of past regimes'' concentration camps: poor conditions, untreated
-    disease, abuse — not random misfortune but the predictable output of a custodial
-    system designed for harm.'
-  themes:
-  - bureaucratic-cruelty
-  state: published
-  source_url: https://bsky.app/profile/gravelinfluencer.bsky.social/post/3mfacwpwznk2w
-  source_publication: BlueSky
-  bluesky_uri: at://did:plc:u6ajzyiqzkzbppp2x2y7fpfu/app.bsky.feed.post/3mfacwpwznk2w
-- slug: ice-trained-to-disregard
-  title: Trained to Disregard
-  date: '2026-02-25'
-  summary: ICE whistleblower Ryan Schwank, a former agency instructor and staff attorney,
-    testified that field agents were trained to disregard constitutional rights —
-    making rights violations a matter of policy rather than aberration.
-  themes:
-  - rule-of-law
-  - resistance-and-witness
-  state: published
-  source_url: https://bsky.app/profile/mollyploofkins.bsky.social/post/3mfkourjtw22e
-  source_publication: BlueSky
-  bluesky_uri: at://did:plc:4q4ziw4qk2hxxaxfu7jweuey/app.bsky.feed.post/3mfkourjtw22e
 - slug: rahman-sotu-arrest
   title: Arrested for Silent Challenge
   date: '2026-02-25'
+  post_created_at: '2026-02-25T21:33:39Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: Aliya Rahman, who was violently dragged from her car by federal agents
     in January, was arrested again at the State of the Union — the cited reason being
     that she had silently challenged the president during the speech.
@@ -288,6 +338,10 @@
 - slug: only-other-witness
   title: The Only Other Witness
   date: '2026-02-24'
+  post_created_at: '2026-02-24T12:35:03Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: The only passenger in the car when an ICE officer shot and killed a US
     citizen in Texas had planned to publicly contradict the government's official
     account of the shooting; before he could testify, he died in an unrelated car
@@ -299,9 +353,30 @@
   source_url: https://bsky.app/profile/nytimes.com/post/3mfm6ixrxqd24
   source_publication: The New York Times
   bluesky_uri: at://did:plc:eclio37ymobqex2ncko63h4r/app.bsky.feed.post/3mfm6ixrxqd24
+- slug: ice-trained-to-disregard
+  title: Trained to Disregard
+  date: '2026-02-23'
+  post_created_at: '2026-02-23T22:22:40Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: ICE whistleblower Ryan Schwank, a former agency instructor and staff attorney,
+    testified that field agents were trained to disregard constitutional rights —
+    making rights violations a matter of policy rather than aberration.
+  themes:
+  - rule-of-law
+  - resistance-and-witness
+  state: published
+  source_url: https://bsky.app/profile/mollyploofkins.bsky.social/post/3mfkourjtw22e
+  source_publication: BlueSky
+  bluesky_uri: at://did:plc:4q4ziw4qk2hxxaxfu7jweuey/app.bsky.feed.post/3mfkourjtw22e
 - slug: doj-cases-collapsing
   title: When the Cameras Came Out
-  date: '2026-02-22'
+  date: '2026-02-21'
+  post_created_at: '2026-02-21T21:22:01Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: Federal prosecutions of protesters and others accused of 'assaulting' or
     'impeding' federal officers have repeatedly collapsed when courtroom evidence
     — particularly video — contradicted the officers' sworn statements.
@@ -312,22 +387,65 @@
   source_url: https://www.theguardian.com/us-news/2026/feb/21/doj-protesters-federal-agents-cases
   source_publication: The Guardian
   bluesky_uri: at://did:plc:wkwznppeeuglgghcet7mch4g/app.bsky.feed.post/3mffkkip7gs2s
-- slug: eighteen-days-for-being-latino
-  title: Eighteen Days for Being Latino
+- slug: deaths-by-design
+  title: Not Accidental
   date: '2026-02-19'
-  summary: A 20-year-old lawfully present in the United States was arrested for being
-    Latino and held for eighteen days in a Minnesota detention cell so cramped he
-    couldn't sit down — an arrest the federal courts have since ruled unlawful.
+  post_created_at: '2026-02-19T19:22:23Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: 'Deaths in immigration detention now match the patterns recorded in the
+    early phases of past regimes'' concentration camps: poor conditions, untreated
+    disease, abuse — not random misfortune but the predictable output of a custodial
+    system designed for harm.'
   themes:
-  - rule-of-law
+  - bureaucratic-cruelty
+  state: published
+  source_url: https://bsky.app/profile/gravelinfluencer.bsky.social/post/3mfacwpwznk2w
+  source_publication: BlueSky
+  bluesky_uri: at://did:plc:u6ajzyiqzkzbppp2x2y7fpfu/app.bsky.feed.post/3mfacwpwznk2w
+- slug: ice-bookings-no-convictions
+  title: Seventy-Three Percent
+  date: '2026-02-18'
+  post_created_at: '2026-02-18T20:30:21Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: Of people booked into Immigration and Customs Enforcement custody since
+    the start of the second Trump administration's enforcement push, seventy-three
+    percent had no criminal conviction of any kind; eight percent had a conviction
+    for a violent or property offense.
+  themes:
+  - official-narrative
   - deportation-machinery
   state: published
-  source_url: https://bsky.app/profile/mjsdc.bsky.social/post/3mf3eii272s2u
+  source_url: https://www.thebulwark.com/p/tricia-mclaughlins-top-five-lies
+  source_publication: The Bulwark
+  bluesky_uri: at://did:plc:aunpu65mdrhwfie7ynymlzeh/app.bsky.feed.post/3mf5wbdxkkj2w
+- slug: honduran-pardon-suite
+  title: Pardon, Then a Suite
+  date: '2026-02-18'
+  post_created_at: '2026-02-18T13:20:57Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: After Trump pardoned Honduras's former president, convicted in US federal
+    court of cocaine trafficking, the administration cancelled an immigration hold
+    and sent a specialized federal team to escort the pardoned individual to the Waldorf
+    Astoria — a thousand-dollar-a-night New York hotel.
+  themes:
+  - rule-of-law
+  state: published
+  source_url: https://bsky.app/profile/ericumansky.bsky.social/post/3mf56bjgfe22x
   source_publication: BlueSky
-  bluesky_uri: at://did:plc:6h7b2i6ttw3l4t7pvbvxdith/app.bsky.feed.post/3mf3eii272s2u
+  bluesky_uri: at://did:plc:o4h5r2albulagzxvhp634tof/app.bsky.feed.post/3mf56bjgfe22x
 - slug: geo-group-ice-procurement
   title: The Procurement Officer's Former Employer
-  date: '2026-02-19'
+  date: '2026-02-17'
+  post_created_at: '2026-02-17T20:58:15Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: The federal official directing Immigration and Customs Enforcement's detention
     procurement is a former GEO Group executive who, by ethics waiver, was permitted
     to award contracts to his prior employer — a company poised to receive tens of
@@ -340,22 +458,30 @@
   source_url: https://bsky.app/profile/reichlinmelnick.bsky.social/post/3mf3hecple22q
   source_publication: BlueSky
   bluesky_uri: at://did:plc:2vtbmhmrwzbqcfv4we4uxzzt/app.bsky.feed.post/3mf3hecple22q
-- slug: honduran-pardon-suite
-  title: Pardon, Then a Suite
-  date: '2026-02-19'
-  summary: After Trump pardoned Honduras's former president, convicted in US federal
-    court of cocaine trafficking, the administration cancelled an immigration hold
-    and sent a specialized federal team to escort the pardoned individual to the Waldorf
-    Astoria — a thousand-dollar-a-night New York hotel.
+- slug: eighteen-days-for-being-latino
+  title: Eighteen Days for Being Latino
+  date: '2026-02-17'
+  post_created_at: '2026-02-17T20:06:53Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: A 20-year-old lawfully present in the United States was arrested for being
+    Latino and held for eighteen days in a Minnesota detention cell so cramped he
+    couldn't sit down — an arrest the federal courts have since ruled unlawful.
   themes:
   - rule-of-law
+  - deportation-machinery
   state: published
-  source_url: https://bsky.app/profile/ericumansky.bsky.social/post/3mf56bjgfe22x
+  source_url: https://bsky.app/profile/mjsdc.bsky.social/post/3mf3eii272s2u
   source_publication: BlueSky
-  bluesky_uri: at://did:plc:o4h5r2albulagzxvhp634tof/app.bsky.feed.post/3mf56bjgfe22x
+  bluesky_uri: at://did:plc:6h7b2i6ttw3l4t7pvbvxdith/app.bsky.feed.post/3mf3eii272s2u
 - slug: after-the-letters
   title: After the Letters Were Published
-  date: '2026-02-18'
+  date: '2026-02-17'
+  post_created_at: '2026-02-17T19:31:47Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: Letters from children imprisoned in the Dilley, Texas family detention
     camp — including a seven-year-old held for seventy days, a five-year-old, and
     a nine-year-old held for one hundred thirteen days — reached ProPublica. The day
@@ -368,23 +494,13 @@
   source_url: https://bsky.app/profile/nkalamb.bsky.social/post/3mf3cjpixvk25
   source_publication: BlueSky
   bluesky_uri: at://did:plc:tgw3d4hvw3x5ijrxax7lg26u/app.bsky.feed.post/3mf3cjpixvk25
-- slug: ice-bookings-no-convictions
-  title: Seventy-Three Percent
-  date: '2026-02-18'
-  summary: Of people booked into Immigration and Customs Enforcement custody since
-    the start of the second Trump administration's enforcement push, seventy-three
-    percent had no criminal conviction of any kind; eight percent had a conviction
-    for a violent or property offense.
-  themes:
-  - official-narrative
-  - deportation-machinery
-  state: published
-  source_url: https://www.thebulwark.com/p/tricia-mclaughlins-top-five-lies
-  source_publication: The Bulwark
-  bluesky_uri: at://did:plc:aunpu65mdrhwfie7ynymlzeh/app.bsky.feed.post/3mf5wbdxkkj2w
 - slug: corecivic-dilley-monetization
   title: The Customer in Question
-  date: '2026-02-17'
+  date: '2026-02-15'
+  post_created_at: '2026-02-15T16:43:39Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: CoreCivic's CEO described Immigration and Customs Enforcement as a 'customer'
     on a 2025 earnings call; investors on the same calls expressed frustration that
     the agency's record detention numbers were not yet high enough. ICE revenues for
@@ -396,23 +512,13 @@
   source_url: https://www.propublica.org/article/life-inside-ice-dilley-children
   source_publication: ProPublica
   bluesky_uri: at://did:plc:nsttbhhihov4y5yejsri2zlr/app.bsky.feed.post/3mevy77oibs27
-- slug: thirty-eighth-extrajudicial-killing
-  title: The Thirty-Eighth Killing
-  date: '2026-02-12'
-  summary: A running tally maintained by independent observers records the United
-    States military's thirty-eighth instance of unlawfully killing civilians under
-    the orders of the Secretary of Defense and the President; the cumulative count
-    of dead is at least one hundred thirty.
-  themes:
-  - civilian-harm
-  - resistance-and-witness
-  state: published
-  source_url: https://bsky.app/profile/charliearchy.bsky.social/post/3meiudiazrs2e
-  source_publication: BlueSky
-  bluesky_uri: at://did:plc:ldtdnoxaint7yzelpnpljwes/app.bsky.feed.post/3meiudiazrs2e
 - slug: ice-150-facility-expansion
   title: One Hundred and Fifty Leases
   date: '2026-02-10'
+  post_created_at: '2026-02-10T16:09:55Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: WIRED reviewed federal records showing that Immigration and Customs Enforcement
     has secretly negotiated more than 150 new office leases and expansions across
     nearly every U.S. state — many near schools, medical offices, and places of worship
@@ -425,9 +531,31 @@
   source_url: https://www.wired.com/story/ice-expansion-across-us-at-heres-where-its-going-next/
   source_publication: WIRED
   bluesky_uri: at://did:plc:5vzgjins5recitzoov4rby3y/app.bsky.feed.post/3mejdybuigs2f
+- slug: thirty-eighth-extrajudicial-killing
+  title: The Thirty-Eighth Killing
+  date: '2026-02-10'
+  post_created_at: '2026-02-10T11:29:51Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: A running tally maintained by independent observers records the United
+    States military's thirty-eighth instance of unlawfully killing civilians under
+    the orders of the Secretary of Defense and the President; the cumulative count
+    of dead is at least one hundred thirty.
+  themes:
+  - civilian-harm
+  - resistance-and-witness
+  state: published
+  source_url: https://bsky.app/profile/charliearchy.bsky.social/post/3meiudiazrs2e
+  source_publication: BlueSky
+  bluesky_uri: at://did:plc:ldtdnoxaint7yzelpnpljwes/app.bsky.feed.post/3meiudiazrs2e
 - slug: trump-admin-court-defiance
   title: Five Patterns of Defiance
   date: '2026-02-10'
+  post_created_at: '2026-02-10T11:15:54Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: Federal judges hearing immigration cases have begun to articulate a recurring
     playbook of administrative noncompliance with their orders — across detainee transfers,
     deadlines, release conditions, post-release treatment, and bond hearings.
@@ -440,7 +568,11 @@
   bluesky_uri: at://did:plc:euynv325eix7glyek377orak/app.bsky.feed.post/3meitkkniu22l
 - slug: maine-sheriff-records-subpoena
   title: The Sheriff Who Spoke Up
-  date: '2026-02-04'
+  date: '2026-02-03'
+  post_created_at: '2026-02-03T23:49:24Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: A day after Cumberland County, Maine sheriff Kevin Joyce publicly criticized
     ICE for arresting one of his corrections officers, ICE served the county with
     a subpoena demanding employment data on every person who had worked at the jail
@@ -455,7 +587,11 @@
   bluesky_uri: at://did:plc:jmte4w4x7ukciit6lci6ziau/app.bsky.feed.post/3mdykfhbibk2g
 - slug: vang-st-paul-return-visits
   title: She Has Not Gone Outside
-  date: '2026-02-04'
+  date: '2026-02-03'
+  post_created_at: '2026-02-03T01:29:35Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: Thi Dua Vang, a Hmong asylum-seeker in St. Paul who fled religious persecution
     in Vietnam and has legal status in the U.S., was detained by ICE in January, transferred
     to Texas, and ordered released by a judge after two weeks; since her return, she
@@ -467,9 +603,30 @@
   source_url: https://www.kare11.com/article/news/local/ice-in-minnesota/after-ice-release-st-paul-woman-she-says-agents-keep-returning-to-her-home/89-17f46bf2-9d68-4988-86c6-ba5109ef510f
   source_publication: KARE 11
   bluesky_uri: at://did:plc:bydv723peqxvialb44vrm455/app.bsky.feed.post/3mdw7jp5ht22i
+- slug: tear-gas-on-children
+  title: Gassed in His Own Home
+  date: '2026-02-01'
+  post_created_at: '2026-02-01T03:26:38Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: Federal agents deployed tear gas on a Minneapolis crowd that included children;
+    the canisters shattered the window of a low-income apartment occupied by a disabled
+    veteran, who was tear-gassed inside his own home.
+  themes:
+  - civilian-harm
+  - state-violence
+  state: published
+  source_url: https://bsky.app/profile/profmasseygo.bsky.social/post/3mdrf55b6gc2h
+  source_publication: BlueSky
+  bluesky_uri: at://did:plc:j2d7xalvams7uy4vjqdpfeem/app.bsky.feed.post/3mdrf55b6gc2h
 - slug: ice-mask-rationale-debunked
   title: The Doxxing That Hasn't Happened
-  date: '2026-02-02'
+  date: '2026-01-30'
+  post_created_at: '2026-01-30T04:08:24Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: The Department of Homeland Security has cited doxxing of ICE agents and
     rising assaults as the public rationale for permitting agents to operate while
     masked; according to DHS's own press releases, no ICE agent has been doxxed or
@@ -481,22 +638,13 @@
   source_url: https://www.pbump.net/o/ices-excuse-for-wearing-masks-has-never-actually-manifested/
   source_publication: How To Read This Chart (Philip Bump)
   bluesky_uri: at://did:plc:rogqxhzq6vy54nbuy4n6rwyd/app.bsky.feed.post/3mdmgjyjeg22a
-- slug: tear-gas-on-children
-  title: Gassed in His Own Home
-  date: '2026-02-02'
-  summary: Federal agents deployed tear gas on a Minneapolis crowd that included children;
-    the canisters shattered the window of a low-income apartment occupied by a disabled
-    veteran, who was tear-gassed inside his own home.
-  themes:
-  - civilian-harm
-  - state-violence
-  state: published
-  source_url: https://bsky.app/profile/profmasseygo.bsky.social/post/3mdrf55b6gc2h
-  source_publication: BlueSky
-  bluesky_uri: at://did:plc:j2d7xalvams7uy4vjqdpfeem/app.bsky.feed.post/3mdrf55b6gc2h
 - slug: midway-blitz-cost
   title: Fifty-Nine Million, Conservatively
   date: '2026-01-04'
+  post_created_at: '2026-01-04T13:16:06Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: A Chicago Tribune review of court filings, databases, and public records
     puts the federal cost of Operation Midway Blitz, the immigration enforcement surge
     in Illinois, at at least fifty-nine million dollars over four months — a back-of-the-envelope
@@ -511,6 +659,10 @@
 - slug: subzero-rooftop-trap
   title: Hours on a Roof, in Subzero
   date: '2025-12-14'
+  post_created_at: '2025-12-14T15:04:16Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: Masked federal agents wearing ICE vests, refusing to identify themselves
     or present warrants, cordoned off a Minneapolis construction site and trapped
     two men on the roof for hours in subzero temperatures; one was eventually taken
@@ -525,6 +677,10 @@
 - slug: bojerski-seventy-years
   title: Seventy Years, A Refugee Camp, Alligator Alcatraz
   date: '2025-11-17'
+  post_created_at: '2025-11-17T14:18:08Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: Paul Bojerski, seventy-nine, was born to Polish parents in a German refugee
     camp after World War II and emigrated legally to the United States with his family
     in 1952; in July of 2025 he was detained at a routine ICE check-in and sent to
@@ -540,6 +696,10 @@
 - slug: billionaire-preachers-texas
   title: The Two Men Who Bought a Statehouse
   date: '2025-11-14'
+  post_created_at: '2025-11-14T04:00:08Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: Oil tycoons Tim Dunn and Farris Wilks have spent more than a decade funding
     primary challenges against Republican incumbents in Texas; the result is the country's
     most disciplined Christian-nationalist political machine, now extending into a
@@ -553,7 +713,11 @@
   bluesky_uri: at://did:plc:k4jt6heuiamymgi46yeuxtpt/app.bsky.feed.post/3m5ks6cxsgn23
 - slug: vijandre-instagram-detention
   title: Held for the Likes
-  date: '2025-11-12'
+  date: '2025-11-11'
+  post_created_at: '2025-11-11T23:02:15Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: Yaa'kub Ira Vijandre, a Texas photojournalist and DACA recipient, has been
     held in ICE custody for his Instagram posts and likes expressing support for Palestine;
     new court filings frame him as a political prisoner.
@@ -567,6 +731,10 @@
 - slug: gamboa-deported-vegetative
   title: Deported in a Vegetative State
   date: '2025-11-06'
+  post_created_at: '2025-11-06T09:13:35Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: Randall Alberto Gamboa Esquivel, a fifty-two-year-old Costa Rican man held
     in ICE custody in Texas since February, was put on an air ambulance to Costa Rica
     in September while in a vegetative state with encephalopathy and rhabdomyolysis;
@@ -581,6 +749,10 @@
 - slug: toddler-in-backseat
   title: The Toddler in the Backseat
   date: '2025-11-05'
+  post_created_at: '2025-11-05T12:03:56Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: Federal immigration agents in California arrested a U.S. citizen and drove
     away with the man's car — with his toddler still in the backseat — over the protests
     of a crowd that had gathered, and only after the crowd's intervention did agents
@@ -595,6 +767,10 @@
 - slug: villegas-gonzalez-killed
   title: Less Than a Minute
   date: '2025-11-04'
+  post_created_at: '2025-11-04T14:23:14Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: 'A New York Times reconstruction of the September 12 Chicago-area shooting
     of Silverio Villegas-Gonzalez — drawing on surveillance footage, body-camera video,
     and bystander recordings — contradicts the DHS account: the videos do not show
@@ -611,6 +787,10 @@
 - slug: ice-bounty-hunter-rewards
   title: Cash Bonuses for Locating Immigrants
   date: '2025-11-01'
+  post_created_at: '2025-11-01T12:54:49Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: An ICE procurement document reviewed by The Intercept solicits private
     contractors to locate immigrants in batches of ten thousand at a time, with monetary
     bonuses paid based on how many targets are successfully tracked down — the contractor
@@ -623,9 +803,31 @@
   source_url: https://theintercept.com/2025/10/31/ice-plans-cash-rewards-for-private-bounty-hunters-to-locate-and-track-immigrants/
   source_publication: The Intercept
   bluesky_uri: at://did:plc:ekts44pfepbmryv2h633onqu/app.bsky.feed.post/3m4kzyh42hk2e
+- slug: edison-park-cbp-grab
+  title: Operation in the Most Conservative Neighborhood
+  date: '2025-10-31'
+  post_created_at: '2025-10-31T19:37:15Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: A Border Patrol operation seized people working in the front yard of a
+    home in Edison Park, Chicago, transferred them in a parking lot in a neighboring
+    suburb to a prisoner van, and was met by neighbors blowing whistles and shouting
+    at the agents.
+  themes:
+  - deportation-machinery
+  - resistance-and-witness
+  state: published
+  source_url: https://bsky.app/profile/peternickeas.bsky.social/post/3m4j7z4ijlc2y
+  source_publication: BlueSky
+  bluesky_uri: at://did:plc:jkuhm4lmg6t25piybct5izji/app.bsky.feed.post/3m4j7z4ijlc2y
 - slug: illinois-tear-gas-tro
   title: Tear Gas Almost Every Day
-  date: '2025-11-01'
+  date: '2025-10-31'
+  post_created_at: '2025-10-31T19:15:16Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: After U.S. District Judge Sara Ellis issued a temporary restraining order
     on October 9 limiting federal agents' use of crowd-control weapons against Illinois
     protesters, court filings allege that federal agents violated the order 'almost
@@ -639,37 +841,13 @@
   source_url: https://www.bellingcat.com/news/2025/10/31/illinois-immigration-protests/
   source_publication: Bellingcat
   bluesky_uri: at://did:plc:sb54dpdfefflykmf5bcfvr7t/app.bsky.feed.post/3m4j6rswv5s2m
-- slug: edison-park-cbp-grab
-  title: Operation in the Most Conservative Neighborhood
-  date: '2025-10-31'
-  summary: A Border Patrol operation seized people working in the front yard of a
-    home in Edison Park, Chicago, transferred them in a parking lot in a neighboring
-    suburb to a prisoner van, and was met by neighbors blowing whistles and shouting
-    at the agents.
-  themes:
-  - deportation-machinery
-  - resistance-and-witness
-  state: published
-  source_url: https://bsky.app/profile/peternickeas.bsky.social/post/3m4j7z4ijlc2y
-  source_publication: BlueSky
-  bluesky_uri: at://did:plc:jkuhm4lmg6t25piybct5izji/app.bsky.feed.post/3m4j7z4ijlc2y
-- slug: marimar-martinez-shooting
-  title: What the Body Cam Said
-  date: '2025-10-18'
-  summary: Federal agents shot Marimar Martinez, a US citizen in Chicago, multiple
-    times; the Department of Homeland Security's account claimed she menaced agents
-    with a gun and her car, but charging documents and body camera footage have since
-    contradicted nearly every element.
-  themes:
-  - state-violence
-  - official-narrative
-  state: published
-  source_url: https://newrepublic.com/article/201957/trump-chicago-secret-police-shot-woman-damning-info
-  source_publication: The New Republic
-  bluesky_uri: at://did:plc:2amnkge5a6hplfwyesmxqkfl/app.bsky.feed.post/3m3hpt6yh4k24
 - slug: us-citizens-grabbed
   title: Fifty-Plus Cases That Fell Apart
   date: '2025-10-18'
+  post_created_at: '2025-10-18T14:11:56Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: A ProPublica investigation methodically tracked over fifty cases of US
     citizens detained by immigration agents on charges that were either dismissed
     in court or never filed at all — including a woman accused of an assault that
@@ -682,9 +860,31 @@
   source_url: https://bsky.app/profile/nicolefoy.bsky.social/post/3m3hxrh6i5k2y
   source_publication: BlueSky
   bluesky_uri: at://did:plc:ix26ab37ugxyhgpunrmzdh5g/app.bsky.feed.post/3m3hxrh6i5k2y
+- slug: marimar-martinez-shooting
+  title: What the Body Cam Said
+  date: '2025-10-18'
+  post_created_at: '2025-10-18T11:49:45Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: Federal agents shot Marimar Martinez, a US citizen in Chicago, multiple
+    times; the Department of Homeland Security's account claimed she menaced agents
+    with a gun and her car, but charging documents and body camera footage have since
+    contradicted nearly every element.
+  themes:
+  - state-violence
+  - official-narrative
+  state: published
+  source_url: https://newrepublic.com/article/201957/trump-chicago-secret-police-shot-woman-damning-info
+  source_publication: The New Republic
+  bluesky_uri: at://did:plc:2amnkge5a6hplfwyesmxqkfl/app.bsky.feed.post/3m3hpt6yh4k24
 - slug: rowan-universities-deal
   title: The Billionaire's Compact
   date: '2025-10-04'
+  post_created_at: '2025-10-04T18:12:38Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
   summary: The Trump administration's proposed compact with American universities
     — the document that conditioned federal funding on policy concessions in admissions,
     hiring, and curriculum — drew many of its provisions, sometimes verbatim, from

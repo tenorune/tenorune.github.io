@@ -10,6 +10,7 @@ source_publication: "The New York Times"
 source_article_pending: true
 bluesky_uri: "at://did:plc:kfaxgen4pxdnmtho7tj4tijr/app.bsky.feed.post/3m2f6ox7cpc2v"
 bluesky_saved_at: 2025-10-04T19:29:50.500Z
+post_created_at: "2025-10-04T18:12:38Z"
 published: true
 ---
 

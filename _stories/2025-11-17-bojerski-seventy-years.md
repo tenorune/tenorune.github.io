@@ -10,6 +10,7 @@ source_publication: "Orlando Sentinel"
 source_author: "Olivia Messer"
 bluesky_uri: "at://did:plc:axpzyhl2p5zy5nmb2vppqvmd/app.bsky.feed.post/3m5tg45khss2f"
 bluesky_saved_at: 2025-11-17T20:34:57.629Z
+post_created_at: "2025-11-17T14:18:08Z"
 published: true
 ---
 

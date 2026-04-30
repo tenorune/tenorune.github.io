@@ -9,6 +9,7 @@ source_title: "How an Attempted ICE Arrest Turned Deadly"
 source_publication: "The New York Times"
 bluesky_uri: "at://did:plc:2rrp7amblhg3xoly5n5huiqv/app.bsky.feed.post/3m4sqdcrqac2h"
 bluesky_saved_at: 2025-11-04T23:51:20.073Z
+post_created_at: "2025-11-04T14:23:14Z"
 published: true
 ---
 

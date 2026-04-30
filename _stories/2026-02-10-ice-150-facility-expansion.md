@@ -10,6 +10,7 @@ source_publication: "WIRED"
 source_author: "Leah Feiger"
 bluesky_uri: "at://did:plc:5vzgjins5recitzoov4rby3y/app.bsky.feed.post/3mejdybuigs2f"
 bluesky_saved_at: 2026-02-10T21:17:42.749Z
+post_created_at: "2026-02-10T16:09:55Z"
 published: true
 ---
 

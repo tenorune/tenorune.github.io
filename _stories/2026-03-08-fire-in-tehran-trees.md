@@ -10,6 +10,7 @@ source_publication: "BlueSky"
 source_author: "Leah McElrath"
 bluesky_uri: "at://did:plc:gvda6fem6r7selm4gzjjww4a/app.bsky.feed.post/3mgjcothtf227"
 bluesky_saved_at: 2026-03-08T05:23:14.033Z
+post_created_at: "2026-03-08T02:37:07Z"
 published: false
 culled: true
 ---

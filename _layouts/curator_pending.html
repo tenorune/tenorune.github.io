@@ -21,6 +21,7 @@ layout: default
 
   <p class="meta curator-tally">
     {{ meta.pending_aligned }} shown · {{ meta.queued }} queued ·
+    {{ meta.pending_gap_flagged }} flagged (post vs. article date &gt; 7d) ·
     {{ meta.pending_unaligned }} excluded as off-theme ·
     {{ meta.skipped }} previously skipped ·
     {{ meta.drafted }} already drafted ·
@@ -35,11 +36,12 @@ layout: default
       {% capture title_queue %}curator: queue {{ s.rkey }}{% endcapture %}
       {% capture title_unq   %}curator: unqueue {{ s.rkey }}{% endcapture %}
       {% capture body        %}{{ s.embed_title | default: s.post_text | truncate: 120 }}{% endcapture %}
-      <li class="curator-row pending-row{% if s.queued %} pending-queued{% endif %}">
+      <li class="curator-row pending-row{% if s.queued %} pending-queued{% endif %}{% if s.gap_flag %} curator-gap-flagged{% endif %}">
         <div class="curator-meta">
           {% if s.queued %}<span class="curator-state-badge curator-state-queued">queued</span>{% endif %}
-          <span class="curator-date">{{ s.saved_at | slice: 0, 10 }}</span>
+          <span class="curator-date">{{ s.post_created_at | slice: 0, 10 }}</span>
           <span class="pending-author">@{{ s.author }}</span>
+          {% if s.gap_flag %}<span class="gap-flag" title="Post and article publication date differ by {{ s.gap_days }} days">⚑ {{ s.gap_days }}d</span>{% endif %}
         </div>
         <div class="curator-body">
           <p class="pending-post">{{ s.post_text }}</p>

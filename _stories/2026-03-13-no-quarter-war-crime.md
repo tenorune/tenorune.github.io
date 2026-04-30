@@ -10,6 +10,7 @@ source_publication: "BlueSky"
 source_author: "Brian Finucane"
 bluesky_uri: "at://did:plc:oqexhdqbizq24v6ikjhhig2h/app.bsky.feed.post/3mgxbrnhqc22e"
 bluesky_saved_at: 2026-03-13T22:02:51.588Z
+post_created_at: "2026-03-13T15:58:04Z"
 published: false
 ---
 

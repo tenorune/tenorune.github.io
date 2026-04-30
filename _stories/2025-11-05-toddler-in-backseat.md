@@ -9,6 +9,7 @@ source_title: "Armed federal immigration agents drive away with a toddler in the
 source_publication: "Los Angeles Times"
 bluesky_uri: "at://did:plc:tbezmmltvdtjthfeaftfoop6/app.bsky.feed.post/3m4uyz4wfbs2m"
 bluesky_saved_at: 2025-11-05T15:02:49.230Z
+post_created_at: "2025-11-05T12:03:56Z"
 published: true
 ---
 

@@ -2,7 +2,7 @@
 title: "The Diligence Reserved for Cruelty"
 slug: diligence-reserved-for-cruelty
 summary: "The energy spent pursuing the deportation of Kilmar Abrego Garcia to a country he never lived in stands in conspicuous contrast to the federal government's approach to nearly every other policy goal."
-date: 2026-03-22
+date: 2026-03-21
 themes: [deportation-machinery, bureaucratic-cruelty]
 source_url: "https://bsky.app/profile/smmarotta.bsky.social/post/3mhm53r3ihk2w"
 source_title: "Marotta on the asymmetric diligence of the Abrego Garcia case"
@@ -10,6 +10,7 @@ source_publication: "BlueSky"
 source_author: "Sean Marotta"
 bluesky_uri: "at://did:plc:dgkyncbh6kcchafzi55rqltt/app.bsky.feed.post/3mhm53r3ihk2w"
 bluesky_saved_at: 2026-03-22T02:21:00.156Z
+post_created_at: "2026-03-21T23:00:09Z"
 published: false
 ---
 

@@ -2,13 +2,14 @@
 title: "She Has Not Gone Outside"
 slug: vang-st-paul-return-visits
 summary: "Thi Dua Vang, a Hmong asylum-seeker in St. Paul who fled religious persecution in Vietnam and has legal status in the U.S., was detained by ICE in January, transferred to Texas, and ordered released by a judge after two weeks; since her return, she has been unable to leave her home because ICE agents continue to come to the door."
-date: 2026-02-04
+date: 2026-02-03
 themes: [bureaucratic-cruelty, resistance-and-witness]
 source_url: "https://www.kare11.com/article/news/local/ice-in-minnesota/after-ice-release-st-paul-woman-she-says-agents-keep-returning-to-her-home/89-17f46bf2-9d68-4988-86c6-ba5109ef510f"
 source_title: "After ICE release St. Paul woman, she says agents keep returning to her home"
 source_publication: "KARE 11"
 bluesky_uri: "at://did:plc:bydv723peqxvialb44vrm455/app.bsky.feed.post/3mdw7jp5ht22i"
 bluesky_saved_at: 2026-02-04T23:05:17.409Z
+post_created_at: "2026-02-03T01:29:35Z"
 published: true
 ---
 

@@ -10,6 +10,7 @@ source_publication: "KSTP"
 source_article_pending: true
 bluesky_uri: "at://did:plc:6m7rbdgaz5vyg4bnbefi7kh6/app.bsky.feed.post/3m7xfbiqsb22h"
 bluesky_saved_at: 2025-12-14T00:00:00.000Z
+post_created_at: "2025-12-14T15:04:16Z"
 published: true
 ---
 

@@ -2,7 +2,7 @@
 title: "Held for the Likes"
 slug: vijandre-instagram-detention
 summary: "Yaa'kub Ira Vijandre, a Texas photojournalist and DACA recipient, has been held in ICE custody for his Instagram posts and likes expressing support for Palestine; new court filings frame him as a political prisoner."
-date: 2025-11-12
+date: 2025-11-11
 themes: [rule-of-law, state-violence]
 source_url: "https://www.forever-wars.com/ice-caged-this-man-for-his-instagram-posts-and-likes/"
 source_title: "ICE Caged This Man For His Instagram Posts And Likes"
@@ -10,6 +10,7 @@ source_publication: "Forever Wars"
 source_author: "Spencer Ackerman"
 bluesky_uri: "at://did:plc:qjzrpzlcmir3bkss4b5nh6ox/app.bsky.feed.post/3m5falt6jwc2q"
 bluesky_saved_at: 2025-11-12T00:00:00.000Z
+post_created_at: "2025-11-11T23:02:15Z"
 published: true
 ---
 

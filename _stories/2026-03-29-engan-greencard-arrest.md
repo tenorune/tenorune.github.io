@@ -10,6 +10,7 @@ source_publication: "Daylight San Diego"
 source_author: "Kate Morrissey"
 bluesky_uri: "at://did:plc:2bqqvvbljclouzkz5r3oq36o/app.bsky.feed.post/3mi7eqa6zpc25"
 bluesky_saved_at: 2026-03-29T00:00:00.000Z
+post_created_at: "2026-03-29T14:37:27Z"
 published: true
 ---
 

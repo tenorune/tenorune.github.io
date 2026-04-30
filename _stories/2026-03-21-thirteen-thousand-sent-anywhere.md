@@ -10,6 +10,7 @@ source_publication: "BlueSky"
 source_author: "Aaron Reichlin-Melnick"
 bluesky_uri: "at://did:plc:2vtbmhmrwzbqcfv4we4uxzzt/app.bsky.feed.post/3mhl4gjcl322c"
 bluesky_saved_at: 2026-03-21T15:20:27.608Z
+post_created_at: "2026-03-21T13:15:37Z"
 published: true
 ---
 

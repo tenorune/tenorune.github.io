@@ -2,13 +2,14 @@
 title: "Tear Gas Almost Every Day"
 slug: illinois-tear-gas-tro
 summary: "After U.S. District Judge Sara Ellis issued a temporary restraining order on October 9 limiting federal agents' use of crowd-control weapons against Illinois protesters, court filings allege that federal agents violated the order 'almost every day,' including a Halloween-eve incident in which children on their way to a school parade were tear-gassed."
-date: 2025-11-01
+date: 2025-10-31
 themes: [civilian-harm, state-violence, rule-of-law]
 source_url: "https://www.bellingcat.com/news/2025/10/31/illinois-immigration-protests/"
 source_title: "Tear Gas, Pepper Balls Among Weapons Deployed Against Illinois Protesters"
 source_publication: "Bellingcat"
 bluesky_uri: "at://did:plc:sb54dpdfefflykmf5bcfvr7t/app.bsky.feed.post/3m4j6rswv5s2m"
 bluesky_saved_at: 2025-11-01T17:27:14.060Z
+post_created_at: "2025-10-31T19:15:16Z"
 published: true
 ---
 

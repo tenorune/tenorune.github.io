@@ -2,7 +2,7 @@
 title: "The Sheriff Who Spoke Up"
 slug: maine-sheriff-records-subpoena
 summary: "A day after Cumberland County, Maine sheriff Kevin Joyce publicly criticized ICE for arresting one of his corrections officers, ICE served the county with a subpoena demanding employment data on every person who had worked at the jail since January 2025; the agency separately ended its long-standing detention contract with the county."
-date: 2026-02-04
+date: 2026-02-03
 themes: [official-narrative, rule-of-law]
 source_url: "https://www.bangordailynews.com/2026/02/03/mainefocus/mainefocus-police-courts/ice-demanded-maine-sheriffs-employment-records/"
 source_title: "ICE demanded Maine sheriff's employment records following his criticism of arrest"
@@ -10,6 +10,7 @@ source_publication: "Bangor Daily News"
 source_author: "Phil Lewis"
 bluesky_uri: "at://did:plc:jmte4w4x7ukciit6lci6ziau/app.bsky.feed.post/3mdykfhbibk2g"
 bluesky_saved_at: 2026-02-04T23:55:07.158Z
+post_created_at: "2026-02-03T23:49:24Z"
 published: true
 ---
 

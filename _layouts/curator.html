@@ -41,10 +41,11 @@ layout: default
       {% capture title_pub %}curator: publish {{ s.slug }}{% endcapture %}
       {% capture title_rej %}curator: reject {{ s.slug }}{% endcapture %}
       {% capture title_drf %}curator: draft {{ s.slug }}{% endcapture %}
-      <li class="curator-row curator-state-{{ s.state }}">
+      <li class="curator-row curator-state-{{ s.state }}{% if s.gap_flag %} curator-gap-flagged{% endif %}">
         <div class="curator-meta">
           <span class="curator-state-badge">{{ s.state }}</span>
           <span class="curator-date">{{ s.date }}</span>
+          {% if s.gap_flag %}<span class="gap-flag" title="Post and article publication date differ by {{ s.gap_days }} days">⚑ {{ s.gap_days }}d</span>{% endif %}
         </div>
         <div class="curator-body">
           {% if s.state == "published" %}

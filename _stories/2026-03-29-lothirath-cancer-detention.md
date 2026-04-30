@@ -2,7 +2,7 @@
 title: "Four Out of Five Chemotherapy Sessions"
 slug: lothirath-cancer-detention
 summary: "Oudone Lothirath, a Minnesota man with aggressive lymphoma, missed four of five scheduled chemotherapy sessions while in ICE detention in Texas in January; he was returned to Minnesota only after a hospital letter warned he would die without treatment, and he is now in hospice."
-date: 2026-03-29
+date: 2026-03-26
 themes: [bureaucratic-cruelty, civilian-harm]
 source_url: "https://www.startribune.com/how-ice-detainment-harmed-immigrants-with-chronic-health-problems/601588583"
 source_title: "Detained by ICE, he missed multiple cancer treatments. Now he's in hospice."
@@ -10,6 +10,7 @@ source_publication: "Star Tribune"
 source_author: "Bryce Covert"
 bluesky_uri: "at://did:plc:uqrng3jvztdp5xhengot5vhy/app.bsky.feed.post/3mhxza22ha22r"
 bluesky_saved_at: 2026-03-29T17:15:28.998Z
+post_created_at: "2026-03-26T16:22:55Z"
 published: true
 ---
 

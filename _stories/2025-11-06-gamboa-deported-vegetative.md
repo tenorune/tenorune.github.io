@@ -9,6 +9,7 @@ source_title: "Family speaks out after death of man deported by ICE in vegetativ
 source_publication: "The Guardian"
 bluesky_uri: "at://did:plc:g7xd2fa6n7e7yqyvh6c3iexy/app.bsky.feed.post/3m4x7xgr5vk2q"
 bluesky_saved_at: 2025-11-06T17:24:23.522Z
+post_created_at: "2025-11-06T09:13:35Z"
 published: true
 ---
 

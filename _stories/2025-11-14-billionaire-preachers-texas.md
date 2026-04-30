@@ -9,6 +9,7 @@ source_title: "A Pair of Billionaire Preachers Built the Most Powerful Political
 source_publication: "ProPublica"
 bluesky_uri: "at://did:plc:k4jt6heuiamymgi46yeuxtpt/app.bsky.feed.post/3m5ks6cxsgn23"
 bluesky_saved_at: 2025-11-14T12:45:35.263Z
+post_created_at: "2025-11-14T04:00:08Z"
 published: true
 ---
 
