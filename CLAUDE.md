@@ -16,8 +16,7 @@ The curator does not run dev or build commands locally. Everything happens throu
 The curator only needs a browser. No `bundle install`, no `pip install`, no local Ruby or Python.
 
 ## Active development branch
-- `claude/review-bluesky-stories-plan-ItxMr` for the current scaffolding work.
-- Subsequent curator sessions (authoring stories, editing, adding images): `stories/YYYYMMDD-<slug-or-topic>` per PR.
+- **Trunk-only: commits go directly to `main`.** The earlier scaffolding branch (`claude/review-bluesky-stories-plan-ItxMr`) and the older planning branch (`claude/bluesky-stories-compilation-milg9`) have been deleted; main is the only active branch. The deferred-drain curator workflow handles concurrent-write races so direct-to-main is safe in practice.
 
 ## Key rules
 - The two projects are **isolated**: no shared CSS, no nav link, no front-matter changes to the homepage.
