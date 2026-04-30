@@ -1,0 +1,12 @@
+{
+  "client_id": "https://YOUR-DOMAIN.example/oauth/client-metadata.json",
+  "client_name": "Your client name",
+  "client_uri": "https://YOUR-DOMAIN.example/oauth/",
+  "redirect_uris": ["https://YOUR-DOMAIN.example/oauth/callback/"],
+  "scope": "atproto transition:generic",
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "application_type": "web",
+  "token_endpoint_auth_method": "none",
+  "dpop_bound_access_tokens": true
+}
