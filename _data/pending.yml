@@ -1,10 +1,10 @@
 meta:
   total_inventory: 675
   drafted: 50
-  skipped: 11
+  skipped: 12
   queued: 12
-  pending_total: 614
-  pending_aligned: 416
+  pending_total: 613
+  pending_aligned: 415
   pending_unaligned: 198
   pending_gap_flagged: 22
 entries:
@@ -10530,28 +10530,6 @@ entries:
   - official-narrative
   badges:
   - image
-  queued: false
-- rkey: 3lyuttznxuc2r
-  uri: at://did:plc:sgti3jsgu3luif24tokvth3a/app.bsky.feed.post/3lyuttznxuc2r
-  author: joshtpm.bsky.social
-  author_display: Josh Marshall
-  saved_at: '2025-09-15T21:12:22.692Z'
-  post_created_at: '2025-09-15T12:50:49Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: As I've written a few times over the last few days, not only is political
-    violence a scourge which we need to denounce in all cases but my personal inclination
-    is to say little if not nothing ill of the dead for a respectful period. But I
-    want to note a particular dynamic that th…
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/joshtpm.bsky.social/post/3lyuttznxuc2r
-  themes:
-  - state-violence
-  badges:
-  - thread
   queued: false
 - rkey: 3lyq4m4yykc2u
   uri: at://did:plc:23jbx3mbesh2ghfcecaxsk6p/app.bsky.feed.post/3lyq4m4yykc2u
