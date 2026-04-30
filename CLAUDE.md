@@ -39,20 +39,21 @@ Scaffolding complete (PR 1):
 - `.github/workflows/verify.yml` — CI workflow that runs all of the above on every push and PR.
 - `Gemfile`, `Gemfile.lock`, `.env.example`, `.gitignore`.
 
-### Ingestion (status: pivoted to manual paste; automated paths preserved as dormant)
+### Ingestion (status: automated via PDS-direct API; legacy auth paths preserved as dormant)
 
-The plan tried two automated paths against BlueSky's bookmark API — both hit walls for accounts on third-party PDSes (the curator's account is on `eurosky.social`):
+`scripts/fetch_saves.py` tries multiple bookmark endpoints in order. The first one — `pds:app.bsky.bookmark.getBookmarks`, calling the curator's PDS directly — succeeds for third-party-PDS accounts (the curator is on `eurosky.social`) because the call is authenticated against the same server that issued the session token. This is what actually populates `_data/saves_inventory.json`. The `fetch saves` workflow runs the script on `workflow_dispatch` (the cron schedule is disabled — see the comment block in the workflow file).
 
-1. **App-password + service auth** (in `scripts/fetch_saves.py`). Works for `bsky.social`-hosted accounts; fails for third-party PDSes because the AppView at `bsky.social` won't verify session JWTs from foreign servers.
+The script's other endpoints — and the OAuth+DPoP infrastructure that surrounds them — are kept as fallbacks. They were the first two paths the original plan tried; both hit BlueSky-policy walls for accounts on third-party PDSes:
+
+1. **App-password + service auth** (in `scripts/fetch_saves.py` itself, the AppView-targeted endpoints). Works for `bsky.social`-hosted accounts; fails for third-party PDSes because the AppView at `bsky.social` won't verify session JWTs from foreign servers.
 2. **OAuth + DPoP** (in `scripts/oauth_init.py`, `scripts/atproto_dpop.py`, the `oauth init`/`oauth complete` workflows). The auth flow itself works; the resulting access token is rejected by `bsky.social`'s AppView with the explicit message `"OAuth tokens are meant for PDS access only"`. This is BlueSky policy, not a fix-able bug.
 
 See spec Section 7's "Errata round 2" for the full debugging story.
 
-**Status of the automated infrastructure:**
-- `scripts/fetch_saves.py`, `scripts/oauth_init.py`, `scripts/atproto_dpop.py`, `oauth/*` and the three workflows (`fetch.yml`, `oauth-init.yml`, `oauth-complete.yml`) are all **preserved in the repo but dormant**.
-- `fetch.yml` cron has been disabled; the workflow is `workflow_dispatch`-only.
+**Status of the dormant paths:**
+- The OAuth scaffolding (`scripts/oauth_init.py`, `scripts/atproto_dpop.py`, `oauth/*`, the `oauth-init`/`oauth-complete` workflows) is preserved in the repo but unused.
 - All `BSKY_*` secrets and the `BSKY_PDS` Variable can be deleted; nothing in active CI uses them.
-- If the curator ever adds a `bsky.social`-hosted secondary account, the app-password path is ready to use.
+- If the curator ever adds a `bsky.social`-hosted secondary account, the app-password code path in `fetch_saves.py` is ready to use.
 
 **Active ingestion path:**
 
