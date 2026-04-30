@@ -11,7 +11,7 @@ source_author: "Eric Umansky"
 bluesky_uri: "at://did:plc:o4h5r2albulagzxvhp634tof/app.bsky.feed.post/3mf56bjgfe22x"
 bluesky_saved_at: 2026-02-19T13:33:25.579Z
 post_created_at: "2026-02-18T13:20:57Z"
-published: true
+published: false
 ---
 
 After Trump pardoned the former president of Honduras — convicted in US federal court of trafficking cocaine — the administration's response went beyond release from custody. The relevant immigration hold was affirmatively cancelled. A specialized federal team was assigned to drive the pardoned individual from prison to the Waldorf Astoria, a New York hotel charging roughly a thousand dollars a night.
