@@ -39,10 +39,7 @@ jobs:
             exit 0
           fi
           # Read drained count for commit message.
-          COUNT=$(python -c "
-import json
-print(json.load(open('.drain_summary.json'))['drained_count'])
-")
+          COUNT=$(python -c "import json; print(json.load(open('.drain_summary.json'))['drained_count'])")
           git commit -m "curate: drain $COUNT actions from queue"
 
           for attempt in $(seq 1 30); do
@@ -73,12 +70,7 @@ print(json.load(open('.drain_summary.json'))['drained_count'])
             echo "no summary; nothing to close"
             exit 0
           fi
-          python -c "
-import json
-s = json.load(open('.drain_summary.json'))
-for n in s['processed_issues']:
-    print(n)
-" | while read -r N; do
+          python -c "import json; [print(n) for n in json.load(open('.drain_summary.json'))['processed_issues']]" | while read -r N; do
             [ -z "$N" ] && continue
             gh issue comment "$N" --repo ${{ github.repository }} \
               --body "Applied by drain (commit $(git rev-parse --short HEAD))." || true

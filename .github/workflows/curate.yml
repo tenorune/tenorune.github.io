@@ -70,26 +70,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          append() {
-            python -c "
-import yaml, os
-from datetime import datetime, timezone
-from pathlib import Path
-qpath = Path('_data/curator_queue.yml')
-queue = yaml.safe_load(qpath.read_text(encoding='utf-8')) if qpath.exists() else []
-queue = queue or []
-queue.append({
-    'action': os.environ['ACTION'],
-    'target': os.environ['TARGET'],
-    'issue':  int(os.environ['ISSUE']),
-    'submitted_at': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
-})
-qpath.write_text(yaml.safe_dump(queue, sort_keys=False, allow_unicode=True), encoding='utf-8')
-"
-            git add _data/curator_queue.yml
-          }
-
-          append
+          python scripts/queue_append.py
+          git add _data/curator_queue.yml
           if git diff --cached --quiet; then
             echo "no change to queue (already enqueued?)"
             exit 0
@@ -104,7 +86,8 @@ qpath.write_text(yaml.safe_dump(queue, sort_keys=False, allow_unicode=True), enc
             echo "push #$attempt rejected; rebasing on origin/main and re-appending"
             git fetch origin main
             git reset --hard origin/main
-            append
+            python scripts/queue_append.py
+            git add _data/curator_queue.yml
             if git diff --cached --quiet; then
               echo "no change after rebase"
               exit 0
@@ -120,12 +103,6 @@ qpath.write_text(yaml.safe_dump(queue, sort_keys=False, allow_unicode=True), enc
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          # Read current queue length for the comment.
-          QSIZE=$(python -c "
-import yaml
-from pathlib import Path
-q = yaml.safe_load(Path('_data/curator_queue.yml').read_text()) or []
-print(len(q))
-")
+          QSIZE=$(python -c "import yaml; print(len(yaml.safe_load(open('_data/curator_queue.yml').read()) or []))")
           gh issue comment ${{ github.event.issue.number }} --repo ${{ github.repository }} \
             --body "Queued for next drain (curator queue: $QSIZE pending). The drain workflow can be triggered from the Actions tab, or in chat with Claude."
