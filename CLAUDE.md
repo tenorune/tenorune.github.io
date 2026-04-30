@@ -4,7 +4,7 @@ This repo hosts two unrelated things that share a GitHub Pages build:
 
 1. **`lightseed.net` homepage** — static, hand-authored. Lives at the repo root: `index.html`, `style.css`, `CNAME`, `favicon.ico`, `media/`. **Do not modify any of these** unless the user explicitly asks about the homepage.
 
-2. **Stories compilation** (PR 1 scaffolded, awaiting ingestion) — a Jekyll-based long-form archive of BlueSky saves. Authoritative spec: [`docs/superpowers/specs/2026-04-27-stories-design.md`](docs/superpowers/specs/2026-04-27-stories-design.md). **Read that file first** before starting any stories-related work.
+2. **Stories compilation** — a Jekyll-based long-form archive of BlueSky saves. ~63 stories drafted, ~43 published; 675 saves in inventory; curator dashboards live at `/stories/curator/` and `/stories/curator/pending/`. Authoritative spec: [`docs/superpowers/specs/2026-04-27-stories-design.md`](docs/superpowers/specs/2026-04-27-stories-design.md). **Read that file first** before starting any stories-related work.
 
 ## Operating model
 
@@ -64,21 +64,27 @@ See spec Section 7's "Errata round 2" for the full debugging story.
 - **Curator dashboards:** `/stories/curator/` (drafted stories) and `/stories/curator/pending/` (theme-aligned saves not yet drafted). Each row carries action buttons that open pre-filled GitHub issues (`curator: <action> <slug-or-rkey>`).
 - **Curator queue (deferred drain):** the `curate` workflow now *appends* each submitted action to `_data/curator_queue.yml` and acknowledges the issue, leaving it open. Nothing is mutated until you trigger a drain — either via the `drain curator queue` workflow on the Actions tab, or by asking Claude in chat. The drain applies every queued action in order, regenerates `_data/curator.yml` and `_data/pending.yml`, clears the queue, and closes processed issues — all in a single commit. This avoids the 1-commit-per-curator-click noise and the push-race fragility of immediate processing.
 - **Ongoing incremental adds:** the curator can also paste a BlueSky URL or AT-URI directly into chat for one-off additions when needed.
-- **PR 3: First bulk-draft.** Once inventory has data (from the bulk import), Claude bulk-drafts stories from real saves, seeding `_data/themes.yml` with emergent themes.
-- **PR 4: First cull + polish + publish.** Curator decides what to keep (in chat); Claude flips `published: true`.
-- **PR 5: CSS iteration** once real content exposes spacing/typography needs.
+
+## Status (as of 2026-04-30)
+
+- **Inventory:** 675 saves; ~210 with external article URLs; ~166 with hydrated article text; ~362 with self-thread context; quote-post embeds also captured (via `quoted_post` field) with their own thread context.
+- **Stories:** 63 total — ~43 published, ~19 drafted, 1 culled (per `_data/saves_state.json`).
+- **Themes:** 8, with story counts ranging from 10 (predatory-capital) to 21 (civilian-harm).
+- **Saves_state:** ~29 skipped, ~3 queued (curator-flagged for next bulk-draft), the rest pending.
+- **Dates captured:** every save has `post_created_at` (TID-decoded); 164 have `article_published_at` (trafilatura metadata). Curator pages flag rows where post-vs-publication gap exceeds 7 days, suppressing noisy hosts.
+- **CSS:** has been incrementally tuned alongside content; no discrete CSS-iteration pass scheduled — minor adjustments happen on demand.
 
 ## How verification works (no local commands)
 
-The `verify` GitHub Actions workflow runs on every push and PR. It:
+The `verify` GitHub Actions workflow runs on every push to main. It:
 
 1. Installs Ruby + Python deps.
-2. Runs `pytest tests/` — 21 unit tests for `verify.py`'s checks.
-3. Runs `python scripts/verify.py` — 10 invariants on the actual repo.
+2. Runs `pytest tests/` — 43 unit tests for `verify.py` and `fetch_saves.py`.
+3. Runs `python scripts/verify.py` — invariant checks on the actual repo (frontmatter contract, theme references, homepage byte-identity, article-pending flag, etc.).
 4. Runs `bundle exec jekyll build`.
 5. Verifies the built site's homepage is byte-identical to the source.
 
-If any step fails, the workflow goes red and the PR cannot merge cleanly. The curator never has to run anything to know if a change is broken — GitHub tells them.
+If any step fails, the workflow goes red on `main` itself. Since we're trunk-only, breakage is visible immediately rather than blocked at merge — the convention is to push fixes promptly rather than rely on a merge gate.
 
 ## Things to read before acting on this project
 1. This file.
