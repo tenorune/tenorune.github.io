@@ -1,10 +1,10 @@
 meta:
   total_inventory: 675
   drafted: 50
-  skipped: 15
+  skipped: 16
   queued: 14
-  pending_total: 610
-  pending_aligned: 412
+  pending_total: 609
+  pending_aligned: 411
   pending_unaligned: 198
   pending_gap_flagged: 22
 entries:
@@ -10442,27 +10442,6 @@ entries:
   badges:
   - image
   queued: true
-- rkey: 3lyvf72psrm2i
-  uri: at://did:plc:mndtiksvxikpsy3zl6ebd2kr/app.bsky.feed.post/3lyvf72psrm2i
-  author: mattbinder.bsky.social
-  author_display: Matt Binder
-  saved_at: '2025-09-15T20:00:39.612Z'
-  post_created_at: '2025-09-15T18:01:13Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: they're going around and documenting flags that aren't at half-mast for
-    Charlie Kirk
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/mattbinder.bsky.social/post/3lyvf72psrm2i
-  themes:
-  - official-narrative
-  badges:
-  - thread
-  - image
-  queued: false
 - rkey: 3lyq4m4yykc2u
   uri: at://did:plc:23jbx3mbesh2ghfcecaxsk6p/app.bsky.feed.post/3lyq4m4yykc2u
   author: juliarosekraut.bsky.social
