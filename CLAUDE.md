@@ -50,10 +50,13 @@ The script's other endpoints — and the OAuth+DPoP infrastructure that surround
 
 See spec Section 7's "Errata round 2" for the full debugging story.
 
+**Required for the active path** (the curator's `eurosky.social` account):
+- Secrets: `BSKY_HANDLE`, `BSKY_APP_PASSWORD` — used by `createSession` against the curator's PDS to mint a session JWT.
+- Variable: `BSKY_PDS=https://eurosky.social` — without this, the script defaults to `https://bsky.social` and both `createSession` and the PDS-direct bookmark call go to the wrong server.
+
 **Status of the dormant paths:**
-- The OAuth scaffolding (`scripts/oauth_init.py`, `scripts/atproto_dpop.py`, `oauth/*`, the `oauth-init`/`oauth-complete` workflows) is preserved in the repo but unused.
-- All `BSKY_*` secrets and the `BSKY_PDS` Variable can be deleted; nothing in active CI uses them.
-- If the curator ever adds a `bsky.social`-hosted secondary account, the app-password code path in `fetch_saves.py` is ready to use.
+- The OAuth+DPoP scaffolding (`scripts/oauth_init.py`, `scripts/atproto_dpop.py`, `oauth/*`, the `oauth-init`/`oauth-complete` workflows, and the `BSKY_OAUTH_*` secrets it would consume) is preserved in the repo but unused.
+- If the curator ever adds a `bsky.social`-hosted secondary account, the same `BSKY_HANDLE` / `BSKY_APP_PASSWORD` mechanism works against `bsky.social` directly — leave `BSKY_PDS` unset (or set it to `https://bsky.social`) and the AppView-targeted endpoints in `fetch_saves.py` take over.
 
 **Active ingestion path:**
 

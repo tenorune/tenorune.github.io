@@ -1,18 +1,24 @@
 name: fetch saves
 
 on:
-  # Cron schedule disabled: BlueSky's AppView refuses both service-auth
-  # tokens and OAuth tokens issued by third-party PDSes for the bookmark
-  # API ("OAuth tokens are meant for PDS access only"), and the curator's
-  # account is on a third-party PDS, so this workflow has no working auth
-  # path against the production saves data.
+  # workflow_dispatch only. Cron is disabled because the curator drives
+  # ingestion manually from the Actions tab; daily-cron noise wasn't
+  # buying anything.
   #
-  # The workflow is preserved for two future scenarios:
-  #   1. If the curator switches to (or adds) an account hosted on
-  #      bsky.social, the app-password code path in fetch_saves.py works
-  #      against the same-server AppView.
-  #   2. If BlueSky later supports cross-PDS bookmark access, this is
-  #      the point of integration.
+  # Active auth path (third-party-PDS-hosted accounts, e.g. eurosky.social):
+  #   - BSKY_PDS variable points at the curator's PDS.
+  #   - BSKY_HANDLE + BSKY_APP_PASSWORD secrets authenticate createSession
+  #     against that PDS, which mints a session JWT valid for the
+  #     PDS-direct bookmark endpoint that fetch_saves.py tries first.
+  #   - The AppView-targeted endpoints in fetch_saves.py are kept as
+  #     fallbacks for bsky.social-hosted accounts; they fail for
+  #     third-party PDSes (BlueSky's AppView won't verify cross-server
+  #     session JWTs).
+  #
+  # OAuth+DPoP path (BSKY_OAUTH_* secrets + scripts/oauth_init.py +
+  # scripts/atproto_dpop.py): preserved but unused. The OAuth tokens are
+  # rejected by bsky.social's AppView with "OAuth tokens are meant for
+  # PDS access only", which we got past with the PDS-direct call instead.
   workflow_dispatch:
 
 permissions:
