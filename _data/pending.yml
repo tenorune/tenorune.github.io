@@ -1,13 +1,36 @@
 meta:
-  total_inventory: 675
+  total_inventory: 676
   drafted: 63
   skipped: 29
   queued: 3
-  pending_total: 583
-  pending_aligned: 388
+  pending_total: 584
+  pending_aligned: 389
   pending_unaligned: 195
   pending_gap_flagged: 19
 entries:
+- rkey: 3mkpswagpak22
+  uri: at://did:plc:j76trmiofvaxxpvx2vnb2vwf/app.bsky.feed.post/3mkpswagpak22
+  author: michaelhobbes.bsky.social
+  author_display: Michael Hobbes
+  saved_at: '2026-04-30T22:42:57.064Z'
+  post_created_at: ''
+  article_published_at: ''
+  gap_days: null
+  gap_flag: false
+  post_text: "The indictment is absolute soup.\n\nLab leakers have completely given\
+    \ up on proving their main contention and are now just flailing around looking\
+    \ for any rule violation or procedural misstep that makes it look like a cover-up\
+    \ happened. \nwww.justice.gov/opa/pr/forme..."
+  embed_title: ''
+  embed_host: ''
+  embed_url: ''
+  bluesky_url: https://bsky.app/profile/michaelhobbes.bsky.social/post/3mkpswagpak22
+  themes:
+  - bureaucratic-cruelty
+  - deportation-machinery
+  badges:
+  - image
+  queued: false
 - rkey: 3mjzl5hnfq22u
   uri: at://did:plc:f5j66gguacu2rqrqxdqzozpa/app.bsky.feed.post/3mjzl5hnfq22u
   author: bachynski.bsky.social
