@@ -1,35 +1,13 @@
 meta:
   total_inventory: 675
-  drafted: 50
+  drafted: 61
   skipped: 16
-  queued: 13
-  pending_total: 609
-  pending_aligned: 411
+  queued: 2
+  pending_total: 598
+  pending_aligned: 400
   pending_unaligned: 198
   pending_gap_flagged: 22
 entries:
-- rkey: 3mjzov6goh62h
-  uri: at://did:plc:eclio37ymobqex2ncko63h4r/app.bsky.feed.post/3mjzov6goh62h
-  author: nytimes.com
-  author_display: The New York Times
-  saved_at: '2026-04-21T21:13:34.544Z'
-  post_created_at: '2026-04-21T19:13:36Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: 'Breaking News: President Trump is said to be in talks to send Afghans
-    who helped the U.S. war effort to the Democratic Republic of Congo.'
-  embed_title: Trump Is Said to Be in Talks to Send Afghans Who Aided U.S. Forces
-    to Congo
-  embed_host: nyti.ms
-  embed_url: https://nyti.ms/4cBNgtJ
-  bluesky_url: https://bsky.app/profile/nytimes.com/post/3mjzov6goh62h
-  themes:
-  - bureaucratic-cruelty
-  - deportation-machinery
-  badges:
-  - image
-  queued: true
 - rkey: 3mjzl5hnfq22u
   uri: at://did:plc:f5j66gguacu2rqrqxdqzozpa/app.bsky.feed.post/3mjzl5hnfq22u
   author: bachynski.bsky.social
@@ -173,28 +151,6 @@ entries:
   - thread
   - image
   queued: false
-- rkey: 3mfpjibhs6c2d
-  uri: at://did:plc:metos4p2yzc3tcdu6h7kszfz/app.bsky.feed.post/3mfpjibhs6c2d
-  author: willbunch.bsky.social
-  author_display: Will Bunch
-  saved_at: '2026-02-25T23:14:25.330Z'
-  post_created_at: '2026-02-25T20:29:30Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: 'They found him. He died.
-
-
-    Another murder by our immigration goon squads'
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/willbunch.bsky.social/post/3mfpjibhs6c2d
-  themes:
-  - civilian-harm
-  badges:
-  - thread
-  queued: true
 - rkey: 3mfkk6colpk24
   uri: at://did:plc:sgti3jsgu3luif24tokvth3a/app.bsky.feed.post/3mfkk6colpk24
   author: joshtpm.bsky.social
@@ -387,53 +343,6 @@ entries:
   - thread
   - image
   queued: false
-- rkey: 3mf3xjjk46k2o
-  uri: at://did:plc:2vtbmhmrwzbqcfv4we4uxzzt/app.bsky.feed.post/3mf3xjjk46k2o
-  author: reichlinmelnick.bsky.social
-  author_display: Aaron Reichlin-Melnick
-  saved_at: '2026-02-18T13:16:59.071Z'
-  post_created_at: '2026-02-18T01:47:30Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: 'Mr. Sim lived in the US for 43 years. He was ordered deported 20 years
-    ago after a larceny conviction. Because Cambodia wasn’t accepting deportations,
-    he was allowed to stay on an order of supervision.
-
-
-    After 20 years, he was suddenly arrested at an ICE check-in and sent to deten…'
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/reichlinmelnick.bsky.social/post/3mf3xjjk46k2o
-  themes:
-  - bureaucratic-cruelty
-  - civilian-harm
-  - deportation-machinery
-  badges:
-  - thread
-  - image
-  queued: true
-- rkey: 3mf3xftxfwk2q
-  uri: at://did:plc:wqhbdx55f4vv7bnpps5pur4c/app.bsky.feed.post/3mf3xftxfwk2q
-  author: anjalikdayal.bsky.social
-  author_display: Anjali Dayal
-  saved_at: '2026-02-18T13:29:52.563Z'
-  post_created_at: '2026-02-18T01:45:26Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: a two-month-old infant who was so sick he was unresponsive in the last
-    day, deported with his family and their total of $190
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/anjalikdayal.bsky.social/post/3mf3xftxfwk2q
-  themes:
-  - deportation-machinery
-  badges:
-  - thread
-  queued: true
 - rkey: 3mf2uc5cfuk2x
   uri: at://did:plc:bono5gae7m6r3qpfxomshwbd/app.bsky.feed.post/3mf2uc5cfuk2x
   author: maddow.bsky.social
@@ -556,30 +465,6 @@ entries:
   badges:
   - thread
   queued: false
-- rkey: 3metgqayja22o
-  uri: at://did:plc:ru2uiz2ifeei5nqpssfy7iqq/app.bsky.feed.post/3metgqayja22o
-  author: tinadesireeberg.com
-  author_display: Tina-Desiree Berg
-  saved_at: '2026-02-16T18:09:07.707Z'
-  post_created_at: '2026-02-14T16:25:44Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: CCTV footage appears to show DHS agents posing as people having car trouble
-    in order to lure a target out of his house before arresting them. The target comes
-    out and starts helping them before 3 vehicles surround the scene. The car "experiencing"
-    trouble then drives off with the…
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/tinadesireeberg.com/post/3metgqayja22o
-  themes:
-  - deportation-machinery
-  - state-violence
-  badges:
-  - thread
-  - image
-  queued: true
 - rkey: 3memwwly4yc23
   uri: at://did:plc:e62gb2ushvtvjvqcbrxeaw2n/app.bsky.feed.post/3memwwly4yc23
   author: chrislhayes.bsky.social
@@ -657,67 +542,6 @@ entries:
   badges:
   - thread
   queued: false
-- rkey: 3mekixce52w2g
-  uri: at://did:plc:euynv325eix7glyek377orak/app.bsky.feed.post/3mekixce52w2g
-  author: kyledcheney.bsky.social
-  author_display: Kyle Cheney
-  saved_at: '2026-02-11T21:41:11.434Z'
-  post_created_at: '2026-02-11T03:11:30Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: 'Another memorable ruling out of West Virginia, where Judge Goodwin —
-    a Clinton appointee — excoriates the treatment of ICE detainees.
-
-
-    "This is not what civil enforcement looks like in a humane system of government
-    under law."
-
-    storage.courtlistener.com/recap/gov.us...'
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/kyledcheney.bsky.social/post/3mekixce52w2g
-  themes:
-  - bureaucratic-cruelty
-  - deportation-machinery
-  - rule-of-law
-  badges:
-  - image
-  queued: true
-- rkey: 3mekdwdah6c2o
-  uri: at://did:plc:vrwglonkfa7hsapabfvdh4l5/app.bsky.feed.post/3mekdwdah6c2o
-  author: jmetr22b.bsky.social
-  author_display: Jason Meisner
-  saved_at: '2026-02-11T23:28:24.710Z'
-  post_created_at: '2026-02-11T01:41:29Z'
-  article_published_at: '2026-02-10'
-  gap_days: 1
-  gap_flag: false
-  post_text: 'The Tribune has obtained evidence from the case of a Chicago woman shot
-    by Border Patrol that offers a rare, behind-the-scenes look at one of the highest-profile
-    investigations of Operation Midway Blitz.
-
-    UPDATED STORY here with video and texts between agents
-
-    www.chicagotribune.co…'
-  embed_title: Border Patrol Cmdr. Gregory Bovino praised agent after shooting Marimar
-    Martínez in Chicago, evidence shows
-  embed_host: chicagotribune.com
-  embed_url: https://www.chicagotribune.com/2026/02/10/marimar-martinez-video-release-bovino/
-  bluesky_url: https://bsky.app/profile/jmetr22b.bsky.social/post/3mekdwdah6c2o
-  themes:
-  - bureaucratic-cruelty
-  - civilian-harm
-  - deportation-machinery
-  - rule-of-law
-  - state-violence
-  - official-narrative
-  - resistance-and-witness
-  badges:
-  - article
-  - image
-  queued: true
 - rkey: 3mekc65qx5k2h
   uri: at://did:plc:yyuhmdl4gs52njld4kf23ik3/app.bsky.feed.post/3mekc65qx5k2h
   author: berkeleyeve.bsky.social
@@ -788,59 +612,6 @@ entries:
   badges:
   - image
   queued: false
-- rkey: 3mejvhred5k27
-  uri: at://did:plc:4usmserhjqkvhldgedfjb3jw/app.bsky.feed.post/3mejvhred5k27
-  author: paleofuture.bsky.social
-  author_display: Matt Novak
-  saved_at: '2026-02-11T21:35:05.557Z'
-  post_created_at: '2026-02-10T21:22:48Z'
-  article_published_at: '2026-02-10'
-  gap_days: 0
-  gap_flag: false
-  post_text: '"Images obtained by CBS News appear to show the zip ties and bruised
-    wrists of Anabel Romero''s 14-year-old daughter SueHey, a U.S. citizen who was
-    tending to her 6- and 8-year-old siblings when the agents descended on the crowd
-    in military-style gear and herded them into a confin…'
-  embed_title: Feds zip-tied a 14-year-old girl during Idaho raid, sparking fresh
-    questions about ICE tactics
-  embed_host: cbsnews.com
-  embed_url: https://www.cbsnews.com/news/feds-zip-tied-14-year-old-girl-idaho-raid-ice-tactics/?ftag=CNM-00-10aab6a&linkId=904770604
-  bluesky_url: https://bsky.app/profile/paleofuture.bsky.social/post/3mejvhred5k27
-  themes:
-  - bureaucratic-cruelty
-  - civilian-harm
-  - deportation-machinery
-  - rule-of-law
-  - state-violence
-  - official-narrative
-  - resistance-and-witness
-  badges:
-  - article
-  - image
-  queued: true
-- rkey: 3mejmqo3sws2x
-  uri: at://did:plc:ieefmvjqux5gqymbt5qhrql3/app.bsky.feed.post/3mejmqo3sws2x
-  author: anamariafortexas.com
-  author_display: Rep. Ana-María Rodríguez Ramos
-  saved_at: '2026-02-12T12:18:48.784Z'
-  post_created_at: '2026-02-10T18:46:43Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: 'We have received numerous credible reports of torture, killing, and
-    inhumane treatment of detained individuals at the Camp East Montana migrant detention
-    facility, located within Fort Bliss. #txlege'
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/anamariafortexas.com/post/3mejmqo3sws2x
-  themes:
-  - bureaucratic-cruelty
-  - state-violence
-  badges:
-  - thread
-  - image
-  queued: true
 - rkey: 3mejicxlyjf2h
   uri: at://did:plc:4llrhdclvdlmmynkwsmg5tdc/app.bsky.feed.post/3mejicxlyjf2h
   author: atrupar.com
@@ -890,31 +661,6 @@ entries:
   - article
   - image
   queued: false
-- rkey: 3meipumgurc2u
-  uri: at://did:plc:gkv76xqizdogfswf4j6jfko5/app.bsky.feed.post/3meipumgurc2u
-  author: davidrvetter.bsky.social
-  author_display: Dave Vetter
-  saved_at: '2026-02-10T15:52:01.411Z'
-  post_created_at: '2026-02-10T10:09:57Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: '"A modern-day concentration camp ... People have been killed by the
-    staff here." Irish citizen Seamus Culleton has been in ICE detention since September,
-    despite having a valid work permit and his own business in the US.'
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/davidrvetter.bsky.social/post/3meipumgurc2u
-  themes:
-  - bureaucratic-cruelty
-  - civilian-harm
-  - deportation-machinery
-  - state-violence
-  badges:
-  - thread
-  - image
-  queued: true
 - rkey: 3mehskmy2rs2w
   uri: at://did:plc:otnmnkaxchvelzwrifs64rbq/app.bsky.feed.post/3mehskmy2rs2w
   author: gwynnefitz.bsky.social
@@ -10420,28 +10166,6 @@ entries:
   badges:
   - thread
   queued: false
-- rkey: 3lz4jpjnfk222
-  uri: at://did:plc:5c6cw3veuqruljoy5ahzerfx/app.bsky.feed.post/3lz4jpjnfk222
-  author: barackobama.bsky.social
-  author_display: Barack Obama
-  saved_at: '2025-09-18T15:43:07.680Z'
-  post_created_at: '2025-09-18T14:10:39Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: After years of complaining about cancel culture, the current administration
-    has taken it to a new and dangerous level by routinely threatening regulatory
-    action against media companies unless they muzzle or fire reporters and commentators
-    it doesn’t like.
-  embed_title: Let’s be clear about what happened to Jimmy Kimmel
-  embed_host: yahoo.com
-  embed_url: https://www.yahoo.com/news/articles/let-clear-happened-jimmy-kimmel-025000655.html
-  bluesky_url: https://bsky.app/profile/barackobama.bsky.social/post/3lz4jpjnfk222
-  themes:
-  - resistance-and-witness
-  badges:
-  - image
-  queued: true
 - rkey: 3lyq4m4yykc2u
   uri: at://did:plc:23jbx3mbesh2ghfcecaxsk6p/app.bsky.feed.post/3lyq4m4yykc2u
   author: juliarosekraut.bsky.social

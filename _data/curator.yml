@@ -14,6 +14,24 @@
   source_url: https://bsky.app/profile/adamjst.bsky.social/post/3mk3zh4xvg22p
   source_publication: BlueSky
   bluesky_uri: at://did:plc:v3rvpshtirgoxscnmcjr7q2c/app.bsky.feed.post/3mk3zh4xvg22p
+- slug: afghan-allies-to-congo
+  title: From Qatar to the Democratic Republic of Congo
+  date: '2026-04-21'
+  post_created_at: '2026-04-21T19:13:36Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: The Trump administration is in talks to relocate Afghans who worked alongside
+    U.S. forces during the war in Afghanistan — currently sheltered in Qatar after
+    the 2021 evacuation — to the Democratic Republic of Congo, with the choice framed
+    to them, per a U.S. aid worker, as the DRC or return to life under the Taliban.
+  themes:
+  - deportation-machinery
+  - bureaucratic-cruelty
+  state: published
+  source_url: https://www.nytimes.com/2026/04/21/us/politics/trump-afghans-congo.html
+  source_publication: The New York Times
+  bluesky_uri: at://did:plc:eclio37ymobqex2ncko63h4r/app.bsky.feed.post/3mjzov6goh62h
 - slug: don-maca-survivors
   title: Survivors of the Don Maca
   date: '2026-04-21'
@@ -335,6 +353,25 @@
   source_url: https://bsky.app/profile/tusk81.bsky.social/post/3mfpn2y5kk223
   source_publication: BlueSky
   bluesky_uri: at://did:plc:qyipmepnqowrzrk4abnfpwow/app.bsky.feed.post/3mfpn2y5kk223
+- slug: rohingya-refugee-died-buffalo
+  title: Buffalo, Frigid
+  date: '2026-02-25'
+  post_created_at: '2026-02-25T20:29:30Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: A Rohingya refugee detained by ICE was found and pronounced dead, prompting
+    Inquirer columnist Will Bunch to write a column titled 'A Rohingya refugee wanted
+    freedom. America left him for dead in frigid Buffalo'; Investigative Post and
+    other regional outlets published parallel reporting on the death.
+  themes:
+  - bureaucratic-cruelty
+  - civilian-harm
+  - deportation-machinery
+  state: published
+  source_url: https://bsky.app/profile/willbunch.bsky.social/post/3mfpjibhs6c2d
+  source_publication: BlueSky
+  bluesky_uri: at://did:plc:metos4p2yzc3tcdu6h7kszfz/app.bsky.feed.post/3mfpjibhs6c2d
 - slug: only-other-witness
   title: The Only Other Witness
   date: '2026-02-24'
@@ -439,6 +476,43 @@
   source_url: https://bsky.app/profile/ericumansky.bsky.social/post/3mf56bjgfe22x
   source_publication: BlueSky
   bluesky_uri: at://did:plc:o4h5r2albulagzxvhp634tof/app.bsky.feed.post/3mf56bjgfe22x
+- slug: sim-cambodia-detention-death
+  title: After Forty-Three Years
+  date: '2026-02-18'
+  post_created_at: '2026-02-18T01:47:30Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: Mr. Sim, a Cambodian green-card holder who lived in the United States for
+    forty-three years, was arrested at a routine ICE check-in twenty years after a
+    deportation order Cambodia had refused to honor; he died in ICE detention shortly
+    after.
+  themes:
+  - bureaucratic-cruelty
+  - deportation-machinery
+  - civilian-harm
+  state: published
+  source_url: https://bsky.app/profile/reichlinmelnick.bsky.social/post/3mf3xjjk46k2o
+  source_publication: BlueSky
+  bluesky_uri: at://did:plc:2vtbmhmrwzbqcfv4we4uxzzt/app.bsky.feed.post/3mf3xjjk46k2o
+- slug: two-month-old-deported-with-190
+  title: A Two-Month-Old, Unresponsive, and One Hundred and Ninety Dollars
+  date: '2026-02-18'
+  post_created_at: '2026-02-18T01:45:26Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: A two-month-old infant who had been so sick the previous day he was unresponsive
+    was deported alongside his family, the family's total funds at the time of removal
+    amounting to one hundred and ninety dollars.
+  themes:
+  - bureaucratic-cruelty
+  - civilian-harm
+  - deportation-machinery
+  state: published
+  source_url: https://bsky.app/profile/anjalikdayal.bsky.social/post/3mf3xftxfwk2q
+  source_publication: BlueSky
+  bluesky_uri: at://did:plc:wqhbdx55f4vv7bnpps5pur4c/app.bsky.feed.post/3mf3xftxfwk2q
 - slug: geo-group-ice-procurement
   title: The Procurement Officer's Former Employer
   date: '2026-02-17'
@@ -512,6 +586,102 @@
   source_url: https://www.propublica.org/article/life-inside-ice-dilley-children
   source_publication: ProPublica
   bluesky_uri: at://did:plc:nsttbhhihov4y5yejsri2zlr/app.bsky.feed.post/3mevy77oibs27
+- slug: cctv-fake-broken-down-car
+  title: The Stalled Car Was a Trap
+  date: '2026-02-14'
+  post_created_at: '2026-02-14T16:25:44Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: 'CCTV footage surfaced in February 2026 appearing to show DHS agents posing
+    as motorists with car trouble outside a target''s house: when the target came
+    out to help, three vehicles converged on the scene and the ''stalled'' car drove
+    off with the agents who had used the ruse.'
+  themes:
+  - state-violence
+  - deportation-machinery
+  state: published
+  source_url: https://bsky.app/profile/tinadesireeberg.com/post/3metgqayja22o
+  source_publication: BlueSky
+  bluesky_uri: at://did:plc:ru2uiz2ifeei5nqpssfy7iqq/app.bsky.feed.post/3metgqayja22o
+- slug: goodwin-ruling-not-humane
+  title: Not What Civil Enforcement Looks Like
+  date: '2026-02-11'
+  post_created_at: '2026-02-11T03:11:30Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: U.S. District Judge Joseph Goodwin, a Clinton appointee in West Virginia,
+    issued a ruling on the conditions facing ICE detainees in his district that concluded
+    with the line 'This is not what civil enforcement looks like in a humane system
+    of government under law.'
+  themes:
+  - rule-of-law
+  - bureaucratic-cruelty
+  state: published
+  source_url: https://bsky.app/profile/kyledcheney.bsky.social/post/3mekixce52w2g
+  source_publication: BlueSky
+  bluesky_uri: at://did:plc:euynv325eix7glyek377orak/app.bsky.feed.post/3mekixce52w2g
+- slug: bovino-praised-shooter
+  title: Beers On Me
+  date: '2026-02-11'
+  post_created_at: '2026-02-11T01:41:29Z'
+  source_published_at: '2026-02-10'
+  gap_days: 1
+  gap_flag: false
+  summary: Evidence released in February 2026 in the federal case arising from the
+    October 2025 Border Patrol shooting of Marimar Martínez in Chicago shows that,
+    on the afternoon of the shooting, Border Patrol Cmdr. Gregory Bovino emailed the
+    agent who fired (Charles Exum) a personal commendation and a retirement-extension
+    offer; in a group chat with other agents, Exum joked about a news headline reporting
+    agents had taunted Martínez to 'do something' before shooting her.
+  themes:
+  - state-violence
+  - civilian-harm
+  - official-narrative
+  state: published
+  source_url: https://www.chicagotribune.com/2026/02/10/marimar-martinez-video-release-bovino/
+  source_publication: Chicago Tribune
+  bluesky_uri: at://did:plc:vrwglonkfa7hsapabfvdh4l5/app.bsky.feed.post/3mekdwdah6c2o
+- slug: idaho-zip-tied-fourteen
+  title: The Zip-Tied Fourteen-Year-Old
+  date: '2026-02-10'
+  post_created_at: '2026-02-10T21:22:48Z'
+  source_published_at: '2026-02-10'
+  gap_days: 0
+  gap_flag: false
+  summary: During an October 2025 federal raid on a community horse-racing event in
+    Wilder, Idaho, agents in military-style gear herded attendees onto the racetrack
+    and zip-tied SueHey, the fourteen-year-old U.S.-citizen daughter of Anabel Romero,
+    while she was caring for her younger siblings; CBS News obtained photographs of
+    the bound, bruised wrists, and DHS continues to deny any child was zip-tied.
+  themes:
+  - civilian-harm
+  - state-violence
+  - official-narrative
+  state: published
+  source_url: https://www.cbsnews.com/news/feds-zip-tied-14-year-old-girl-idaho-raid-ice-tactics/
+  source_publication: CBS News
+  bluesky_uri: at://did:plc:4usmserhjqkvhldgedfjb3jw/app.bsky.feed.post/3mejvhred5k27
+- slug: east-montana-state-rep-allegations
+  title: Credible Reports of Torture
+  date: '2026-02-10'
+  post_created_at: '2026-02-10T18:46:43Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: Texas State Representative Ana-María Rodríguez Ramos publicly called for
+    an independent investigation and House Committee hearings into Camp East Montana
+    — the ICE tent facility on Fort Bliss — citing 'numerous credible reports of torture,
+    killing, and inhumane treatment of detained individuals.'
+  themes:
+  - bureaucratic-cruelty
+  - civilian-harm
+  - resistance-and-witness
+  state: published
+  source_url: https://bsky.app/profile/anamariafortexas.com/post/3mejmqo3sws2x
+  source_publication: BlueSky
+  bluesky_uri: at://did:plc:ieefmvjqux5gqymbt5qhrql3/app.bsky.feed.post/3mejmqo3sws2x
 - slug: ice-150-facility-expansion
   title: One Hundred and Fifty Leases
   date: '2026-02-10'
@@ -566,6 +736,25 @@
   source_url: https://www.politico.com/news/2026/02/10/ice-immigration-detention-court-orders-00771727
   source_publication: Politico
   bluesky_uri: at://did:plc:euynv325eix7glyek377orak/app.bsky.feed.post/3meitkkniu22l
+- slug: culleton-irish-citizen-detained
+  title: An Irish Citizen, Five Months In
+  date: '2026-02-10'
+  post_created_at: '2026-02-10T10:09:57Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: Seamus Culleton, an Irish citizen with a valid U.S. work permit and his
+    own business in the United States, has been held in ICE detention since September
+    2025 — nearly five months by the time the case surfaced — at a facility one detainee
+    described as 'a modern-day concentration camp,' where, he said, 'people have been
+    killed by the staff.'
+  themes:
+  - bureaucratic-cruelty
+  - civilian-harm
+  state: published
+  source_url: https://bsky.app/profile/davidrvetter.bsky.social/post/3meipumgurc2u
+  source_publication: BlueSky
+  bluesky_uri: at://did:plc:gkv76xqizdogfswf4j6jfko5/app.bsky.feed.post/3meipumgurc2u
 - slug: maine-sheriff-records-subpoena
   title: The Sheriff Who Spoke Up
   date: '2026-02-03'
@@ -897,3 +1086,22 @@
   source_url: https://www.nytimes.com/2025/10/03/us/billionaire-marc-rowan-trump-deal-universities.html
   source_publication: The New York Times
   bluesky_uri: at://did:plc:kfaxgen4pxdnmtho7tj4tijr/app.bsky.feed.post/3m2f6ox7cpc2v
+- slug: obama-kimmel-regulatory-threat
+  title: The Cancellation Now Coming From Inside the House
+  date: '2025-09-18'
+  post_created_at: '2025-09-18T14:10:39Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: After ABC pulled Jimmy Kimmel from the air in September 2025 amid pressure
+    from federal regulators, former president Barack Obama observed publicly that
+    the administration that had built its political identity around opposition to
+    'cancel culture' was now routinely threatening regulatory action against media
+    companies unless they fired or muzzled commentators it disliked.
+  themes:
+  - official-narrative
+  - rule-of-law
+  state: published
+  source_url: https://bsky.app/profile/barackobama.bsky.social/post/3lz4jpjnfk222
+  source_publication: BlueSky
+  bluesky_uri: at://did:plc:5c6cw3veuqruljoy5ahzerfx/app.bsky.feed.post/3lz4jpjnfk222
