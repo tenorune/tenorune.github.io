@@ -385,6 +385,13 @@
       "status": "drafted",
       "story_slug": "rahman-sotu-arrest"
     },
+    "at://did:plc:rcgrkfgh55jxcbsejzkzexv7/app.bsky.feed.post/3lyjbywjplc2m": {
+      "first_processed_at": "2026-04-30T03:34:00Z",
+      "last_action_at": "2026-04-30T03:34:00Z",
+      "notes": null,
+      "status": "skipped",
+      "story_slug": null
+    },
     "at://did:plc:rogqxhzq6vy54nbuy4n6rwyd/app.bsky.feed.post/3mdmgjyjeg22a": {
       "first_processed_at": "2026-04-28T10:00:00Z",
       "last_action_at": "2026-04-28T10:00:00Z",

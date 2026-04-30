@@ -1,10 +1,10 @@
 meta:
   total_inventory: 675
   drafted: 50
-  skipped: 6
+  skipped: 7
   queued: 12
-  pending_total: 619
-  pending_aligned: 421
+  pending_total: 618
+  pending_aligned: 420
   pending_unaligned: 198
   pending_gap_flagged: 22
 entries:
@@ -10674,28 +10674,6 @@ entries:
   - civilian-harm
   - official-narrative
   badges: []
-  queued: false
-- rkey: 3lyjbywjplc2m
-  uri: at://did:plc:rcgrkfgh55jxcbsejzkzexv7/app.bsky.feed.post/3lyjbywjplc2m
-  author: 2damntrans.bsky.social
-  author_display: sasha
-  saved_at: '2025-09-10T23:05:14.358Z'
-  post_created_at: '2025-09-10T22:32:09Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: on a serious note it's incredible how little they cared about the guy.
-    he wasn't even confirmed as dead, never mind his body cold, before they started
-    pushing "lefist" and "trans" "terrorism" narratives. they saw the blood gush out
-    of his neck and thought "this is an excellent op…
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/2damntrans.bsky.social/post/3lyjbywjplc2m
-  themes:
-  - official-narrative
-  badges:
-  - thread
   queued: false
 - rkey: 3lyj7h3gz722k
   uri: at://did:plc:wkzimwvsjeqf3524dgv3hpsj/app.bsky.feed.post/3lyj7h3gz722k
