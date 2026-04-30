@@ -35,6 +35,13 @@
       "status": "drafted",
       "story_slug": "geo-group-ice-procurement"
     },
+    "at://did:plc:2vtbmhmrwzbqcfv4we4uxzzt/app.bsky.feed.post/3mf3xjjk46k2o": {
+      "first_processed_at": "2026-04-30T01:39:51Z",
+      "last_action_at": "2026-04-30T01:39:51Z",
+      "notes": null,
+      "status": "queued",
+      "story_slug": null
+    },
     "at://did:plc:2vtbmhmrwzbqcfv4we4uxzzt/app.bsky.feed.post/3mhl4gjcl322c": {
       "first_processed_at": "2026-04-28T06:00:00Z",
       "last_action_at": "2026-04-28T06:00:00Z",

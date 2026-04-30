@@ -2,7 +2,7 @@ meta:
   total_inventory: 675
   drafted: 50
   skipped: 1
-  queued: 3
+  queued: 4
   pending_total: 624
   pending_aligned: 426
   pending_unaligned: 198
@@ -368,7 +368,7 @@ entries:
   badges:
   - thread
   - image
-  queued: false
+  queued: true
 - rkey: 3mf2uc5cfuk2x
   uri: at://did:plc:bono5gae7m6r3qpfxomshwbd/app.bsky.feed.post/3mf2uc5cfuk2x
   author: maddow.bsky.social
