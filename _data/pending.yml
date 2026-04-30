@@ -1,10 +1,10 @@
 meta:
   total_inventory: 675
   drafted: 50
-  skipped: 9
+  skipped: 10
   queued: 12
-  pending_total: 616
-  pending_aligned: 418
+  pending_total: 615
+  pending_aligned: 417
   pending_unaligned: 198
   pending_gap_flagged: 22
 entries:
@@ -10625,35 +10625,6 @@ entries:
   badges:
   - thread
   - image
-  queued: false
-- rkey: 3lylcslykkc2i
-  uri: at://did:plc:s6j27rxb3ic2rxw73ixgqv2p/app.bsky.feed.post/3lylcslykkc2i
-  author: kenwhite.bsky.social
-  author_display: Critical For Our National Popehat
-  saved_at: '2025-09-11T21:02:57.144Z'
-  post_created_at: '2025-09-11T17:51:50Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: 'I have a couple of comments about the "free speech hero" narrative about
-    Charlie Kirk.
-
-
-    First, was Charlie Kirk really notable for supporting the free speech of people
-    he disagreed with?  I haven''t noticed that, though I could have missed it.
-
-
-    /1'
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/kenwhite.bsky.social/post/3lylcslykkc2i
-  themes:
-  - bureaucratic-cruelty
-  - deportation-machinery
-  - official-narrative
-  badges:
-  - thread
   queued: false
 - rkey: 3lydt3jc24i2v
   uri: at://did:plc:m5soh62ifdpq443v3rnjnfrm/app.bsky.feed.post/3lydt3jc24i2v
