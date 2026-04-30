@@ -2,7 +2,7 @@ meta:
   total_inventory: 675
   drafted: 50
   skipped: 1
-  queued: 1
+  queued: 2
   pending_total: 624
   pending_aligned: 426
   pending_unaligned: 198
@@ -165,7 +165,7 @@ entries:
   - civilian-harm
   badges:
   - thread
-  queued: false
+  queued: true
 - rkey: 3mfkk6colpk24
   uri: at://did:plc:sgti3jsgu3luif24tokvth3a/app.bsky.feed.post/3mfkk6colpk24
   author: joshtpm.bsky.social
