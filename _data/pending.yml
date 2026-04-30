@@ -2,7 +2,7 @@ meta:
   total_inventory: 675
   drafted: 50
   skipped: 12
-  queued: 12
+  queued: 13
   pending_total: 613
   pending_aligned: 415
   pending_unaligned: 198
@@ -10554,7 +10554,7 @@ entries:
   badges:
   - thread
   - image
-  queued: false
+  queued: true
 - rkey: 3lynri7patc2d
   uri: at://did:plc:4yb2pjejfziah3eork7stm6j/app.bsky.feed.post/3lynri7patc2d
   author: rachelgilmore.bsky.social
