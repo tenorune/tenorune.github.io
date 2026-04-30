@@ -1,10 +1,10 @@
 meta:
   total_inventory: 675
   drafted: 50
-  skipped: 5
+  skipped: 6
   queued: 12
-  pending_total: 620
-  pending_aligned: 422
+  pending_total: 619
+  pending_aligned: 421
   pending_unaligned: 198
   pending_gap_flagged: 22
 entries:
@@ -10766,27 +10766,6 @@ entries:
   badges:
   - thread
   - image
-  queued: false
-- rkey: 3lcboxf37as2p
-  uri: at://did:plc:jhxnlqmy26jikbcst6kux7fr/app.bsky.feed.post/3lcboxf37as2p
-  author: mjcrockett.bsky.social
-  author_display: M.J. Crockett
-  saved_at: '2025-09-08T19:20:08.936Z'
-  post_created_at: '2024-12-01T22:48:23Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: "Is it Bad to leave Twitter? No. Here are 7+ years of insights from my\
-    \ lab’s research that explain why. \n\nFeaturing work w/ @williambrady.bsky.social\
-    \ @killianmcloughlin.bsky.social \n\n\U0001F9F5"
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/mjcrockett.bsky.social/post/3lcboxf37as2p
-  themes:
-  - state-violence
-  badges:
-  - thread
   queued: false
 - rkey: 3lcapz46fns2q
   uri: at://did:plc:xehuhj2n2d4ag2klqktm77fw/app.bsky.feed.post/3lcapz46fns2q
