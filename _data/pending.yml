@@ -2,7 +2,7 @@ meta:
   total_inventory: 675
   drafted: 50
   skipped: 1
-  queued: 6
+  queued: 7
   pending_total: 624
   pending_aligned: 426
   pending_unaligned: 198
@@ -529,7 +529,7 @@ entries:
   badges:
   - thread
   - image
-  queued: false
+  queued: true
 - rkey: 3memwwly4yc23
   uri: at://did:plc:e62gb2ushvtvjvqcbrxeaw2n/app.bsky.feed.post/3memwwly4yc23
   author: chrislhayes.bsky.social
