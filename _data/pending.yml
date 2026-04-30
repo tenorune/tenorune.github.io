@@ -1,12 +1,12 @@
 meta:
   total_inventory: 675
   drafted: 63
-  skipped: 16
-  queued: 0
-  pending_total: 596
-  pending_aligned: 401
+  skipped: 27
+  queued: 3
+  pending_total: 585
+  pending_aligned: 390
   pending_unaligned: 195
-  pending_gap_flagged: 22
+  pending_gap_flagged: 20
 entries:
 - rkey: 3mjzl5hnfq22u
   uri: at://did:plc:f5j66gguacu2rqrqxdqzozpa/app.bsky.feed.post/3mjzl5hnfq22u
@@ -9766,32 +9766,6 @@ entries:
   - thread
   - image
   queued: false
-- rkey: 3m22mtdfguk27
-  uri: at://did:plc:kok4aqdr3qnsj6ktfkq76kqz/app.bsky.feed.post/3m22mtdfguk27
-  author: adamrothman.bsky.social
-  author_display: Adam Rothman aced his cognitive test
-  saved_at: '2025-09-30T22:07:39.004Z'
-  post_created_at: '2025-09-30T13:26:20Z'
-  article_published_at: '2014-07-07'
-  gap_days: 4103
-  gap_flag: true
-  post_text: www.smithsonianmag.com/history/who-...
-  embed_title: Who Had the Best Civil War Facial Hair?
-  embed_host: smithsonianmag.com
-  embed_url: https://www.smithsonianmag.com/history/who-had-best-civil-war-facial-hair-180951965/
-  bluesky_url: https://bsky.app/profile/adamrothman.bsky.social/post/3m22mtdfguk27
-  themes:
-  - bureaucratic-cruelty
-  - civilian-harm
-  - deportation-machinery
-  - rule-of-law
-  - state-violence
-  - official-narrative
-  - resistance-and-witness
-  badges:
-  - article
-  - image
-  queued: false
 - rkey: 3lzysvx6wbs26
   uri: at://did:plc:43ck35s3crmdzqkghid2zsgv/app.bsky.feed.post/3lzysvx6wbs26
   author: noturtlesoup17.bsky.social
@@ -9836,30 +9810,6 @@ entries:
   - resistance-and-witness
   badges: []
   queued: false
-- rkey: 3lzvq3kz3ns2m
-  uri: at://did:plc:kpmeqsgi52jt2vz2ttaj43nq/app.bsky.feed.post/3lzvq3kz3ns2m
-  author: radobrien.myatproto.social
-  author_display: Rad O'Brien, Chief Engineer 🔵
-  saved_at: '2025-09-30T22:35:27.398Z'
-  post_created_at: '2025-09-28T14:41:19Z'
-  article_published_at: '2025-07-10'
-  gap_days: 80
-  gap_flag: false
-  post_text: ok this breakdown of AI writing indicators is incredible.  Huge shout-out
-    to the Wikipedia community for this
-  embed_title: Wikipedia:Signs of AI writing - Wikipedia
-  embed_host: en.wikipedia.org
-  embed_url: https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing
-  bluesky_url: https://bsky.app/profile/radobrien.myatproto.social/post/3lzvq3kz3ns2m
-  themes:
-  - bureaucratic-cruelty
-  - deportation-machinery
-  - official-narrative
-  - resistance-and-witness
-  badges:
-  - article
-  - thread
-  queued: false
 - rkey: 3lzqwcusewc2h
   uri: at://did:plc:2vtbmhmrwzbqcfv4we4uxzzt/app.bsky.feed.post/3lzqwcusewc2h
   author: reichlinmelnick.bsky.social
@@ -9886,7 +9836,7 @@ entries:
   badges:
   - thread
   - image
-  queued: false
+  queued: true
 - rkey: 3lzqw76iv6k2k
   uri: at://did:plc:pxcupv4p27r73xgjw4s3lkqj/app.bsky.feed.post/3lzqw76iv6k2k
   author: mguariglia.bsky.social
@@ -9981,39 +9931,7 @@ entries:
   badges:
   - article
   - image
-  queued: false
-- rkey: 3lzjklcnqgk2w
-  uri: at://did:plc:3t37x6vfigdzzp2gjcfnzlz4/app.bsky.feed.post/3lzjklcnqgk2w
-  author: jayrosen.bsky.social
-  author_display: Jay Rosen
-  saved_at: '2025-09-23T18:55:02.726Z'
-  post_created_at: '2025-09-23T18:30:48Z'
-  article_published_at: '2025-09-23'
-  gap_days: 0
-  gap_flag: false
-  post_text: '"A few weeks ago, I was complaining bitterly about how the New York
-    Times routinely resorts to weasel words, euphemisms and third-party critiques
-    to avoid speaking the truth about Donald Trump. But in the last 10 days..."
-
-
-    Froomkin senses a shift, led by Peter Baker presswatchers…'
-  embed_title: Is the New York Times finally getting real about Trump? | Press Watch
-  embed_host: presswatchers.org
-  embed_url: https://presswatchers.org/2025/09/is-the-new-york-times-finally-getting-real-about-trump/
-  bluesky_url: https://bsky.app/profile/jayrosen.bsky.social/post/3lzjklcnqgk2w
-  themes:
-  - bureaucratic-cruelty
-  - deportation-machinery
-  - rule-of-law
-  - state-violence
-  - official-narrative
-  - predatory-capital
-  - resistance-and-witness
-  badges:
-  - article
-  - thread
-  - image
-  queued: false
+  queued: true
 - rkey: 3lzjhpnxs4k22
   uri: at://did:plc:it4vfrn3hgrb3hsvvwfltqqa/app.bsky.feed.post/3lzjhpnxs4k22
   author: lebassett.bsky.social
@@ -10039,31 +9957,7 @@ entries:
   badges:
   - thread
   - image
-  queued: false
-- rkey: 3lziyetvdns2g
-  uri: at://did:plc:ykkkrah7gq23zkjyi4b66437/app.bsky.feed.post/3lziyetvdns2g
-  author: tricialockwood.bsky.social
-  author_display: Tricia Lockwood
-  saved_at: '2025-09-23T14:28:57.069Z'
-  post_created_at: '2025-09-23T13:05:04Z'
-  article_published_at: '2025-09-23'
-  gap_days: 0
-  gap_flag: false
-  post_text: 'my new book is OUT TODAY! it’s been described as "the writer at her
-    best: mystified, curious, pathetic, absurd" — you can buy it here'
-  embed_title: 'Will There Ever Be Another You by Patricia Lockwood: 9780593718551
-    | PenguinRandomHouse.com: Books'
-  embed_host: penguinrandomhouse.com
-  embed_url: https://www.penguinrandomhouse.com/books/747467/will-there-ever-be-another-you-by-patricia-lockwood/
-  bluesky_url: https://bsky.app/profile/tricialockwood.bsky.social/post/3lziyetvdns2g
-  themes:
-  - state-violence
-  - resistance-and-witness
-  badges:
-  - article
-  - thread
-  - image
-  queued: false
+  queued: true
 - rkey: 3lzioaxu5ak2m
   uri: at://did:plc:dtgy62tymnpbnzozbpgnov56/app.bsky.feed.post/3lzioaxu5ak2m
   author: jessicacalarco.com
@@ -10154,28 +10048,6 @@ entries:
   badges:
   - image
   queued: false
-- rkey: 3lze2f5kcks2y
-  uri: at://did:plc:j76trmiofvaxxpvx2vnb2vwf/app.bsky.feed.post/3lze2f5kcks2y
-  author: michaelhobbes.bsky.social
-  author_display: Michael Hobbes
-  saved_at: '2025-09-21T16:56:14.745Z'
-  post_created_at: '2025-09-21T13:57:42Z'
-  article_published_at: '2025-09-08'
-  gap_days: 13
-  gap_flag: false
-  post_text: Conservative men are apparently pretending to be liberal and then "coming
-    out" to their progressive girlfriends after dating for months
-  embed_title: Conservative Men keep LYING because no one will date them...
-  embed_host: youtube.com
-  embed_url: https://www.youtube.com/watch?v=WQvijZMIK_A
-  bluesky_url: https://bsky.app/profile/michaelhobbes.bsky.social/post/3lze2f5kcks2y
-  themes:
-  - resistance-and-witness
-  badges:
-  - article
-  - thread
-  - image
-  queued: false
 - rkey: 3lzbpq3tzck2o
   uri: at://did:plc:iiofy6mupgapoiz2b3lgfyr7/app.bsky.feed.post/3lzbpq3tzck2o
   author: karenattiah.bsky.social
@@ -10221,53 +10093,6 @@ entries:
   badges:
   - thread
   queued: false
-- rkey: 3lynri7patc2d
-  uri: at://did:plc:4yb2pjejfziah3eork7stm6j/app.bsky.feed.post/3lynri7patc2d
-  author: rachelgilmore.bsky.social
-  author_display: Rachel Gilmore
-  saved_at: '2025-09-13T12:20:12.079Z'
-  post_created_at: '2025-09-12T17:19:47Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: "Hi. I’m Rachel. \n\nMy name is first on the website the North American\
-    \ far-right is using to target people they say “celebrated” Charlie Kirk’s death.\n\
-    \nThere’s just one problem: I never did that. \n\nBut the people sending me threats\
-    \ don’t seem to care.\n\nLet me tell you, in my own wo…"
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/rachelgilmore.bsky.social/post/3lynri7patc2d
-  themes:
-  - civilian-harm
-  - official-narrative
-  badges:
-  - thread
-  - image
-  queued: false
-- rkey: 3lydt3jc24i2v
-  uri: at://did:plc:m5soh62ifdpq443v3rnjnfrm/app.bsky.feed.post/3lydt3jc24i2v
-  author: kyleor.land
-  author_display: Kyle Orland
-  saved_at: '2025-09-08T20:20:53.166Z'
-  post_created_at: '2025-09-08T18:21:51Z'
-  article_published_at: '2025-09-08'
-  gap_days: 0
-  gap_flag: false
-  post_text: One of the coolest video game preservation stories I have ever covered
-    arstechnica.com/gaming/2025/...
-  embed_title: All 54 lost clickwheel iPod games have now been preserved for posterity
-  embed_host: arstechnica.com
-  embed_url: https://arstechnica.com/gaming/2025/09/all-54-lost-clickwheel-ipod-games-have-now-been-preserved-for-posterity
-  bluesky_url: https://bsky.app/profile/kyleor.land/post/3lydt3jc24i2v
-  themes:
-  - official-narrative
-  - resistance-and-witness
-  badges:
-  - article
-  - thread
-  - image
-  queued: false
 - rkey: 3lhogjhgu4s2y
   uri: at://did:plc:t4i3a4fawuzge3dsw2i2h2fw/app.bsky.feed.post/3lhogjhgu4s2y
   author: markjacob.bsky.social
@@ -10293,118 +10118,4 @@ entries:
   badges:
   - thread
   - image
-  queued: false
-- rkey: 3lcapz46fns2q
-  uri: at://did:plc:xehuhj2n2d4ag2klqktm77fw/app.bsky.feed.post/3lcapz46fns2q
-  author: bendobrown.bsky.social
-  author_display: Benjamin Strick
-  saved_at: '2025-09-08T19:19:45.120Z'
-  post_created_at: '2024-12-01T13:34:34Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: This festive season I’m sharing a video every day for the next 24 days
-    showing useful OSINT tools & techniques. Creating this OSINT Advent Series has
-    been a lot of fun and I hope it’s helpful for the ever-growing OSINT community!
-    🎄👇
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/bendobrown.bsky.social/post/3lcapz46fns2q
-  themes:
-  - resistance-and-witness
-  badges:
-  - thread
-  queued: false
-- rkey: 3lbuklkpi2s2e
-  uri: at://did:plc:yn75hmwkitdshnylue6d3grk/app.bsky.feed.post/3lbuklkpi2s2e
-  author: niedermeyer.online
-  author_display: e.w. niedermeyer
-  saved_at: '2025-09-08T19:20:24.955Z'
-  post_created_at: '2024-11-26T17:25:34Z'
-  article_published_at: '2024-11-14'
-  gap_days: 12
-  gap_flag: false
-  post_text: 'in other "look at where this guy comes from" news, Elon Musk''s father
-    just did a lengthy podcast episode that opens with the host saying "I bet the
-    last time you had this many black people in your house someone was trying to rob
-    you"
-
-
-    youtu.be/KH1U5x8LXgs?...'
-  embed_title: EPISODE 613 | ERROL MUSK On Growing Up in SA, Elon Musk,Donald Trump,Dating
-    Step Daughter,Ex Wife’s
-  embed_host: youtu.be
-  embed_url: https://youtu.be/KH1U5x8LXgs?si=Om5OqxfK-IQQHeu3
-  bluesky_url: https://bsky.app/profile/niedermeyer.online/post/3lbuklkpi2s2e
-  themes:
-  - civilian-harm
-  - predatory-capital
-  - resistance-and-witness
-  badges:
-  - article
-  - thread
-  - image
-  queued: false
-- rkey: 3lbrovupjtd2p
-  uri: at://did:plc:miczfsfixolk42l7343z3bpd/app.bsky.feed.post/3lbrovupjtd2p
-  author: sethcotlar.bsky.social
-  author_display: Seth Cotlar
-  saved_at: '2025-09-08T19:20:46.749Z'
-  post_created_at: '2024-11-25T14:04:56Z'
-  article_published_at: '2024-04-16'
-  gap_days: 223
-  gap_flag: true
-  post_text: 'I''ve been thinking a lot lately about this piece that came out this
-    spring. The imperatives of large scale corporate capitalism have squelched much
-    of what once was (and still could be) culturally and politically democratizing
-    about internet technology.
-
-    www.noemamag.com/we-need-t…'
-  embed_title: We Need To Rewild The Internet  | NOEMA
-  embed_host: noemamag.com
-  embed_url: https://www.noemamag.com/we-need-to-rewild-the-internet/
-  bluesky_url: https://bsky.app/profile/sethcotlar.bsky.social/post/3lbrovupjtd2p
-  themes:
-  - bureaucratic-cruelty
-  - civilian-harm
-  - deportation-machinery
-  - state-violence
-  - official-narrative
-  - predatory-capital
-  - resistance-and-witness
-  badges:
-  - article
-  - thread
-  - image
-  queued: false
-- rkey: 3latqlwzve22p
-  uri: at://did:plc:4s4ivkb523dolwkskbauvcyx/app.bsky.feed.post/3latqlwzve22p
-  author: nickjbrumfield.bsky.social
-  author_display: Nick Brumfield
-  saved_at: '2025-09-08T19:20:53.612Z'
-  post_created_at: '2024-11-13T16:15:18Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: 'Here it is! A Starter Pack for Middle East News
-
-
-    A couple things
-
-    1) Inclusion in this list should not be taken as an endorsement, this is to crystalize
-    the MENA ecosystem so it can grow
-
-
-    2) Limit''s 150, so if I missed you, hit me in the replies & I''ll get you in
-    the next one
-
-    go.b…'
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/nickjbrumfield.bsky.social/post/3latqlwzve22p
-  themes:
-  - official-narrative
-  badges: []
   queued: false
