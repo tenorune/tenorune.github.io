@@ -2,7 +2,7 @@ meta:
   total_inventory: 675
   drafted: 50
   skipped: 1
-  queued: 7
+  queued: 8
   pending_total: 624
   pending_aligned: 426
   pending_unaligned: 198
@@ -730,7 +730,7 @@ entries:
   badges:
   - article
   - image
-  queued: false
+  queued: true
 - rkey: 3melssqyo3k2a
   uri: at://did:plc:63umjc3jjqrv77hc4eehbvw7/app.bsky.feed.post/3melssqyo3k2a
   author: ndrew.bsky.social
