@@ -28,6 +28,13 @@
       "status": "queued",
       "story_slug": null
     },
+    "at://did:plc:2lnlbdb24j54upu66sojzad4/app.bsky.feed.post/3lyyydtsoz22e": {
+      "first_processed_at": "2026-04-30T03:37:52Z",
+      "last_action_at": "2026-04-30T03:37:52Z",
+      "notes": null,
+      "status": "skipped",
+      "story_slug": null
+    },
     "at://did:plc:2rrp7amblhg3xoly5n5huiqv/app.bsky.feed.post/3m4sqdcrqac2h": {
       "first_processed_at": "2026-04-29T00:00:00Z",
       "last_action_at": "2026-04-29T00:00:00Z",

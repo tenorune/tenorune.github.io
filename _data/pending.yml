@@ -1,10 +1,10 @@
 meta:
   total_inventory: 675
   drafted: 50
-  skipped: 14
+  skipped: 15
   queued: 14
-  pending_total: 611
-  pending_aligned: 413
+  pending_total: 610
+  pending_aligned: 412
   pending_unaligned: 198
   pending_gap_flagged: 22
 entries:
@@ -10442,27 +10442,6 @@ entries:
   badges:
   - image
   queued: true
-- rkey: 3lyyydtsoz22e
-  uri: at://did:plc:2lnlbdb24j54upu66sojzad4/app.bsky.feed.post/3lyyydtsoz22e
-  author: dunkelman.bsky.social
-  author_display: Canuck
-  saved_at: '2025-09-18T23:26:07.536Z'
-  post_created_at: '2025-09-17T04:21:54Z'
-  article_published_at: '2025-09-16'
-  gap_days: 1
-  gap_flag: false
-  post_text: youtu.be/a97iH0eKGMg?...
-  embed_title: They EXPLOITED Charlie Kirk’s Grieving Widow - Ft. Christopher Hitchens
-  embed_host: youtu.be
-  embed_url: https://youtu.be/a97iH0eKGMg?si=Pgs1iMlI_jd7aeiu
-  bluesky_url: https://bsky.app/profile/dunkelman.bsky.social/post/3lyyydtsoz22e
-  themes:
-  - official-narrative
-  - resistance-and-witness
-  badges:
-  - article
-  - image
-  queued: false
 - rkey: 3lyvf72psrm2i
   uri: at://did:plc:mndtiksvxikpsy3zl6ebd2kr/app.bsky.feed.post/3lyvf72psrm2i
   author: mattbinder.bsky.social
