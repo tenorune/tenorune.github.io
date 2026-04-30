@@ -2,7 +2,7 @@ meta:
   total_inventory: 675
   drafted: 50
   skipped: 1
-  queued: 2
+  queued: 3
   pending_total: 624
   pending_aligned: 426
   pending_unaligned: 198
@@ -345,7 +345,7 @@ entries:
   - deportation-machinery
   badges:
   - thread
-  queued: false
+  queued: true
 - rkey: 3mf3xjjk46k2o
   uri: at://did:plc:2vtbmhmrwzbqcfv4we4uxzzt/app.bsky.feed.post/3mf3xjjk46k2o
   author: reichlinmelnick.bsky.social
