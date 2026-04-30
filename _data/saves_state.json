@@ -21,13 +21,6 @@
       "status": "drafted",
       "story_slug": "engan-greencard-arrest"
     },
-    "at://did:plc:2h35jxwj2w2ecanvohqc3vbb/app.bsky.feed.post/3mjzaokxpsc2m": {
-      "first_processed_at": "2026-04-30T01:36:33Z",
-      "last_action_at": "2026-04-30T01:36:33Z",
-      "notes": null,
-      "status": "queued",
-      "story_slug": null
-    },
     "at://did:plc:2lnlbdb24j54upu66sojzad4/app.bsky.feed.post/3lyyydtsoz22e": {
       "first_processed_at": "2026-04-30T03:37:52Z",
       "last_action_at": "2026-04-30T03:37:52Z",

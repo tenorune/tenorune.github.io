@@ -1,0 +1,86 @@
+name: drain curator queue
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  drain:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install pyyaml
+
+      - name: Drain queue
+        id: drain
+        run: |
+          python scripts/drain_queue.py
+
+      - name: Commit and push (with retry on race)
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add _stories/ _data/curator.yml _data/pending.yml _data/saves_state.json _data/curator_queue.yml
+          if git diff --cached --quiet; then
+            echo "drain produced no changes"
+            exit 0
+          fi
+          # Read drained count for commit message.
+          COUNT=$(python -c "
+import json
+print(json.load(open('.drain_summary.json'))['drained_count'])
+")
+          git commit -m "curate: drain $COUNT actions from queue"
+
+          for attempt in $(seq 1 30); do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "push #$attempt rejected; rebasing"
+            git fetch origin main
+            git reset --hard origin/main
+            python scripts/drain_queue.py
+            git add _stories/ _data/curator.yml _data/pending.yml _data/saves_state.json _data/curator_queue.yml
+            if git diff --cached --quiet; then
+              echo "no changes after rebase"
+              exit 0
+            fi
+            COUNT=$(python -c "import json; print(json.load(open('.drain_summary.json'))['drained_count'])")
+            git commit -m "curate: drain $COUNT actions from queue"
+            sleep $(( attempt < 5 ? attempt : 5 ))
+          done
+          echo "exhausted push retries"
+          exit 1
+
+      - name: Close processed issues
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ ! -f .drain_summary.json ]; then
+            echo "no summary; nothing to close"
+            exit 0
+          fi
+          python -c "
+import json
+s = json.load(open('.drain_summary.json'))
+for n in s['processed_issues']:
+    print(n)
+" | while read -r N; do
+            [ -z "$N" ] && continue
+            gh issue comment "$N" --repo ${{ github.repository }} \
+              --body "Applied by drain (commit $(git rev-parse --short HEAD))." || true
+            gh issue close "$N" --repo ${{ github.repository }} || true
+          done

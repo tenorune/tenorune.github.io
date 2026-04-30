@@ -26,6 +26,14 @@ layout: default
     · {{ site.data.curator | size }} total
   </p>
 
+  {% if site.data.curator_queue and site.data.curator_queue.size > 0 %}
+  <p class="meta curator-tally">
+    <strong>{{ site.data.curator_queue.size }} action{% if site.data.curator_queue.size != 1 %}s{% endif %} queued</strong> —
+    drain via the <a href="https://github.com/tenorune/tenorune.github.io/actions/workflows/drain-curator-queue.yml">drain-curator-queue workflow</a>
+    or by asking Claude in chat.
+  </p>
+  {% endif %}
+
   {% if site.data.pending and site.data.pending.meta %}
   <p class="meta curator-tally">
     <a href="/stories/curator/pending/">{{ site.data.pending.meta.pending_aligned }} pending saves →</a>

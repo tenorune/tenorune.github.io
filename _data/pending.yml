@@ -2,7 +2,7 @@ meta:
   total_inventory: 675
   drafted: 50
   skipped: 16
-  queued: 14
+  queued: 13
   pending_total: 609
   pending_aligned: 411
   pending_unaligned: 198
@@ -86,7 +86,7 @@ entries:
   badges:
   - article
   - image
-  queued: true
+  queued: false
 - rkey: 3mjhzgfbuwk2s
   uri: at://did:plc:heglpme62gnefpy6adjpcswr/app.bsky.feed.post/3mjhzgfbuwk2s
   author: jeremotographs.bsky.social

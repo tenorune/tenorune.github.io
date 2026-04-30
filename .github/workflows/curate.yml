@@ -19,8 +19,6 @@ jobs:
           TITLE: ${{ github.event.issue.title }}
         run: |
           # Match: "curator: <action> <target>"
-          # action ∈ {publish, draft, reject, skip, queue, unqueue}
-          # target = story slug (kebab) or rkey (alphanumeric); both fit [a-z0-9-]+
           if [[ "$TITLE" =~ ^curator:\ (publish|draft|reject|skip|queue|unqueue)\ ([a-z0-9-]+)$ ]]; then
             echo "action=${BASH_REMATCH[1]}" >> "$GITHUB_OUTPUT"
             echo "target=${BASH_REMATCH[2]}" >> "$GITHUB_OUTPUT"
@@ -61,7 +59,7 @@ jobs:
         if: steps.parse.outputs.ok == 'true' && github.event.issue.author_association == 'OWNER'
         run: pip install pyyaml
 
-      - name: Apply, commit, and push (with retry on race)
+      - name: Append to curator queue and push (with retry on race)
         if: steps.parse.outputs.ok == 'true' && github.event.issue.author_association == 'OWNER'
         env:
           ACTION: ${{ steps.parse.outputs.action }}
@@ -72,56 +70,62 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          apply_and_stage() {
-            python scripts/curate.py "$ACTION" "$TARGET"
-            python scripts/build_curator_data.py
-            python scripts/build_pending_data.py
-            git add _stories/ _data/curator.yml _data/pending.yml _data/saves_state.json
+          append() {
+            python -c "
+import yaml, os
+from datetime import datetime, timezone
+from pathlib import Path
+qpath = Path('_data/curator_queue.yml')
+queue = yaml.safe_load(qpath.read_text(encoding='utf-8')) if qpath.exists() else []
+queue = queue or []
+queue.append({
+    'action': os.environ['ACTION'],
+    'target': os.environ['TARGET'],
+    'issue':  int(os.environ['ISSUE']),
+    'submitted_at': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+})
+qpath.write_text(yaml.safe_dump(queue, sort_keys=False, allow_unicode=True), encoding='utf-8')
+"
+            git add _data/curator_queue.yml
           }
 
-          # First attempt: apply, commit, push.
-          apply_and_stage
+          append
           if git diff --cached --quiet; then
-            echo "noop=true" >> "$GITHUB_ENV"
+            echo "no change to queue (already enqueued?)"
             exit 0
           fi
-          git commit -m "curate: $ACTION $TARGET (issue #$ISSUE)"
+          git commit -m "queue: $ACTION $TARGET (issue #$ISSUE)"
 
-          # Retry on non-fast-forward push (concurrent curate runs racing
-          # on main). Keep going for up to ~30 attempts; sleep grows from
-          # 1s to a cap of 5s so a burst of 10+ parallel issues all land
-          # eventually without any single retry waiting too long.
+          # Retry on non-fast-forward push (concurrent enqueues racing on main).
           for attempt in $(seq 1 30); do
             if git push origin HEAD:main; then
-              echo "noop=false" >> "$GITHUB_ENV"
               exit 0
             fi
-            echo "push #$attempt rejected; rebasing on origin/main and re-applying"
+            echo "push #$attempt rejected; rebasing on origin/main and re-appending"
             git fetch origin main
             git reset --hard origin/main
-            apply_and_stage
+            append
             if git diff --cached --quiet; then
-              echo "no changes after rebase — already in target state on latest main"
-              echo "noop=true" >> "$GITHUB_ENV"
+              echo "no change after rebase"
               exit 0
             fi
-            git commit -m "curate: $ACTION $TARGET (issue #$ISSUE)"
-            # Sleep: 1, 2, 3, 4, 5, then capped at 5s for the rest.
+            git commit -m "queue: $ACTION $TARGET (issue #$ISSUE)"
             sleep $(( attempt < 5 ? attempt : 5 ))
           done
-
           echo "exhausted push retries"
           exit 1
 
-      - name: Confirm and close
+      - name: Acknowledge on issue
         if: steps.parse.outputs.ok == 'true' && github.event.issue.author_association == 'OWNER'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if [ "$noop" = "true" ]; then
-            BODY="No-op: \`${{ steps.parse.outputs.target }}\` was already in the requested state (\`${{ steps.parse.outputs.action }}\`)."
-          else
-            BODY="Applied \`${{ steps.parse.outputs.action }}\` to \`${{ steps.parse.outputs.target }}\`."
-          fi
-          gh issue comment ${{ github.event.issue.number }} --repo ${{ github.repository }} --body "$BODY"
-          gh issue close ${{ github.event.issue.number }} --repo ${{ github.repository }}
+          # Read current queue length for the comment.
+          QSIZE=$(python -c "
+import yaml
+from pathlib import Path
+q = yaml.safe_load(Path('_data/curator_queue.yml').read_text()) or []
+print(len(q))
+")
+          gh issue comment ${{ github.event.issue.number }} --repo ${{ github.repository }} \
+            --body "Queued for next drain (curator queue: $QSIZE pending). The drain workflow can be triggered from the Actions tab, or in chat with Claude."
