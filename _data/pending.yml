@@ -1,12 +1,12 @@
 meta:
   total_inventory: 675
   drafted: 63
-  skipped: 27
+  skipped: 29
   queued: 3
-  pending_total: 585
-  pending_aligned: 390
+  pending_total: 583
+  pending_aligned: 388
   pending_unaligned: 195
-  pending_gap_flagged: 20
+  pending_gap_flagged: 19
 entries:
 - rkey: 3mjzl5hnfq22u
   uri: at://did:plc:f5j66gguacu2rqrqxdqzozpa/app.bsky.feed.post/3mjzl5hnfq22u
@@ -894,32 +894,6 @@ entries:
   - deportation-machinery
   - state-violence
   badges: []
-  queued: false
-- rkey: 3me7nisadi22g
-  uri: at://did:plc:x4qyokjtdzgl7gmqhsw4ajqj/app.bsky.feed.post/3me7nisadi22g
-  author: bencollins.bsky.social
-  author_display: Tim Onion
-  saved_at: '2026-02-06T19:53:33.743Z'
-  post_created_at: '2026-02-06T19:33:35Z'
-  article_published_at: '1999-03-17'
-  gap_days: 9823
-  gap_flag: true
-  post_text: An old classic.
-  embed_title: European Men Are So Much More Romantic Than American Men vs. American
-    Women Studying In Europe Are Unbelievably Easy
-  embed_host: theonion.com
-  embed_url: https://theonion.com/european-men-are-so-much-more-romantic-than-american-me-1819594261/
-  bluesky_url: https://bsky.app/profile/bencollins.bsky.social/post/3me7nisadi22g
-  themes:
-  - bureaucratic-cruelty
-  - civilian-harm
-  - deportation-machinery
-  - state-violence
-  - official-narrative
-  - resistance-and-witness
-  badges:
-  - article
-  - image
   queued: false
 - rkey: 3me7jkplpvc2u
   uri: at://did:plc:zn5wzyeehxerl4ft7m7vzrs4/app.bsky.feed.post/3me7jkplpvc2u
@@ -10092,30 +10066,4 @@ entries:
   - resistance-and-witness
   badges:
   - thread
-  queued: false
-- rkey: 3lhogjhgu4s2y
-  uri: at://did:plc:t4i3a4fawuzge3dsw2i2h2fw/app.bsky.feed.post/3lhogjhgu4s2y
-  author: markjacob.bsky.social
-  author_display: Mark Jacob
-  saved_at: '2025-10-03T16:47:04.660Z'
-  post_created_at: '2025-02-08T15:28:00Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: 'This Politico story from last October shows how easy it is to launder
-    lies through the press. It claimed Trump would ban anyone tied to Project 2025
-    from a job in a second Trump administration.
-
-    “Clearly people working on Project 2025 are blacklisted,” said an unidentified
-    Trump i…'
-  embed_title: Trump team preps list of banned staffers
-  embed_host: politico.com
-  embed_url: https://www.politico.com/news/2024/10/16/trump-transition-hiring-staffer-ban-00183208
-  bluesky_url: https://bsky.app/profile/markjacob.bsky.social/post/3lhogjhgu4s2y
-  themes:
-  - official-narrative
-  - resistance-and-witness
-  badges:
-  - thread
-  - image
   queued: false
