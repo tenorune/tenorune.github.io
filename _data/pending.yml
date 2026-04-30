@@ -2,7 +2,7 @@ meta:
   total_inventory: 675
   drafted: 50
   skipped: 0
-  queued: 0
+  queued: 1
   pending_total: 625
   pending_aligned: 427
   pending_unaligned: 198
@@ -33,7 +33,7 @@ entries:
   badges:
   - article
   - image
-  queued: false
+  queued: true
 - rkey: 3mjzl5hnfq22u
   uri: at://did:plc:f5j66gguacu2rqrqxdqzozpa/app.bsky.feed.post/3mjzl5hnfq22u
   author: bachynski.bsky.social
