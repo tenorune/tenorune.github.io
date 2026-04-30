@@ -32,7 +32,13 @@ from fetch_saves import _extract_media
 # Bump this when the thread_replies schema changes; entries whose stored
 # thread_schema_version is below the current value are re-fetched on the
 # next run.
-THREAD_SCHEMA_VERSION = 2
+#
+# Schema versions:
+#   v1 — initial: {uri, indexedAt, text}
+#   v2 — added images
+#   v3 — also walks the thread of a save's quoted_post (quote-post target)
+#        and stores it as quoted_post.thread_replies
+THREAD_SCHEMA_VERSION = 3
 
 APPVIEW = "https://public.api.bsky.app"
 USER_AGENT = (
@@ -131,6 +137,7 @@ def main() -> int:
     success = 0
     failed = 0
     found_any = 0
+    quoted_walked = 0
     for i, s in enumerate(pending, 1):
         uri = s["uri"]
         author_did = s["author"]["did"]
@@ -153,11 +160,38 @@ def main() -> int:
             print(f"    FAIL: {error}", file=sys.stderr)
         time.sleep(RATE_LIMIT_SEC)
 
+        # If the save quote-posts another available post, walk that
+        # quoted post's thread too — capturing same-author replies from
+        # the quoted post's author. Lets bulk-drafting see the full
+        # thread context the curator was responding to.
+        quoted = s.get("quoted_post") or {}
+        if not isinstance(quoted, dict):
+            continue
+        if quoted.get("unavailable"):
+            continue
+        quoted_uri = quoted.get("uri")
+        quoted_did = (quoted.get("author") or {}).get("did")
+        if not quoted_uri or not quoted_did:
+            continue
+        print(f"    quoted-post thread: {quoted_uri[:80]}", file=sys.stderr)
+        qthread, qerror = fetch_thread(quoted_uri)
+        if qthread is not None:
+            qreplies = collect_same_author_replies(qthread, quoted_did)
+            quoted["thread_replies"] = qreplies
+            quoted.pop("thread_fetch_error", None)
+            quoted_walked += 1
+            print(f"      ok ({len(qreplies)} self-replies)", file=sys.stderr)
+        else:
+            quoted["thread_fetch_error"] = qerror
+            print(f"      FAIL: {qerror}", file=sys.stderr)
+        time.sleep(RATE_LIMIT_SEC)
+
     inv["fetched_at"] = now_iso()
     inv_path.write_text(json.dumps(inv, indent=2, sort_keys=True, ensure_ascii=False) + "\n")
 
     print(
-        f"fetch_threads: {success} hydrated ({found_any} had self-replies), {failed} failed",
+        f"fetch_threads: {success} hydrated ({found_any} had self-replies, "
+        f"{quoted_walked} quoted-post threads also walked), {failed} failed",
         file=sys.stderr,
     )
     return 0

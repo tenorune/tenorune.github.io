@@ -369,6 +369,18 @@ def normalise_record(raw: dict) -> dict:
             "title": ext.get("title", ""),
             "description": ext.get("description", ""),
         }
+    elif embed_raw.get("$type") == "app.bsky.embed.recordWithMedia":
+        # If the post quote-posts AND has its own external article, the
+        # external lives under embed.media on the raw record.
+        media_raw = embed_raw.get("media") or {}
+        if media_raw.get("$type") == "app.bsky.embed.external":
+            ext = media_raw.get("external", {})
+            embed = {
+                "type": "external",
+                "url": ext.get("uri", ""),
+                "title": ext.get("title", ""),
+                "description": ext.get("description", ""),
+            }
 
     author = {
         "handle": author_raw.get("handle", ""),
@@ -377,8 +389,9 @@ def normalise_record(raw: dict) -> dict:
     }
 
     images = _extract_media(embed_view)
+    quoted_post = _extract_quoted_post(embed_view)
 
-    return {
+    entry = {
         "uri": post_uri,
         "saved_at": saved_at,
         "post_text": post_text,
@@ -386,6 +399,9 @@ def normalise_record(raw: dict) -> dict:
         "author": author,
         "images": images,
     }
+    if quoted_post is not None:
+        entry["quoted_post"] = quoted_post
+    return entry
 
 
 def _extract_media(view: dict) -> list[dict]:
@@ -437,6 +453,72 @@ def _extract_media(view: dict) -> list[dict]:
     elif typ == "app.bsky.embed.recordWithMedia#view":
         out.extend(_extract_media(view.get("media")))
     return out
+
+
+def _extract_quoted_post(view: dict) -> dict | None:
+    """Extract a quote-post's referenced record from a hydrated embed view.
+
+    Handles both `app.bsky.embed.record#view` (pure quote-post) and
+    `app.bsky.embed.recordWithMedia#view` (quote-post with the saver's own
+    media). Drills into the contained `viewRecord`.
+
+    Returns None when the embed isn't a quote-post. For unavailable records
+    (not_found / blocked / detached), returns a stub:
+        {"uri": "...", "unavailable": "<kind>"}
+
+    For an available quoted post:
+        {
+          "uri": "...", "cid": "...",
+          "author": {"handle": "...", "display_name": "...", "did": "..."},
+          "text": "...", "created_at": "...",
+          "images": [...],
+        }
+    """
+    if not isinstance(view, dict):
+        return None
+
+    typ = view.get("$type", "")
+    record = None
+    if typ == "app.bsky.embed.record#view":
+        record = view.get("record")
+    elif typ == "app.bsky.embed.recordWithMedia#view":
+        inner = view.get("record")
+        if isinstance(inner, dict):
+            record = inner.get("record")
+
+    if not isinstance(record, dict):
+        return None
+
+    rec_typ = record.get("$type", "")
+
+    if rec_typ == "app.bsky.embed.record#viewNotFound":
+        return {"uri": record.get("uri", ""), "unavailable": "not_found"}
+    if rec_typ == "app.bsky.embed.record#viewBlocked":
+        return {"uri": record.get("uri", ""), "unavailable": "blocked"}
+    if rec_typ == "app.bsky.embed.record#viewDetached":
+        return {"uri": record.get("uri", ""), "unavailable": "detached"}
+    if rec_typ != "app.bsky.embed.record#viewRecord":
+        return None
+
+    author_raw = record.get("author") or {}
+    value = record.get("value") or {}
+
+    quoted_images: list[dict] = []
+    for embed in record.get("embeds") or []:
+        quoted_images.extend(_extract_media(embed))
+
+    return {
+        "uri": record.get("uri", ""),
+        "cid": record.get("cid", ""),
+        "author": {
+            "handle": author_raw.get("handle", ""),
+            "display_name": author_raw.get("displayName", ""),
+            "did": author_raw.get("did", ""),
+        },
+        "text": value.get("text", ""),
+        "created_at": value.get("createdAt", ""),
+        "images": quoted_images,
+    }
 
 
 # ----- merge -----
