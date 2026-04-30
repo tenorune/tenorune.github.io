@@ -27,9 +27,9 @@ jobs:
       - name: Hydrate inventory with article text
         run: |
           if [ "${{ inputs.refresh_dates }}" = "true" ]; then
-            python scripts/fetch_articles.py --refresh-dates
+            bsky-saves hydrate articles --inventory _data/saves_inventory.json --refresh-dates
           else
-            python scripts/fetch_articles.py
+            bsky-saves hydrate articles --inventory _data/saves_inventory.json
           fi
 
       - name: Commit if inventory changed

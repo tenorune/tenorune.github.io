@@ -4,21 +4,6 @@ on:
   # workflow_dispatch only. Cron is disabled because the curator drives
   # ingestion manually from the Actions tab; daily-cron noise wasn't
   # buying anything.
-  #
-  # Active auth path (third-party-PDS-hosted accounts, e.g. eurosky.social):
-  #   - BSKY_PDS variable points at the curator's PDS.
-  #   - BSKY_HANDLE + BSKY_APP_PASSWORD secrets authenticate createSession
-  #     against that PDS, which mints a session JWT valid for the
-  #     PDS-direct bookmark endpoint that fetch_saves.py tries first.
-  #   - The AppView-targeted endpoints in fetch_saves.py are kept as
-  #     fallbacks for bsky.social-hosted accounts; they fail for
-  #     third-party PDSes (BlueSky's AppView won't verify cross-server
-  #     session JWTs).
-  #
-  # OAuth+DPoP path (BSKY_OAUTH_* secrets + scripts/oauth_init.py +
-  # scripts/atproto_dpop.py): preserved but unused. The OAuth tokens are
-  # rejected by bsky.social's AppView with "OAuth tokens are meant for
-  # PDS access only", which we got past with the PDS-direct call instead.
   workflow_dispatch:
 
 permissions:
@@ -39,27 +24,12 @@ jobs:
 
       - name: Fetch saves
         env:
-          # Two auth modes; fetch_saves.py picks one based on which set of
-          # env vars is populated.
-          #
-          # Mode 1 (app password): used for accounts hosted on bsky.social.
-          # Set BSKY_HANDLE and BSKY_APP_PASSWORD secrets.
           BSKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
           BSKY_APP_PASSWORD: ${{ secrets.BSKY_APP_PASSWORD }}
-          # Optional PDS override for the app-password path; defaults to
-          # https://bsky.social if unset.
+          # PDS override; defaults to https://bsky.social if unset. Required
+          # for accounts hosted on a third-party PDS (e.g., eurosky.social).
           BSKY_PDS: ${{ vars.BSKY_PDS || 'https://bsky.social' }}
-          #
-          # Mode 2 (OAuth + DPoP): for accounts on third-party PDSes where
-          # mode 1's session JWT is rejected by the AppView. Set all four
-          # of the BSKY_OAUTH_* secrets (produced by the oauth-init /
-          # oauth-complete workflow pair). When all four are set, the
-          # OAuth path is chosen and the app-password vars are ignored.
-          BSKY_OAUTH_REFRESH_TOKEN: ${{ secrets.BSKY_OAUTH_REFRESH_TOKEN }}
-          BSKY_OAUTH_DPOP_PRIVATE_JWK: ${{ secrets.BSKY_OAUTH_DPOP_PRIVATE_JWK }}
-          BSKY_OAUTH_PDS_ISSUER: ${{ secrets.BSKY_OAUTH_PDS_ISSUER }}
-          BSKY_OAUTH_DID: ${{ secrets.BSKY_OAUTH_DID }}
-        run: python scripts/fetch_saves.py
+        run: bsky-saves fetch --inventory _data/saves_inventory.json
 
       - name: Commit if changed
         run: |

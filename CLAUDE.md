@@ -39,31 +39,28 @@ Scaffolding complete (PR 1):
 - `.github/workflows/verify.yml` — CI workflow that runs all of the above on every push and PR.
 - `Gemfile`, `Gemfile.lock`, `.env.example`, `.gitignore`.
 
-### Ingestion (status: automated via PDS-direct API; legacy auth paths preserved as dormant)
+### Ingestion (status: automated via the published `bsky-saves` PyPI package)
 
-`scripts/fetch_saves.py` tries multiple bookmark endpoints in order. The first one — `pds:app.bsky.bookmark.getBookmarks`, calling the curator's PDS directly — succeeds for third-party-PDS accounts (the curator is on `eurosky.social`) because the call is authenticated against the same server that issued the session token. This is what actually populates `_data/saves_inventory.json`. The `fetch saves` workflow runs the script on `workflow_dispatch` (the cron schedule is disabled — see the comment block in the workflow file).
+The four ingestion workflows (`fetch.yml`, `fetch-articles.yml`, `fetch-threads.yml`, `fetch-images.yml`) install [`bsky-saves`](https://pypi.org/project/bsky-saves/) from PyPI and call its CLI. The package is maintained in a separate repo ([`tenorune/bsky-saves`](https://github.com/tenorune/bsky-saves)) and was extracted from this repo's `scripts/` on 2026-04-30 (see `docs/extraction-draft/README.md` for the cutover procedure and full extraction map).
 
-The script's other endpoints — and the OAuth+DPoP infrastructure that surrounds them — are kept as fallbacks. They were the first two paths the original plan tried; both hit BlueSky-policy walls for accounts on third-party PDSes:
+The active path uses **app-password + PDS-direct bookmark fetch**, which works for accounts on third-party PDSes (the curator is on `eurosky.social`) because the call goes to the PDS that issued the session JWT, not to bsky.social's AppView. AppView-targeted endpoints are still in the package as fallbacks for bsky.social-hosted accounts.
 
-1. **App-password + service auth** (in `scripts/fetch_saves.py` itself, the AppView-targeted endpoints). Works for `bsky.social`-hosted accounts; fails for third-party PDSes because the AppView at `bsky.social` won't verify session JWTs from foreign servers.
-2. **OAuth + DPoP** (in `scripts/oauth_init.py`, `scripts/atproto_dpop.py`, the `oauth init`/`oauth complete` workflows). The auth flow itself works; the resulting access token is rejected by `bsky.social`'s AppView with the explicit message `"OAuth tokens are meant for PDS access only"`. This is BlueSky policy, not a fix-able bug.
+The OAuth + DPoP scaffolding that used to live in this repo (`scripts/oauth_init.py`, `scripts/atproto_dpop.py`, `oauth/*`, the `oauth-init`/`oauth-complete` workflows) was extracted into [`atproto-oauth-py`](https://pypi.org/project/atproto-oauth-py/) ([`tenorune/atproto-oauth-py`](https://github.com/tenorune/atproto-oauth-py)). It's not in active use here — BlueSky's AppView rejects OAuth tokens from third-party PDSes with `"OAuth tokens are meant for PDS access only"` — but it's preserved as a published library if the use case ever changes.
 
 See spec Section 7's "Errata round 2" for the full debugging story.
 
-**Required for the active path** (the curator's `eurosky.social` account):
+**Required secrets / variables for the active path** (curator's `eurosky.social` account):
 - Secrets: `BSKY_HANDLE`, `BSKY_APP_PASSWORD` — used by `createSession` against the curator's PDS to mint a session JWT.
 - Variable: `BSKY_PDS=https://eurosky.social` — without this, the script defaults to `https://bsky.social` and both `createSession` and the PDS-direct bookmark call go to the wrong server.
 
-**Status of the dormant paths:**
-- The OAuth+DPoP scaffolding (`scripts/oauth_init.py`, `scripts/atproto_dpop.py`, `oauth/*`, the `oauth-init`/`oauth-complete` workflows, and the `BSKY_OAUTH_*` secrets it would consume) is preserved in the repo but unused.
-- If the curator ever adds a `bsky.social`-hosted secondary account, the same `BSKY_HANDLE` / `BSKY_APP_PASSWORD` mechanism works against `bsky.social` directly — leave `BSKY_PDS` unset (or set it to `https://bsky.social`) and the AppView-targeted endpoints in `fetch_saves.py` take over.
+If the curator ever adds a `bsky.social`-hosted secondary account, leave `BSKY_PDS` unset (or set it to `https://bsky.social`) and the AppView-targeted endpoints take over.
 
 **Active ingestion path:**
 
-- **Save inventory:** `fetch saves` workflow (manual or scheduled) pulls bookmarks via the AT Protocol bookmark endpoint into `_data/saves_inventory.json`. The PDS-direct path (`pds:app.bsky.bookmark.getBookmarks`) succeeds for the curator's third-party-PDS account. Currently 675 saves committed.
-- **Article hydration:** `fetch articles` workflow (manual) iterates inventory entries with external article links, downloads each article via trafilatura, and writes `article_text` back into the entry. Idempotent. Lets bulk-drafting in chat read article content directly from inventory.
-- **Thread hydration:** `fetch threads` workflow (manual) walks each save's thread via the public AppView and stores same-author descendant posts (with their images) as `thread_replies` on the entry. Idempotent and schema-versioned: schema bumps trigger re-fetch on next run.
-- **Image localization:** `fetch images` workflow (manual) scans `_stories/*.md` for inline image references pointing at `cdn.bsky.app`, downloads each into `assets/stories/<slug>/` using a deterministic hash-named filename, and rewrites the story body to use the local root-relative path. Idempotent. Run after a draft batch to make image references durable against CDN drift.
+- **Save inventory:** `fetch saves` workflow runs `bsky-saves fetch --inventory _data/saves_inventory.json`. Currently 675 saves committed.
+- **Article hydration:** `fetch articles` workflow runs `bsky-saves hydrate articles --inventory _data/saves_inventory.json`. Iterates entries with external article links, downloads each via trafilatura, writes `article_text` back. Idempotent.
+- **Thread hydration:** `fetch threads` workflow runs `bsky-saves hydrate threads --inventory _data/saves_inventory.json`. Walks each save's thread via the public AppView and stores same-author descendant posts (with their images) as `thread_replies`. Idempotent and schema-versioned: schema bumps trigger re-fetch on next run.
+- **Image localization:** `fetch images` workflow runs `bsky-saves hydrate images --stories _stories --assets assets/stories --assets-url-prefix /assets/stories`. Scans `_stories/*.md` for inline `cdn.bsky.app` image refs, downloads each into `assets/stories/<slug>/` with a deterministic hash filename, rewrites refs to local paths. Idempotent.
 - **Bulk drafting:** Claude reads inventory + article_text in chat, drafts batches of stories as `published: false`, commits with theme stubs and saves_state updates. Curator culls and polishes later.
 - **Curator dashboards:** `/stories/curator/` (drafted stories) and `/stories/curator/pending/` (theme-aligned saves not yet drafted). Each row carries action buttons that open pre-filled GitHub issues (`curator: <action> <slug-or-rkey>`).
 - **Curator queue (deferred drain):** the `curate` workflow now *appends* each submitted action to `_data/curator_queue.yml` and acknowledges the issue, leaving it open. Nothing is mutated until you trigger a drain — either via the `drain curator queue` workflow on the Actions tab, or by asking Claude in chat. The drain applies every queued action in order, regenerates `_data/curator.yml` and `_data/pending.yml`, clears the queue, and closes processed issues — all in a single commit. This avoids the 1-commit-per-curator-click noise and the push-race fragility of immediate processing.
@@ -83,7 +80,7 @@ See spec Section 7's "Errata round 2" for the full debugging story.
 The `verify` GitHub Actions workflow runs on every push to main. It:
 
 1. Installs Ruby + Python deps.
-2. Runs `pytest tests/` — 43 unit tests for `verify.py` and `fetch_saves.py`.
+2. Runs `pytest tests/` — unit tests for `verify.py` (the bookmark-schema tests now live in the `bsky-saves` repo).
 3. Runs `python scripts/verify.py` — invariant checks on the actual repo (frontmatter contract, theme references, homepage byte-identity, article-pending flag, etc.).
 4. Runs `bundle exec jekyll build`.
 5. Verifies the built site's homepage is byte-identical to the source.

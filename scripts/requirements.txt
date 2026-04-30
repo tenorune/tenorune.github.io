@@ -2,14 +2,6 @@
 PyYAML>=6.0
 pytest>=8.0
 
-# Used by scripts/fetch_saves.py and scripts/oauth_init.py
-httpx>=0.27
-python-dateutil>=2.9
-respx>=0.21       # HTTP mocking for tests
-
-# OAuth (DPoP-signed AT Protocol OAuth 2.1)
-pyjwt[crypto]>=2.8
-cryptography>=42
-
-# Used by scripts/fetch_articles.py — extracts main article text from HTML.
-trafilatura>=1.10
+# Ingestion is now handled by the published bsky-saves package.
+# It pulls in httpx + trafilatura transitively.
+bsky-saves>=0.1.0

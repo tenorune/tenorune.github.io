@@ -20,7 +20,11 @@ jobs:
         run: pip install -r scripts/requirements.txt
 
       - name: Localize CDN images into assets/stories/
-        run: python scripts/fetch_images.py
+        run: |
+          bsky-saves hydrate images \
+            --stories _stories \
+            --assets assets/stories \
+            --assets-url-prefix /assets/stories
 
       - name: Commit if changes
         run: |

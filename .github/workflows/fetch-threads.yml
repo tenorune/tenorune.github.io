@@ -20,7 +20,7 @@ jobs:
         run: pip install -r scripts/requirements.txt
 
       - name: Hydrate inventory with thread_replies
-        run: python scripts/fetch_threads.py
+        run: bsky-saves hydrate threads --inventory _data/saves_inventory.json
 
       - name: Commit if inventory changed
         run: |

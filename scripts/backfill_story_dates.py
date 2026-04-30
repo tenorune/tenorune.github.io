@@ -12,7 +12,7 @@ For each story file:
 Idempotent: a story already pointing date: at its post date and carrying
 post_created_at won't be touched.
 
-This script is meant to run once after enrich_inventory.py; new drafts I
+This script is meant to run once after `bsky-saves enrich`; new drafts I
 create directly in chat will include both fields from the start.
 """
 from __future__ import annotations
