@@ -2,7 +2,7 @@ meta:
   total_inventory: 675
   drafted: 50
   skipped: 14
-  queued: 13
+  queued: 14
   pending_total: 611
   pending_aligned: 413
   pending_unaligned: 198
@@ -10441,7 +10441,7 @@ entries:
   - resistance-and-witness
   badges:
   - image
-  queued: false
+  queued: true
 - rkey: 3lyyydtsoz22e
   uri: at://did:plc:2lnlbdb24j54upu66sojzad4/app.bsky.feed.post/3lyyydtsoz22e
   author: dunkelman.bsky.social
