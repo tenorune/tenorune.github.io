@@ -1,10 +1,10 @@
 meta:
   total_inventory: 675
   drafted: 50
-  skipped: 7
+  skipped: 8
   queued: 12
-  pending_total: 618
-  pending_aligned: 420
+  pending_total: 617
+  pending_aligned: 419
   pending_unaligned: 198
   pending_gap_flagged: 22
 entries:
@@ -10674,27 +10674,6 @@ entries:
   - civilian-harm
   - official-narrative
   badges: []
-  queued: false
-- rkey: 3lyj7h3gz722k
-  uri: at://did:plc:wkzimwvsjeqf3524dgv3hpsj/app.bsky.feed.post/3lyj7h3gz722k
-  author: pizzalawyer420.bsky.social
-  author_display: SKELLYTON
-  saved_at: '2025-09-10T22:55:08.919Z'
-  post_created_at: '2025-09-10T21:46:23Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: Imagine scolding people laughing at the 'it's good to die from gun violence
-    because it gives us unfettered access to guns' guy getting got by a gun under
-    a sign that says prove me wrong like I'm sorry grow up
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/pizzalawyer420.bsky.social/post/3lyj7h3gz722k
-  themes:
-  - state-violence
-  badges:
-  - thread
   queued: false
 - rkey: 3lydt3jc24i2v
   uri: at://did:plc:m5soh62ifdpq443v3rnjnfrm/app.bsky.feed.post/3lydt3jc24i2v
