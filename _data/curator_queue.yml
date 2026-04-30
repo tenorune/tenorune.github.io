@@ -1,1 +1,4 @@
-[]
+- action: skip
+  target: 3latqlwzve22p
+  issue: 46
+  submitted_at: '2026-04-30T05:00:21Z'
