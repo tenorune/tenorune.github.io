@@ -1,10 +1,10 @@
 meta:
   total_inventory: 675
   drafted: 50
-  skipped: 0
+  skipped: 1
   queued: 1
-  pending_total: 625
-  pending_aligned: 427
+  pending_total: 624
+  pending_aligned: 426
   pending_unaligned: 198
 entries:
 - rkey: 3mjzaokxpsc2m
@@ -117,29 +117,6 @@ entries:
   - civilian-harm
   - deportation-machinery
   badges:
-  - image
-  queued: false
-- rkey: 3mgdnr5iob22n
-  uri: at://did:plc:vk7rduhvom3rq6dyluce5wzf/app.bsky.feed.post/3mgdnr5iob22n
-  author: josephcox.bsky.social
-  author_display: Joseph Cox
-  saved_at: '2026-03-05T21:05:37.763Z'
-  post_text: 'New from 404 Media: Proton Mail, the privacy-focused email service,
-    gave authorities data that let the FBI unmask an anonymous ''Stop Cop City'' protester.
-    It was payment data linked to the anonymous email account. From that, FBI ID''d
-    them, then tracked their movements www.404media…'
-  embed_title: Proton Mail Helped FBI Unmask Anonymous ‘Stop Cop City’ Protestor
-  embed_host: 404media.co
-  embed_url: https://www.404media.co/proton-mail-helped-fbi-unmask-anonymous-stop-cop-city-protestor/
-  bluesky_url: https://bsky.app/profile/josephcox.bsky.social/post/3mgdnr5iob22n
-  themes:
-  - bureaucratic-cruelty
-  - deportation-machinery
-  - rule-of-law
-  - state-violence
-  - resistance-and-witness
-  badges:
-  - article
   - image
   queued: false
 - rkey: 3mg3irzkkqk2c
