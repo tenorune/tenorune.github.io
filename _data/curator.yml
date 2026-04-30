@@ -893,7 +893,7 @@
   themes:
   - predatory-capital
   - official-narrative
-  state: published
+  state: draft
   source_url: https://www.nytimes.com/2025/10/03/us/billionaire-marc-rowan-trump-deal-universities.html
   source_publication: The New York Times
   bluesky_uri: at://did:plc:kfaxgen4pxdnmtho7tj4tijr/app.bsky.feed.post/3m2f6ox7cpc2v
