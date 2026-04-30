@@ -40,6 +40,11 @@ jobs:
       - name: Hydrate threads
         run: bsky-saves hydrate threads --inventory _data/saves_inventory.json
 
+      - name: Enrich (decode post_created_at, drop bogus article_published_at)
+        # After hydrate articles — the bogus-date cleanup compares against
+        # article_fetched_at, so we want that to be current.
+        run: bsky-saves enrich --inventory _data/saves_inventory.json
+
       - name: Rebuild curator + pending data
         run: |
           python scripts/build_curator_data.py
