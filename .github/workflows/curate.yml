@@ -61,27 +61,53 @@ jobs:
         if: steps.parse.outputs.ok == 'true' && github.event.issue.author_association == 'OWNER'
         run: pip install pyyaml
 
-      - name: Apply curator action
+      - name: Apply, commit, and push (with retry on race)
         if: steps.parse.outputs.ok == 'true' && github.event.issue.author_association == 'OWNER'
+        env:
+          ACTION: ${{ steps.parse.outputs.action }}
+          TARGET: ${{ steps.parse.outputs.target }}
+          ISSUE:  ${{ github.event.issue.number }}
         run: |
-          python scripts/curate.py "${{ steps.parse.outputs.action }}" "${{ steps.parse.outputs.target }}"
-          python scripts/build_curator_data.py
-          python scripts/build_pending_data.py
-
-      - name: Commit and push
-        if: steps.parse.outputs.ok == 'true' && github.event.issue.author_association == 'OWNER'
-        run: |
+          set -e
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add _stories/ _data/curator.yml _data/pending.yml _data/saves_state.json
+
+          apply_and_stage() {
+            python scripts/curate.py "$ACTION" "$TARGET"
+            python scripts/build_curator_data.py
+            python scripts/build_pending_data.py
+            git add _stories/ _data/curator.yml _data/pending.yml _data/saves_state.json
+          }
+
+          # First attempt: apply, commit, push.
+          apply_and_stage
           if git diff --cached --quiet; then
-            echo "no changes — action was a no-op"
             echo "noop=true" >> "$GITHUB_ENV"
-          else
-            git commit -m "curate: ${{ steps.parse.outputs.action }} ${{ steps.parse.outputs.target }} (issue #${{ github.event.issue.number }})"
-            git push origin HEAD:main
-            echo "noop=false" >> "$GITHUB_ENV"
+            exit 0
           fi
+          git commit -m "curate: $ACTION $TARGET (issue #$ISSUE)"
+
+          # Retry on non-fast-forward push (concurrent curate runs racing on main).
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then
+              echo "noop=false" >> "$GITHUB_ENV"
+              exit 0
+            fi
+            echo "push #$attempt rejected; rebasing on origin/main and re-applying"
+            git fetch origin main
+            git reset --hard origin/main
+            apply_and_stage
+            if git diff --cached --quiet; then
+              echo "no changes after rebase — already in target state on latest main"
+              echo "noop=true" >> "$GITHUB_ENV"
+              exit 0
+            fi
+            git commit -m "curate: $ACTION $TARGET (issue #$ISSUE)"
+            sleep $((attempt * 2))
+          done
+
+          echo "exhausted push retries"
+          exit 1
 
       - name: Confirm and close
         if: steps.parse.outputs.ok == 'true' && github.event.issue.author_association == 'OWNER'

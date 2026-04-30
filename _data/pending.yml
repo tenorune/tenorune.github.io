@@ -2,11 +2,11 @@ meta:
   total_inventory: 675
   drafted: 50
   skipped: 2
-  queued: 8
+  queued: 11
   pending_total: 623
   pending_aligned: 425
   pending_unaligned: 198
-  pending_gap_flagged: 0
+  pending_gap_flagged: 36
 entries:
 - rkey: 3mjzov6goh62h
   uri: at://did:plc:eclio37ymobqex2ncko63h4r/app.bsky.feed.post/3mjzov6goh62h
@@ -93,8 +93,8 @@ entries:
   author_display: Jeremy Lindenfeld
   saved_at: '2026-04-14T19:23:32.906Z'
   post_created_at: '2026-04-14T18:34:15Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2026-04-14'
+  gap_days: 0
   gap_flag: false
   post_text: ICE is arresting delivery drivers at a San Diego military base. According
     to an attorney interviewed by Kate Morrissey, military police at the gates call
@@ -146,8 +146,8 @@ entries:
   author_display: Shannon Heffernan
   saved_at: '2026-03-02T18:47:29.511Z'
   post_created_at: '2026-03-02T14:49:00Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2026-03-02'
+  gap_days: 0
   gap_flag: false
   post_text: 'After detaining children and parents for weeks, or months, inside Dilley
     detention center, ICE is dumping them at a shelter in Laredo, TX. They are often
@@ -201,8 +201,8 @@ entries:
   author_display: Josh Marshall
   saved_at: '2026-02-25T00:57:01.942Z'
   post_created_at: '2026-02-23T20:58:31Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2026-02-23'
+  gap_days: 0
   gap_flag: false
   post_text: Gift link share.inquirer.com/MfblQD
   embed_title: As ICE enforcement intensifies, one man works to keep undocumented
@@ -227,8 +227,8 @@ entries:
   author_display: Will Bunch
   saved_at: '2026-02-22T19:46:10.431Z'
   post_created_at: '2026-02-22T18:10:40Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2026-02-23'
+  gap_days: 1
   gap_flag: false
   post_text: 'What''s more shocking than ICE''s plan to cram as many 8,500 humans
     into massive, soul-crushing warehouses?
@@ -287,8 +287,8 @@ entries:
   author_display: Alex Ip 葉清霖
   saved_at: '2026-02-23T17:00:07.608Z'
   post_created_at: '2026-02-21T18:22:03Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2026-02-21'
+  gap_days: 0
   gap_flag: false
   post_text: "INBOX: the police chief of Quakertown, Pa., led a group of plainclothes\
     \ officers to disrupt a peaceful high school student sidewalk protest yesterday.\
@@ -461,9 +461,9 @@ entries:
   author_display: Karen James
   saved_at: '2026-02-18T13:05:38.557Z'
   post_created_at: '2026-02-17T14:40:55Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2026-02-07'
+  gap_days: 10
+  gap_flag: true
   post_text: '“They’re trapped in this little confinement cell, a dark cell with no
     sunlight, with multiple people,” said Shaan Chatterjee, an attorney at New England
     Immigration Law. “They’re basically torturing people into signing off on their
@@ -684,15 +684,15 @@ entries:
   - rule-of-law
   badges:
   - image
-  queued: false
+  queued: true
 - rkey: 3mekdwdah6c2o
   uri: at://did:plc:vrwglonkfa7hsapabfvdh4l5/app.bsky.feed.post/3mekdwdah6c2o
   author: jmetr22b.bsky.social
   author_display: Jason Meisner
   saved_at: '2026-02-11T23:28:24.710Z'
   post_created_at: '2026-02-11T01:41:29Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2026-02-10'
+  gap_days: 1
   gap_flag: false
   post_text: 'The Tribune has obtained evidence from the case of a Chicago woman shot
     by Border Patrol that offers a rare, behind-the-scenes look at one of the highest-profile
@@ -717,7 +717,7 @@ entries:
   badges:
   - article
   - image
-  queued: false
+  queued: true
 - rkey: 3mekc65qx5k2h
   uri: at://did:plc:yyuhmdl4gs52njld4kf23ik3/app.bsky.feed.post/3mekc65qx5k2h
   author: berkeleyeve.bsky.social
@@ -794,8 +794,8 @@ entries:
   author_display: Matt Novak
   saved_at: '2026-02-11T21:35:05.557Z'
   post_created_at: '2026-02-10T21:22:48Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2026-02-10'
+  gap_days: 0
   gap_flag: false
   post_text: '"Images obtained by CBS News appear to show the zip ties and bruised
     wrists of Anabel Romero''s 14-year-old daughter SueHey, a U.S. citizen who was
@@ -869,8 +869,8 @@ entries:
   author_display: Gabi 雪
   saved_at: '2026-02-10T21:16:32.536Z'
   post_created_at: '2026-02-10T15:16:19Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2026-02-10'
+  gap_days: 0
   gap_flag: false
   post_text: "I know, I know, stop being so naive, but this is utterly fucking outrageous.\
     \ \n\n@ablativmeatshld.bsky.social \n\nwww.theguardian.com/us-news/2026..."
@@ -914,15 +914,15 @@ entries:
   badges:
   - thread
   - image
-  queued: false
+  queued: true
 - rkey: 3mehskmy2rs2w
   uri: at://did:plc:otnmnkaxchvelzwrifs64rbq/app.bsky.feed.post/3mehskmy2rs2w
   author: gwynnefitz.bsky.social
   author_display: Gwynne Hogan
   saved_at: '2026-02-10T11:49:57.293Z'
   post_created_at: '2026-02-10T01:25:23Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2026-02-09'
+  gap_days: 1
   gap_flag: false
   post_text: 'ICE officials, under a judge’s order to clean up overcrowded and squalid
     conditions inside holding cells at 26 Federal Plaza detained migrants on a separate
@@ -951,8 +951,8 @@ entries:
   author_display: Weyland-Yutani Chief Compliance Officer
   saved_at: '2026-02-09T20:55:05.055Z'
   post_created_at: '2026-02-09T18:53:51Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2026-02-05'
+  gap_days: 4
   gap_flag: false
   post_text: fucking horrible. V for Vendetta shit. hell is not hot enough
   embed_title: 'Exclusive: Detention Center Captives Are Throwing Lotion Bottles Wrapped
@@ -1080,9 +1080,9 @@ entries:
   author_display: Emily E Hogstad
   saved_at: '2026-02-06T23:01:41.005Z'
   post_created_at: '2026-02-06T22:50:42Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2026-04-26'
+  gap_days: 79
+  gap_flag: true
   post_text: 'you know who DIDN''T get booed today on the international stage and
     made everyone tear up with joy? our fierce woke princess Alysa Liu
 
@@ -1128,9 +1128,9 @@ entries:
   author_display: Tim Onion
   saved_at: '2026-02-06T19:53:33.743Z'
   post_created_at: '2026-02-06T19:33:35Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '1999-03-17'
+  gap_days: 9823
+  gap_flag: true
   post_text: An old classic.
   embed_title: European Men Are So Much More Romantic Than American Men vs. American
     Women Studying In Europe Are Unbelievably Easy
@@ -1230,8 +1230,8 @@ entries:
   author_display: Radley Balko
   saved_at: '2026-02-07T10:55:38.986Z'
   post_created_at: '2026-02-06T13:35:30Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2026-02-05'
+  gap_days: 1
   gap_flag: false
   post_text: Legally here on a work permit. Arrested when he went to renew it. Not
     fighting his deportation. Yet he's been in detention 29 days. No access to a lawyer.
@@ -1284,8 +1284,8 @@ entries:
   author_display: Kotaku
   saved_at: '2026-02-06T20:11:11.642Z'
   post_created_at: '2026-02-05T20:56:44Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2026-02-05'
+  gap_days: 0
   gap_flag: false
   post_text: The Winter Olympics Will Make Sure Nobody Cheats By Injecting Their Penis
     With Acid
@@ -1356,8 +1356,8 @@ entries:
   author_display: Radley Balko
   saved_at: '2026-02-04T23:54:31.262Z'
   post_created_at: '2026-02-03T23:14:22Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2026-02-03'
+  gap_days: 0
   gap_flag: false
   post_text: Floored by this story. A man wrote a pollite email to a federal prosecutor
     objecting to the deportation of an Afghan seeking asylum. DHS responded with an
@@ -1438,8 +1438,8 @@ entries:
   author_display: sarah jeong
   saved_at: '2026-02-05T00:38:04.515Z'
   post_created_at: '2026-02-03T14:11:13Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2026-02-03'
+  gap_days: 0
   gap_flag: false
   post_text: ICE tear gassed a bunch of children on Saturday. This was a massive escalation
     of force. They were shooting tear gas at the back of the crowd, it took these
@@ -1554,8 +1554,8 @@ entries:
   author_display: Seth Cotlar
   saved_at: '2026-02-01T18:57:03.621Z'
   post_created_at: '2026-02-01T14:47:17Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2026-01-31'
+  gap_days: 1
   gap_flag: false
   post_text: 4 federal agents pull over an elderly US citizen for the suspected crime
     of being brown, break her car window, throw her to the ground, then drive off
@@ -1742,8 +1742,8 @@ entries:
   author_display: Prisonculture
   saved_at: '2026-02-01T12:33:48.241Z'
   post_created_at: '2026-01-30T16:25:27Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2026-01-25'
+  gap_days: 5
   gap_flag: false
   post_text: www.chicagotribune.com/2026/01/25/m... [gift link]
   embed_title: ICE releases Chicago-area mother after seven months. It failed to provide
@@ -1768,8 +1768,8 @@ entries:
   author_display: Dylan Tusinski
   saved_at: '2026-02-01T18:48:32.241Z'
   post_created_at: '2026-01-29T18:05:36Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2026-01-28'
+  gap_days: 1
   gap_flag: false
   post_text: 'Video shows ICE leaving behind an infant and broken glass after arresting
     a man with no criminal history.
@@ -2050,8 +2050,8 @@ entries:
   author_display: Toula Drimonis
   saved_at: '2026-01-15T11:03:00.683Z'
   post_created_at: '2026-01-14T12:19:55Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2026-01-13'
+  gap_days: 1
   gap_flag: false
   post_text: www.latimes.com/california/s...
   embed_title: Anti-ICE protester blinded by federal agent during demonstration in
@@ -2260,9 +2260,9 @@ entries:
   author_display: Chad Loder
   saved_at: '2026-01-09T23:19:20.089Z'
   post_created_at: '2026-01-09T21:34:59Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2025-12-30'
+  gap_days: 10
+  gap_flag: true
   post_text: Apropos of absolutely nothing to do with the masked men with no visible
     agency insignia carrying crates of who knows what out of the shooter's house,
     but HBO just released an amazing documentary into DHS "shadow units" whose job
@@ -2392,9 +2392,9 @@ entries:
   author_display: Jack Jenkins
   saved_at: '2026-01-09T12:04:56.702Z'
   post_created_at: '2026-01-09T00:30:10Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2026-04-26'
+  gap_days: 107
+  gap_flag: true
   post_text: 'A Minneapolis pastor of an MCC church — a denomination rooted in LGBTQ
     equality — recounts being detained by ICE.
 
@@ -2672,9 +2672,9 @@ entries:
   author_display: ProPublica
   saved_at: '2026-01-02T00:21:01.534Z'
   post_created_at: '2026-01-02T00:00:10Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2025-11-24'
+  gap_days: 39
+  gap_flag: true
   post_text: 'Under a zero tolerance policy, the first Trump administration separated
     immigrant children from their families at the U.S.-Mexico border.
 
@@ -2707,9 +2707,9 @@ entries:
   author_display: Defence Scheme Enjoyer 🇨🇦🇺🇦🇬🇱🇲🇽🇵🇸
   saved_at: '2026-01-03T20:10:49.595Z'
   post_created_at: '2026-01-01T12:24:12Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2025-12-12'
+  gap_days: 20
+  gap_flag: true
   post_text: Why do I have to read an Irish paper for a feature about this?
   embed_title: '‘It’s surreal’: US sanctions lock International Criminal Court judge
     out of daily life'
@@ -2732,9 +2732,9 @@ entries:
   author_display: ProPublica
   saved_at: '2026-01-01T17:13:39.468Z'
   post_created_at: '2025-12-31T02:00:14Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2025-12-23'
+  gap_days: 8
+  gap_flag: true
   post_text: 'A maternity ward doctor donated his own blood during surgery to keep
     a pregnant patient alive.
 
@@ -2790,8 +2790,8 @@ entries:
   author_display: David Ho
   saved_at: '2025-12-27T18:01:22.946Z'
   post_created_at: '2025-12-27T10:06:40Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-12-26'
+  gap_days: 1
   gap_flag: false
   post_text: I think this is called a robbery.
   embed_title: ICE Agents Arrest Man on Christmas Eve—and Then Steal His Groceries
@@ -2894,8 +2894,8 @@ entries:
   author_display: The Editorial Board
   saved_at: '2025-12-25T16:38:35.126Z'
   post_created_at: '2025-12-25T16:04:35Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-12-24'
+  gap_days: 1
   gap_flag: false
   post_text: www.courant.com/2025/12/24/a...
   embed_title: A CT native’s husband is detained by ICE. He is fighting to get ‘the
@@ -2921,8 +2921,8 @@ entries:
   author_display: Monteiro
   saved_at: '2025-12-30T21:40:50.458Z'
   post_created_at: '2025-12-24T18:37:03Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-12-22'
+  gap_days: 2
   gap_flag: false
   post_text: "Here is the after: \n\nbuttondown.com/monteiro/arc..."
   embed_title: How to attend a funeral
@@ -3064,9 +3064,9 @@ entries:
   author_display: Jesse Thorn
   saved_at: '2025-12-29T21:02:47.236Z'
   post_created_at: '2025-12-20T03:02:01Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2025-12-10'
+  gap_days: 10
+  gap_flag: true
   post_text: '"''I have my ID!'' Mubashir shouted repeatedly, as heard on the video.
     The agents do not respond."
 
@@ -3090,8 +3090,8 @@ entries:
   author_display: Chicago News Bot
   saved_at: '2025-12-20T13:10:38.525Z'
   post_created_at: '2025-12-20T00:05:34Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-12-20'
+  gap_days: 0
   gap_flag: false
   post_text: 'Bulgarian Chicago business owner dies in ICE custody, sparking calls
     for ''immediate investigation''
@@ -3332,8 +3332,8 @@ entries:
   author_display: ProPublica
   saved_at: '2025-12-15T11:05:50.985Z'
   post_created_at: '2025-12-15T02:30:02Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-12-09'
+  gap_days: 6
   gap_flag: false
   post_text: 'One citizen said that federal agents in Idaho pointed guns at her children,
     ages 6 and 8, and dragged her 14-year-old daughter out of a truck and zip-tied
@@ -3368,8 +3368,8 @@ entries:
   author_display: Scott Horton
   saved_at: '2025-12-14T20:30:25.967Z'
   post_created_at: '2025-12-14T17:54:30Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-12-10'
+  gap_days: 4
   gap_flag: false
   post_text: Armed ICE agents trapped US citizens in a restaurant and demanded their
     papers. Federal agents walked into East African restaurants in Cedar-Riverside,
@@ -3491,8 +3491,8 @@ entries:
   author_display: Josh Marshall
   saved_at: '2025-12-12T16:47:54.289Z'
   post_created_at: '2025-12-12T14:44:19Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-12-12'
+  gap_days: 0
   gap_flag: false
   post_text: The Undocumented Underground Is Fighting Back Inside New York’s Notorious
     Immigration Court talkingpointsmemo.com/feature/new-...
@@ -3518,8 +3518,8 @@ entries:
   author_display: ProPublica
   saved_at: '2025-12-11T23:12:47.355Z'
   post_created_at: '2025-12-11T23:00:14Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-12-09'
+  gap_days: 2
   gap_flag: false
   post_text: '“What most struck me is the brutality and physical violence involved
     in every story,” said Sen. Richard Blumenthal. “This is stuff that should be unrecognizable
@@ -3909,8 +3909,8 @@ entries:
   author_display: Kelly
   saved_at: '2025-12-09T13:15:16.762Z'
   post_created_at: '2025-12-09T05:25:24Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-12-08'
+  gap_days: 1
   gap_flag: false
   post_text: 'An ICE agent has been arrested for putting a woman in a chokehold and
     causing “serious physical harm”
@@ -4014,8 +4014,8 @@ entries:
   author_display: Kelly
   saved_at: '2025-12-07T22:17:31.838Z'
   post_created_at: '2025-12-05T20:26:16Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-12-03'
+  gap_days: 2
   gap_flag: false
   post_text: "A 27 year old man in end stage kidney failure was told if he wanted\
     \ his dialysis he has to sign self deportation papers. \n\n“If you want to leave,\
@@ -4044,9 +4044,9 @@ entries:
   author_display: '@NewsJennifer (Jennifer Schulze)'
   saved_at: '2025-12-05T11:26:25.432Z'
   post_created_at: '2025-12-05T04:27:04Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2025-04-12'
+  gap_days: 237
+  gap_flag: true
   post_text: 'Look at these ICE thugs with their masks on chasing this woman down
     the street.    Terrifying and grotesque.
 
@@ -4073,9 +4073,9 @@ entries:
   author_display: ProPublica
   saved_at: '2025-12-04T18:34:38.188Z'
   post_created_at: '2025-12-04T04:00:05Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2025-10-16'
+  gap_days: 49
+  gap_flag: true
   post_text: 'Americans have been dragged, tackled, beaten, tased and shot by immigration
     agents.
 
@@ -4228,8 +4228,8 @@ entries:
   author_display: Olivia Guest · Ολίβια Γκεστ
   saved_at: '2025-11-30T22:50:44.719Z'
   post_created_at: '2025-11-30T18:09:06Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-29'
+  gap_days: 1
   gap_flag: false
   post_text: 'We can''t really say this enough...
 
@@ -4309,8 +4309,8 @@ entries:
   author_display: Soren Spicknall
   saved_at: '2025-11-29T16:07:33.741Z'
   post_created_at: '2025-11-29T02:18:17Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-28'
+  gap_days: 1
   gap_flag: false
   post_text: DHS's stated justification for Abak's abduction is that he has a criminal
     case in Turkey, but the circumstances of that case form a substantial part of
@@ -4340,9 +4340,9 @@ entries:
   author_display: Jonathan M. Katz
   saved_at: '2025-11-29T01:34:22.937Z'
   post_created_at: '2025-11-28T05:52:40Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2025-11-02'
+  gap_days: 26
+  gap_flag: true
   post_text: Or this one www.latimes.com/california/s...
   embed_title: U.S. citizen shot from behind as he warned ICE agents about children
     gathering at bus stop, lawyers say
@@ -4368,9 +4368,9 @@ entries:
   author_display: Jonathan M. Katz
   saved_at: '2025-11-29T01:34:48.546Z'
   post_created_at: '2025-11-28T05:49:03Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2025-10-17'
+  gap_days: 42
+  gap_flag: true
   post_text: Ask yourself why there wasn’t this level of wall to wall coverage for
     this shooting wgme.com/news/local/i...
   embed_title: ICE agent who shot woman in Chicago drove Border Patrol vehicle back
@@ -4397,8 +4397,8 @@ entries:
   author_display: Gravel Influencer
   saved_at: '2025-11-27T13:58:17.197Z'
   post_created_at: '2025-11-27T10:47:42Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-25'
+  gap_days: 2
   gap_flag: false
   post_text: 'I feel much safer today knowing that we deported a Babson College student
     back to a country where she hasn''t lived since childhood.
@@ -4427,9 +4427,9 @@ entries:
   author_display: David Roberts
   saved_at: '2025-11-27T09:13:14.509Z'
   post_created_at: '2025-11-26T22:00:50Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2026-04-26'
+  gap_days: 151
+  gap_flag: true
   post_text: "An 18yo US citizen, surrounded by eight masked, armed agents of the\
     \ state, taken into custody, not read his rights, not offered a chance to contact\
     \ a lawyer, proof of citizenship ignored, handcuffed so tightly he later required\
@@ -4477,8 +4477,8 @@ entries:
   author_display: Marisa Kabas
   saved_at: '2025-11-26T20:13:29.867Z'
   post_created_at: '2025-11-26T19:58:47Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-26'
+  gap_days: 0
   gap_flag: false
   post_text: "SCOOP—In August, nearly 200 current/former FEMA staffers published the\
     \ Katrina Declaration, a whistleblower letter detailing all the dangers posed\
@@ -4595,8 +4595,8 @@ entries:
   author_display: Judd Legum
   saved_at: '2025-11-25T22:34:59.988Z'
   post_created_at: '2025-11-25T15:09:16Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-25'
+  gap_days: 0
   gap_flag: false
   post_text: '1. In Tennessee, public libraries have closed for up to a week to facilitate
     a Trump-inspired book purge.
@@ -4651,8 +4651,8 @@ entries:
   author_display: Radley Balko
   saved_at: '2025-11-25T20:07:21.151Z'
   post_created_at: '2025-11-25T11:13:11Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-25'
+  gap_days: 0
   gap_flag: false
   post_text: "ICE arrests, detains British woman with US husband and newborn when\
     \ she shows up for her green card interview. She’s now in a detention center,\
@@ -4681,8 +4681,8 @@ entries:
   author_display: Nathan Tankus
   saved_at: '2025-11-28T11:35:25.277Z'
   post_created_at: '2025-11-25T10:48:50Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-25'
+  gap_days: 0
   gap_flag: false
   post_text: 'NEW @crisesnotes.bsky.social PIECE: I finally have written up the extraordinary
     fact that the @federalreserve.gov has created an entire page specifically devoted
@@ -4712,8 +4712,8 @@ entries:
   author_display: Christopher Hale
   saved_at: '2025-11-26T13:05:49.407Z'
   post_created_at: '2025-11-25T10:43:55Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-24'
+  gap_days: 1
   gap_flag: false
   post_text: 'In newly leaked audio, Peter Thiel admits he urged JD Vance to ignore
     Pope Leo XIV on moral questions — including the ethical development of AI.
@@ -4741,8 +4741,8 @@ entries:
   author_display: Bill
   saved_at: '2025-11-29T21:01:43.875Z'
   post_created_at: '2025-11-24T18:13:07Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-21'
+  gap_days: 3
   gap_flag: false
   post_text: "Again, for most of us, we are not doing enough, we are not paying enough\
     \ attention, we will not be proud when our grandchildren ask us about this era\
@@ -4768,8 +4768,8 @@ entries:
   author_display: Josh Marshall
   saved_at: '2025-11-25T11:57:27.540Z'
   post_created_at: '2025-11-24T16:25:15Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-21'
+  gap_days: 3
   gap_flag: false
   post_text: A Brutal Ending to One of the Worst Trump II Cases talkingpointsmemo.com/morning-memo...
   embed_title: A Brutal Ending to One of the Worst Trump II Cases
@@ -4793,8 +4793,8 @@ entries:
   author_display: Olivia Messer
   saved_at: '2025-11-25T22:52:47.668Z'
   post_created_at: '2025-11-24T15:03:33Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-24'
+  gap_days: 0
   gap_flag: false
   post_text: "Emmanuel, a 15-year-old with intellectual disabilities, wandered away\
     \ from his mom’s fruit stand in October.\n\nShe reported him missing to Houston\
@@ -4823,8 +4823,8 @@ entries:
   author_display: Senator Jeff Merkley
   saved_at: '2025-11-25T22:55:45.982Z'
   post_created_at: '2025-11-24T00:36:47Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-21'
+  gap_days: 3
   gap_flag: false
   post_text: 'Absolutely horrific. ICE detained and abducted a minor—a high school
     student—who the family identified as a US citizen.
@@ -4926,8 +4926,8 @@ entries:
   author_display: Spencer Ackerman
   saved_at: '2025-11-22T02:04:47.052Z'
   post_created_at: '2025-11-21T21:50:30Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-21'
+  gap_days: 0
   gap_flag: false
   post_text: I felt like I was losing my mind watching this person's remarks and had
     to write about how disgusting they are.
@@ -4950,8 +4950,8 @@ entries:
   author_display: Walker Bragman
   saved_at: '2025-11-20T12:30:08.486Z'
   post_created_at: '2025-11-20T04:57:28Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-20'
+  gap_days: 0
   gap_flag: false
   post_text: "The CDC has updated its vaccine safety page to promote long-discredited\
     \ claims about vaccines—namely that they cause autism.\n\nThe page links to a\
@@ -4999,8 +4999,8 @@ entries:
   author_display: Caitlin Kelly
   saved_at: '2025-11-20T00:53:22.446Z'
   post_created_at: '2025-11-19T11:08:17Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-19'
+  gap_days: 0
   gap_flag: false
   post_text: "NEW: \n\nIn 2024, Tierra Walker was sick and getting sicker. She was\
     \ also pregnant. \n\nShe knew abortion was illegal in Texas, but thought there\
@@ -5028,8 +5028,8 @@ entries:
   author_display: Tyler Kingkade
   saved_at: '2025-11-18T22:15:42.919Z'
   post_created_at: '2025-11-18T18:25:21Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-18'
+  gap_days: 0
   gap_flag: false
   post_text: "Over 20,000 students stayed home from school Monday in Charlotte amid\
     \ ICE raids, representing 15% of enrollment \n\nThe district is nearly one-third\
@@ -5132,8 +5132,8 @@ entries:
   author_display: Violet Miller
   saved_at: '2025-11-17T18:12:56.121Z'
   post_created_at: '2025-11-17T17:16:02Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-16'
+  gap_days: 1
   gap_flag: false
   post_text: 'Broadview''s mayor said “out-of-towners” had “chosen their fists" but
     video shows calm before cops grab Rev Michael Woolf from the crowd.
@@ -5308,8 +5308,8 @@ entries:
   author_display: Gregory Pratt
   saved_at: '2025-11-15T15:39:38.037Z'
   post_created_at: '2025-11-15T14:05:11Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-15'
+  gap_days: 0
   gap_flag: false
   post_text: For two months, the U.S. government has been racial profiling as masked
     federal agents hunted for immigrants throughout Chicago. They’ve repeatedly snatched
@@ -5359,8 +5359,8 @@ entries:
   author_display: Long Beach Post
   saved_at: '2025-11-14T12:58:23.258Z'
   post_created_at: '2025-11-14T01:51:48Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-13'
+  gap_days: 1
   gap_flag: false
   post_text: 'We obtained hours of body-camera video that give the fullest — and perhaps
     last — glimpse of Border Patrol Agent Isaiah Hodgson’s mindset when he became
@@ -5420,9 +5420,9 @@ entries:
   author_display: Radley Balko
   saved_at: '2025-11-13T18:19:33.373Z'
   post_created_at: '2025-11-13T16:03:25Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2026-04-27'
+  gap_days: 165
+  gap_flag: true
   post_text: 'According to the car wash owner, agents arrested employees before they
     could obtain their documentation from their work lockers. So many were likely
     here legally.
@@ -5450,8 +5450,8 @@ entries:
   author_display: Melissa Sanchez
   saved_at: '2025-11-13T14:18:03.996Z'
   post_created_at: '2025-11-13T13:28:18Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-13'
+  gap_days: 0
   gap_flag: false
   post_text: "You probably saw videos of a nighttime raid in Chicago. Agents rappelling\
     \ from a helicopter, bursting down doors, questioning brown-skinned immigrants.\
@@ -5504,9 +5504,9 @@ entries:
   author_display: Anti-Kook, Post-Kook, and Hyper-Kook 🪬🇵🇸🏳️‍⚧️
   saved_at: '2025-11-12T15:25:08.984Z'
   post_created_at: '2025-11-12T13:48:07Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2023-10-06'
+  gap_days: 768
+  gap_flag: true
   post_text: 'If you want to see another John Wick, watch the Korean film BALLERINA.
     Not the John Wick Ballerina, the one on Netflix. It is ‘if John Wick’ was an art
     film. Every shot is the most beautiful thing you’ve ever seen.
@@ -5532,8 +5532,8 @@ entries:
   author_display: Ryan Marino, MD
   saved_at: '2025-11-12T09:30:40.259Z'
   post_created_at: '2025-11-12T01:22:19Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-10'
+  gap_days: 2
   gap_flag: false
   post_text: A man pardoned by Donald Trump for his role in January 6th - he assaulted
     Capitol Police officers with bear spray & a metal whip - has avoided prison for
@@ -5581,8 +5581,8 @@ entries:
   author_display: Mother Jones
   saved_at: '2025-11-12T02:24:44.439Z'
   post_created_at: '2025-11-12T00:00:08Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-11'
+  gap_days: 1
   gap_flag: false
   post_text: Dreamers were once obvious candidates for a path to citizenship. Now,
     they’re getting picked up, detained, and set for potential deportation.
@@ -5608,8 +5608,8 @@ entries:
   author_display: Brad Johnson
   saved_at: '2025-11-12T01:44:19.333Z'
   post_created_at: '2025-11-11T23:53:48Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-11'
+  gap_days: 0
   gap_flag: false
   post_text: 'Short version:
 
@@ -5709,8 +5709,8 @@ entries:
   author_display: Caroline Kubzansky
   saved_at: '2025-11-10T19:12:36.138Z'
   post_created_at: '2025-11-09T23:16:00Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-09'
+  gap_days: 0
   gap_flag: false
   post_text: 'Arianna Sofia Veraza and her parents were driving to Sam''s Club for
     milk, eggs and diapers yesterday when they heard helicopters and horns blaring
@@ -5804,8 +5804,8 @@ entries:
   author_display: ProPublica
   saved_at: '2025-11-10T18:30:45.911Z'
   post_created_at: '2025-11-09T02:00:07Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-03'
+  gap_days: 6
   gap_flag: false
   post_text: 'Phillip Lewis, a 72-year-old cancer patient, said he was woken up and
     marched outside his home in his robe and underwear before federal officers even
@@ -5839,8 +5839,8 @@ entries:
   author_display: Chicago Tribune
   saved_at: '2025-11-09T00:39:09.466Z'
   post_created_at: '2025-11-08T18:29:04Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-07'
+  gap_days: 1
   gap_flag: false
   post_text: 'A Waukegan councilman was briefly detained by U.S. immigration agents
     on Friday, and he says the agents drew their guns on him while he was sitting
@@ -5968,9 +5968,9 @@ entries:
   author_display: Mark Joseph Stern
   saved_at: '2025-11-08T23:22:24.759Z'
   post_created_at: '2025-11-08T01:14:00Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2025-10-31'
+  gap_days: 8
+  gap_flag: true
   post_text: Like much federal law enforcement under Trump's control, the Federal
     Protective Service has a serious problem with the truth, and keeps submitting
     false information to the courts. One major whopper clinched the government's (temporary)
@@ -5997,8 +5997,8 @@ entries:
   author_display: Lynda Lopez
   saved_at: '2025-11-07T14:29:26.703Z'
   post_created_at: '2025-11-07T03:40:05Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-03'
+  gap_days: 4
   gap_flag: false
   post_text: This account also feels in line with some of what other people that have
     been in Broadview have shared.
@@ -6070,8 +6070,8 @@ entries:
   author_display: The New Yorker
   saved_at: '2025-11-07T12:54:29.870Z'
   post_created_at: '2025-11-06T21:00:24Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-05'
+  gap_days: 1
   gap_flag: false
   post_text: One analytical model shows that, as of November 5th, the dismantling
     of U.S.A.I.D. has already caused the deaths of 600,000 people, two-thirds of them
@@ -6126,8 +6126,8 @@ entries:
   author_display: shawn
   saved_at: '2025-11-06T21:00:11.755Z'
   post_created_at: '2025-11-06T19:18:13Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-06'
+  gap_days: 0
   gap_flag: false
   post_text: 'new: at least 26 unhoused chicagoans have been abducted since the start
     of "operation midway blitz."
@@ -6162,8 +6162,8 @@ entries:
   author_display: Denise Wheeler
   saved_at: '2025-11-06T15:42:56.638Z'
   post_created_at: '2025-11-06T05:23:33Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-04'
+  gap_days: 2
   gap_flag: false
   post_text: 'Students held at gunpoint by Trump''s masked thugs at York High School
     in Elmhurst, IL, right outside Chicago.
@@ -6200,8 +6200,8 @@ entries:
   author_display: dan sinker
   saved_at: '2025-11-06T00:52:34.591Z'
   post_created_at: '2025-11-06T00:35:43Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-05'
+  gap_days: 1
   gap_flag: false
   post_text: '"An Immigration and Customs Enforcement agent is facing drunken driving
     charges after police said his car jumped a curb and crashed into a hedgerow in
@@ -6229,8 +6229,8 @@ entries:
   author_display: Andrew Weinstein
   saved_at: '2025-11-06T00:23:07.266Z'
   post_created_at: '2025-11-05T23:03:15Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-05'
+  gap_days: 0
   gap_flag: false
   post_text: 'Heartbreaking: Under Trump''s ICE terror, a 2-year-old Chicago girl
     was tear-gassed while walking with her mom-burning eyes, screams of
@@ -6258,9 +6258,9 @@ entries:
   author_display: Congresswoman Delia C. Ramirez
   saved_at: '2025-11-05T20:13:55.832Z'
   post_created_at: '2025-11-05T19:41:11Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2026-04-26'
+  gap_days: 172
+  gap_flag: true
   post_text: 'This morning, ICE unlawfully kidnapped a day care worker in front of
     parents and children.
 
@@ -6439,8 +6439,8 @@ entries:
   author_display: Mother Jones
   saved_at: '2025-11-04T14:17:02.323Z'
   post_created_at: '2025-11-04T13:00:10Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-03'
+  gap_days: 1
   gap_flag: false
   post_text: For the second time in a little over a week, ICE officers reportedly
     shot someone in Los Angeles. This time, it was a US citizen who ICE officers shot
@@ -6468,8 +6468,8 @@ entries:
   author_display: Damon Beres
   saved_at: '2025-11-04T12:48:46.264Z'
   post_created_at: '2025-11-04T12:15:18Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-04'
+  gap_days: 0
   gap_flag: false
   post_text: 'NEW: Common Crawl, the massive archiver of the web, has gotten cozy
     with AI companies and is providing paywalled articles for training data. They’re
@@ -6497,8 +6497,8 @@ entries:
   author_display: Anil Dash
   saved_at: '2025-11-04T13:06:36.404Z'
   post_created_at: '2025-11-04T07:00:53Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-31'
+  gap_days: 4
   gap_flag: false
   post_text: An actually-performant way of running Linux in browser implementations
     of WASM could have some very interesting use cases. github.com/joelseverin/...
@@ -6520,9 +6520,9 @@ entries:
   author_display: ProPublica
   saved_at: '2025-11-04T13:22:17.008Z'
   post_created_at: '2025-11-04T04:15:01Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2025-10-18'
+  gap_days: 17
+  gap_flag: true
   post_text: 'Six months after ICE apprehended 47 people, including nine kids, in
     Hays County, Tex., County Judge Ruben Becerra says DHS has ignored his attempts
     to get answers:
@@ -6600,9 +6600,9 @@ entries:
   author_display: ubermitch.bsky.social
   saved_at: '2025-11-04T00:25:01.757Z'
   post_created_at: '2025-11-03T21:35:17Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2025-05-18'
+  gap_days: 169
+  gap_flag: true
   post_text: 'nationwide it''s happening several times a day now; it''s going to keep
     getting worse
 
@@ -6697,8 +6697,8 @@ entries:
   author_display: Jess Calarco
   saved_at: '2025-11-04T13:03:09.212Z'
   post_created_at: '2025-11-03T17:42:11Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-28'
+  gap_days: 6
   gap_flag: false
   post_text: '"[Chicago mom] Andrea Soria... overheard her 6-year-old whisper to her
     dolls: ''We have to be good or ICE will get us.''"
@@ -6727,8 +6727,8 @@ entries:
   author_display: Bulletin of the Atomic Scientists
   saved_at: '2025-11-04T02:41:04.560Z'
   post_created_at: '2025-11-03T14:35:20Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-31'
+  gap_days: 3
   gap_flag: false
   post_text: 'Assuming that the missile in ''A House of Dynamite'' carried a several-hundred-kiloton
     nuclear warhead and detonated directly above Chicago''s Loop, what would follow?
@@ -6779,8 +6779,8 @@ entries:
   author_display: Robert Farley
   saved_at: '2025-11-04T02:47:30.162Z'
   post_created_at: '2025-11-03T13:43:40Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-03'
+  gap_days: 0
   gap_flag: false
   post_text: 'A House of Dynamite: Fun with Blast Radii www.lawyersgunsmoneyblog.com/2025/11/a-ho...'
   embed_title: A House of Dynamite - Lawyers, Guns & Money
@@ -6803,8 +6803,8 @@ entries:
   author_display: Gregory Pratt
   saved_at: '2025-11-03T14:05:48.102Z'
   post_created_at: '2025-11-03T13:26:38Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-03'
+  gap_days: 0
   gap_flag: false
   post_text: 'NEWS: Federal agents crashed with woman’s car, pointed guns at her,
     dragged her out by legs, tossed her in a minivan, held her and (eventually) let
@@ -6835,8 +6835,8 @@ entries:
   author_display: Charles Ornstein
   saved_at: '2025-11-03T14:07:13.325Z'
   post_created_at: '2025-11-03T13:21:50Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-03'
+  gap_days: 0
   gap_flag: false
   post_text: 'NEW: “I Don’t Feel Safe.” Black Memphis Residents Report Harassment
     by Trump’s Police Task Force, by @wendicthomas.bsky.social  @katieburgess.bsky.social
@@ -6890,8 +6890,8 @@ entries:
   author_display: Rachel Maddow
   saved_at: '2025-11-03T13:14:50.305Z'
   post_created_at: '2025-11-03T02:09:23Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-11-02'
+  gap_days: 1
   gap_flag: false
   post_text: '"Throughout their time in the U.S., the family has kept up with immigration
     requirements.
@@ -6978,9 +6978,9 @@ entries:
   author_display: Erin Kissane
   saved_at: '2025-11-02T09:05:37.635Z'
   post_created_at: '2025-11-02T02:50:15Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2025-07-16'
+  gap_days: 109
+  gap_flag: true
   post_text: 'Flipped this on earlier and holy god do some of you post a lot
 
 
@@ -7102,8 +7102,8 @@ entries:
   author_display: Amanda Kaschube
   saved_at: '2025-11-01T19:56:24.079Z'
   post_created_at: '2025-11-01T13:54:12Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-31'
+  gap_days: 1
   gap_flag: false
   post_text: "In Albany Park, they fired pepper-spray balls and arrested U.S. citizens.\
     \ \n\nIn Evanston, a weapon was repeatedly pointed at protesters.\n\nThey grabbed\
@@ -7131,8 +7131,8 @@ entries:
   author_display: Rick Porter
   saved_at: '2025-11-01T17:57:12.938Z'
   post_created_at: '2025-11-01T13:20:34Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-31'
+  gap_days: 1
   gap_flag: false
   post_text: Straight up “papers please” harassment of people doing their jobs and
     assault and brutalizing of people who tied to intervene. Abolish DHS.
@@ -7178,8 +7178,8 @@ entries:
   author_display: Matt Sebastian
   saved_at: '2025-11-01T17:28:14.766Z'
   post_created_at: '2025-10-31T19:31:11Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-31'
+  gap_days: 0
   gap_flag: false
   post_text: ICE agents mistakenly identified a Durango father when they pulled him
     over this week, a senior enforcement official testified in court today, but still
@@ -7281,8 +7281,8 @@ entries:
   author_display: Philip Bump
   saved_at: '2025-10-31T12:58:26.714Z'
   post_created_at: '2025-10-31T03:15:42Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-30'
+  gap_days: 1
   gap_flag: false
   post_text: "Three examples in one 24-hour period of people threatening to use the\
     \ power of the state against those holding them to account. \nwww.pbump.net/o/these-are-..."
@@ -7331,8 +7331,8 @@ entries:
   author_display: Tina Vasquez
   saved_at: '2025-10-30T20:21:10.913Z'
   post_created_at: '2025-10-30T19:12:46Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-30'
+  gap_days: 0
   gap_flag: false
   post_text: 'In case you would like an example of how ICE''s propaganda works: Today,
     for the second time this week, an ICE agent shot at an unarmed community member.'
@@ -7360,9 +7360,9 @@ entries:
   author_display: Nancy Levine Stearns
   saved_at: '2025-10-30T22:02:00.234Z'
   post_created_at: '2025-10-30T18:50:08Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2025-10-16'
+  gap_days: 14
+  gap_flag: true
   post_text: "Kristi Noem says no US citizens have been detained by ICE. \n\n170 US\
     \ citizens detained by ICE including kids.\n\nRelease the EPSTEIN files.  \n\n\
     www.propublica.org/article/immi..."
@@ -7418,8 +7418,8 @@ entries:
   author_display: WIRED
   saved_at: '2025-11-04T12:42:40.583Z'
   post_created_at: '2025-10-30T13:40:55Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-30'
+  gap_days: 0
   gap_flag: false
   post_text: "Unlike A House of Dynamite, Fail Safe depicts the hubris and viciousness\
     \ of certain individuals involved, as well as the ridiculousness of the complex\
@@ -7517,8 +7517,8 @@ entries:
   author_display: seosamh.bsky.social
   saved_at: '2025-10-29T23:23:16.825Z'
   post_created_at: '2025-10-29T22:57:11Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-27'
+  gap_days: 2
   gap_flag: false
   post_text: This is what I saw, from 2 days ago.
   embed_title: Could ICE have 'lost' 3,000 immigrant arrestees in Chicago?
@@ -7687,8 +7687,8 @@ entries:
   author_display: Radley Balko
   saved_at: '2025-10-29T19:26:31.171Z'
   post_created_at: '2025-10-28T23:41:16Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-27'
+  gap_days: 1
   gap_flag: false
   post_text: 'A source familiar with this incident told me today that not only did
     they arrest and charge the comedy club manager, but the Latino man he was defending
@@ -7718,8 +7718,8 @@ entries:
   author_display: Chris Morran
   saved_at: '2025-10-29T19:49:00.213Z'
   post_created_at: '2025-10-28T20:40:38Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-28'
+  gap_days: 0
   gap_flag: false
   post_text: '"According to his running club, the man, who is a U.S. citizen, was
     returning from a team run when agents pulled him out of his vehicle, tackled him
@@ -7795,8 +7795,8 @@ entries:
   author_display: David A. Graham
   saved_at: '2025-10-30T16:46:15.248Z'
   post_created_at: '2025-10-28T12:59:46Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-28'
+  gap_days: 0
   gap_flag: false
   post_text: 'How many ways could Trump try to subvert the 2026 elections? More than
     you can probably imagine, and many of them might work. My deep dive in @theatlantic.com,
@@ -7856,8 +7856,8 @@ entries:
   author_display: Bellingcat
   saved_at: '2025-10-29T13:59:44.918Z'
   post_created_at: '2025-10-26T14:56:25Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-24'
+  gap_days: 2
   gap_flag: false
   post_text: 'What role does fashion play in far-right movements?
 
@@ -7911,8 +7911,8 @@ entries:
   author_display: Chicago Tribune
   saved_at: '2025-10-26T00:44:40.325Z'
   post_created_at: '2025-10-25T22:31:00Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-25'
+  gap_days: 0
   gap_flag: false
   post_text: A Naperville man was hauled away by federal immigration agents Thursday
     morning as his two sons watched, the older boy begging them not to hurt his father
@@ -7940,8 +7940,8 @@ entries:
   author_display: Liliana Segura
   saved_at: '2025-10-26T14:45:09.340Z'
   post_created_at: '2025-10-25T21:06:33Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-23'
+  gap_days: 2
   gap_flag: false
   post_text: In the wake of Charlie Kirk's death, a TN sheriff had a 61-yr-old man
     arrested for posting a meme on Facebook, which the sheriff absurdly construed
@@ -8346,9 +8346,9 @@ entries:
   author_display: Anil Dash
   saved_at: '2025-10-16T16:31:56.633Z'
   post_created_at: '2025-10-16T08:13:10Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2026-04-26'
+  gap_days: 192
+  gap_flag: true
   post_text: 'The last twenty minutes is here: youtu.be/tXG7CSJpr08 the first 5 minutes
     straight were literally all questions about Israel, I think they put that up as
     a separate clip'
@@ -8421,8 +8421,8 @@ entries:
   author_display: Clara Jeffery
   saved_at: '2025-10-14T17:07:38.189Z'
   post_created_at: '2025-10-14T16:13:12Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-14'
+  gap_days: 0
   gap_flag: false
   post_text: '1/Stop everything and read/watch/bookmark this massive investigation
     between @motherjones.com @lighthousereports.com  Le Monde, Der Spiegel, Paper
@@ -8607,9 +8607,9 @@ entries:
   author_display: Anil Dash
   saved_at: '2025-10-12T22:29:17.812Z'
   post_created_at: '2025-10-12T19:16:26Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2026-04-26'
+  gap_days: 196
+  gap_flag: true
   post_text: Always worth revisiting, @edyong209.bsky.social talking about his reckoning
     with The Atlantic and why he left, including a nod to @prisonculture.bsky.social.
     (And skip back to 13:15 or so for a very satisfying truth-telling about Jesse
@@ -8677,9 +8677,9 @@ entries:
   author_display: Tom Joscelyn
   saved_at: '2025-10-12T22:24:08.163Z'
   post_created_at: '2025-10-12T12:01:23Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2025-09-30'
+  gap_days: 12
+  gap_flag: true
   post_text: “I spent three nights and three days in federal custody. During that
     time, I was never told what I was charged with, was not allowed to shower despite
     being covered in tear gas and pepper spray, had no phone call to my family, and
@@ -8907,8 +8907,8 @@ entries:
   author_display: Ashton Pittman
   saved_at: '2025-10-11T12:45:29.830Z'
   post_created_at: '2025-10-10T23:58:10Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-10'
+  gap_days: 0
   gap_flag: false
   post_text: 'ICE left David, a 17-year-old boy, stranded on the side of Interstate
     20 after pulling over his immigrant father, Hector, in Mississippi.
@@ -9015,9 +9015,9 @@ entries:
   author_display: Unbreaking
   saved_at: '2025-10-11T19:16:13.806Z'
   post_created_at: '2025-10-10T18:43:27Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2026-04-23'
+  gap_days: 195
+  gap_flag: true
   post_text: 'The clear story in Immigration this week is the escalation of—and pushback
     against—the Trump administration’s militarized raids and warrantless stops in
     Democrat-run major cities. We’ve updated our timeline with a lot of events in
@@ -9097,9 +9097,9 @@ entries:
   author_display: Christopher Mathias
   saved_at: '2025-10-10T17:11:14.958Z'
   post_created_at: '2025-10-10T13:07:49Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2025-09-27'
+  gap_days: 13
+  gap_flag: true
   post_text: "“The truth is that antifa groups have been responsible for some of the\
     \ most prescient & impactful organizing countering the far-right during the last\
     \ decade” \n\nAmazing corrective to liberal punditry abt antifa from Matthew Whitley\
@@ -9195,8 +9195,8 @@ entries:
   author_display: Josh Marshall
   saved_at: '2025-10-08T19:32:37.875Z'
   post_created_at: '2025-10-08T19:02:07Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-08'
+  gap_days: 0
   gap_flag: false
   post_text: A Shortlist of Federal Data the Trump Administration Has Tampered With
     or Destroyed talkingpointsmemo.com/news/a-short...
@@ -9244,8 +9244,8 @@ entries:
   author_display: George Monbiot
   saved_at: '2025-10-08T11:15:18.661Z'
   post_created_at: '2025-10-08T06:08:57Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-08'
+  gap_days: 0
   gap_flag: false
   post_text: "ME/CFS is a devastating condition that has long been denied, dismissed,\
     \ psychologised and underdiagnosed. Research is at last starting to catch up with\
@@ -9298,8 +9298,8 @@ entries:
   author_display: The Kyiv Independent
   saved_at: '2025-10-07T20:30:08.147Z'
   post_created_at: '2025-10-07T19:09:15Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-07'
+  gap_days: 0
   gap_flag: false
   post_text: Polish Prime Minister Donald Tusk on Oct. 7 said those who built Nord
     Stream 2, not those accused of sabotaging it, "should be ashamed and remain silent,"
@@ -9325,8 +9325,8 @@ entries:
   author_display: Simon Willison
   saved_at: '2025-10-10T14:15:41.841Z'
   post_created_at: '2025-10-07T14:35:39Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-07'
+  gap_days: 0
   gap_flag: false
   post_text: 'Vibe coding is irresponsibly building software through dice rolls, not
     caring what code is produced
@@ -9403,9 +9403,9 @@ entries:
   author_display: Ms Boba (rebuilding community era)
   saved_at: '2025-10-06T21:43:05.829Z'
   post_created_at: '2025-10-06T21:27:58Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2025-04-04'
+  gap_days: 185
+  gap_flag: true
   post_text: 'I''ve written an explanation of AppViews, how they work, and what they
     enable in the repo of our Guestbook project. It should have likely been its own
     article in a more readable format, but you write where inspiration strikes!
@@ -9431,8 +9431,8 @@ entries:
   author_display: dell cameron
   saved_at: '2025-10-06T21:59:48.724Z'
   post_created_at: '2025-10-06T19:59:00Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-04'
+  gap_days: 2
   gap_flag: false
   post_text: '"Now Wired — which has become indispensable and deserves your subscription
     dollars (🙏) — reports that DHS wants to create dedicated centers to mass monitor
@@ -9459,8 +9459,8 @@ entries:
   author_display: Rav
   saved_at: '2025-10-06T20:41:26.952Z'
   post_created_at: '2025-10-06T16:07:33Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-06'
+  gap_days: 0
   gap_flag: false
   post_text: 'Dropping it here in case anyone else is following this
 
@@ -9486,8 +9486,8 @@ entries:
   author_display: bryan newbold
   saved_at: '2025-10-06T10:47:10.541Z'
   post_created_at: '2025-10-06T08:22:19Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-06'
+  gap_days: 0
   gap_flag: false
   post_text: 'for atproto devs and protocol watchers, I published an overview of the
     network moderation architecture.
@@ -9604,8 +9604,8 @@ entries:
   author_display: Paul T. Levin
   saved_at: '2025-10-04T19:38:46.670Z'
   post_created_at: '2025-10-04T18:21:46Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-04'
+  gap_days: 0
   gap_flag: false
   post_text: ““They dragged little Greta [Thunberg] by her hair before our eyes, beat
     her, and forced her to kiss the Israeli flag. They did everything imaginable to
@@ -9702,8 +9702,8 @@ entries:
   author_display: paco xander nathan
   saved_at: '2025-10-07T19:46:32.742Z'
   post_created_at: '2025-10-04T17:00:20Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-02'
+  gap_days: 2
   gap_flag: false
   post_text: "There's an LLM hiding in your Chrome browser.\nCheck out these instructions\
     \ by @petewarden.bsky.social \npetewarden.com/2025/10/02/h..."
@@ -9748,9 +9748,9 @@ entries:
   author_display: Andy Craig
   saved_at: '2025-10-04T09:51:26.846Z'
   post_created_at: '2025-10-04T04:02:13Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2022-01-30'
+  gap_days: 1343
+  gap_flag: true
   post_text: "Lawyers and adjacent also have some complaints about him. \n\nelectionlawblog.org?p=127270"
   embed_title: 'Marc Elias is Sometimes Counterproductive When It Comes to Protecting
     Voting Rights, Election Integrity, and the Interests of the Democratic Party #ELB'
@@ -9773,9 +9773,9 @@ entries:
   author_display: Mark Hennessy-Barrett
   saved_at: '2025-10-03T21:55:30.031Z'
   post_created_at: '2025-10-03T20:27:58Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2021-11-09'
+  gap_days: 1424
+  gap_flag: true
   post_text: "He has inspired so, so many copycats throughout his party. \n\ndocs.google.com/document/u/1...\n\
     \nThe list is at 1,465 arrest records. \n\nAnd rising."
   embed_title: '#RightWingSexualPredators'
@@ -9797,8 +9797,8 @@ entries:
   author_display: Andrew Couts
   saved_at: '2025-10-05T18:05:13.343Z'
   post_created_at: '2025-10-03T13:22:35Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-03'
+  gap_days: 0
   gap_flag: false
   post_text: 'NEW: ICE is planning to hire a team of nearly 30 people to surveil social
     media 24/7, build dossiers on people, and flag them for arrest and deportation.
@@ -9822,9 +9822,9 @@ entries:
   author_display: Lawfare
   saved_at: '2025-10-03T20:05:54.565Z'
   post_created_at: '2025-10-02T19:48:27Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2025-02-10'
+  gap_days: 234
+  gap_flag: true
   post_text: Rep. Jordan "treated Google’s resistance as proof of censorship, and
     his own success in getting YouTube to capitulate on a fact-checking policy as
     a victory for free speech. He isn’t fighting against censorship, he’s redefining
@@ -9873,8 +9873,8 @@ entries:
   author_display: Denis - The COVID Info Guy
   saved_at: '2025-10-02T13:48:51.105Z'
   post_created_at: '2025-10-01T23:16:25Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-10-01'
+  gap_days: 0
   gap_flag: false
   post_text: 'Scientists Finally Reveal Biological Basis of Long COVID Brain Fog.
 
@@ -9971,9 +9971,9 @@ entries:
   author_display: Adam Rothman aced his cognitive test
   saved_at: '2025-09-30T22:07:39.004Z'
   post_created_at: '2025-09-30T13:26:20Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2014-07-07'
+  gap_days: 4103
+  gap_flag: true
   post_text: www.smithsonianmag.com/history/who-...
   embed_title: Who Had the Best Civil War Facial Hair?
   embed_host: smithsonianmag.com
@@ -10041,9 +10041,9 @@ entries:
   author_display: Rad O'Brien, Chief Engineer 🔵
   saved_at: '2025-09-30T22:35:27.398Z'
   post_created_at: '2025-09-28T14:41:19Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2025-07-10'
+  gap_days: 80
+  gap_flag: true
   post_text: ok this breakdown of AI writing indicators is incredible.  Huge shout-out
     to the Wikipedia community for this
   embed_title: Wikipedia:Signs of AI writing - Wikipedia
@@ -10161,8 +10161,8 @@ entries:
   author_display: Katie Drummond
   saved_at: '2025-09-25T19:35:34.207Z'
   post_created_at: '2025-09-25T14:45:36Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-09-25'
+  gap_days: 0
   gap_flag: false
   post_text: "\"This used to be the best job I’ve ever had, the best environment I’ve\
     \ ever had, the best culture I’ve ever had—and they fucking ruined it. \n\nI will\
@@ -10187,8 +10187,8 @@ entries:
   author_display: Jay Rosen
   saved_at: '2025-09-23T18:55:02.726Z'
   post_created_at: '2025-09-23T18:30:48Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-09-23'
+  gap_days: 0
   gap_flag: false
   post_text: '"A few weeks ago, I was complaining bitterly about how the New York
     Times routinely resorts to weasel words, euphemisms and third-party critiques
@@ -10245,8 +10245,8 @@ entries:
   author_display: Tricia Lockwood
   saved_at: '2025-09-23T14:28:57.069Z'
   post_created_at: '2025-09-23T13:05:04Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-09-23'
+  gap_days: 0
   gap_flag: false
   post_text: 'my new book is OUT TODAY! it’s been described as "the writer at her
     best: mystified, curious, pathetic, absurd" — you can buy it here'
@@ -10359,9 +10359,9 @@ entries:
   author_display: Michael Hobbes
   saved_at: '2025-09-21T16:56:14.745Z'
   post_created_at: '2025-09-21T13:57:42Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2025-09-08'
+  gap_days: 13
+  gap_flag: true
   post_text: Conservative men are apparently pretending to be liberal and then "coming
     out" to their progressive girlfriends after dating for months
   embed_title: Conservative Men keep LYING because no one will date them...
@@ -10448,8 +10448,8 @@ entries:
   author_display: Canuck
   saved_at: '2025-09-18T23:26:07.536Z'
   post_created_at: '2025-09-17T04:21:54Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-09-16'
+  gap_days: 1
   gap_flag: false
   post_text: youtu.be/a97iH0eKGMg?...
   embed_title: They EXPLOITED Charlie Kirk’s Grieving Widow - Ft. Christopher Hitchens
@@ -10724,8 +10724,8 @@ entries:
   author_display: Kyle Orland
   saved_at: '2025-09-08T20:20:53.166Z'
   post_created_at: '2025-09-08T18:21:51Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2025-09-08'
+  gap_days: 0
   gap_flag: false
   post_text: One of the coolest video game preservation stories I have ever covered
     arstechnica.com/gaming/2025/...
@@ -10816,9 +10816,9 @@ entries:
   author_display: e.w. niedermeyer
   saved_at: '2025-09-08T19:20:24.955Z'
   post_created_at: '2024-11-26T17:25:34Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2024-11-14'
+  gap_days: 12
+  gap_flag: true
   post_text: 'in other "look at where this guy comes from" news, Elon Musk''s father
     just did a lengthy podcast episode that opens with the host saying "I bet the
     last time you had this many black people in your house someone was trying to rob
@@ -10846,9 +10846,9 @@ entries:
   author_display: Seth Cotlar
   saved_at: '2025-09-08T19:20:46.749Z'
   post_created_at: '2024-11-25T14:04:56Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
+  article_published_at: '2024-04-16'
+  gap_days: 223
+  gap_flag: true
   post_text: 'I''ve been thinking a lot lately about this piece that came out this
     spring. The imperatives of large scale corporate capitalism have squelched much
     of what once was (and still could be) culturally and politically democratizing
@@ -10878,8 +10878,8 @@ entries:
   author_display: alec karakatsanis
   saved_at: '2025-09-08T19:22:36.212Z'
   post_created_at: '2024-11-18T00:06:27Z'
-  article_published_at: ''
-  gap_days: null
+  article_published_at: '2024-11-17'
+  gap_days: 1
   gap_flag: false
   post_text: 'My amazing colleague Susan and I just recorded an episode of the great
     podcast This Machine Kills on the prison tech industry and how it profits from
