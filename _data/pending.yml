@@ -2,7 +2,7 @@ meta:
   total_inventory: 675
   drafted: 50
   skipped: 1
-  queued: 4
+  queued: 5
   pending_total: 624
   pending_aligned: 426
   pending_unaligned: 198
@@ -445,7 +445,7 @@ entries:
   - state-violence
   - predatory-capital
   badges: []
-  queued: false
+  queued: true
 - rkey: 3metgqayja22o
   uri: at://did:plc:ru2uiz2ifeei5nqpssfy7iqq/app.bsky.feed.post/3metgqayja22o
   author: tinadesireeberg.com
