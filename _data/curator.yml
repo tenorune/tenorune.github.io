@@ -1105,3 +1105,23 @@
   source_url: https://bsky.app/profile/barackobama.bsky.social/post/3lz4jpjnfk222
   source_publication: BlueSky
   bluesky_uri: at://did:plc:5c6cw3veuqruljoy5ahzerfx/app.bsky.feed.post/3lz4jpjnfk222
+- slug: kraut-rubio-citizen-speech
+  title: What the Cold War Did to Passports
+  date: '2025-09-13'
+  post_created_at: '2025-09-13T15:44:10Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: Historian Julia Rose Kraut, author of 'Threat of Dissent,' surfaced the
+    Kent v. Dulles precedent on Bluesky in response to an Intercept report that Secretary
+    of State Marco Rubio — who has already sought to punish immigrants for their speech
+    — would have new legislative authority to extend that punishment to U.S. citizens;
+    in 1958 the Supreme Court held that the right to travel cannot be conditioned
+    on a citizen's political speech.
+  themes:
+  - rule-of-law
+  - official-narrative
+  state: published
+  source_url: https://bsky.app/profile/juliarosekraut.bsky.social/post/3lyq4m4yykc2u
+  source_publication: BlueSky
+  bluesky_uri: at://did:plc:23jbx3mbesh2ghfcecaxsk6p/app.bsky.feed.post/3lyq4m4yykc2u

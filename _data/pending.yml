@@ -1,11 +1,11 @@
 meta:
   total_inventory: 675
-  drafted: 61
+  drafted: 62
   skipped: 16
   queued: 2
-  pending_total: 598
-  pending_aligned: 400
-  pending_unaligned: 198
+  pending_total: 597
+  pending_aligned: 402
+  pending_unaligned: 195
   pending_gap_flagged: 22
 entries:
 - rkey: 3mjzl5hnfq22u
@@ -612,6 +612,28 @@ entries:
   badges:
   - image
   queued: false
+- rkey: 3mejmnazdms2q
+  uri: at://did:plc:k4jt6heuiamymgi46yeuxtpt/app.bsky.feed.post/3mejmnazdms2q
+  author: propublica.org
+  author_display: ProPublica
+  saved_at: '2026-02-11T22:01:45.914Z'
+  post_created_at: '2026-02-10T18:44:48Z'
+  article_published_at: ''
+  gap_days: null
+  gap_flag: false
+  post_text: 'Read the letters referenced by Rep. James Walkinshaw here:'
+  embed_title: '“I Have Been Here Too Long”: Read Letters from the Children Detained
+    at ICE’s Dilley Facility'
+  embed_host: propublica.org
+  embed_url: https://www.propublica.org/article/ice-dilley-children-letters?utm_source=bluesky&utm_medium=social&utm_campaign=propublica-bsky&utm_content=2-10
+  bluesky_url: https://bsky.app/profile/propublica.org/post/3mejmnazdms2q
+  themes:
+  - bureaucratic-cruelty
+  - civilian-harm
+  - deportation-machinery
+  badges:
+  - image
+  queued: false
 - rkey: 3mejicxlyjf2h
   uri: at://did:plc:4llrhdclvdlmmynkwsmg5tdc/app.bsky.feed.post/3mejicxlyjf2h
   author: atrupar.com
@@ -659,6 +681,32 @@ entries:
   - resistance-and-witness
   badges:
   - article
+  - image
+  queued: false
+- rkey: 3meix6k2yi22x
+  uri: at://did:plc:yobyqjt4hs5icoihvaombhhn/app.bsky.feed.post/3meix6k2yi22x
+  author: thefarce.org
+  author_display: 🗽LOLGOP🗽
+  saved_at: '2026-02-11T20:24:45.029Z'
+  post_created_at: '2026-02-10T12:20:46Z'
+  article_published_at: ''
+  gap_days: null
+  gap_flag: false
+  post_text: 'And here''s a fine PBS report on the Dilley concentration camp.
+
+
+    Doing the work so no one can say, "We didn''t know."'
+  embed_title: Reporter details life for children and families detained in Texas migrant
+    facility
+  embed_host: youtube.com
+  embed_url: https://www.youtube.com/watch?v=hsUd1fG2Pcs
+  bluesky_url: https://bsky.app/profile/thefarce.org/post/3meix6k2yi22x
+  themes:
+  - bureaucratic-cruelty
+  - civilian-harm
+  - official-narrative
+  - resistance-and-witness
+  badges:
   - image
   queued: false
 - rkey: 3mehskmy2rs2w
@@ -4314,6 +4362,29 @@ entries:
   - thread
   - image
   queued: false
+- rkey: 3m6hwgzsins2p
+  uri: at://did:plc:c7ozmxoc5b2ky4iam2o36uic/app.bsky.feed.post/3m6hwgzsins2p
+  author: radleybalko.bsky.social
+  author_display: Radley Balko
+  saved_at: '2025-11-25T20:06:41.413Z'
+  post_created_at: '2025-11-25T18:03:48Z'
+  article_published_at: ''
+  gap_days: null
+  gap_flag: false
+  post_text: 'Video of her being dragged by authorities in Ghana:
+
+
+    www.nbcnews.com/news/amp/rcn...'
+  embed_title: Woman deported from Maryland shown on video being dragged in Ghana
+  embed_host: nbcnews.com
+  embed_url: https://www.nbcnews.com/news/amp/rcna245596
+  bluesky_url: https://bsky.app/profile/radleybalko.bsky.social/post/3m6hwgzsins2p
+  themes:
+  - bureaucratic-cruelty
+  - deportation-machinery
+  badges:
+  - image
+  queued: false
 - rkey: 3m6hmubhxr225
   uri: at://did:plc:beirch5u3d3ybvuct27mtyxd/app.bsky.feed.post/3m6hmubhxr225
   author: mikesacks.bsky.social
@@ -5619,11 +5690,15 @@ entries:
   gap_days: null
   gap_flag: false
   post_text: people.com/armed-agents...
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
+  embed_title: Masked Border Patrol Agents Drive Off with 22-Month-Old Baby in Car
+    After Detaining Infant's U.S. Citizen Father
+  embed_host: people.com
+  embed_url: https://people.com/armed-agents-drive-off-with-child-after-detaining-her-father-11843953
   bluesky_url: https://bsky.app/profile/swin24.bsky.social/post/3m557fcce5c2u
   themes:
+  - bureaucratic-cruelty
+  - civilian-harm
+  - deportation-machinery
   - state-violence
   badges:
   - image
@@ -6302,9 +6377,10 @@ entries:
   gap_days: null
   gap_flag: false
   post_text: 'The original press release: www.epicenter.org/the-episcopa...'
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
+  embed_title: The Episcopal Diocese of Texas Calls for Justice After Detention of
+    Clergy Member Employed by the State of Texas - EDOT
+  embed_host: epicenter.org
+  embed_url: https://www.epicenter.org/the-episcopal-diocese-of-texas-calls-for-justice-after-detention-of-clergy-member-employed-by-the-state-of-texas/
   bluesky_url: https://bsky.app/profile/actualkatherine.bsky.social/post/3m4rjvc3ufc2n
   themes:
   - bureaucratic-cruelty
@@ -10166,30 +10242,6 @@ entries:
   badges:
   - thread
   queued: false
-- rkey: 3lyq4m4yykc2u
-  uri: at://did:plc:23jbx3mbesh2ghfcecaxsk6p/app.bsky.feed.post/3lyq4m4yykc2u
-  author: juliarosekraut.bsky.social
-  author_display: Julia Rose Kraut
-  saved_at: '2025-09-13T22:57:56.194Z'
-  post_created_at: '2025-09-13T15:44:10Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: "Hi folks. We've seen this before during the Cold War.\n\nCheck out Ch.\
-    \ 5 in \"Threat of Dissent\" to learn more. \U0001F5C3️\n\nAnd, remember, in Kent\
-    \ v. Dulles (1958), the U.S. Supreme Court held that American citizens have a\
-    \ fundamental right to travel. \n\nsupreme.justia.com/cases/federa..."
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/juliarosekraut.bsky.social/post/3lyq4m4yykc2u
-  themes:
-  - bureaucratic-cruelty
-  - rule-of-law
-  badges:
-  - thread
-  - image
-  queued: true
 - rkey: 3lynri7patc2d
   uri: at://did:plc:4yb2pjejfziah3eork7stm6j/app.bsky.feed.post/3lynri7patc2d
   author: rachelgilmore.bsky.social
