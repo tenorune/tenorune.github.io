@@ -1,10 +1,10 @@
 meta:
   total_inventory: 675
   drafted: 50
-  skipped: 8
+  skipped: 9
   queued: 12
-  pending_total: 617
-  pending_aligned: 419
+  pending_total: 616
+  pending_aligned: 418
   pending_unaligned: 198
   pending_gap_flagged: 22
 entries:
@@ -10654,26 +10654,6 @@ entries:
   - official-narrative
   badges:
   - thread
-  queued: false
-- rkey: 3lyjcftuhgs2a
-  uri: at://did:plc:5jroksyiphqyyn76dlehkpb7/app.bsky.feed.post/3lyjcftuhgs2a
-  author: popecrocodylus.bsky.social
-  author_display: The Space Pope
-  saved_at: '2025-09-10T23:44:34.759Z'
-  post_created_at: '2025-09-10T22:39:23Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: RIP Charlie Kirk, you would have loved politicizing the shooting of Charlie
-    Kirk.
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/popecrocodylus.bsky.social/post/3lyjcftuhgs2a
-  themes:
-  - civilian-harm
-  - official-narrative
-  badges: []
   queued: false
 - rkey: 3lydt3jc24i2v
   uri: at://did:plc:m5soh62ifdpq443v3rnjnfrm/app.bsky.feed.post/3lydt3jc24i2v
