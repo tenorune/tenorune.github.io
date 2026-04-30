@@ -11,7 +11,7 @@ source_published_at: "2026-02-10"
 bluesky_uri: "at://did:plc:4usmserhjqkvhldgedfjb3jw/app.bsky.feed.post/3mejvhred5k27"
 bluesky_saved_at: 2026-02-11T21:35:05.557Z
 post_created_at: "2026-02-10T21:22:48Z"
-published: true
+published: false
 ---
 
 In October 2025, federal agents in military-style gear, accompanied by armored vehicles and flashbang grenades, raided La Catedral Arena, a community horse-racing venue in Wilder, Idaho. They herded the crowd into a confined area on the racetrack — many of them U.S. citizens of Hispanic descent — and detained one hundred and five undocumented immigrants. Among those bound on the track, according to photographs CBS News obtained, was SueHey, the fourteen-year-old U.S.-citizen daughter of Anabel Romero. SueHey had been minding her six- and eight-year-old siblings when the agents arrived. The photographs show her zip ties and the bruising they left on her wrists. "I'm just like there crying," she told CBS, "I'm struggling to breathe."

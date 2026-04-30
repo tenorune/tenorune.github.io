@@ -12,7 +12,7 @@ source_article_pending: true
 bluesky_uri: "at://did:plc:pmq7ipaky342kntr6eqsbsir/app.bsky.feed.post/3mev3ooczu226"
 bluesky_saved_at: 2026-02-17T10:04:58.174Z
 post_created_at: "2026-02-15T08:13:19Z"
-published: true
+published: false
 ---
 
 A modeling study in *The Lancet* in early 2026 projected that the destruction of the U.S. Agency for International Development — driven through the federal government by Russell Vought and Elon Musk — would, on its mild-defunding scenario (a continuation of current downward trends), produce 9.4 million additional deaths by 2030, with a 95% uncertainty interval of 6.2 to 12.6 million. About 2.5 million of those deaths, with an interval of 1.8 to 3.2 million, are projected to be children under the age of five. The figures are projections, not retrospective counts, but the methodology — applied to a real and recent administrative dismantling — produces them as a near-term forecast rather than a historical possibility.

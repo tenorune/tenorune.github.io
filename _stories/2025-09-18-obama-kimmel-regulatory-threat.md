@@ -12,7 +12,7 @@ source_article_pending: true
 bluesky_uri: "at://did:plc:5c6cw3veuqruljoy5ahzerfx/app.bsky.feed.post/3lz4jpjnfk222"
 bluesky_saved_at: 2025-09-18T15:43:07.680Z
 post_created_at: "2025-09-18T14:10:39Z"
-published: true
+published: false
 ---
 
 After Jimmy Kimmel was pulled from ABC's late-night lineup in September 2025 — a removal preceded by public threats from federal communications regulators against the network's licensure — former president Barack Obama wrote that the current administration, "after years of complaining about cancel culture, has taken it to a new and dangerous level by routinely threatening regulatory action against media companies unless they muzzle or fire reporters and commentators it doesn't like."

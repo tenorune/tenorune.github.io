@@ -11,7 +11,7 @@ source_article_pending: true
 bluesky_uri: "at://did:plc:eclio37ymobqex2ncko63h4r/app.bsky.feed.post/3mjzov6goh62h"
 bluesky_saved_at: 2026-04-21T21:13:34.544Z
 post_created_at: "2026-04-21T19:13:36Z"
-published: true
+published: false
 ---
 
 The New York Times reported in April 2026 that the Trump administration is negotiating with the Democratic Republic of Congo to receive Afghans who worked alongside U.S. forces during the war in Afghanistan and were evacuated to Qatar in the 2021 airlift. According to a U.S. aid worker quoted in the reporting, the choice being presented to those Afghans is the DRC or return to a life under the Taliban — the regime they had risked their lives helping the United States to fight.

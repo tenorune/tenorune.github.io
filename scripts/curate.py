@@ -62,6 +62,39 @@ def apply_story_action(fm: str, action: str) -> str:
     return "\n".join(lines)
 
 
+STORY_ACTION_TO_STATUS = {
+    "publish": "published",
+    "draft":   "drafted",
+    "reject":  "culled",
+}
+
+
+def _update_state_for_story(slug: str, status: str) -> None:
+    """Mirror a story-action status onto the matching saves_state entry.
+
+    Looks up the saves_state entry whose `story_slug` matches `slug` and
+    sets its `status` to the new value (and bumps `last_action_at`). If
+    no matching entry exists (e.g., the story was authored without a
+    bluesky_uri) this is a silent no-op — the story file remains the
+    source of truth for site visibility either way.
+    """
+    if not STATE.exists():
+        return
+    doc = json.loads(STATE.read_text(encoding="utf-8"))
+    states = doc.get("states") or {}
+    changed = False
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    for uri, entry in states.items():
+        if entry.get("story_slug") == slug:
+            if entry.get("status") != status:
+                entry["status"] = status
+                entry["last_action_at"] = now
+                changed = True
+    if changed:
+        doc["states"] = dict(sorted(states.items()))
+        STATE.write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
 def run_story_action(action: str, slug: str) -> int:
     path = find_story(slug)
     if path is None:
@@ -74,11 +107,19 @@ def run_story_action(action: str, slug: str) -> int:
         return 1
     new_fm = apply_story_action(m.group(2), action)
     new_text = f"{m.group(1)}{new_fm}{m.group(3)}{m.group(4)}"
-    if new_text == text:
+    fm_changed = new_text != text
+    if fm_changed:
+        path.write_text(new_text, encoding="utf-8")
+
+    # Mirror onto saves_state regardless of frontmatter-changed (the state
+    # file may have drifted from frontmatter and this is the moment to
+    # reconcile).
+    _update_state_for_story(slug, STORY_ACTION_TO_STATUS[action])
+
+    if fm_changed:
+        print(f"{path.name}: applied {action}")
+    else:
         print(f"{path.name}: no change ({action})")
-        return 0
-    path.write_text(new_text, encoding="utf-8")
-    print(f"{path.name}: applied {action}")
     return 0
 
 

@@ -11,7 +11,7 @@ source_author: "Aaron Reichlin-Melnick"
 bluesky_uri: "at://did:plc:2vtbmhmrwzbqcfv4we4uxzzt/app.bsky.feed.post/3mf3xjjk46k2o"
 bluesky_saved_at: 2026-02-18T13:16:59.071Z
 post_created_at: "2026-02-18T01:47:30Z"
-published: true
+published: false
 ---
 
 Mr. Sim arrived in the United States as a refugee and lived here for forty-three years. A larceny conviction more than two decades ago triggered a deportation order, but Cambodia would not accept the deportation, so he stayed under what U.S. immigration law calls an order of supervision — checking in with the agency on a regular schedule, year after year, decade after decade. After twenty years on that order, with nothing in his case file changed, he was arrested at one of those check-ins and sent to detention. He died there.

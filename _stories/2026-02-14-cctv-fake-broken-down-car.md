@@ -12,7 +12,7 @@ source_article_pending: true
 bluesky_uri: "at://did:plc:ru2uiz2ifeei5nqpssfy7iqq/app.bsky.feed.post/3metgqayja22o"
 bluesky_saved_at: 2026-02-16T18:09:07.707Z
 post_created_at: "2026-02-14T16:25:44Z"
-published: true
+published: false
 ---
 
 A CCTV recording surfaced in February 2026 that appears to show federal Homeland Security agents conducting an arrest using a pretextual ruse: the agents staged a car as if it had broken down outside the target's residence, waited for the target to come outside, and only then signaled the operation. When the target emerged and began offering help, three additional vehicles converged on the scene, the man was detained, and the "stalled" car drove off with the agents who had used the staging.

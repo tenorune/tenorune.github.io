@@ -12,7 +12,7 @@ source_article_pending: true
 bluesky_uri: "at://did:plc:ieefmvjqux5gqymbt5qhrql3/app.bsky.feed.post/3mejmqo3sws2x"
 bluesky_saved_at: 2026-02-12T12:18:48.784Z
 post_created_at: "2026-02-10T18:46:43Z"
-published: true
+published: false
 ---
 
 Texas State Representative Ana-María Rodríguez Ramos, posting on BlueSky in February 2026, said her office had received "numerous credible reports of torture, killing, and inhumane treatment of detained individuals at the Camp East Montana migrant detention facility, located within Fort Bliss." She called for an independent investigation and for public hearings by the Texas House Committee on Homeland Security, Public Safety, and Veterans Affairs into conditions at the facility.

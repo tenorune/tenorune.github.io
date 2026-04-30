@@ -12,7 +12,7 @@ source_article_pending: true
 bluesky_uri: "at://did:plc:gkv76xqizdogfswf4j6jfko5/app.bsky.feed.post/3meipumgurc2u"
 bluesky_saved_at: 2026-02-10T15:52:01.411Z
 post_created_at: "2026-02-10T10:09:57Z"
-published: true
+published: false
 ---
 
 Seamus Culleton is an Irish citizen who came to the United States legally, runs a small business here, and holds a valid work permit. He was taken into Immigration and Customs Enforcement custody in September 2025 and was, as of February 2026, still detained — nearly five months, with no scheduled removal he could plan around. The phrase he used, in correspondence later surfaced by journalist Dave Vetter, was that the facility holding him is "a modern-day concentration camp." He added: "People have been killed by the staff here."

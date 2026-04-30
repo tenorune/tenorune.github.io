@@ -12,7 +12,7 @@ source_article_pending: true
 bluesky_uri: "at://did:plc:wqhbdx55f4vv7bnpps5pur4c/app.bsky.feed.post/3mf3xftxfwk2q"
 bluesky_saved_at: 2026-02-18T13:29:52.563Z
 post_created_at: "2026-02-18T01:45:26Z"
-published: true
+published: false
 ---
 
 A two-month-old infant, in the day before he and his family were placed on a deportation flight, had been so sick that he was unresponsive. He was deported anyway. The family's total funds at the moment of removal were one hundred and ninety dollars. The fact entered the public record as a brief social-media note from political scientist Anjali Dayal, citing the case as an instance of what the immigration system is currently allowing itself to do.

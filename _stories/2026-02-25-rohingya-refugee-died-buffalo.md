@@ -12,7 +12,7 @@ source_article_pending: true
 bluesky_uri: "at://did:plc:metos4p2yzc3tcdu6h7kszfz/app.bsky.feed.post/3mfpjibhs6c2d"
 bluesky_saved_at: 2026-02-25T23:14:25.330Z
 post_created_at: "2026-02-25T20:29:30Z"
-published: true
+published: false
 ---
 
 In late February 2026, Inquirer columnist Will Bunch posted a brief notice that a Rohingya refugee whose case he had been following had been "found." The follow-up sentence: "He died." Bunch then turned the case into a column, published in the Philadelphia Inquirer and titled, by his own naming, "A Rohingya refugee wanted freedom. America left him for dead in frigid Buffalo." The Investigative Post in western New York reported the death in parallel.

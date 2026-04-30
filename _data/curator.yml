@@ -28,7 +28,7 @@
   themes:
   - deportation-machinery
   - bureaucratic-cruelty
-  state: published
+  state: draft
   source_url: https://www.nytimes.com/2026/04/21/us/politics/trump-afghans-congo.html
   source_publication: The New York Times
   bluesky_uri: at://did:plc:eclio37ymobqex2ncko63h4r/app.bsky.feed.post/3mjzov6goh62h
@@ -368,7 +368,7 @@
   - bureaucratic-cruelty
   - civilian-harm
   - deportation-machinery
-  state: published
+  state: draft
   source_url: https://bsky.app/profile/willbunch.bsky.social/post/3mfpjibhs6c2d
   source_publication: BlueSky
   bluesky_uri: at://did:plc:metos4p2yzc3tcdu6h7kszfz/app.bsky.feed.post/3mfpjibhs6c2d
@@ -491,7 +491,7 @@
   - bureaucratic-cruelty
   - deportation-machinery
   - civilian-harm
-  state: published
+  state: draft
   source_url: https://bsky.app/profile/reichlinmelnick.bsky.social/post/3mf3xjjk46k2o
   source_publication: BlueSky
   bluesky_uri: at://did:plc:2vtbmhmrwzbqcfv4we4uxzzt/app.bsky.feed.post/3mf3xjjk46k2o
@@ -509,7 +509,7 @@
   - bureaucratic-cruelty
   - civilian-harm
   - deportation-machinery
-  state: published
+  state: draft
   source_url: https://bsky.app/profile/anjalikdayal.bsky.social/post/3mf3xftxfwk2q
   source_publication: BlueSky
   bluesky_uri: at://did:plc:wqhbdx55f4vv7bnpps5pur4c/app.bsky.feed.post/3mf3xftxfwk2q
@@ -602,7 +602,7 @@
   - bureaucratic-cruelty
   - civilian-harm
   - predatory-capital
-  state: published
+  state: draft
   source_url: https://bsky.app/profile/michaelleroyoberg.bsky.social/post/3mev3ooczu226
   source_publication: BlueSky
   bluesky_uri: at://did:plc:pmq7ipaky342kntr6eqsbsir/app.bsky.feed.post/3mev3ooczu226
@@ -620,7 +620,7 @@
   themes:
   - state-violence
   - deportation-machinery
-  state: published
+  state: draft
   source_url: https://bsky.app/profile/tinadesireeberg.com/post/3metgqayja22o
   source_publication: BlueSky
   bluesky_uri: at://did:plc:ru2uiz2ifeei5nqpssfy7iqq/app.bsky.feed.post/3metgqayja22o
@@ -638,7 +638,7 @@
   themes:
   - rule-of-law
   - bureaucratic-cruelty
-  state: published
+  state: draft
   source_url: https://bsky.app/profile/kyledcheney.bsky.social/post/3mekixce52w2g
   source_publication: BlueSky
   bluesky_uri: at://did:plc:euynv325eix7glyek377orak/app.bsky.feed.post/3mekixce52w2g
@@ -659,7 +659,7 @@
   - state-violence
   - civilian-harm
   - official-narrative
-  state: published
+  state: draft
   source_url: https://www.chicagotribune.com/2026/02/10/marimar-martinez-video-release-bovino/
   source_publication: Chicago Tribune
   bluesky_uri: at://did:plc:vrwglonkfa7hsapabfvdh4l5/app.bsky.feed.post/3mekdwdah6c2o
@@ -679,7 +679,7 @@
   - civilian-harm
   - state-violence
   - official-narrative
-  state: published
+  state: draft
   source_url: https://www.cbsnews.com/news/feds-zip-tied-14-year-old-girl-idaho-raid-ice-tactics/
   source_publication: CBS News
   bluesky_uri: at://did:plc:4usmserhjqkvhldgedfjb3jw/app.bsky.feed.post/3mejvhred5k27
@@ -698,7 +698,7 @@
   - bureaucratic-cruelty
   - civilian-harm
   - resistance-and-witness
-  state: published
+  state: draft
   source_url: https://bsky.app/profile/anamariafortexas.com/post/3mejmqo3sws2x
   source_publication: BlueSky
   bluesky_uri: at://did:plc:ieefmvjqux5gqymbt5qhrql3/app.bsky.feed.post/3mejmqo3sws2x
@@ -771,7 +771,7 @@
   themes:
   - bureaucratic-cruelty
   - civilian-harm
-  state: published
+  state: draft
   source_url: https://bsky.app/profile/davidrvetter.bsky.social/post/3meipumgurc2u
   source_publication: BlueSky
   bluesky_uri: at://did:plc:gkv76xqizdogfswf4j6jfko5/app.bsky.feed.post/3meipumgurc2u
@@ -1121,7 +1121,7 @@
   themes:
   - official-narrative
   - rule-of-law
-  state: published
+  state: draft
   source_url: https://bsky.app/profile/barackobama.bsky.social/post/3lz4jpjnfk222
   source_publication: BlueSky
   bluesky_uri: at://did:plc:5c6cw3veuqruljoy5ahzerfx/app.bsky.feed.post/3lz4jpjnfk222
@@ -1141,7 +1141,7 @@
   themes:
   - rule-of-law
   - official-narrative
-  state: published
+  state: draft
   source_url: https://bsky.app/profile/juliarosekraut.bsky.social/post/3lyq4m4yykc2u
   source_publication: BlueSky
   bluesky_uri: at://did:plc:23jbx3mbesh2ghfcecaxsk6p/app.bsky.feed.post/3lyq4m4yykc2u

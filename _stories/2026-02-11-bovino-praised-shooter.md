@@ -12,7 +12,7 @@ source_published_at: "2026-02-10"
 bluesky_uri: "at://did:plc:vrwglonkfa7hsapabfvdh4l5/app.bsky.feed.post/3mekdwdah6c2o"
 bluesky_saved_at: 2026-02-11T23:28:24.710Z
 post_created_at: "2026-02-11T01:41:29Z"
-published: true
+published: false
 ---
 
 In October 2025, at the height of Operation Midway Blitz in Chicago, Border Patrol Agent Charles Exum shot Marimar Martínez through her windshield in Brighton Park. The federal account described it as a self-defense shooting after Martínez allegedly tried to run an agent over. Body-camera footage, texts, and emails released in February 2026 — pulled into the public record after a judge lifted a protective order — describe a different scene around the shooting itself and around the institutional reaction to it. Seconds before the collision, an agent on the bodycam audio says, "It's time to get aggressive and get the fuck out." The agents' Tahoe then jerks toward Martínez's car. The collision is captured, then five rapid gunshots.
