@@ -707,7 +707,7 @@
   themes:
   - predatory-capital
   - official-narrative
-  state: published
+  state: draft
   source_url: https://www.propublica.org/article/tim-dunn-farris-wilks-texas-christian-nationalism-dominionism-elections-voting
   source_publication: ProPublica
   bluesky_uri: at://did:plc:k4jt6heuiamymgi46yeuxtpt/app.bsky.feed.post/3m5ks6cxsgn23

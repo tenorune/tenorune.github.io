@@ -10,7 +10,7 @@ source_publication: "ProPublica"
 bluesky_uri: "at://did:plc:k4jt6heuiamymgi46yeuxtpt/app.bsky.feed.post/3m5ks6cxsgn23"
 bluesky_saved_at: 2025-11-14T12:45:35.263Z
 post_created_at: "2025-11-14T04:00:08Z"
-published: true
+published: false
 ---
 
 Tim Dunn and Farris Wilks are oilfield billionaires who, since the early 2010s, have spent ProPublica-estimable sums on Republican primaries in Texas — recruiting, funding, and protecting candidates aligned with a Christian-nationalist program, and crushing those who are not. The mechanism is recurrent: an incumbent strays from the program; a constellation of grassroots-named PACs (Texans for Fiscal Responsibility, Texas Gun Rights, Texas Family Project) attacks him in his own district; a primary challenger funded from the same circle wins; the legislature drifts further. The Texas statehouse described in the article is the cumulative output of fifteen years of this strategy.
