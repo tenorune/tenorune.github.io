@@ -1,10 +1,10 @@
 meta:
   total_inventory: 675
   drafted: 50
-  skipped: 3
+  skipped: 4
   queued: 12
-  pending_total: 622
-  pending_aligned: 424
+  pending_total: 621
+  pending_aligned: 423
   pending_unaligned: 198
   pending_gap_flagged: 22
 entries:
@@ -10900,29 +10900,6 @@ entries:
   - resistance-and-witness
   badges:
   - article
-  - image
-  queued: false
-- rkey: 3lb4iettch22c
-  uri: at://did:plc:tjqjxamiekx4ihexr57ezs36/app.bsky.feed.post/3lb4iettch22c
-  author: uruloke.tolkienguide.com
-  author_display: Jeremy
-  saved_at: '2025-09-08T19:21:33.664Z'
-  post_created_at: '2024-11-17T03:42:08Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: "1000 followers (and counting)! Thank you all \U0001F601\n\nTo celebrate,\
-    \ I will share something from my collection for every like this post gets.  \n\
-    \nI’ll start things off with a special fanzine (by request) - I Palantir #1 (August\
-    \ 1960). The very first Tolkien specific fanzine!"
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/uruloke.tolkienguide.com/post/3lb4iettch22c
-  themes:
-  - predatory-capital
-  badges:
-  - thread
   - image
   queued: false
 - rkey: 3latqlwzve22p
