@@ -1,10 +1,10 @@
 meta:
   total_inventory: 675
-  drafted: 62
+  drafted: 63
   skipped: 16
-  queued: 2
-  pending_total: 597
-  pending_aligned: 402
+  queued: 0
+  pending_total: 596
+  pending_aligned: 401
   pending_unaligned: 195
   pending_gap_flagged: 22
 entries:
@@ -415,27 +415,6 @@ entries:
   badges:
   - image
   queued: false
-- rkey: 3mev3ooczu226
-  uri: at://did:plc:pmq7ipaky342kntr6eqsbsir/app.bsky.feed.post/3mev3ooczu226
-  author: michaelleroyoberg.bsky.social
-  author_display: Michael Oberg
-  saved_at: '2026-02-17T10:04:58.174Z'
-  post_created_at: '2026-02-15T08:13:19Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: Pol Pot killed 3 million people. Vought and Musk have him beat three
-    times over.
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/michaelleroyoberg.bsky.social/post/3mev3ooczu226
-  themes:
-  - civilian-harm
-  - state-violence
-  - predatory-capital
-  badges: []
-  queued: true
 - rkey: 3metmdpjay22n
   uri: at://did:plc:jfersscjmut66kwgcgtqmeor/app.bsky.feed.post/3metmdpjay22n
   author: bjkeefe.bsky.social

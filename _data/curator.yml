@@ -586,6 +586,26 @@
   source_url: https://www.propublica.org/article/life-inside-ice-dilley-children
   source_publication: ProPublica
   bluesky_uri: at://did:plc:nsttbhhihov4y5yejsri2zlr/app.bsky.feed.post/3mevy77oibs27
+- slug: usaid-cuts-9m-deaths-projection
+  title: Three Times Over
+  date: '2026-02-15'
+  post_created_at: '2026-02-15T08:13:19Z'
+  source_published_at: ''
+  gap_days: null
+  gap_flag: false
+  summary: A peer-reviewed Lancet study projected that the dismantling of USAID by
+    Russell Vought and Elon Musk, if its current trajectory continued, would produce
+    9.4 million additional deaths by 2030 — about 2.5 million of them children under
+    five — a figure several times the death toll attributed to the Khmer Rouge under
+    Pol Pot.
+  themes:
+  - bureaucratic-cruelty
+  - civilian-harm
+  - predatory-capital
+  state: published
+  source_url: https://bsky.app/profile/michaelleroyoberg.bsky.social/post/3mev3ooczu226
+  source_publication: BlueSky
+  bluesky_uri: at://did:plc:pmq7ipaky342kntr6eqsbsir/app.bsky.feed.post/3mev3ooczu226
 - slug: cctv-fake-broken-down-car
   title: The Stalled Car Was a Trap
   date: '2026-02-14'
