@@ -1,0 +1,76 @@
+name: refresh saves + hydrate + rebuild
+
+# One-button orchestrator: pulls saves, hydrates articles + threads,
+# regenerates curator + pending data, commits everything in a single
+# commit. Use this for the routine "what's new since last time" run.
+#
+# The individual workflows (fetch.yml, fetch-articles.yml,
+# fetch-threads.yml, fetch-images.yml) remain available for one-off use
+# when only one piece needs re-running.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install Python deps
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch saves
+        env:
+          BSKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
+          BSKY_APP_PASSWORD: ${{ secrets.BSKY_APP_PASSWORD }}
+          BSKY_PDS: ${{ vars.BSKY_PDS || 'https://bsky.social' }}
+        run: bsky-saves fetch --inventory _data/saves_inventory.json
+
+      - name: Hydrate articles
+        run: bsky-saves hydrate articles --inventory _data/saves_inventory.json
+
+      - name: Hydrate threads
+        run: bsky-saves hydrate threads --inventory _data/saves_inventory.json
+
+      - name: Rebuild curator + pending data
+        run: |
+          python scripts/build_curator_data.py
+          python scripts/build_pending_data.py
+
+      - name: Commit if any meaningful change
+        run: |
+          git config user.name "refresh[bot]"
+          git config user.email "refresh@users.noreply.github.com"
+
+          # Meaningful change = inventory has any non-fetched_at diff, OR
+          # curator.yml / pending.yml changed at all. (Hydration steps
+          # bump fetched_at on every run; if that's the only thing that
+          # moved AND the rebuild was a no-op, skip to avoid noise.)
+          inventory_meaningful=$(git diff -U0 _data/saves_inventory.json \
+            | grep -E '^[+-]' \
+            | grep -vE '^(\+\+\+|---|[+-] *"fetched_at")' \
+            | head -5)
+
+          if git diff --quiet _data/curator.yml _data/pending.yml; then
+            curator_changed=false
+          else
+            curator_changed=true
+          fi
+
+          if [ -z "$inventory_meaningful" ] && [ "$curator_changed" = "false" ]; then
+            echo "no meaningful changes; reverting fetched_at churn and exiting clean"
+            git checkout -- _data/
+            exit 0
+          fi
+
+          git add _data/saves_inventory.json _data/curator.yml _data/pending.yml
+          git commit -m "data: refresh saves + hydrate articles/threads + rebuild curator data"
+          git push
