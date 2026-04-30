@@ -1,0 +1,52 @@
+name: enrich inventory
+
+# Standalone: runs `bsky-saves enrich` against the inventory. Offline
+# (no HTTP), idempotent — decodes post_created_at from each save's rkey
+# and drops bogus article_published_at values (within ±1 day of
+# article_fetched_at, or after post_created_at). The routine path is
+# the `refresh` workflow; this is for one-off re-enrichment after a
+# bsky-saves heuristic bump or after manually clearing fields.
+
+on:
+  workflow_dispatch:
+    inputs:
+      refresh:
+        description: "Recompute post_created_at even if it's already set"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install Python deps
+        run: pip install -r scripts/requirements.txt
+
+      - name: Enrich inventory
+        run: |
+          if [ "${{ inputs.refresh }}" = "true" ]; then
+            bsky-saves enrich --inventory _data/saves_inventory.json --refresh
+          else
+            bsky-saves enrich --inventory _data/saves_inventory.json
+          fi
+
+      - name: Commit if inventory changed
+        run: |
+          git config user.name "enrich[bot]"
+          git config user.email "enrich@users.noreply.github.com"
+          if git diff --quiet -- _data/saves_inventory.json; then
+            echo "no changes to inventory"
+            exit 0
+          fi
+          git add _data/saves_inventory.json
+          git commit -m "data: enrich inventory (post_created_at + cleaned dates)"
+          git push
