@@ -136,6 +136,20 @@ def bluesky_url_of(uri: str, handle: str) -> str:
     return f"https://bsky.app/profile/{handle}/post/{rkey}"
 
 
+# Hosts whose date metadata trafilatura tends to extract poorly (YouTube
+# defaults to the fetch date; the others either lack a real publish date
+# or only have a stable evergreen date that isn't editorially meaningful).
+NOISY_DATE_HOSTS = {
+    "youtube.com",
+    "m.youtube.com",
+    "youtu.be",
+    "docs.google.com",
+    "github.com",
+    "en.wikipedia.org",
+    "wikipedia.org",
+}
+
+
 def parse_iso(s: str | None) -> datetime | None:
     """Parse a variety of ISO-ish timestamps to a tz-naive UTC datetime."""
     if not s:
@@ -217,7 +231,9 @@ def main() -> int:
 
         post_at = s.get("post_created_at", "")
         pub_at = s.get("article_published_at", "")
+        embed_host = host_of(e.get("url") if isinstance(e, dict) else None)
         gap = gap_days(post_at, pub_at)
+        is_noisy = embed_host in NOISY_DATE_HOSTS
         aligned.append({
             "rkey": rkey_of(uri),
             "uri": uri,
@@ -227,10 +243,10 @@ def main() -> int:
             "post_created_at": post_at,
             "article_published_at": pub_at,
             "gap_days": gap,
-            "gap_flag": gap is not None and gap > 7,
+            "gap_flag": gap is not None and gap > 7 and not is_noisy,
             "post_text": excerpt(s.get("post_text") or "", 280),
             "embed_title": (e.get("title") or "").strip() if isinstance(e, dict) else "",
-            "embed_host": host_of(e.get("url") if isinstance(e, dict) else None),
+            "embed_host": embed_host,
             "embed_url": (e.get("url") or "") if isinstance(e, dict) else "",
             "bluesky_url": bluesky_url_of(uri, handle) if handle else "",
             "themes": themes,

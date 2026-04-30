@@ -6,7 +6,7 @@ meta:
   pending_total: 623
   pending_aligned: 425
   pending_unaligned: 198
-  pending_gap_flagged: 36
+  pending_gap_flagged: 22
 entries:
 - rkey: 3mjzov6goh62h
   uri: at://did:plc:eclio37ymobqex2ncko63h4r/app.bsky.feed.post/3mjzov6goh62h
@@ -227,8 +227,8 @@ entries:
   author_display: Will Bunch
   saved_at: '2026-02-22T19:46:10.431Z'
   post_created_at: '2026-02-22T18:10:40Z'
-  article_published_at: '2026-02-23'
-  gap_days: 1
+  article_published_at: ''
+  gap_days: null
   gap_flag: false
   post_text: 'What''s more shocking than ICE''s plan to cram as many 8,500 humans
     into massive, soul-crushing warehouses?
@@ -1080,9 +1080,9 @@ entries:
   author_display: Emily E Hogstad
   saved_at: '2026-02-06T23:01:41.005Z'
   post_created_at: '2026-02-06T22:50:42Z'
-  article_published_at: '2026-04-26'
-  gap_days: 79
-  gap_flag: true
+  article_published_at: ''
+  gap_days: null
+  gap_flag: false
   post_text: 'you know who DIDN''T get booed today on the international stage and
     made everyone tear up with joy? our fierce woke princess Alysa Liu
 
@@ -2392,9 +2392,9 @@ entries:
   author_display: Jack Jenkins
   saved_at: '2026-01-09T12:04:56.702Z'
   post_created_at: '2026-01-09T00:30:10Z'
-  article_published_at: '2026-04-26'
-  gap_days: 107
-  gap_flag: true
+  article_published_at: ''
+  gap_days: null
+  gap_flag: false
   post_text: 'A Minneapolis pastor of an MCC church — a denomination rooted in LGBTQ
     equality — recounts being detained by ICE.
 
@@ -4427,9 +4427,9 @@ entries:
   author_display: David Roberts
   saved_at: '2025-11-27T09:13:14.509Z'
   post_created_at: '2025-11-26T22:00:50Z'
-  article_published_at: '2026-04-26'
-  gap_days: 151
-  gap_flag: true
+  article_published_at: ''
+  gap_days: null
+  gap_flag: false
   post_text: "An 18yo US citizen, surrounded by eight masked, armed agents of the\
     \ state, taken into custody, not read his rights, not offered a chance to contact\
     \ a lawyer, proof of citizenship ignored, handcuffed so tightly he later required\
@@ -5420,9 +5420,9 @@ entries:
   author_display: Radley Balko
   saved_at: '2025-11-13T18:19:33.373Z'
   post_created_at: '2025-11-13T16:03:25Z'
-  article_published_at: '2026-04-27'
-  gap_days: 165
-  gap_flag: true
+  article_published_at: ''
+  gap_days: null
+  gap_flag: false
   post_text: 'According to the car wash owner, agents arrested employees before they
     could obtain their documentation from their work lockers. So many were likely
     here legally.
@@ -5506,7 +5506,7 @@ entries:
   post_created_at: '2025-11-12T13:48:07Z'
   article_published_at: '2023-10-06'
   gap_days: 768
-  gap_flag: true
+  gap_flag: false
   post_text: 'If you want to see another John Wick, watch the Korean film BALLERINA.
     Not the John Wick Ballerina, the one on Netflix. It is ‘if John Wick’ was an art
     film. Every shot is the most beautiful thing you’ve ever seen.
@@ -6258,9 +6258,9 @@ entries:
   author_display: Congresswoman Delia C. Ramirez
   saved_at: '2025-11-05T20:13:55.832Z'
   post_created_at: '2025-11-05T19:41:11Z'
-  article_published_at: '2026-04-26'
-  gap_days: 172
-  gap_flag: true
+  article_published_at: ''
+  gap_days: null
+  gap_flag: false
   post_text: 'This morning, ICE unlawfully kidnapped a day care worker in front of
     parents and children.
 
@@ -8346,9 +8346,9 @@ entries:
   author_display: Anil Dash
   saved_at: '2025-10-16T16:31:56.633Z'
   post_created_at: '2025-10-16T08:13:10Z'
-  article_published_at: '2026-04-26'
-  gap_days: 192
-  gap_flag: true
+  article_published_at: ''
+  gap_days: null
+  gap_flag: false
   post_text: 'The last twenty minutes is here: youtu.be/tXG7CSJpr08 the first 5 minutes
     straight were literally all questions about Israel, I think they put that up as
     a separate clip'
@@ -8607,9 +8607,9 @@ entries:
   author_display: Anil Dash
   saved_at: '2025-10-12T22:29:17.812Z'
   post_created_at: '2025-10-12T19:16:26Z'
-  article_published_at: '2026-04-26'
-  gap_days: 196
-  gap_flag: true
+  article_published_at: ''
+  gap_days: null
+  gap_flag: false
   post_text: Always worth revisiting, @edyong209.bsky.social talking about his reckoning
     with The Atlantic and why he left, including a nod to @prisonculture.bsky.social.
     (And skip back to 13:15 or so for a very satisfying truth-telling about Jesse
@@ -9015,9 +9015,9 @@ entries:
   author_display: Unbreaking
   saved_at: '2025-10-11T19:16:13.806Z'
   post_created_at: '2025-10-10T18:43:27Z'
-  article_published_at: '2026-04-23'
-  gap_days: 195
-  gap_flag: true
+  article_published_at: ''
+  gap_days: null
+  gap_flag: false
   post_text: 'The clear story in Immigration this week is the escalation of—and pushback
     against—the Trump administration’s militarized raids and warrantless stops in
     Democrat-run major cities. We’ve updated our timeline with a lot of events in
@@ -9405,7 +9405,7 @@ entries:
   post_created_at: '2025-10-06T21:27:58Z'
   article_published_at: '2025-04-04'
   gap_days: 185
-  gap_flag: true
+  gap_flag: false
   post_text: 'I''ve written an explanation of AppViews, how they work, and what they
     enable in the repo of our Guestbook project. It should have likely been its own
     article in a more readable format, but you write where inspiration strikes!
@@ -9775,7 +9775,7 @@ entries:
   post_created_at: '2025-10-03T20:27:58Z'
   article_published_at: '2021-11-09'
   gap_days: 1424
-  gap_flag: true
+  gap_flag: false
   post_text: "He has inspired so, so many copycats throughout his party. \n\ndocs.google.com/document/u/1...\n\
     \nThe list is at 1,465 arrest records. \n\nAnd rising."
   embed_title: '#RightWingSexualPredators'
@@ -10043,7 +10043,7 @@ entries:
   post_created_at: '2025-09-28T14:41:19Z'
   article_published_at: '2025-07-10'
   gap_days: 80
-  gap_flag: true
+  gap_flag: false
   post_text: ok this breakdown of AI writing indicators is incredible.  Huge shout-out
     to the Wikipedia community for this
   embed_title: Wikipedia:Signs of AI writing - Wikipedia
@@ -10361,7 +10361,7 @@ entries:
   post_created_at: '2025-09-21T13:57:42Z'
   article_published_at: '2025-09-08'
   gap_days: 13
-  gap_flag: true
+  gap_flag: false
   post_text: Conservative men are apparently pretending to be liberal and then "coming
     out" to their progressive girlfriends after dating for months
   embed_title: Conservative Men keep LYING because no one will date them...
@@ -10818,7 +10818,7 @@ entries:
   post_created_at: '2024-11-26T17:25:34Z'
   article_published_at: '2024-11-14'
   gap_days: 12
-  gap_flag: true
+  gap_flag: false
   post_text: 'in other "look at where this guy comes from" news, Elon Musk''s father
     just did a lengthy podcast episode that opens with the host saying "I bet the
     last time you had this many black people in your house someone was trying to rob

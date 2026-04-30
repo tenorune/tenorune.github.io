@@ -19,8 +19,27 @@ import re
 import sys
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urlparse
 
 import yaml
+
+# Hosts whose date metadata trafilatura tends to extract poorly. Mirror of
+# build_pending_data.NOISY_DATE_HOSTS — kept in sync by hand for the moment.
+NOISY_DATE_HOSTS = {
+    "youtube.com",
+    "m.youtube.com",
+    "youtu.be",
+    "docs.google.com",
+    "github.com",
+    "en.wikipedia.org",
+    "wikipedia.org",
+}
+
+
+def host_of(url: str) -> str:
+    if not url:
+        return ""
+    return urlparse(url).netloc.lower().removeprefix("www.")
 
 REPO = Path(__file__).resolve().parent.parent
 STORIES = REPO / "_stories"
@@ -77,6 +96,7 @@ def main() -> int:
         post_at = fm.get("post_created_at") or ""
         pub_at = fm.get("source_published_at") or ""
         gap = gap_days(post_at, pub_at)
+        is_noisy = host_of(fm.get("source_url", "")) in NOISY_DATE_HOSTS
         rows.append(
             {
                 "slug": slug,
@@ -85,7 +105,7 @@ def main() -> int:
                 "post_created_at": str(post_at) if post_at else "",
                 "source_published_at": str(pub_at) if pub_at else "",
                 "gap_days": gap,
-                "gap_flag": gap is not None and gap > 7,
+                "gap_flag": gap is not None and gap > 7 and not is_noisy,
                 "summary": fm.get("summary", ""),
                 "themes": fm.get("themes") or [],
                 "state": state(fm),
