@@ -2,7 +2,7 @@ meta:
   total_inventory: 675
   drafted: 50
   skipped: 1
-  queued: 5
+  queued: 6
   pending_total: 624
   pending_aligned: 426
   pending_unaligned: 198
@@ -465,7 +465,7 @@ entries:
   badges:
   - thread
   - image
-  queued: false
+  queued: true
 - rkey: 3metmdpjay22n
   uri: at://did:plc:jfersscjmut66kwgcgtqmeor/app.bsky.feed.post/3metmdpjay22n
   author: bjkeefe.bsky.social
