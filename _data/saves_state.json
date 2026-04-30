@@ -140,6 +140,13 @@
       "status": "drafted",
       "story_slug": "dhs-lies-series-thao"
     },
+    "at://did:plc:cltmdg3fnumhwdfusmfvmm7r/app.bsky.feed.post/3lb6ms44zps2m": {
+      "first_processed_at": "2026-04-30T03:33:46Z",
+      "last_action_at": "2026-04-30T03:33:46Z",
+      "notes": null,
+      "status": "skipped",
+      "story_slug": null
+    },
     "at://did:plc:cvne4fdbpqyu6qced7whinxn/app.bsky.feed.post/3mjzgnfd7vs2b": {
       "first_processed_at": "2026-04-28T08:00:00Z",
       "last_action_at": "2026-04-28T08:00:00Z",

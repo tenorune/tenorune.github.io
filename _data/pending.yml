@@ -1,10 +1,10 @@
 meta:
   total_inventory: 675
   drafted: 50
-  skipped: 4
+  skipped: 5
   queued: 12
-  pending_total: 621
-  pending_aligned: 423
+  pending_total: 620
+  pending_aligned: 422
   pending_unaligned: 198
   pending_gap_flagged: 22
 entries:
@@ -10870,36 +10870,6 @@ entries:
   badges:
   - article
   - thread
-  - image
-  queued: false
-- rkey: 3lb6ms44zps2m
-  uri: at://did:plc:cltmdg3fnumhwdfusmfvmm7r/app.bsky.feed.post/3lb6ms44zps2m
-  author: equalityalec.bsky.social
-  author_display: alec karakatsanis
-  saved_at: '2025-09-08T19:22:36.212Z'
-  post_created_at: '2024-11-18T00:06:27Z'
-  article_published_at: '2024-11-17'
-  gap_days: 1
-  gap_flag: false
-  post_text: 'My amazing colleague Susan and I just recorded an episode of the great
-    podcast This Machine Kills on the prison tech industry and how it profits from
-    family separation in thousands of jails. The hosts Jathan and @bigblackjacobin.bsky.social
-    are amazing. Listen here: soundcloud.co…'
-  embed_title: 379. The Booming Prison Tech Industry (ft. Susan Li, Alec Karakatsanis)
-  embed_host: soundcloud.com
-  embed_url: https://soundcloud.com/thismachinekillspod/379-the-booming-prison-tech-industry-ft-susan-li-alec-karakatsanis
-  bluesky_url: https://bsky.app/profile/equalityalec.bsky.social/post/3lb6ms44zps2m
-  themes:
-  - bureaucratic-cruelty
-  - civilian-harm
-  - deportation-machinery
-  - rule-of-law
-  - state-violence
-  - official-narrative
-  - predatory-capital
-  - resistance-and-witness
-  badges:
-  - article
   - image
   queued: false
 - rkey: 3latqlwzve22p
