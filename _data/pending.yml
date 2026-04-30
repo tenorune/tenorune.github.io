@@ -1,10 +1,10 @@
 meta:
   total_inventory: 675
   drafted: 50
-  skipped: 1
+  skipped: 2
   queued: 8
-  pending_total: 624
-  pending_aligned: 426
+  pending_total: 623
+  pending_aligned: 425
   pending_unaligned: 198
 entries:
 - rkey: 3mjzaokxpsc2m
@@ -731,23 +731,6 @@ entries:
   - article
   - image
   queued: true
-- rkey: 3melssqyo3k2a
-  uri: at://did:plc:63umjc3jjqrv77hc4eehbvw7/app.bsky.feed.post/3melssqyo3k2a
-  author: ndrew.bsky.social
-  author_display: Andrew Lawrence
-  saved_at: '2026-02-11T21:04:36.410Z'
-  post_text: political malpractice that this chart hasnt been seared into the brains
-    of every single american through advertising and social media
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/ndrew.bsky.social/post/3melssqyo3k2a
-  themes:
-  - bureaucratic-cruelty
-  - deportation-machinery
-  badges:
-  - thread
-  queued: false
 - rkey: 3mejaygpmrc2p
   uri: at://did:plc:izxzl34nvikl3l2tg6jdwqff/app.bsky.feed.post/3mejaygpmrc2p
   author: gabimccauley.bsky.social

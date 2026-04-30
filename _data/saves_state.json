@@ -70,6 +70,13 @@
       "status": "drafted",
       "story_slug": "ice-150-facility-expansion"
     },
+    "at://did:plc:63umjc3jjqrv77hc4eehbvw7/app.bsky.feed.post/3melssqyo3k2a": {
+      "first_processed_at": "2026-04-30T01:43:40Z",
+      "last_action_at": "2026-04-30T01:43:40Z",
+      "notes": null,
+      "status": "skipped",
+      "story_slug": null
+    },
     "at://did:plc:6h7b2i6ttw3l4t7pvbvxdith/app.bsky.feed.post/3mf3eii272s2u": {
       "first_processed_at": "2026-04-28T07:00:00Z",
       "last_action_at": "2026-04-28T07:00:00Z",
