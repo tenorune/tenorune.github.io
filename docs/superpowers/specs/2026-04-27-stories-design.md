@@ -1,8 +1,8 @@
 # Stories Compilation — Design Specification
 
-> **Status**: design approved 2026-04-27. Implementation plan pending.
-> **Supersedes**: `docs/stories-plan.md` (delete in the same commit as scaffolding PR 1).
-> **Working branch for scaffolding**: `claude/bluesky-stories-compilation-milg9` (per CLAUDE.md).
+> **Status**: implemented and in active curatorial use as of 2026-04-30. Original design approved 2026-04-27; this document carries errata entries reflecting how the implementation diverged from the original plan, and Sections 2 / 7 / 9 / 10 / Execution-phases have been refreshed to match the shipped reality.
+> **Supersedes**: `docs/stories-plan.md` (deleted in scaffolding PR 1).
+> **Branching**: trunk-only. All work commits directly to `main`. The original scaffolding branch (`claude/review-bluesky-stories-plan-ItxMr`) and predecessor planning branch (`claude/bluesky-stories-compilation-milg9`) have been deleted; see CLAUDE.md.
 
 ---
 
@@ -28,8 +28,8 @@ Each story entry contains:
 | Build | Jekyll, GitHub Pages classic build (whitelist plugins only) |
 | Homepage relationship | Truly independent — no shared CSS, no nav crosslinks |
 | Scale target | ~100–300 stories, ~5–15/month, modest archive |
-| Ingestion | Local Python script in `scripts/`, run by curator; full inventory artifact |
-| Authoring | Hybrid: Claude bulk-drafts as `published: false` → curator culls → curator polishes (Claude does ad-hoc revisions on request) |
+| Ingestion | PDS bookmark API (`pds:app.bsky.bookmark.getBookmarks`) via a `workflow_dispatch` GitHub Action; full inventory committed as JSON. Originally specified as a local-only Python script — see Section 7 errata for the pivot. |
+| Authoring | Hybrid: Claude bulk-drafts as `published: false` → curator triages via `/stories/curator/` and `/stories/curator/pending/` dashboards (publish / draft / reject / queue / skip actions, batched into `_data/curator_queue.yml` and applied via the `drain curator queue` workflow) → Claude does ad-hoc revisions on request. |
 | URL structure | Flat `/stories/:slug/` |
 | Themes | Emergent; themes index page + per-theme pages (list view + full-compilation view) |
 | Aesthetic | Long-form serif, ~38rem column, generous leading; system-font stack (no webfonts) |
@@ -239,7 +239,7 @@ Frontmatter is still parsed normally; only the body skips Liquid.
 
 ### File naming
 
-`_stories/YYYY-MM-DD-<slug>.md` where the date is derived from `bluesky_saved_at`. The date prefix is purely filesystem-chronological ordering — it does **not** appear in URLs (permalinks are `/stories/:slug/`). Keeping it makes `ls _stories/` and `git log` readable.
+`_stories/YYYY-MM-DD-<slug>.md` where the date prefix is the `post_created_at` date (when the BlueSky post was authored) — see the frontmatter `date:` field below for derivation. The prefix is purely filesystem-chronological ordering — it does **not** appear in URLs (permalinks are `/stories/:slug/`). Keeping it makes `ls _stories/` and `git log` readable.
 
 ### Frontmatter contract
 
@@ -249,7 +249,7 @@ Frontmatter is still parsed normally; only the body skips Liquid.
 title: "Climate Grief in the Pacific Northwest"
 slug: climate-grief-in-the-pnw
 summary: "One-sentence summary of the story."
-date: 2026-04-12              # YYYY-MM-DD only; derived from bluesky_saved_at
+date: 2026-04-10              # YYYY-MM-DD only; derived from post_created_at
 themes: [climate-grief, infrastructure]
 
 # Required source citation
@@ -260,16 +260,19 @@ source_publication: "The New York Times"
 # Required BlueSky provenance
 bluesky_uri: "at://did:plc:abc.../app.bsky.feed.post/3kxyz..."
 bluesky_saved_at: 2026-04-12T18:31:00Z
+post_created_at: "2026-04-10T15:22:08Z"   # decoded from rkey TID
 
 # Optional
 source_author: "Jane Doe"           # byline; many pieces are unsigned
-source_published_at: 2026-04-10     # when the article was originally published
+source_published_at: 2026-04-08     # when the article was originally published
+source_article_pending: true        # set when the source URL couldn't be hydrated
 hero_image: /assets/stories/climate-grief-in-the-pnw/hero.jpg
 hero_image_alt: "Smoke over a mountain ridge."   # REQUIRED if hero_image present
 hero_image_credit: "Photo: Jane Photographer / Reuters"
 
 # Publishing
-published: false              # default for fresh drafts; flip to true to publish
+published: false              # default for fresh drafts; curator flips to true via UI
+culled: true                  # set by curator's "Reject" action; preserves the file
 ---
 
 Synopsis paragraph one. Plain Markdown only — no Liquid tags, no raw HTML.
@@ -286,16 +289,18 @@ Synopsis paragraph three (optional).
 | Field | Required? | Notes |
 |---|---|---|
 | `title`, `slug`, `summary` | Yes | `slug` must match the slug portion of the filename. |
-| `date` | Yes | YYYY-MM-DD; derived from `bluesky_saved_at`. Required by Jekyll for collection items. |
+| `date` | Yes | YYYY-MM-DD; derived from `post_created_at` (the date used for sort order, story-page display, and feed pubDate). Required by Jekyll for collection items. |
 | `themes` | Yes | List of slugs; every value must exist in `_data/themes.yml`. |
-| `source_url`, `source_title`, `source_publication` | Yes | Use `"Unknown"` for `source_publication` when truly unknown. |
-| `bluesky_uri`, `bluesky_saved_at` | Yes | The provenance link. |
+| `source_url`, `source_title`, `source_publication` | Yes | Use `"Unknown"` for `source_publication` when truly unknown. For BlueSky-native saves (no external article), `source_url` points at `https://bsky.app/profile/<handle>/post/<rkey>` and `source_publication` is `"BlueSky"`. |
+| `bluesky_uri`, `bluesky_saved_at` | Yes | Provenance link plus the moment of the curator's bookmark. |
+| `post_created_at` | Yes | Full ISO timestamp, decoded from the rkey TID at draft time. Drives `date:` and the meta-line display. Backfilled across older stories by `scripts/backfill_story_dates.py`. |
 | `source_author` | No | Many pieces are unsigned. |
-| `source_published_at` | No | Often unknown. |
+| `source_published_at` | No | Article publication date if extractable. Populated by `fetch_articles.py` (trafilatura metadata); often unknown. Used together with `post_created_at` to compute the curator-page gap flag (>7 days). |
 | `hero_image` | No | If set, `hero_image_alt` becomes required. |
 | `hero_image_alt` | Conditional | Required iff `hero_image` is set. Build verification fails otherwise. |
 | `hero_image_credit` | No | Encouraged when applicable. |
-| `published` | Yes | Defaults to `false` for new drafts; flip to `true` to publish. |
+| `published` | Yes | Defaults to `false` for new drafts. Curator promotes to `true` via the `/stories/curator/` dashboard's Publish action (or in chat). |
+| `culled` | Conditional | Set to `true` by the curator's Reject action. Combined with `published: false` it hides the story while preserving the file (so the rejection is recorded and not redrafted). Stories with `culled: true` should never have `published: true`. |
 | `source_article_pending` | Conditional | Set to `true` when `source_url` points to an article whose body could not be hydrated (i.e., the inventory entry has `article_fetch_error`). Lets the curator find stories needing manual hydration via `grep -l 'source_article_pending: true' _stories/`. The verify pipeline enforces this consistency. |
 
 ### Body rules
@@ -737,7 +742,7 @@ git add _data/saves_inventory.json && git commit -m "data: refresh saves invento
 > 1. Automated daily ingestion via the `fetch saves` workflow is dead for the curator's third-party-PDS account. The cron schedule has been disabled; the workflow is preserved for `workflow_dispatch` only, in case BlueSky later opens up cross-PDS bookmark access or the project gains a bsky.social-hosted secondary account.
 > 2. The OAuth scaffolding (`scripts/oauth_init.py`, `scripts/atproto_dpop.py`, the `oauth/` static files, the `oauth init` and `oauth complete` workflows) is preserved as documentation and for future reuse, but is not in active use.
 > 3. The `scripts/fetch_saves.py` app-password code path is preserved and remains correct for bsky.social-hosted accounts.
-> 4. **Actual ingestion path going forward:** a one-shot bulk import via browser DevTools inspection of bsky.app (capturing the saves list directly from the bsky.app client's authenticated context), followed by ongoing manual paste of individual URLs in chat. See Section 8a (added below) for details when finalised.
+> 4. **Actual ingestion path that shipped:** the workflow uses `pds:app.bsky.bookmark.getBookmarks` against the curator's PDS directly — succeeds for third-party-PDS accounts because the call goes to the PDS that issued the session token, not to bsky.social's AppView. The full inventory (currently 675 saves) is pulled in one workflow run; downstream hydration steps (`fetch_articles`, `fetch_threads`, `fetch_images`) operate on entries individually and are idempotent. Manual paste of individual URLs in chat remains as an escape hatch for one-off adds. See CLAUDE.md `Active ingestion path` for the current operational details.
 
 ---
 
@@ -872,45 +877,24 @@ echo "build-check: OK"
 
 Catches Jekyll touching homepage files — impossible if `exclude:` is right, but worth verifying. Draft-rendering correctness is checked separately via the fixture flow in step 12 below.
 
-### Verification at scaffold time (PR 1)
+### Verification in CI (the active path)
 
-Before merging the scaffolding PR:
+The `.github/workflows/verify.yml` workflow runs on every push to `main`. It installs Ruby + Python deps, runs `pytest tests/` (43 passing), runs `python scripts/verify.py`, runs `bundle exec jekyll build`, and then asserts homepage byte-identity. A red workflow lands on `main` itself (we're trunk-only) — fix forward immediately rather than relying on a merge gate.
 
-1. `bundle install && bundle exec jekyll serve`
-2. `python scripts/verify.py` → exits 0
-3. `bash scripts/build-check.sh` → exits 0
-4. Browser-visit `localhost:4000/` — should render the existing homepage byte-identical.
-5. Browser-visit `localhost:4000/style.css` — same byte-identity check.
-6. Browser-visit `localhost:4000/stories/` — empty stories index renders cleanly.
-7. Browser-visit `localhost:4000/stories/themes/` — empty themes page renders cleanly.
-
-### Verification with seeded fixtures (still PR 1, optional)
-
-Optional fixture story + fixture theme committed temporarily to verify rendering end-to-end:
-
-8. Add `_stories/2026-01-01-fixture.md` (one story, two themes, one hero image, `published: true`).
-9. Add corresponding entries to `_data/themes.yml` and stubs.
-10. Re-run `verify.py` and `build-check.sh`.
-11. Visit `/stories/`, `/stories/themes/`, `/stories/themes/<slug>/`, `/stories/themes/<slug>/all/`, `/stories/<slug>/`.
-12. Set fixture's `published: false`, re-build, confirm it disappears from index/themes/feed/sitemap.
-13. Remove the fixture before merging.
-
-### Post-deploy verification (after PR merges)
+### Post-deploy verification (spot checks)
 
 | Check | How |
 |---|---|
-| `https://lightseed.net/` shows the existing homepage | Browser. Compare to pre-merge screenshot if uncertain. |
+| `https://lightseed.net/` shows the existing homepage | Browser. Compare to a known-good screenshot if uncertain. |
 | `https://lightseed.net/style.css` is byte-identical to source | `curl -s https://lightseed.net/style.css \| diff - style.css` |
 | `https://lightseed.net/stories/` renders | Browser. |
-| `https://lightseed.net/feed.xml` exists (jekyll-feed) | Browser / curl. |
+| `https://lightseed.net/stories/feed.xml` exists (jekyll-feed, scoped to the stories collection) | Browser / curl. The legacy posts feed at `/feed.xml` is empty by design. |
 | `https://lightseed.net/sitemap.xml` exists (jekyll-sitemap) | Browser / curl. |
-| Pages build status is green for the PR | GitHub UI / Pages settings. |
+| Pages build status is green | GitHub Actions tab. |
 
-### Verification cadence post-scaffold
+### Historical: scaffold-time verification
 
-- `scripts/verify.py` runs **before every commit** that touches `_stories/`, `_data/`, or `assets/stories/`. Curator may wire it into a local `pre-commit` git hook.
-- `scripts/build-check.sh` runs before any push that includes layout or config changes.
-- Post-deploy spot checks happen after merging anything non-trivial.
+The PR 1 scaffold-time procedure (local `bundle install && jekyll serve`, browser visits to `/`, `/style.css`, `/stories/`, `/stories/themes/`, plus an optional seeded-fixtures pass) ran once before the scaffolding shipped and was the gate for accepting that work. It isn't repeated; the equivalent assurances are now provided by CI on every push.
 
 The big change from the original plan is moving from "verify by manual diff after build" to "verify by `scripts/verify.py` before commit" — invariants are checked early and consistently rather than caught by build failures or rendering errors.
 
@@ -977,15 +961,15 @@ Same as above through step 4. Then: (5b) push the new repo to the new host; conf
 
 Nothing in the design references the lightseed.net homepage, so cleanup is a single deletion of the move-list files from this repo when the time comes.
 
-### Open questions remaining (none blocking)
+### Open questions (all resolved by implementation)
 
-| Question | Stance |
+| Question | Resolution |
 |---|---|
-| Exact BlueSky bookmark lexicon name at runtime | Probe-and-cache strategy in fetch script handles it; not a design-time decision. |
-| OAuth flow specifics if app password fails | Implementation detail, documented in the fetch script's docstring rather than this spec. |
-| What to do with the existing `docs/stories-plan.md` after this design lands | Delete it in scaffolding PR 1 with a commit message that points to this new spec path. |
-| `Gemfile.lock` committed? | Yes — already in the layout. |
-| `.env.example` committed? | Yes — covered in Section 7. |
+| Exact BlueSky bookmark lexicon name at runtime | `pds:app.bsky.bookmark.getBookmarks` against the curator's PDS works for third-party PDS accounts; the AppView path doesn't. See Section 7 errata round 2. |
+| OAuth flow specifics if app password fails | OAuth was implemented end-to-end (see `scripts/oauth_init.py` + `scripts/atproto_dpop.py`) and rejected by `bsky.social`'s AppView with `"OAuth tokens are meant for PDS access only"`. The PDS-direct bookmark call (above) replaced it. |
+| What to do with `docs/stories-plan.md` | Deleted in PR 1 (history preserved in git). |
+| `Gemfile.lock` committed? | Yes. |
+| `.env.example` committed? | Yes. |
 
 ### What's deliberately *not* deferred (i.e., done at scaffold)
 
@@ -1012,17 +996,33 @@ A few things from the original plan's "still open" list are now explicit decisio
 
 ---
 
-## Execution phases
+## Execution phases (status as of 2026-04-30)
 
-1. **Scaffolding (PR 1)** — `_config.yml` (with explicit `exclude:`), `Gemfile`, `Gemfile.lock`, `.gitignore`, `.env.example`, all six `_layouts/*`, three `_includes/stories_*`, `assets/stories/stories.css`, three empty `_data/*` files, `stories/index.md`, `stories/themes/index.md`, `scripts/verify.py`, `scripts/build-check.sh`, delete `docs/stories-plan.md`. Verify homepage unchanged on fresh build per Section 9.
+### Shipped
 
-2. **Ingestion (PR 2)** — `scripts/fetch_saves.py`, `scripts/requirements.txt`. Run once locally; confirm data lands in `_data/saves_inventory.json` and re-run is a no-op.
+1. **Scaffolding (PR 1).** `_config.yml`, `Gemfile`, all six layouts, three includes, `assets/stories/stories.css`, three empty `_data/*` files, `stories/index.md`, `stories/themes/index.md`, `scripts/verify.py`, `scripts/build-check.sh`, `docs/stories-plan.md` deleted, CI workflow `verify.yml` running on every push.
 
-3. **First stories (PR 3)** — bulk-draft 5–10 saves into `_stories/`, seeding `_data/themes.yml` with real emergent themes. Stage any requested images. All as drafts (`published: false`).
+2. **Ingestion (PR 2 + errata).** `scripts/fetch_saves.py` runs in `fetch.yml` (workflow_dispatch); reaches the curator's third-party-PDS via `pds:app.bsky.bookmark.getBookmarks`. Hydration extensions added: `fetch_articles.py` (article text + publication date via trafilatura metadata), `fetch_threads.py` (same-author thread descendants, plus quote-post threads via `quoted_post.thread_replies`), `fetch_images.py` (CDN image localization into `assets/stories/<slug>/`). Inventory currently contains 675 saves.
 
-4. **First cull + polish + publish (PR 4)** — curator culls the batch, polishes keepers, flips `published: true` on a small first cohort. Site goes live with real content.
+3. **First bulk-drafts (originally PR 3, since extended).** Seven draft batches against the inventory, seeding `_data/themes.yml` with eight emergent themes. 63 stories in `_stories/`.
 
-5. **Polish iteration** — iterate on CSS once real content exposes spacing/typography needs.
+4. **Cull + publish workflow.** Curator dashboards at `/stories/curator/` and `/stories/curator/pending/`, deferred-drain queue (`_data/curator_queue.yml` + `drain-curator-queue.yml`), `scripts/curate.py` keeps frontmatter and `saves_state.json` in sync. ~43 stories published, ~19 drafted, 1 culled.
 
-Branch convention for subsequent curator sessions: `stories/YYYYMMDD-<slug-or-topic>` per PR.
+5. **Date model.** Every save carries `post_created_at` (TID-decoded); 164 carry `article_published_at` (trafilatura). Stories display the post date; curator pages flag rows where post-vs-article gap exceeds 7 days, suppressing noisy hosts.
+
+6. **Quote-post capture.** `fetch_saves.py` extracts the quoted record (uri / cid / author / text / created_at / images) into a `quoted_post` field; `fetch_threads.py` (schema v3) walks the quoted post's thread too.
+
+### Ongoing
+
+- **Bulk drafting.** Drafts continue against the remaining ~390 theme-aligned pending saves; weighting nudged toward under-represented themes per batch.
+- **Cull + polish.** Curator triage via the dashboards; queue drained on demand.
+- **Ad-hoc CSS adjustments.** No discrete CSS-iteration pass scheduled; tweaks happen on demand.
+
+### Anticipated (no commitment)
+
+- Pagination on `/stories/` once the published count crosses ~75 (per Section 10 trigger).
+- Subdomain relocation to `stories.lightseed.net` per the relocation plan in Section 10.
+- Pandoc book-export pipeline once content is mature.
+
+**Branching:** trunk-only. All work commits directly to `main`.
 
