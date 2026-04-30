@@ -21,3 +21,4 @@ __pycache__/
 # Editor / OS
 .DS_Store
 *.swp
+.drain_summary.json
