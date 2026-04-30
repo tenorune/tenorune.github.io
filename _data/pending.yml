@@ -1,10 +1,10 @@
 meta:
   total_inventory: 675
   drafted: 50
-  skipped: 2
+  skipped: 3
   queued: 12
-  pending_total: 623
-  pending_aligned: 425
+  pending_total: 622
+  pending_aligned: 424
   pending_unaligned: 198
   pending_gap_flagged: 22
 entries:
@@ -10954,26 +10954,4 @@ entries:
   themes:
   - official-narrative
   badges: []
-  queued: false
-- rkey: 3laqvxpa5z52n
-  uri: at://did:plc:c54gigcddg65g4larkvgmdku/app.bsky.feed.post/3laqvxpa5z52n
-  author: sbvanoosten.bsky.social
-  author_display: Dr. Sanne van Oosten
-  saved_at: '2025-09-08T19:22:28.730Z'
-  post_created_at: '2024-11-12T13:13:22Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: "The starter pack I was searching for but couldn't find.\n\nGreat for\
-    \ scholars, journalists, and anyone looking for research-based takes on current\
-    \ events.\n\nPlease reply to this message or DM if you want me to add you, or\
-    \ anyone else, to the list \U0001F60A \n\ngo.bsky.app/315MyLR"
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/sbvanoosten.bsky.social/post/3laqvxpa5z52n
-  themes:
-  - resistance-and-witness
-  badges:
-  - thread
   queued: false
