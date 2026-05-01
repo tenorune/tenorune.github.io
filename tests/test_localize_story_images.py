@@ -174,6 +174,43 @@ def test_inventory_entry_missing_local_images_no_change(tmp_path: Path):
     assert p.read_text(encoding="utf-8").endswith("Body.\n")
 
 
+def test_extra_local_images_not_in_body_are_not_copied(tmp_path: Path):
+    """v0.2's hydrate-images enumerates every image URL on an inventory
+    entry (embed thumbs, thread-reply images, quoted-post images, etc.).
+    We must only copy files that are actually referenced in the story
+    body — copying the rest into assets/stories/<slug>/ would pollute the
+    Jekyll layout with files no rendered page references."""
+    stories_dir, inv_path, cache_dir, assets_dir = _common_layout(tmp_path)
+    uri = "at://did:plc:a/app.bsky.feed.post/abc"
+    used_url = "https://cdn.bsky.app/img/used@jpeg"
+    used_filename = "img-1111111111111111.jpg"
+    extra_url = "https://cdn.bsky.app/img/thread-reply@jpeg"
+    extra_filename = "img-2222222222222222.jpg"
+
+    _write_story(
+        stories_dir,
+        slug="picky",
+        uri=uri,
+        body=f"Body.\n\n![used]({used_url})\n",
+    )
+    _write_inventory(inv_path, [
+        {"uri": uri, "saved_at": "2026-05-01T00:00:00Z",
+         "local_images": [
+             {"url": used_url, "path": used_filename},
+             {"url": extra_url, "path": extra_filename},
+         ]}
+    ])
+    _seed_cache(cache_dir, {used_filename: b"used-bytes", extra_filename: b"extra-bytes"})
+
+    rc = _run(stories_dir, inv_path, cache_dir, assets_dir)
+    assert rc == 0
+
+    slug_dir = assets_dir / "picky"
+    # Only the body-referenced file gets copied into the per-slug dir.
+    assert (slug_dir / used_filename).exists()
+    assert not (slug_dir / extra_filename).exists()
+
+
 def test_cdn_url_without_mapping_emits_warning_but_keeps_url(tmp_path, capsys):
     stories_dir, inv_path, cache_dir, assets_dir = _common_layout(tmp_path)
     uri = "at://did:plc:a/app.bsky.feed.post/abc"

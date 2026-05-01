@@ -90,7 +90,7 @@ def url_to_path_map(entry: dict) -> dict[str, str]:
 
 
 def copy_cached_assets(
-    url_to_filename: dict[str, str],
+    filenames: set[str],
     cache_dir: Path,
     slug_assets_dir: Path,
 ) -> tuple[int, list[str]]:
@@ -101,7 +101,7 @@ def copy_cached_assets(
     """
     copied = 0
     missing: list[str] = []
-    for filename in set(url_to_filename.values()):
+    for filename in filenames:
         src = cache_dir / filename
         if not src.exists():
             missing.append(filename)
@@ -174,27 +174,41 @@ def localize_story(
         return 0, 0, [f"{story_path.name}: uri {uri} not in inventory"]
 
     url_to_filename = url_to_path_map(entry)
-    if not url_to_filename:
-        # No images recorded for this entry. Body might still contain a
-        # cdn.bsky.app URL if the curator pasted one manually; that's a
-        # warning case, not a hard failure.
-        if CDN_IMG_RE.search(body):
-            return 0, 0, [
-                f"{story_path.name}: body has cdn.bsky.app images but inventory entry has no local_images"
-            ]
-        return 0, 0, []
+
+    # bsky-saves v0.2 enumerates every image URL the inventory entry
+    # references — including embed thumbs, thread-reply images, and
+    # quoted-post images. Most of those aren't referenced in the
+    # rendered story body. We only localize what the body actually
+    # uses, matching v0.1's behavior. The rest stay in the cache.
+    referenced_urls: list[str] = [m.group("url") for m in CDN_IMG_RE.finditer(body)]
+    needed: dict[str, str] = {}
+    unmapped: list[str] = []
+    for url in referenced_urls:
+        fn = url_to_filename.get(url)
+        if fn is None:
+            unmapped.append(url)
+        else:
+            needed[url] = fn
+
+    warnings: list[str] = []
+    for url in unmapped:
+        warnings.append(
+            f"{story_path.name}: body has cdn.bsky.app URL with no local_images mapping: {url[:80]}"
+        )
+
+    if not needed:
+        # Body already-localized (no cdn URLs) or no matching inventory
+        # data — nothing to do here. Don't touch the slug assets dir.
+        return 0, 0, warnings
 
     slug_assets_dir = assets_dir / slug
-    copied, missing = copy_cached_assets(url_to_filename, cache_dir, slug_assets_dir)
-    warnings: list[str] = []
+    copied, missing = copy_cached_assets(set(needed.values()), cache_dir, slug_assets_dir)
     for filename in missing:
         warnings.append(f"{story_path.name}: cache missing {filename}")
 
-    new_body, rewritten, unmapped = rewrite_markdown_body(
-        body, url_to_filename, slug, assets_url_prefix
+    new_body, rewritten, _unmapped_in_rewrite = rewrite_markdown_body(
+        body, needed, slug, assets_url_prefix
     )
-    for url in unmapped:
-        warnings.append(f"{story_path.name}: cdn.bsky.app URL with no local_images mapping: {url[:80]}")
 
     if new_body != body:
         new_text = f"---\n{fm}\n---\n{new_body}"
