@@ -5,9 +5,21 @@ pytest>=8.0
 # Ingestion is now handled by the published bsky-saves package.
 # It pulls in httpx + trafilatura transitively.
 #
-# Pinned to <0.2 because v0.2.0 will be a breaking change to
-# `hydrate images` (drops --stories/--assets/--assets-url-prefix in
-# favour of a flat --out + a stories-of-47-side rewriter). The
-# `migrate-bsky-saves-v0.2` branch tracks the migration; main keeps
-# the v0.1 contract until that branch lands.
+# Currently pinned to <0.2 (matches main) because the bsky-saves v0.2
+# branch isn't published or installable yet. When tenorune/bsky-saves
+# pushes its v0.2 branch, replace the line below with:
+#
+#     bsky-saves @ git+https://github.com/tenorune/bsky-saves@v0.2
+#
+# That switch is the integration-test trigger called for in the
+# bsky-saves v0.2 spec § 6.3. The new fetch-images.yml + the new
+# scripts/localize_story_images.py rewriter on this branch were
+# written against v0.2's CLI surface — they will fail against v0.1's
+# `bsky-saves hydrate images` (which expects --stories/--assets/...
+# and produces no `local_images` field on inventory entries).
+#
+# Final cutover (after v0.2.0 is tagged and published to PyPI): flip
+# back to a PyPI pin:
+#
+#     bsky-saves>=0.2.0,<0.3
 bsky-saves>=0.1.0,<0.2

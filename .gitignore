@@ -22,3 +22,10 @@ __pycache__/
 .DS_Store
 *.swp
 .drain_summary.json
+
+# Intermediate cache produced by `bsky-saves hydrate images` (v0.2+).
+# Source of truth is assets/stories/<slug>/ (committed); the cache is
+# just where bsky-saves drops files before localize_story_images.py
+# copies them into the per-slug Jekyll layout.
+_data/_image_cache/
+uris.txt

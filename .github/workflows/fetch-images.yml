@@ -1,5 +1,19 @@
 name: fetch images
 
+# Three-step orchestrator (since bsky-saves v0.2):
+#   1. Build a uris.txt of every _stories/*.md's bluesky_uri.
+#   2. Run `bsky-saves hydrate images` to download CDN images into a flat
+#      cache and record each entry's local_images map in the inventory.
+#   3. Run scripts/localize_story_images.py to copy cached images into
+#      per-slug assets/stories/<slug>/ subdirs and rewrite Markdown
+#      references in _stories/*.md.
+#
+# The transform-into-Jekyll-layout step (3) used to live inside the
+# bsky-saves package; v0.2 cuts that out (the package is now ingestion-
+# only) and stories-of-47 owns it. See:
+#   docs/extraction-draft/README.md (overall extraction context)
+#   bsky-saves spec docs/superpowers/specs/2026-05-01-bsky-saves-v0.2-images-scope-cut.md
+
 on:
   workflow_dispatch:
 
@@ -19,21 +33,45 @@ jobs:
       - name: Install Python deps
         run: pip install -r scripts/requirements.txt
 
-      - name: Localize CDN images into assets/stories/
+      - name: Build URI subset from _stories/*.md
+        run: |
+          # Collect every story's bluesky_uri into a flat newline-delimited
+          # file. Stories without a bluesky_uri (e.g. authored from
+          # scratch) are silently omitted.
+          python - <<'PY'
+          import re
+          from pathlib import Path
+          uri_re = re.compile(r'^bluesky_uri:\s*"?(at://[^"\s]+)"?\s*$', re.M)
+          uris = []
+          for md in sorted(Path("_stories").glob("*.md")):
+              m = uri_re.search(md.read_text(encoding="utf-8"))
+              if m:
+                  uris.append(m.group(1))
+          Path("uris.txt").write_text("\n".join(uris) + "\n", encoding="utf-8")
+          print(f"collected {len(uris)} URIs")
+          PY
+
+      - name: Hydrate images into flat cache
         run: |
           bsky-saves hydrate images \
-            --stories _stories \
-            --assets assets/stories \
-            --assets-url-prefix /assets/stories
+            --inventory _data/saves_inventory.json \
+            --out _data/_image_cache \
+            --uris uris.txt
+
+      - name: Localize cached images into assets/stories/<slug>/
+        run: python scripts/localize_story_images.py
 
       - name: Commit if changes
         run: |
           git config user.name "fetch-images[bot]"
           git config user.email "fetch-images@users.noreply.github.com"
-          if git diff --quiet && git diff --cached --quiet && [ -z "$(git status --porcelain)" ]; then
+          # The cache lives in _data/_image_cache/ and is .gitignored;
+          # only the inventory diff (local_images), Markdown rewrites,
+          # and slug-scoped asset copies should be committed.
+          git add _stories/ assets/stories/ _data/saves_inventory.json
+          if git diff --cached --quiet; then
             echo "no changes"
             exit 0
           fi
-          git add _stories/ assets/stories/
           git commit -m "data: localize CDN images into assets/stories/"
           git push
