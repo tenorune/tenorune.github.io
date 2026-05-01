@@ -112,6 +112,10 @@ def main() -> int:
                 "source_url": fm.get("source_url", ""),
                 "source_publication": fm.get("source_publication", ""),
                 "bluesky_uri": fm.get("bluesky_uri", ""),
+                # Repo-relative path of the underlying story file, so the
+                # curator dashboard can link drafts/rejected items straight
+                # to their GitHub source for editing.
+                "path": f"_stories/{md.name}",
             }
         )
 

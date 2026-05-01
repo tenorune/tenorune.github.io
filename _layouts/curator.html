@@ -59,7 +59,12 @@ layout: default
           {% if s.state == "published" %}
             <a class="curator-title" href="/stories/{{ s.slug }}/">{{ s.title }}</a>
           {% else %}
-            <span class="curator-title">{{ s.title }}</span>
+            {% comment %}
+              Drafts and rejected stories don't have a rendered page;
+              link the title straight to the GitHub source so the
+              curator can read or edit the underlying Markdown.
+            {% endcomment %}
+            <a class="curator-title" href="https://github.com/{{ repo }}/blob/main/{{ s.path }}">{{ s.title }}</a>
           {% endif %}
           <p class="curator-summary">{{ s.summary }}</p>
           <p class="curator-themes">
