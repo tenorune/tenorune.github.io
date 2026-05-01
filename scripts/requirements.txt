@@ -5,10 +5,9 @@ pytest>=8.0
 # Ingestion is now handled by the published bsky-saves package.
 # It pulls in httpx + trafilatura transitively.
 #
-# This branch (migrate-bsky-saves-v0.2) is wired against the v0.2
-# branch of tenorune/bsky-saves, which is not yet published to PyPI.
-# Final cutover (after v0.2.0 is tagged and published): change the
-# line below to:
-#
-#     bsky-saves>=0.2.0,<0.3
-bsky-saves @ git+https://github.com/tenorune/bsky-saves@v0.2
+# v0.2 introduced an ingestion/transformation split: bsky-saves now
+# downloads images into a flat cache and records the URL→path mapping
+# as `local_images` on each inventory entry, while the Jekyll-aware
+# Markdown rewriter lives here in `scripts/localize_story_images.py`.
+# The `fetch images` workflow chains the two together.
+bsky-saves>=0.2.0,<0.3
