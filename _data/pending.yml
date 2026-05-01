@@ -1,64 +1,13 @@
 meta:
   total_inventory: 678
   drafted: 63
-  skipped: 29
-  queued: 3
-  pending_total: 586
-  pending_aligned: 390
+  skipped: 35
+  queued: 8
+  pending_total: 580
+  pending_aligned: 384
   pending_unaligned: 196
   pending_gap_flagged: 19
 entries:
-- rkey: 3mkr7k4ftd22c
-  uri: at://did:plc:r6wxaadynk3m7sqsyn3r3vrf/app.bsky.feed.post/3mkr7k4ftd22c
-  author: ashtonpittman.bsky.social
-  author_display: Ashton Pittman
-  saved_at: '2026-05-01T05:14:13.079Z'
-  post_created_at: '2026-05-01T03:42:52Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: 'New York Times: If you''re gonna crib our headline, you could at least
-    credit Nick Judin and the Mississippi Free Press for first reporting it 2 days
-    earlier.
-
-
-    I''m glad this story is getting national attention. But Nick puts a lot of himself
-    in these stories, and deserves credit (…'
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/ashtonpittman.bsky.social/post/3mkr7k4ftd22c
-  themes:
-  - official-narrative
-  - resistance-and-witness
-  badges:
-  - thread
-  - image
-  queued: false
-- rkey: 3mkpswagpak22
-  uri: at://did:plc:j76trmiofvaxxpvx2vnb2vwf/app.bsky.feed.post/3mkpswagpak22
-  author: michaelhobbes.bsky.social
-  author_display: Michael Hobbes
-  saved_at: '2026-04-30T22:42:57.064Z'
-  post_created_at: '2026-04-30T14:24:21Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: "The indictment is absolute soup.\n\nLab leakers have completely given\
-    \ up on proving their main contention and are now just flailing around looking\
-    \ for any rule violation or procedural misstep that makes it look like a cover-up\
-    \ happened. \nwww.justice.gov/opa/pr/forme..."
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/michaelhobbes.bsky.social/post/3mkpswagpak22
-  themes:
-  - bureaucratic-cruelty
-  - deportation-machinery
-  badges:
-  - thread
-  - image
-  queued: false
 - rkey: 3mjzl5hnfq22u
   uri: at://did:plc:f5j66gguacu2rqrqxdqzozpa/app.bsky.feed.post/3mjzl5hnfq22u
   author: bachynski.bsky.social
@@ -115,7 +64,7 @@ entries:
   badges:
   - article
   - image
-  queued: false
+  queued: true
 - rkey: 3mjhzgfbuwk2s
   uri: at://did:plc:heglpme62gnefpy6adjpcswr/app.bsky.feed.post/3mjhzgfbuwk2s
   author: jeremotographs.bsky.social
@@ -144,31 +93,7 @@ entries:
   badges:
   - article
   - image
-  queued: false
-- rkey: 3mhcnrqtqfs2z
-  uri: at://did:plc:ftjiq2rkbuqw3ue4zkb6ktnj/app.bsky.feed.post/3mhcnrqtqfs2z
-  author: lataco.bsky.social
-  author_display: L.A. TACO
-  saved_at: '2026-03-19T12:12:02.134Z'
-  post_created_at: '2026-03-18T04:32:10Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: 'Daily Memo: ICE Kidnapped Several Fathers In Front of Their Children
-
-
-    @eltragon.bsky.social'
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/lataco.bsky.social/post/3mhcnrqtqfs2z
-  themes:
-  - bureaucratic-cruelty
-  - civilian-harm
-  - deportation-machinery
-  badges:
-  - image
-  queued: false
+  queued: true
 - rkey: 3mg3irzkkqk2c
   uri: at://did:plc:olbqhwuqdlbwrzknuomseswm/app.bsky.feed.post/3mg3irzkkqk2c
   author: shannonheffernan.bsky.social
@@ -201,33 +126,7 @@ entries:
   - article
   - thread
   - image
-  queued: false
-- rkey: 3mfkk6colpk24
-  uri: at://did:plc:sgti3jsgu3luif24tokvth3a/app.bsky.feed.post/3mfkk6colpk24
-  author: joshtpm.bsky.social
-  author_display: Josh Marshall
-  saved_at: '2026-02-25T00:57:01.942Z'
-  post_created_at: '2026-02-23T20:58:31Z'
-  article_published_at: '2026-02-23'
-  gap_days: 0
-  gap_flag: false
-  post_text: Gift link share.inquirer.com/MfblQD
-  embed_title: As ICE enforcement intensifies, one man works to keep undocumented
-    families fed in Bensalem
-  embed_host: share.inquirer.com
-  embed_url: https://share.inquirer.com/MfblQD
-  bluesky_url: https://bsky.app/profile/joshtpm.bsky.social/post/3mfkk6colpk24
-  themes:
-  - bureaucratic-cruelty
-  - civilian-harm
-  - deportation-machinery
-  - state-violence
-  - official-narrative
-  - resistance-and-witness
-  badges:
-  - article
-  - image
-  queued: false
+  queued: true
 - rkey: 3mfhqdauffs2d
   uri: at://did:plc:metos4p2yzc3tcdu6h7kszfz/app.bsky.feed.post/3mfhqdauffs2d
   author: willbunch.bsky.social
@@ -262,7 +161,7 @@ entries:
   - article
   - thread
   - image
-  queued: false
+  queued: true
 - rkey: 3mfhkbffjdl2t
   uri: at://did:plc:gx2mw5w2tfcwnlkkhpe6gp4x/app.bsky.feed.post/3mfhkbffjdl2t
   author: brennancenter.org
@@ -9896,29 +9795,6 @@ entries:
   badges:
   - thread
   queued: false
-- rkey: 3lzojyaq63k22
-  uri: at://did:plc:dxu25p5fmfrngmjr5iawpr4d/app.bsky.feed.post/3lzojyaq63k22
-  author: bradlander.bsky.social
-  author_display: Brad Lander
-  saved_at: '2025-09-25T18:19:53.597Z'
-  post_created_at: '2025-09-25T18:03:27Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: 'I was back at 26 Federal Plaza today, where an ICE agent violently threw
-    this bereft woman to the ground in front of her kids. She had not touched him.
-    She did not pose any threat. She had to be taken to the hospital. (🎥: Elias Eliahu)'
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/bradlander.bsky.social/post/3lzojyaq63k22
-  themes:
-  - bureaucratic-cruelty
-  - deportation-machinery
-  - state-violence
-  badges:
-  - image
-  queued: false
 - rkey: 3lzobwotez22c
   uri: at://did:plc:aw426jbgw7drhivb4ijrizlu/app.bsky.feed.post/3lzobwotez22c
   author: leftistlawyer.com
@@ -10060,29 +9936,7 @@ entries:
   badges:
   - thread
   - image
-  queued: false
-- rkey: 3lze2jigbx22d
-  uri: at://did:plc:5u54z2qgkq43dh2nzwzdbbhb/app.bsky.feed.post/3lze2jigbx22d
-  author: financialtimes.com
-  author_display: Financial Times
-  saved_at: '2025-09-22T13:02:06.170Z'
-  post_created_at: '2025-09-21T14:00:08Z'
-  article_published_at: ''
-  gap_days: null
-  gap_flag: false
-  post_text: 'Opinion: In the Trump 2.0 era in financial markets, the dollar is taking
-    the strain. The stock rally is masking deep anxiety from investors about the path
-    forward for the world’s biggest economy. on.ft.com/4pubDza'
-  embed_title: ''
-  embed_host: ''
-  embed_url: ''
-  bluesky_url: https://bsky.app/profile/financialtimes.com/post/3lze2jigbx22d
-  themes:
-  - state-violence
-  - resistance-and-witness
-  badges:
-  - image
-  queued: false
+  queued: true
 - rkey: 3lzbpq3tzck2o
   uri: at://did:plc:iiofy6mupgapoiz2b3lgfyr7/app.bsky.feed.post/3lzbpq3tzck2o
   author: karenattiah.bsky.social
