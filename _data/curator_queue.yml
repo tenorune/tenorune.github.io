@@ -30,3 +30,7 @@
   target: 3mjzaokxpsc2m
   issue: 67
   submitted_at: '2026-05-01T06:12:27Z'
+- action: skip
+  target: 3mhcnrqtqfs2z
+  issue: 69
+  submitted_at: '2026-05-01T06:12:31Z'
