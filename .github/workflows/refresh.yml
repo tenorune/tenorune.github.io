@@ -50,32 +50,20 @@ jobs:
           python scripts/build_curator_data.py
           python scripts/build_pending_data.py
 
-      - name: Commit if any meaningful change
+      - name: Commit if any change
         run: |
           git config user.name "refresh[bot]"
           git config user.email "refresh@users.noreply.github.com"
-
-          # Meaningful change = inventory has any non-fetched_at diff, OR
-          # curator.yml / pending.yml changed at all. (Hydration steps
-          # bump fetched_at on every run; if that's the only thing that
-          # moved AND the rebuild was a no-op, skip to avoid noise.)
-          inventory_meaningful=$(git diff -U0 _data/saves_inventory.json \
-            | grep -E '^[+-]' \
-            | grep -vE '^(\+\+\+|---|[+-] *"fetched_at")' \
-            | head -5)
-
-          if git diff --quiet _data/curator.yml _data/pending.yml; then
-            curator_changed=false
-          else
-            curator_changed=true
-          fi
-
-          if [ -z "$inventory_meaningful" ] && [ "$curator_changed" = "false" ]; then
-            echo "no meaningful changes; reverting fetched_at churn and exiting clean"
-            git checkout -- _data/
+          # bsky-saves v0.2.2+ leaves the inventory byte-identical on
+          # no-op runs across every subcommand (fetch, enrich,
+          # hydrate articles, hydrate threads, hydrate images), and the
+          # rebuild scripts are deterministic — same inputs produce
+          # byte-identical curator.yml + pending.yml. So a clean staged
+          # diff is a real no-op signal; no fetched_at-revert needed.
+          git add _data/saves_inventory.json _data/curator.yml _data/pending.yml
+          if git diff --cached --quiet; then
+            echo "no changes"
             exit 0
           fi
-
-          git add _data/saves_inventory.json _data/curator.yml _data/pending.yml
           git commit -m "data: refresh saves + hydrate articles/threads + rebuild curator data"
           git push

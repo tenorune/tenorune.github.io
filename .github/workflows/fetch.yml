@@ -35,17 +35,11 @@ jobs:
         run: |
           git config user.name "fetch-saves[bot]"
           git config user.email "fetch-saves@users.noreply.github.com"
-          # Only commit if the saves array actually changed (ignore the
-          # fetched_at timestamp churn).
+          # bsky-saves v0.2.2+ leaves the inventory file byte-identical
+          # on no-op runs (no fetched_at churn), so a clean diff is a
+          # real "nothing to do" signal.
           if git diff --quiet -- _data/saves_inventory.json; then
             echo "no changes to inventory"
-            exit 0
-          fi
-          # Check whether the only change is fetched_at; if so, skip.
-          changed_lines=$(git diff -U0 _data/saves_inventory.json | grep -E '^[+-]' | grep -vE '^(\+\+\+|---|[+-] *"fetched_at")' | head -5)
-          if [ -z "$changed_lines" ]; then
-            echo "only fetched_at timestamp changed; skipping commit"
-            git checkout -- _data/saves_inventory.json
             exit 0
           fi
           git add _data/saves_inventory.json

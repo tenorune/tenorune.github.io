@@ -11,9 +11,9 @@ pytest>=8.0
 # Markdown rewriter lives here in `scripts/localize_story_images.py`.
 # The `fetch images` workflow chains the two together.
 #
-# v0.2.1 fixes the always-rewrite behavior on `hydrate images` (no-op
-# runs no longer bump fetched_at) and makes `bsky_saves.__version__`
-# read from package metadata. We pin >=0.2.1 so CI gets that fix
-# deterministically rather than relying on PyPI's resolver to pick the
-# newer minor.
-bsky-saves>=0.2.1,<0.3
+# v0.2.2 completes the no-write-on-no-change pattern across every
+# ingestion subcommand (`fetch`, `enrich`, `hydrate articles`,
+# `hydrate threads`, `hydrate images`). With this pin, every
+# fetched_at-revert hack in our workflow scripts can come out — a
+# clean inventory diff is finally a real no-op signal.
+bsky-saves>=0.2.2,<0.3
