@@ -4,4 +4,10 @@ pytest>=8.0
 
 # Ingestion is now handled by the published bsky-saves package.
 # It pulls in httpx + trafilatura transitively.
-bsky-saves>=0.1.0
+#
+# Pinned to <0.2 because v0.2.0 will be a breaking change to
+# `hydrate images` (drops --stories/--assets/--assets-url-prefix in
+# favour of a flat --out + a stories-of-47-side rewriter). The
+# `migrate-bsky-saves-v0.2` branch tracks the migration; main keeps
+# the v0.1 contract until that branch lands.
+bsky-saves>=0.1.0,<0.2
