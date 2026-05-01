@@ -10,4 +10,10 @@ pytest>=8.0
 # as `local_images` on each inventory entry, while the Jekyll-aware
 # Markdown rewriter lives here in `scripts/localize_story_images.py`.
 # The `fetch images` workflow chains the two together.
-bsky-saves>=0.2.0,<0.3
+#
+# v0.2.1 fixes the always-rewrite behavior on `hydrate images` (no-op
+# runs no longer bump fetched_at) and makes `bsky_saves.__version__`
+# read from package metadata. We pin >=0.2.1 so CI gets that fix
+# deterministically rather than relying on PyPI's resolver to pick the
+# newer minor.
+bsky-saves>=0.2.1,<0.3

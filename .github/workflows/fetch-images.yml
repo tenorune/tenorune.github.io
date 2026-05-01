@@ -80,33 +80,18 @@ jobs:
       - name: Localize cached images into assets/stories/<slug>/
         run: python scripts/localize_story_images.py
 
-      - name: Commit if any meaningful change
+      - name: Commit if any change
         run: |
           git config user.name "fetch-images[bot]"
           git config user.email "fetch-images@users.noreply.github.com"
-
-          # bsky-saves v0.2's `hydrate images` rewrites the inventory at
-          # the end of every run (bumping fetched_at) even if no entry's
-          # local_images changed. Treat fetched_at-only inventory diffs
-          # as no-op and revert them to avoid a noise commit. (Same
-          # pattern as fetch.yml and refresh.yml.)
-          inventory_meaningful=$(git diff -U0 _data/saves_inventory.json \
-            | grep -E '^[+-]' \
-            | grep -vE '^(\+\+\+|---|[+-] *"fetched_at")' \
-            | head -5)
-
-          if git diff --quiet -- _stories/ assets/stories/; then
-            assets_changed=false
-          else
-            assets_changed=true
-          fi
-
-          if [ -z "$inventory_meaningful" ] && [ "$assets_changed" = "false" ]; then
-            echo "no meaningful changes; reverting fetched_at churn and exiting clean"
-            git checkout -- _data/saves_inventory.json
+          # bsky-saves v0.2.1+ only writes the inventory when something
+          # actually changed (fixed in upstream from v0.2.0's always-
+          # rewrite behavior), so the staged diff being empty is a true
+          # no-op signal — no fetched_at-only churn to revert.
+          git add _stories/ assets/stories/ _data/saves_inventory.json
+          if git diff --cached --quiet; then
+            echo "no changes"
             exit 0
           fi
-
-          git add _stories/ assets/stories/ _data/saves_inventory.json
           git commit -m "data: hydrate images (cache, inventory, and assets)"
           git push
