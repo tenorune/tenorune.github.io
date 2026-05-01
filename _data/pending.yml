@@ -1,13 +1,40 @@
 meta:
-  total_inventory: 676
+  total_inventory: 678
   drafted: 63
   skipped: 29
   queued: 3
-  pending_total: 584
-  pending_aligned: 389
-  pending_unaligned: 195
+  pending_total: 586
+  pending_aligned: 390
+  pending_unaligned: 196
   pending_gap_flagged: 19
 entries:
+- rkey: 3mkr7k4ftd22c
+  uri: at://did:plc:r6wxaadynk3m7sqsyn3r3vrf/app.bsky.feed.post/3mkr7k4ftd22c
+  author: ashtonpittman.bsky.social
+  author_display: Ashton Pittman
+  saved_at: '2026-05-01T05:14:13.079Z'
+  post_created_at: '2026-05-01T03:42:52Z'
+  article_published_at: ''
+  gap_days: null
+  gap_flag: false
+  post_text: 'New York Times: If you''re gonna crib our headline, you could at least
+    credit Nick Judin and the Mississippi Free Press for first reporting it 2 days
+    earlier.
+
+
+    I''m glad this story is getting national attention. But Nick puts a lot of himself
+    in these stories, and deserves credit (…'
+  embed_title: ''
+  embed_host: ''
+  embed_url: ''
+  bluesky_url: https://bsky.app/profile/ashtonpittman.bsky.social/post/3mkr7k4ftd22c
+  themes:
+  - official-narrative
+  - resistance-and-witness
+  badges:
+  - thread
+  - image
+  queued: false
 - rkey: 3mkpswagpak22
   uri: at://did:plc:j76trmiofvaxxpvx2vnb2vwf/app.bsky.feed.post/3mkpswagpak22
   author: michaelhobbes.bsky.social

@@ -1,6 +1,146 @@
 {
-  "fetched_at": "2026-05-01T05:09:51Z",
+  "fetched_at": "2026-05-01T05:15:03Z",
   "saves": [
+    {
+      "author": {
+        "did": "did:plc:r6wxaadynk3m7sqsyn3r3vrf",
+        "display_name": "Ashton Pittman",
+        "handle": "ashtonpittman.bsky.social"
+      },
+      "embed": null,
+      "images": [
+        {
+          "alt": "Mississippi Free Press screenshot shows a picture of two teen boys with their arms around one another in front of a cake and a sign that says \"2026.\" The headline below the photo says: Max and Israel Makoka Were Waiting for a Hancock High School Bus. ICE Took the Brothers Instead.\nby Nick Judin",
+          "kind": "image",
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:r6wxaadynk3m7sqsyn3r3vrf/bafkreifoqgdtkpkvfc6j4yy3q56jbfyzpqhk3enuby5b3s37wrjx7xww2u",
+          "url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:r6wxaadynk3m7sqsyn3r3vrf/bafkreifoqgdtkpkvfc6j4yy3q56jbfyzpqhk3enuby5b3s37wrjx7xww2u"
+        },
+        {
+          "alt": "New York Times screenshot shows a picture of two teen boys with their arms around one another in front of a cake and a sign that says \"2026.\" The headline above the photo says: They Left for the School Bus. ICE\nPicked Them Up Instead.\n\nSubtext says: A school transfer disrupted two brothers' visas, their lawyer said, leaving them vulnerable to arrest and unsettling their Mississippi school community.",
+          "kind": "image",
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:r6wxaadynk3m7sqsyn3r3vrf/bafkreicp4lwup7nvahyvu3bya6fmviwsk4q7o2ag4ukkacwsvvgn3ny63i",
+          "url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:r6wxaadynk3m7sqsyn3r3vrf/bafkreicp4lwup7nvahyvu3bya6fmviwsk4q7o2ag4ukkacwsvvgn3ny63i"
+        }
+      ],
+      "post_text": "New York Times: If you're gonna crib our headline, you could at least credit Nick Judin and the Mississippi Free Press for first reporting it 2 days earlier.\n\nI'm glad this story is getting national attention. But Nick puts a lot of himself in these stories, and deserves credit (just as we'd do).",
+      "quoted_post": {
+        "author": {
+          "did": "did:plc:alhv6cq23lxwyoa3nmtl4vky",
+          "display_name": "Donna Ladd said what she said. 😘",
+          "handle": "donnerkay.bsky.social"
+        },
+        "cid": "bafyreiatyt5m67mx5mcfk4fvflchdcdg3nv6ckbidjr2rc5kvli756cphe",
+        "created_at": "2026-04-30T22:41:13.689Z",
+        "images": [
+          {
+            "alt": "a man in a suit is standing in a living room",
+            "kind": "embed_thumb",
+            "url": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:alhv6cq23lxwyoa3nmtl4vky/bafkreiboflbf5bpxsvidhr7zlwgytwzehwjuok542dlvx5a2zodt3arywq"
+          }
+        ],
+        "text": "So why has the @nytimes.com now published two stories following\n@nickjudin.bsky.social original reporting on Makoka boys without linking to or crediting him or the @mississippifreepress.org as most others have done??\n\nWhy can’t “big” media grow the hell up?",
+        "thread_replies": [
+          {
+            "images": [],
+            "indexedAt": "2026-05-01T00:14:31.163Z",
+            "text": "🗑️🗑️",
+            "uri": "at://did:plc:alhv6cq23lxwyoa3nmtl4vky/app.bsky.feed.post/3mkqtvjquik24"
+          },
+          {
+            "images": [],
+            "indexedAt": "2026-05-01T03:58:27.560Z",
+            "text": "Thanks! Back at you. ✊",
+            "uri": "at://did:plc:alhv6cq23lxwyoa3nmtl4vky/app.bsky.feed.post/3mkrafxh44s24"
+          }
+        ],
+        "uri": "at://did:plc:alhv6cq23lxwyoa3nmtl4vky/app.bsky.feed.post/3mkqoopyzvs24"
+      },
+      "saved_at": "2026-05-01T05:14:13.079Z",
+      "thread_fetched_at": "2026-05-01T05:15:01Z",
+      "thread_replies": [
+        {
+          "images": [
+            {
+              "alt": "Israel and Max Makoka Are Coming Home After ICE Arrests Galvanized Their Mississippi Community",
+              "kind": "embed_thumb",
+              "url": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:r6wxaadynk3m7sqsyn3r3vrf/bafkreicvxmmwii2x6jjprh2kzv2ekaspp7eqkwfjijbvwg6yt344kvnnti"
+            }
+          ],
+          "indexedAt": "2026-05-01T03:44:45.566Z",
+          "text": "Nick also broke the news that the brothers were returned home today. A few hours later, the New York Times and Washington Post reported the same thing, once again, neither credited him.\n\nI don't understand why it's so hard for big national papers to credit smaller local pubs.\n\nNick's latest:",
+          "uri": "at://did:plc:r6wxaadynk3m7sqsyn3r3vrf/app.bsky.feed.post/3mkr7ne7ai22c"
+        },
+        {
+          "images": [],
+          "indexedAt": "2026-05-01T03:51:59.164Z",
+          "text": "This is far from the most important thing about this story.\n\nBut I see how hard our reporters work, and how heavy some of these stories weigh on them (because they come at this as humans first, reporters second), and it ticks me off when big national pubs can't even be bothered to acknowledge them.",
+          "uri": "at://did:plc:r6wxaadynk3m7sqsyn3r3vrf/app.bsky.feed.post/3mkra2ezug22c"
+        },
+        {
+          "images": [],
+          "indexedAt": "2026-05-01T03:53:00.666Z",
+          "text": "And Nick, by the way, is someone who takes extra care to make sure he always credits other journalists and news outlets. If he forgets something, he makes sure to go back and fix it to ensure he's giving credit where credit is due, whether it's a small local paper or the NYT.",
+          "uri": "at://did:plc:r6wxaadynk3m7sqsyn3r3vrf/app.bsky.feed.post/3mkra47hsck2c"
+        }
+      ],
+      "thread_schema_version": 3,
+      "uri": "at://did:plc:r6wxaadynk3m7sqsyn3r3vrf/app.bsky.feed.post/3mkr7k4ftd22c",
+      "post_created_at": "2026-05-01T03:42:52Z"
+    },
+    {
+      "author": {
+        "did": "did:plc:36qxymynrrlueovhitpmrfbu",
+        "display_name": "Mel Buer",
+        "handle": "melbuer.bsky.social"
+      },
+      "embed": null,
+      "images": [],
+      "post_text": "The attack on the UCLA Gaza encampment was one of the first times in my professional career where I took a look at a situation and thought, “someone might seriously die tonight”\n\nSome of the worst hours I’ve ever experienced and reported on",
+      "quoted_post": {
+        "author": {
+          "did": "did:plc:fv256ijb3ftgb6hewcujshxw",
+          "display_name": "Sarah T Roberts, PhD",
+          "handle": "ubiquity75.xyz"
+        },
+        "cid": "bafyreih5z4fhan4v25gqeqjxoa2efxrtoafysdg6cnpoe6fqsvwmda65oe",
+        "created_at": "2026-05-01T01:56:46.663Z",
+        "images": [
+          {
+            "alt": "UCLA students describe violent attack on Gaza protest encampment: ‘It was terrifying’",
+            "kind": "embed_thumb",
+            "url": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:fv256ijb3ftgb6hewcujshxw/bafkreiex3xfpacctjrmgu4alshs5kogaesv6ijeqwn6nzaz6ag36fleioy"
+          }
+        ],
+        "text": "www.theguardian.com/us-news/2024...",
+        "thread_replies": [],
+        "uri": "at://did:plc:fv256ijb3ftgb6hewcujshxw/app.bsky.feed.post/3mkqzmfgvfk2h"
+      },
+      "saved_at": "2026-05-01T05:14:11.574Z",
+      "thread_fetched_at": "2026-05-01T05:15:02Z",
+      "thread_replies": [
+        {
+          "images": [],
+          "indexedAt": "2026-05-01T05:07:29.667Z",
+          "text": "I was there trying to report on it and am still to this day absolutely shocked that Police responded and then *watched* the carnage for hours without trying to help",
+          "uri": "at://did:plc:36qxymynrrlueovhitpmrfbu/app.bsky.feed.post/3mkrebfqwf22c"
+        },
+        {
+          "images": [],
+          "indexedAt": "2026-05-01T03:49:20.760Z",
+          "text": "Very few were ever arrested for that night, despite mountains of video evidence, and LAPD turned the encampment into a war zone the next night in order to sweep it\n\nUCLA effectively banned protest and really any major gathering on campus after the fact\n\n“Why aren’t students protesting?” Well…",
+          "uri": "at://did:plc:36qxymynrrlueovhitpmrfbu/app.bsky.feed.post/3mkr7vnwtpk2z"
+        },
+        {
+          "images": [],
+          "indexedAt": "2026-05-01T03:51:31.568Z",
+          "text": "Fucking wild it’s been two years, that’s insane to think about",
+          "uri": "at://did:plc:36qxymynrrlueovhitpmrfbu/app.bsky.feed.post/3mkr7zkhcnc2z"
+        }
+      ],
+      "thread_schema_version": 3,
+      "uri": "at://did:plc:36qxymynrrlueovhitpmrfbu/app.bsky.feed.post/3mkr7oexhh22z",
+      "post_created_at": "2026-05-01T03:45:15Z"
+    },
     {
       "author": {
         "did": "did:plc:j76trmiofvaxxpvx2vnb2vwf",
@@ -16,6 +156,7 @@
           "url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:j76trmiofvaxxpvx2vnb2vwf/bafkreiahuve74dkmmuyq3znuewgkx7uexpdljtrudvwvj4euyl2ypkvvh4"
         }
       ],
+      "post_created_at": "2026-04-30T14:24:21Z",
       "post_text": "The indictment is absolute soup.\n\nLab leakers have completely given up on proving their main contention and are now just flailing around looking for any rule violation or procedural misstep that makes it look like a cover-up happened. \nwww.justice.gov/opa/pr/forme...",
       "quoted_post": {
         "author": {
@@ -78,8 +219,7 @@
         }
       ],
       "thread_schema_version": 3,
-      "uri": "at://did:plc:j76trmiofvaxxpvx2vnb2vwf/app.bsky.feed.post/3mkpswagpak22",
-      "post_created_at": "2026-04-30T14:24:21Z"
+      "uri": "at://did:plc:j76trmiofvaxxpvx2vnb2vwf/app.bsky.feed.post/3mkpswagpak22"
     },
     {
       "author": {
