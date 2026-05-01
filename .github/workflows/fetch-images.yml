@@ -30,6 +30,25 @@ jobs:
         with:
           python-version: "3.12"
 
+      # Persist _data/_image_cache/ across runs. The cache directory is
+      # gitignored (it's an intermediate artifact between bsky-saves'
+      # download and the rewriter's slug-scoped copy), so without this
+      # every fresh CI checkout would re-download every image. With it,
+      # bsky-saves' "skip if file exists on disk" idempotence kicks in
+      # and only genuinely-new images are fetched.
+      #
+      # Unique key per run + restore-keys fallback ensures every run
+      # uploads a fresh keyed cache covering whatever it touched, while
+      # restoring from the most recent prior cache. Cache size is small
+      # (~10s of MB) and grows monotonically as new bookmarks come in.
+      - name: Restore image cache
+        uses: actions/cache@v4
+        with:
+          path: _data/_image_cache
+          key: bsky-saves-image-cache-${{ github.run_id }}
+          restore-keys: |
+            bsky-saves-image-cache-
+
       - name: Install Python deps
         run: pip install -r scripts/requirements.txt
 
@@ -61,17 +80,33 @@ jobs:
       - name: Localize cached images into assets/stories/<slug>/
         run: python scripts/localize_story_images.py
 
-      - name: Commit if changes
+      - name: Commit if any meaningful change
         run: |
           git config user.name "fetch-images[bot]"
           git config user.email "fetch-images@users.noreply.github.com"
-          # The cache lives in _data/_image_cache/ and is .gitignored;
-          # only the inventory diff (local_images), Markdown rewrites,
-          # and slug-scoped asset copies should be committed.
-          git add _stories/ assets/stories/ _data/saves_inventory.json
-          if git diff --cached --quiet; then
-            echo "no changes"
+
+          # bsky-saves v0.2's `hydrate images` rewrites the inventory at
+          # the end of every run (bumping fetched_at) even if no entry's
+          # local_images changed. Treat fetched_at-only inventory diffs
+          # as no-op and revert them to avoid a noise commit. (Same
+          # pattern as fetch.yml and refresh.yml.)
+          inventory_meaningful=$(git diff -U0 _data/saves_inventory.json \
+            | grep -E '^[+-]' \
+            | grep -vE '^(\+\+\+|---|[+-] *"fetched_at")' \
+            | head -5)
+
+          if git diff --quiet -- _stories/ assets/stories/; then
+            assets_changed=false
+          else
+            assets_changed=true
+          fi
+
+          if [ -z "$inventory_meaningful" ] && [ "$assets_changed" = "false" ]; then
+            echo "no meaningful changes; reverting fetched_at churn and exiting clean"
+            git checkout -- _data/saves_inventory.json
             exit 0
           fi
-          git commit -m "data: localize CDN images into assets/stories/"
+
+          git add _stories/ assets/stories/ _data/saves_inventory.json
+          git commit -m "data: hydrate images (cache, inventory, and assets)"
           git push
