@@ -10,6 +10,9 @@ source_publication: "The Guardian"
 bluesky_uri: "at://did:plc:cvne4fdbpqyu6qced7whinxn/app.bsky.feed.post/3mjzgnfd7vs2b"
 bluesky_saved_at: 2026-04-21T21:45:45.301Z
 post_created_at: "2026-04-21T16:46:05Z"
+hero_image: /assets/stories/don-maca-survivors/1920.jpg
+hero_image_alt: "The crew of the Ecuadorian fishing vessel Don Maca"
+hero_image_credit: "The crew of the Ecuadorian fishing vessel Don Maca. Photograph obtained by the Guardian."
 published: true
 ---
 
