@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-01T05:15:03Z",
+  "fetched_at": "2026-05-01T05:21:57Z",
   "saves": [
     {
       "author": {
@@ -22,6 +22,7 @@
           "url": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:r6wxaadynk3m7sqsyn3r3vrf/bafkreicp4lwup7nvahyvu3bya6fmviwsk4q7o2ag4ukkacwsvvgn3ny63i"
         }
       ],
+      "post_created_at": "2026-05-01T03:42:52Z",
       "post_text": "New York Times: If you're gonna crib our headline, you could at least credit Nick Judin and the Mississippi Free Press for first reporting it 2 days earlier.\n\nI'm glad this story is getting national attention. But Nick puts a lot of himself in these stories, and deserves credit (just as we'd do).",
       "quoted_post": {
         "author": {
@@ -84,8 +85,7 @@
         }
       ],
       "thread_schema_version": 3,
-      "uri": "at://did:plc:r6wxaadynk3m7sqsyn3r3vrf/app.bsky.feed.post/3mkr7k4ftd22c",
-      "post_created_at": "2026-05-01T03:42:52Z"
+      "uri": "at://did:plc:r6wxaadynk3m7sqsyn3r3vrf/app.bsky.feed.post/3mkr7k4ftd22c"
     },
     {
       "author": {
@@ -95,6 +95,7 @@
       },
       "embed": null,
       "images": [],
+      "post_created_at": "2026-05-01T03:45:15Z",
       "post_text": "The attack on the UCLA Gaza encampment was one of the first times in my professional career where I took a look at a situation and thought, “someone might seriously die tonight”\n\nSome of the worst hours I’ve ever experienced and reported on",
       "quoted_post": {
         "author": {
@@ -138,8 +139,7 @@
         }
       ],
       "thread_schema_version": 3,
-      "uri": "at://did:plc:36qxymynrrlueovhitpmrfbu/app.bsky.feed.post/3mkr7oexhh22z",
-      "post_created_at": "2026-05-01T03:45:15Z"
+      "uri": "at://did:plc:36qxymynrrlueovhitpmrfbu/app.bsky.feed.post/3mkr7oexhh22z"
     },
     {
       "author": {
