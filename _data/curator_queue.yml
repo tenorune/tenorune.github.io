@@ -18,3 +18,7 @@
   target: 3mkr7k4ftd22c
   issue: 65
   submitted_at: '2026-05-01T06:12:19Z'
+- action: skip
+  target: 3mkpswagpak22
+  issue: 66
+  submitted_at: '2026-05-01T06:12:22Z'
