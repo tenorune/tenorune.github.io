@@ -16,4 +16,11 @@ pytest>=8.0
 # `hydrate threads`, `hydrate images`). With this pin, every
 # fetched_at-revert hack in our workflow scripts can come out — a
 # clean inventory diff is finally a real no-op signal.
-bsky-saves>=0.2.2,<0.3
+#
+# Upper bound was `<0.3` originally as a conservative reflex during
+# the v0.2.0 cutover. v0.3.0 turned out to be additive (new `serve`
+# subcommand for a separate consumer; no changes to CLI surface or
+# inventory schema), and the maintainer has held semver discipline
+# across each release, so widened to `<0.4` to track the 0.x line
+# without re-opting-in on every minor.
+bsky-saves>=0.2.2,<0.4
