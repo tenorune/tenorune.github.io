@@ -17,10 +17,11 @@ pytest>=8.0
 # fetched_at-revert hack in our workflow scripts can come out — a
 # clean inventory diff is finally a real no-op signal.
 #
-# Upper bound was `<0.3` originally as a conservative reflex during
-# the v0.2.0 cutover. v0.3.0 turned out to be additive (new `serve`
-# subcommand for a separate consumer; no changes to CLI surface or
-# inventory schema), and the maintainer has held semver discipline
-# across each release, so widened to `<0.4` to track the 0.x line
-# without re-opting-in on every minor.
-bsky-saves>=0.2.2,<0.4
+# Upper bound: `<1.0`. The cap-at-current-minor pattern (originally
+# `<0.3`, then `<0.4`) was useful when the package was new and we
+# hadn't built up a track record yet. Several releases in (clean
+# semver discipline, explicit breaking-change callouts on every
+# release), the cost-benefit has tipped. `<1.0` accepts every 0.x
+# release while still guarding against a future v1.0 that might ship
+# real breaking changes.
+bsky-saves>=0.2.2,<1.0
