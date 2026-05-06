@@ -1,13 +1,39 @@
 meta:
-  total_inventory: 678
+  total_inventory: 679
   drafted: 63
   skipped: 35
   queued: 8
-  pending_total: 580
-  pending_aligned: 384
+  pending_total: 581
+  pending_aligned: 385
   pending_unaligned: 196
   pending_gap_flagged: 19
 entries:
+- rkey: 3ml3qi5ajx52y
+  uri: at://did:plc:465tbrqfeduj3lhludc6nbog/app.bsky.feed.post/3ml3qi5ajx52y
+  author: irishtimes.com
+  author_display: The Irish Times
+  saved_at: '2026-05-05T11:25:28.660Z'
+  post_created_at: '2026-05-05T08:12:37Z'
+  article_published_at: ''
+  gap_days: null
+  gap_flag: false
+  post_text: ‘Imagine not being able to go back for your own mother’s funeral’ – the
+    Limerick priest helping undocumented Irish in New York City
+  embed_title: ‘Imagine not being able to go back for your own mother’s funeral’ –
+    the Limerick priest helping undocumented Irish in New York City
+  embed_host: irishtimes.com
+  embed_url: https://www.irishtimes.com/ireland/2026/05/06/imagine-not-being-able-to-go-back-for-your-own-mothers-funeral-the-limerick-priest-helping-undocumented-irish-in-new-york-city/?utm_source=dlvr.it&utm_medium=bluesky&utm_campaign=HP-SubDesc
+  bluesky_url: https://bsky.app/profile/irishtimes.com/post/3ml3qi5ajx52y
+  themes:
+  - bureaucratic-cruelty
+  - civilian-harm
+  - deportation-machinery
+  - official-narrative
+  - resistance-and-witness
+  badges:
+  - article
+  - image
+  queued: false
 - rkey: 3mjzl5hnfq22u
   uri: at://did:plc:f5j66gguacu2rqrqxdqzozpa/app.bsky.feed.post/3mjzl5hnfq22u
   author: bachynski.bsky.social
@@ -343,7 +369,6 @@ entries:
   - resistance-and-witness
   badges:
   - article
-  - thread
   - image
   queued: false
 - rkey: 3meytjcoags2d
@@ -490,8 +515,7 @@ entries:
   themes:
   - bureaucratic-cruelty
   - deportation-machinery
-  badges:
-  - thread
+  badges: []
   queued: false
 - rkey: 3mek7dzkla22z
   uri: at://did:plc:qjoafldyxvsszdxrrmxyvq67/app.bsky.feed.post/3mek7dzkla22z
@@ -771,8 +795,7 @@ entries:
   - civilian-harm
   - deportation-machinery
   - resistance-and-witness
-  badges:
-  - thread
+  badges: []
   queued: false
 - rkey: 3mebyh5lyb22j
   uri: at://did:plc:tgw3d4hvw3x5ijrxax7lg26u/app.bsky.feed.post/3mebyh5lyb22j
@@ -1330,7 +1353,6 @@ entries:
   - deportation-machinery
   - resistance-and-witness
   badges:
-  - thread
   - image
   queued: false
 - rkey: 3mdr4ypzqwk2x
@@ -1385,7 +1407,6 @@ entries:
   - official-narrative
   - resistance-and-witness
   badges:
-  - thread
   - image
   queued: false
 - rkey: 3mdqpqmif622j
@@ -1408,8 +1429,7 @@ entries:
   themes:
   - bureaucratic-cruelty
   - deportation-machinery
-  badges:
-  - thread
+  badges: []
   queued: false
 - rkey: 3mdnzxdal6s2s
   uri: at://did:plc:ttuljczlvmwk5tyfbgghv76y/app.bsky.feed.post/3mdnzxdal6s2s
@@ -2425,7 +2445,6 @@ entries:
   - state-violence
   badges:
   - article
-  - thread
   - image
   queued: false
 - rkey: 3mbarf6ppcm2d
@@ -2950,7 +2969,6 @@ entries:
   - state-violence
   - official-narrative
   badges:
-  - thread
   - image
   queued: false
 - rkey: 3ma2jlw4g4s2d
@@ -3116,7 +3134,8 @@ entries:
   themes:
   - bureaucratic-cruelty
   - deportation-machinery
-  badges: []
+  badges:
+  - thread
   queued: false
 - rkey: 3m7v2yguigs2e
   uri: at://did:plc:6hkr3ivkbqplmhkzrbvk44bq/app.bsky.feed.post/3m7v2yguigs2e
@@ -3184,7 +3203,6 @@ entries:
   - bureaucratic-cruelty
   - deportation-machinery
   badges:
-  - thread
   - image
   queued: false
 - rkey: 3m7sd7yoqxk2c
@@ -3363,7 +3381,6 @@ entries:
   themes:
   - deportation-machinery
   badges:
-  - thread
   - image
   queued: false
 - rkey: 3m7nwbppnrk23
@@ -3554,7 +3571,6 @@ entries:
   themes:
   - civilian-harm
   badges:
-  - thread
   - image
   queued: false
 - rkey: 3m7kxg6gyds2x
@@ -3578,8 +3594,7 @@ entries:
   - bureaucratic-cruelty
   - deportation-machinery
   - resistance-and-witness
-  badges:
-  - thread
+  badges: []
   queued: false
 - rkey: 3m7jt7wojgc2n
   uri: at://did:plc:ftjiq2rkbuqw3ue4zkb6ktnj/app.bsky.feed.post/3m7jt7wojgc2n
@@ -3638,7 +3653,6 @@ entries:
   - resistance-and-witness
   badges:
   - article
-  - thread
   queued: false
 - rkey: 3m7irez4yys2y
   uri: at://did:plc:zhcfq6acrvb6ermtjt644w2n/app.bsky.feed.post/3m7irez4yys2y
@@ -4267,7 +4281,6 @@ entries:
   - deportation-machinery
   - state-violence
   badges:
-  - thread
   - image
   queued: false
 - rkey: 3m6hwgzsins2p
@@ -5009,7 +5022,6 @@ entries:
   themes:
   - official-narrative
   badges:
-  - thread
   - image
   queued: false
 - rkey: 3m5p5siftgc2a
@@ -5364,7 +5376,6 @@ entries:
   - resistance-and-witness
   badges:
   - article
-  - thread
   - image
   queued: false
 - rkey: 3m5eqlqbre22z
@@ -6245,7 +6256,6 @@ entries:
   - resistance-and-witness
   badges:
   - article
-  - thread
   - image
   queued: false
 - rkey: 3m4rodqgxp52r
@@ -6353,7 +6363,6 @@ entries:
   - resistance-and-witness
   badges:
   - article
-  - thread
   queued: false
 - rkey: 3m4qtasgp2k2t
   uri: at://did:plc:ynhvprwsjim3ttkefxsttf7y/app.bsky.feed.post/3m4qtasgp2k2t
@@ -6728,7 +6737,6 @@ entries:
   - official-narrative
   badges:
   - article
-  - thread
   queued: false
 - rkey: 3m4m6afq6zk2z
   uri: at://did:plc:kwgll52mqvzj3hh25olfresj/app.bsky.feed.post/3m4m6afq6zk2z
@@ -7034,7 +7042,6 @@ entries:
   - resistance-and-witness
   badges:
   - article
-  - thread
   - image
   queued: false
 - rkey: 3m4gqilesxu2o
@@ -7444,7 +7451,6 @@ entries:
   - official-narrative
   badges:
   - article
-  - thread
   - image
   queued: false
 - rkey: 3m4bs5p6vg22w
@@ -7501,7 +7507,6 @@ entries:
   - rule-of-law
   - state-violence
   badges:
-  - thread
   - image
   queued: false
 - rkey: 3m4b3hc4p7s2g
@@ -7611,7 +7616,6 @@ entries:
   - resistance-and-witness
   badges:
   - article
-  - thread
   - image
   queued: false
 - rkey: 3m42jcfwvl22s
@@ -7696,7 +7700,6 @@ entries:
   - resistance-and-witness
   badges:
   - article
-  - thread
   - image
   queued: false
 - rkey: 3m4257wudwc2u
@@ -7832,7 +7835,6 @@ entries:
   - deportation-machinery
   - resistance-and-witness
   badges:
-  - thread
   - image
   queued: false
 - rkey: 3m3x36l3kic22
@@ -7859,7 +7861,6 @@ entries:
   - deportation-machinery
   - official-narrative
   badges:
-  - thread
   - image
   queued: false
 - rkey: 3m3uzqenhes2w
@@ -7885,7 +7886,6 @@ entries:
   - deportation-machinery
   - state-violence
   badges:
-  - thread
   - image
   queued: false
 - rkey: 3m3uvfcepcc2e
@@ -8003,8 +8003,7 @@ entries:
   bluesky_url: https://bsky.app/profile/madopal.bsky.social/post/3m3koxybir22o
   themes:
   - official-narrative
-  badges:
-  - thread
+  badges: []
   queued: false
 - rkey: 3m3j6s45vek27
   uri: at://did:plc:ejihld4sywvvqwe67cdkn4jq/app.bsky.feed.post/3m3j6s45vek27
@@ -8095,7 +8094,6 @@ entries:
   - resistance-and-witness
   badges:
   - article
-  - thread
   - image
   queued: false
 - rkey: 3m37mafgnf22s
@@ -8357,7 +8355,6 @@ entries:
   - resistance-and-witness
   badges:
   - article
-  - thread
   - image
   queued: false
 - rkey: 3m2ywivhv3s26
@@ -8851,7 +8848,6 @@ entries:
   - resistance-and-witness
   badges:
   - article
-  - thread
   - image
   queued: false
 - rkey: 3m2psbuswss2t
@@ -9107,7 +9103,6 @@ entries:
   themes:
   - official-narrative
   badges:
-  - thread
   - image
   queued: false
 - rkey: 3m2knmybwrk2j
@@ -9245,7 +9240,6 @@ entries:
   - resistance-and-witness
   badges:
   - article
-  - thread
   - image
   queued: false
 - rkey: 3m2j4l4ddn22f
@@ -9269,7 +9263,6 @@ entries:
   - bureaucratic-cruelty
   - official-narrative
   badges:
-  - thread
   - image
   queued: false
 - rkey: 3m2fkmpzcdc2b
@@ -9599,7 +9592,6 @@ entries:
   themes:
   - deportation-machinery
   badges:
-  - thread
   - image
   queued: false
 - rkey: 3m266bfldzc2g
@@ -9957,7 +9949,6 @@ entries:
   - rule-of-law
   - official-narrative
   badges:
-  - thread
   - image
   queued: false
 - rkey: 3lz5fwbwxpc2c
